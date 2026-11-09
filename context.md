@@ -47,3 +47,13 @@
 - Placeholder-only actions: message toolbar Tag/More, composer Translate/Bot/Tagify,
   and "Connect channel" (shows a coming-soon hint).
 - All content is sample data; no backend or persistence yet.
+
+## Repository — 2026-11-09
+
+- Initialized git on `main` and connected the remote
+  `https://github.com/navinxqz/Unified-inbox.git`.
+- `.gitignore` covers dependencies, `.next`, build outputs, env files (with
+  `.env.example` kept), logs, TypeScript build info and editor/OS files.
+  `rules.md` and `context.md` are explicitly kept tracked.
+- Pushed the initial project commit; remote already had a LICENSE commit, so the
+  local branch was rebased onto `origin/main` before pushing.
