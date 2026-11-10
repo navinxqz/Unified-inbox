@@ -42,11 +42,31 @@
 - Computed colors match the reference tokens (rail `#F4F5F8`, accent `#4F46E5`,
   banner `#312E81`, active channel `#EEF0FF`).
 
-## Remaining / notes
+## Changes — 2026-11-10 (Restored 4-Pane Unified Inbox Layout)
 
-- Placeholder-only actions: message toolbar Tag/More, composer Translate/Bot/Tagify,
-  and "Connect channel" (shows a coming-soon hint).
-- All content is sample data; no backend or persistence yet.
+- **Restored Exact 4-Pane Architecture**:
+  1. **1st Part (Far Left)**: Icon navigation rail ([app-rail.tsx](file:///c:/Navin/unified-inbox/src/features/inbox/components/app-rail.tsx)) for All messages, Priority, Tagify, Ignored, and Bots.
+  2. **2nd Part (Left Center)**: Conversation list ([conversation-list.tsx](file:///c:/Navin/unified-inbox/src/features/inbox/components/conversation-list.tsx)) with avatars, live channel badges, message previews, unread stars, search shortcut (`/`), and newest/oldest sort.
+  3. **3rd Part (Main Center)**: Chat thread panel ([thread-panel.tsx](file:///c:/Navin/unified-inbox/src/features/inbox/components/thread-panel.tsx)) with full message stream, suggested replies, pinned state, banner, reply quotes, reactions, hover highlights, and composer.
+  4. **4th Part (Right Side)**: Connected channels sidebar ([channel-sidebar.tsx](file:///c:/Navin/unified-inbox/src/features/inbox/components/channel-sidebar.tsx)) with clean brand icons (Slack, WhatsApp, Email, Messenger, Telegram), draggable priority ordering, and channel message counts.
+- **Removed Unwanted Priority Tag Boxes & Generic Names**:
+  - Completely removed the bulky `P1`, `P2` priority tags that cluttered the channel items.
+  - Removed "Acme Customer Operations" placeholder naming and restored "Unified Inbox".
+- **User Details Moved to Dedicated Interactive Modal** ([user-details-modal.tsx](file:///c:/Navin/unified-inbox/src/features/inbox/components/user-details-modal.tsx)):
+  - Clicking on the user in the chat header opens the comprehensive Customer Details Modal with company info, contact phone/email, SLA status, ticket triage controls, and internal notes without disrupting the 4-pane layout.
+- **Rich Composer Features Retained**:
+  - File attachment picker with clear button.
+  - Categorized emoji popover picker.
+  - Translate dropdown with target language selection.
+  - Tagify popover with custom tag addition.
+  - Modern quoted reply banner (`Replying to...`) and hover-highlighting across replies.
+- **Settings & Webhook Tools via Quick Access (`⌘K` / `Ctrl+K`)**:
+  - Accessible via command palette without cluttering the main 4-pane inbox view.
+
+## Verification
+
+- `npm run check` — exit 0 (TypeScript + ESLint).
+- `npm run build` — exit 0 (compiled and prerendered static build in 1.9s).
 
 ## Repository — 2026-11-09
 

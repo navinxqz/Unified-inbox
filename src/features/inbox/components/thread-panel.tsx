@@ -17,6 +17,7 @@ import type {
   Channel,
   Message,
   Person,
+  QuotedMessage,
 } from "@/features/inbox/types";
 import { cn } from "@/lib/utils";
 
@@ -32,8 +33,15 @@ type ThreadPanelProps = {
   onDismissBanner: () => void;
   onViewBanner: () => void;
   onToggleReaction: (messageId: string, emoji: string, replyId?: string) => void;
-  onSend: (body: string, attachment?: Attachment) => void;
+  onSend: (data: {
+    body: string;
+    attachment?: Attachment;
+    replyTo?: QuotedMessage;
+    tags?: string[];
+    translation?: string;
+  }) => void;
   onOpenChannels: () => void;
+  onOpenUserDetails?: () => void;
   onBack: () => void;
 };
 
@@ -51,11 +59,17 @@ export function ThreadPanel({
   onToggleReaction,
   onSend,
   onOpenChannels,
+  onOpenUserDetails,
   onBack,
 }: ThreadPanelProps) {
   const [pinned, setPinned] = useState(false);
   const [draft, setDraft] = useState("");
   const [attachment, setAttachment] = useState<Attachment | null>(null);
+  const [replyingTo, setReplyingTo] = useState<QuotedMessage | null>(null);
+  const [highlightedMessageId, setHighlightedMessageId] = useState<string | null>(null);
+  const [tags, setTags] = useState<string[]>([]);
+  const [targetLanguage, setTargetLanguage] = useState<string | null>(null);
+
   const inputRef = useRef<HTMLInputElement>(null);
   const endRef = useRef<HTMLDivElement>(null);
 
@@ -65,19 +79,36 @@ export function ThreadPanel({
 
   function handleSend() {
     const body = draft.trim();
-
     if (!body && !attachment) return;
 
-    onSend(body || "Shared a file", attachment ?? undefined);
+    let translation: string | undefined = undefined;
+    if (targetLanguage) {
+      if (targetLanguage === "es") translation = "Traducido al español";
+      else if (targetLanguage === "fr") translation = "Traduit en français";
+      else if (targetLanguage === "bn") translation = "অনূদিত বার্তা";
+      else if (targetLanguage === "de") translation = "Ins Deutsche übersetzt";
+      else if (targetLanguage === "ja") translation = "日本語に翻訳されました";
+      else translation = "Translated to English";
+    }
+
+    onSend({
+      body: body || "Shared a file",
+      attachment: attachment ?? undefined,
+      replyTo: replyingTo ?? undefined,
+      tags: tags.length > 0 ? tags : undefined,
+      translation,
+    });
+
     setDraft("");
     setAttachment(null);
+    setReplyingTo(null);
+    setTags([]);
+    setTargetLanguage(null);
     inputRef.current?.focus();
   }
 
-  function handleReply(authorName: string) {
-    setDraft((current) =>
-      current.trim().length > 0 ? current : `@${authorName} `,
-    );
+  function handleReply(replyData: { id: string; authorName: string; body: string }) {
+    setReplyingTo(replyData);
     inputRef.current?.focus();
   }
 
@@ -95,39 +126,58 @@ export function ThreadPanel({
         </button>
 
         {person ? (
-          <Avatar
-            initials={person.initials}
-            background={person.avatar.background}
-            color={person.avatar.color}
-            size="sm"
-          />
-        ) : channel ? (
-          <span
-            className="flex size-7 shrink-0 items-center justify-center rounded-full"
-            style={{ backgroundColor: channel.soft }}
+          <button
+            type="button"
+            onClick={onOpenUserDetails}
+            title="Click to view customer details"
+            className="flex items-center gap-2.5 text-left group hover:opacity-80 transition-opacity"
           >
-            <ChannelDot color={channel.color} />
-          </span>
-        ) : (
-          <Avatar
-            initials="#"
-            background="#FDE7D3"
-            color="#8A3B0B"
-            size="sm"
-          />
-        )}
-
-        <div className="min-w-0 flex-1">
-          <div className="flex min-w-0 items-baseline gap-2.5">
-            <h1 className="truncate text-base font-semibold">{title}</h1>
-            <p className="hidden truncate text-[13px] text-muted-foreground sm:block">
-              {subtitle}
-            </p>
+            <Avatar
+              initials={person.initials}
+              background={person.avatar.background}
+              color={person.avatar.color}
+              size="sm"
+            />
+            <div className="min-w-0">
+              <div className="flex items-center gap-2">
+                <h1 className="truncate text-base font-semibold group-hover:text-primary transition-colors">
+                  {title}
+                </h1>
+                <span className="rounded bg-surface px-1.5 py-0.5 text-[10px] font-medium text-muted-foreground group-hover:bg-primary-soft group-hover:text-primary">
+                  View Info
+                </span>
+              </div>
+              <p className="truncate text-[13px] text-muted-foreground">
+                {subtitle}
+              </p>
+            </div>
+          </button>
+        ) : channel ? (
+          <div className="flex items-center gap-2.5 min-w-0">
+            <ChannelDot channel={channel.id} color={channel.color} className="size-7 rounded-lg" />
+            <div className="min-w-0">
+              <h1 className="truncate text-base font-semibold">{title}</h1>
+              <p className="truncate text-[13px] text-muted-foreground">
+                {subtitle}
+              </p>
+            </div>
           </div>
-          <p className="truncate text-[13px] text-muted-foreground sm:hidden">
-            {subtitle}
-          </p>
-        </div>
+        ) : (
+          <div className="flex items-center gap-2.5 min-w-0">
+            <Avatar
+              initials="#"
+              background="#FDE7D3"
+              color="#8A3B0B"
+              size="sm"
+            />
+            <div className="min-w-0">
+              <h1 className="truncate text-base font-semibold">{title}</h1>
+              <p className="truncate text-[13px] text-muted-foreground">
+                {subtitle}
+              </p>
+            </div>
+          </div>
+        )}
 
         <button
           type="button"
@@ -210,6 +260,8 @@ export function ThreadPanel({
             <MessageCard
               key={message.id}
               message={message}
+              highlightedMessageId={highlightedMessageId}
+              onHoverReply={(targetId) => setHighlightedMessageId(targetId)}
               onToggleReaction={onToggleReaction}
               onReply={handleReply}
             />
@@ -228,6 +280,12 @@ export function ThreadPanel({
           inputRef={inputRef}
           attachment={attachment}
           onAttachmentChange={setAttachment}
+          replyingTo={replyingTo}
+          onCancelReply={() => setReplyingTo(null)}
+          tags={tags}
+          onTagsChange={setTags}
+          targetLanguage={targetLanguage}
+          onTargetLanguageChange={setTargetLanguage}
           onSubmit={handleSend}
         />
       ) : null}

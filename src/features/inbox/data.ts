@@ -1,11 +1,14 @@
 import type {
+  ApiKeyItem,
   Author,
-  Channel,
+  ChannelConnection,
   Message,
   Person,
+  WebhookEventItem,
+  WorkspaceSettings,
 } from "./types";
 
-export const channels: Channel[] = [
+export const initialChannels: ChannelConnection[] = [
   {
     id: "slack",
     label: "Slack",
@@ -14,6 +17,13 @@ export const channels: Channel[] = [
     soft: "#E8E9FB",
     softForeground: "#3730A3",
     count: 12,
+    status: "connected",
+    accountHandle: "#workspace-inquiries",
+    webhookUrl: "https://api.unifiedinbox.io/v1/webhooks/slack/wh_9x4b219",
+    apiKeyMasked: "xoxb-98214-•••••••••••82c1",
+    lastSyncedAt: "Just now",
+    enabled: true,
+    priorityOrder: 1,
   },
   {
     id: "whatsapp",
@@ -23,6 +33,13 @@ export const channels: Channel[] = [
     soft: "#D6F0E0",
     softForeground: "#14532D",
     count: 9,
+    status: "connected",
+    accountHandle: "+1 (555) 234-8900",
+    webhookUrl: "https://api.unifiedinbox.io/v1/webhooks/whatsapp/wh_4w8k910",
+    apiKeyMasked: "EAAG••••••••••••••••3821",
+    lastSyncedAt: "3m ago",
+    enabled: true,
+    priorityOrder: 2,
   },
   {
     id: "email",
@@ -32,6 +49,13 @@ export const channels: Channel[] = [
     soft: "#DCEBFF",
     softForeground: "#123E7C",
     count: 11,
+    status: "connected",
+    accountHandle: "support@mycompany.com",
+    webhookUrl: "https://api.unifiedinbox.io/v1/webhooks/email/wh_7m1p384",
+    apiKeyMasked: "SG.9821••••••••••••77a0",
+    lastSyncedAt: "5m ago",
+    enabled: true,
+    priorityOrder: 3,
   },
   {
     id: "messenger",
@@ -41,6 +65,13 @@ export const channels: Channel[] = [
     soft: "#F6DDF0",
     softForeground: "#6B1B5A",
     count: 6,
+    status: "connected",
+    accountHandle: "facebook.com/mybrandsupport",
+    webhookUrl: "https://api.unifiedinbox.io/v1/webhooks/messenger/wh_2j9c551",
+    apiKeyMasked: "EAAK••••••••••••••••5519",
+    lastSyncedAt: "12m ago",
+    enabled: true,
+    priorityOrder: 4,
   },
   {
     id: "telegram",
@@ -50,103 +81,167 @@ export const channels: Channel[] = [
     soft: "#D9F2F7",
     softForeground: "#0B4F63",
     count: 4,
+    status: "connected",
+    accountHandle: "@mybrand_support_bot",
+    webhookUrl: "https://api.unifiedinbox.io/v1/webhooks/telegram/wh_5t8d330",
+    apiKeyMasked: "bot6291••••••••••••:AAH9",
+    lastSyncedAt: "24m ago",
+    enabled: true,
+    priorityOrder: 5,
   },
 ];
 
+export const channels = initialChannels;
+
 export const channelById = Object.fromEntries(
-  channels.map((channel) => [channel.id, channel]),
-) as Record<Channel["id"], Channel>;
+  initialChannels.map((channel) => [channel.id, channel]),
+) as Record<ChannelConnection["id"], ChannelConnection>;
 
-export const totalChannelCount = 38;
+export const totalChannelCount = 42;
 
-export const people: Person[] = [
+export const initialPeople: Person[] = [
   {
     id: "maya",
     name: "Maya Alvarez",
+    email: "maya.alvarez@stripe.corp",
+    phone: "+1 415 889 2011",
+    company: "Stripe Enterprise",
+    planTier: "Enterprise",
     initials: "MA",
     channel: "slack",
     avatar: { background: "#FDE7D3", color: "#8A3B0B" },
-    preview: "Can you confirm the delivery date?",
+    preview: "Can you confirm the delivery date for the Enterprise API keys?",
     time: "2m",
     priority: true,
+    ticketPriority: "urgent",
+    status: "open",
+    assignee: "You",
+    unreadCount: 1,
   },
   {
     id: "rahim",
     name: "Rahim Khan",
+    email: "rahim@apexlogistics.com",
+    phone: "+880 1711 982233",
+    company: "Apex Logistics Ltd",
+    planTier: "Growth",
     initials: "RK",
     channel: "whatsapp",
     avatar: { background: "#D6F0E0", color: "#14532D" },
-    preview: "আপনার ইনভয়েসটি পেয়েছি, পেমেন্ট…",
+    preview: "আপনার ইনভয়েসটি পেয়েছি, পেমেন্ট আগামীকাল হবে।",
     time: "11m",
     priority: true,
+    ticketPriority: "high",
+    status: "open",
+    assignee: "You",
+    unreadCount: 2,
   },
   {
     id: "jonas",
     name: "Jonas Teller",
+    email: "jonas.teller@novatech.io",
+    company: "NovaTech Solutions",
+    planTier: "Growth",
     initials: "JT",
     channel: "email",
     avatar: { background: "#DCEBFF", color: "#123E7C" },
-    preview: "Re: Q4 proposal — revised numbers",
+    preview: "Re: Q4 proposal — attached the revised numbers, let me know if the scope works.",
     time: "34m",
+    ticketPriority: "medium",
+    status: "pending",
+    assignee: "Sarah Jenkins",
   },
   {
     id: "sana",
     name: "Sana Parveen",
+    email: "sana.p@glamourretail.com",
+    company: "Glamour Retail",
+    planTier: "Starter",
     initials: "SP",
     channel: "messenger",
     avatar: { background: "#F6DDF0", color: "#6B1B5A" },
     preview: "Is the sample still available in blue?",
     time: "1h",
+    ticketPriority: "low",
+    status: "open",
+    assignee: "You",
   },
   {
     id: "esther",
     name: "Esther Howard",
+    email: "e.howard@crestview.org",
+    company: "Crestview Capital",
+    planTier: "Enterprise",
     initials: "EH",
     channel: "whatsapp",
     avatar: { background: "#FFE4E1", color: "#7A1F1F" },
-    preview: "Yes, I saw your message. I'm writing…",
+    preview: "Yes, I saw your message. I'm writing the full reply now — just need a moment.",
     time: "3h",
+    ticketPriority: "high",
+    status: "open",
   },
   {
     id: "sophia",
     name: "Sophia Rodriguez",
+    email: "sophia@projecty.xyz",
+    company: "Project Y Labs",
+    planTier: "Growth",
     initials: "SR",
     channel: "telegram",
     avatar: { background: "#D9F2F7", color: "#0B4F63" },
-    preview: "I'm currently working on Project Y…",
+    preview: "I'm currently working on Project Y and sharing the update before lunch.",
     time: "5h",
+    ticketPriority: "medium",
+    status: "resolved",
   },
   {
     id: "leslie",
     name: "Leslie Alexander",
+    email: "leslie.a@beaconhealth.com",
+    company: "Beacon Health",
+    planTier: "Starter",
     initials: "LA",
     channel: "whatsapp",
     avatar: { background: "#E9E2FF", color: "#40308A" },
-    preview: "Please be informed that a new policy…",
+    preview: "Please be informed that a new policy takes effect from Monday.",
     time: "10h",
+    ticketPriority: "low",
+    status: "resolved",
   },
   {
     id: "chloe",
     name: "Chloe Patel",
+    email: "c.patel@horizon.co",
+    company: "Horizon Dynamics",
+    planTier: "Free",
     initials: "CP",
     channel: "messenger",
     avatar: { background: "#E6F4D7", color: "#2E5410" },
-    preview: "This is a friendly reminder on the deadline",
+    preview: "This is a friendly reminder that the deadline is tomorrow at 5 PM.",
     time: "15h",
+    ticketPriority: "low",
+    status: "resolved",
   },
   {
     id: "elise",
     name: "Elise Hunt",
+    email: "elise.hunt@nexusventures.vc",
+    company: "Nexus Ventures",
+    planTier: "Enterprise",
     initials: "EH",
     channel: "email",
     avatar: { background: "#FFF1C2", color: "#6B4A00" },
-    preview: "Following up on the contract draft",
+    preview: "Following up on the contract draft — could you review section 4?",
     time: "2d",
+    ticketPriority: "high",
+    status: "pending",
   },
 ];
 
+export const people = initialPeople;
+
 export const personById = Object.fromEntries(
-  people.map((person) => [person.id, person]),
+  initialPeople.map((person) => [person.id, person]),
 ) as Record<string, Person>;
 
 export const selfAuthor: Author = {
@@ -156,7 +251,7 @@ export const selfAuthor: Author = {
   avatar: { background: "#E8E9FB", color: "#3730A3" },
 };
 
-const authorEntries = people.map((person) => [
+const authorEntries = initialPeople.map((person) => [
   person.id,
   {
     id: person.id,
@@ -180,7 +275,7 @@ export const initialMessages: Message[] = [
     time: "9:12 AM",
     body: "আপনার ইনভয়েসটি পেয়েছি, পেমেন্ট আগামীকাল হবে।",
     translation: "Got the invoice, payment will be made tomorrow.",
-    tags: ["invoice"],
+    tags: ["invoice", "urgent"],
   },
   {
     id: "m-maya-1",
@@ -189,6 +284,7 @@ export const initialMessages: Message[] = [
     channel: "slack",
     time: "9:40 AM",
     body: "Can you confirm the delivery date? The client is asking again.",
+    tags: ["enterprise", "sla"],
     reactions: [
       { emoji: "👍", count: 2, reacted: true },
       { emoji: "👀", count: 1 },
@@ -199,12 +295,22 @@ export const initialMessages: Message[] = [
         authorId: "me",
         time: "9:42 AM",
         body: "Checking with the warehouse now, will update you shortly.",
+        replyTo: {
+          id: "m-maya-1",
+          authorName: "Maya Alvarez",
+          body: "Can you confirm the delivery date? The client is asking again.",
+        },
       },
       {
         id: "r-maya-2",
         authorId: "maya",
         time: "9:44 AM",
         body: "Thanks, appreciated.",
+        replyTo: {
+          id: "r-maya-1",
+          authorName: "You",
+          body: "Checking with the warehouse now, will update you shortly.",
+        },
         reactions: [{ emoji: "❤️", count: 1 }],
       },
     ],
@@ -217,6 +323,7 @@ export const initialMessages: Message[] = [
     time: "10:05 AM",
     body: "Re: Q4 proposal — attached the revised numbers, let me know if the scope works.",
     attachment: { name: "Q4-proposal-v2.pdf", size: "248 KB" },
+    tags: ["proposal"],
   },
   {
     id: "m-sana-1",
@@ -288,4 +395,72 @@ export const storyBanner = {
   personId: "sophia",
   title: "New in Telegram",
   text: "Sophia: “Sharing the Project Y update now.”",
+};
+
+export const initialApiKeys: ApiKeyItem[] = [
+  {
+    id: "key_live_99a81",
+    name: "Production Ingestion Webhook",
+    keyPrefix: "pk_live_89b2",
+    createdAt: "2026-10-15",
+    lastUsedAt: "2 minutes ago",
+  },
+  {
+    id: "key_live_12c44",
+    name: "Zapier / Make Integration",
+    keyPrefix: "pk_live_33c1",
+    createdAt: "2026-11-01",
+    lastUsedAt: "1 hour ago",
+  },
+];
+
+export const initialWebhookEvents: WebhookEventItem[] = [
+  {
+    id: "evt_101",
+    channel: "slack",
+    event: "message.channels",
+    timestamp: "11:42:05",
+    payload: '{"type":"message","user":"U9921","text":"Can you confirm date?"}',
+    status: "delivered",
+  },
+  {
+    id: "evt_102",
+    channel: "whatsapp",
+    event: "messages.upsert",
+    timestamp: "11:40:19",
+    payload: '{"from":"+8801711982233","text":"Got invoice, payment tomorrow"}',
+    status: "delivered",
+  },
+  {
+    id: "evt_103",
+    channel: "email",
+    event: "email.received",
+    timestamp: "11:28:44",
+    payload: '{"subject":"Re: Q4 proposal","attachments":1}',
+    status: "delivered",
+  },
+];
+
+export const initialSettings: WorkspaceSettings = {
+  workspaceName: "Unified Inbox",
+  workspaceSlug: "inbox",
+  companyDomain: "unifiedinbox.io",
+  supportEmail: "support@unifiedinbox.io",
+  timezone: "UTC - 05:00 Eastern Time (US & Canada)",
+  theme: "light",
+  density: "compact",
+  enableAiSuggestions: true,
+  enableAutoTranslation: true,
+  defaultTranslateLanguage: "en",
+  autoResolveAfterDays: 7,
+  notificationSounds: true,
+  desktopNotifications: true,
+  emailDigest: "daily",
+  customTags: [
+    { id: "urgent", name: "urgent", color: "#DC2626" },
+    { id: "invoice", name: "invoice", color: "#D97706" },
+    { id: "contract", name: "contract", color: "#2563EB" },
+    { id: "enterprise", name: "enterprise", color: "#7C3AED" },
+    { id: "sla", name: "sla", color: "#059669" },
+  ],
 };

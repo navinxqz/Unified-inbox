@@ -1,11 +1,13 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { RefObject } from "react";
 import {
   Bot,
+  Check,
   Languages,
   Paperclip,
+  Reply as ReplyIcon,
   SendHorizontal,
   Smile,
   Sparkles,
@@ -13,7 +15,7 @@ import {
   X,
 } from "lucide-react";
 
-import type { Attachment } from "@/features/inbox/types";
+import type { Attachment, QuotedMessage } from "@/features/inbox/types";
 import { cn } from "@/lib/utils";
 
 function formatFileSize(bytes: number) {
@@ -21,6 +23,26 @@ function formatFileSize(bytes: number) {
   if (bytes < 1024 * 1024) return `${Math.round(bytes / 1024)} KB`;
   return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
 }
+
+const COMMON_EMOJIS = [
+  "🙂", "😄", "👍", "❤️", "🔥", "🎉", "🙌", "🙏",
+  "👋", "✅", "🚀", "💡", "👀", "✨", "💯", "🤝",
+  "👏", "😎", "😅", "👌", "⭐", "💼", "📩", "⏰",
+];
+
+const AVAILABLE_TAGS = [
+  "urgent", "invoice", "follow-up", "contract", "support",
+  "client", "proposal", "bug", "feature", "delivered",
+];
+
+const TARGET_LANGUAGES = [
+  { code: "en", label: "English" },
+  { code: "es", label: "Spanish (Español)" },
+  { code: "fr", label: "French (Français)" },
+  { code: "bn", label: "Bengali (বাংলা)" },
+  { code: "de", label: "German (Deutsch)" },
+  { code: "ja", label: "Japanese (日本語)" },
+];
 
 type ComposerProps = {
   value: string;
@@ -30,11 +52,17 @@ type ComposerProps = {
   inputRef: RefObject<HTMLInputElement | null>;
   attachment: Attachment | null;
   onAttachmentChange: (attachment: Attachment | null) => void;
+  replyingTo: QuotedMessage | null;
+  onCancelReply: () => void;
+  tags: string[];
+  onTagsChange: (tags: string[]) => void;
+  targetLanguage: string | null;
+  onTargetLanguageChange: (lang: string | null) => void;
   onSubmit: () => void;
 };
 
 const toolButtonStyles =
-  "inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg px-3 text-[13px] font-semibold text-ink-soft transition-colors hover:bg-border/70 focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-primary";
+  "inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg px-2.5 text-[13px] font-semibold text-ink-soft transition-colors hover:bg-border/70 focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-primary";
 
 export function Composer({
   value,
@@ -44,14 +72,80 @@ export function Composer({
   inputRef,
   attachment,
   onAttachmentChange,
+  replyingTo,
+  onCancelReply,
+  tags,
+  onTagsChange,
+  targetLanguage,
+  onTargetLanguageChange,
   onSubmit,
 }: ComposerProps) {
   const fileRef = useRef<HTMLInputElement>(null);
+  const [showEmojiPicker, setShowEmojiPicker] = useState(false);
+  const [showTagPicker, setShowTagPicker] = useState(false);
+  const [showTranslatePicker, setShowTranslatePicker] = useState(false);
+  const [customTagInput, setCustomTagInput] = useState("");
+
+  const emojiContainerRef = useRef<HTMLDivElement>(null);
+  const tagContainerRef = useRef<HTMLDivElement>(null);
+  const translateContainerRef = useRef<HTMLDivElement>(null);
+
+  // Close popovers on click outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      const target = event.target as Node;
+      if (
+        emojiContainerRef.current &&
+        !emojiContainerRef.current.contains(target)
+      ) {
+        setShowEmojiPicker(false);
+      }
+      if (
+        tagContainerRef.current &&
+        !tagContainerRef.current.contains(target)
+      ) {
+        setShowTagPicker(false);
+      }
+      if (
+        translateContainerRef.current &&
+        !translateContainerRef.current.contains(target)
+      ) {
+        setShowTranslatePicker(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   const canSend = value.trim().length > 0 || attachment !== null;
+
+  function handleSelectEmoji(emoji: string) {
+    onChange(`${value}${value && !value.endsWith(" ") ? " " : ""}${emoji} `);
+    setShowEmojiPicker(false);
+    inputRef.current?.focus();
+  }
+
+  function handleToggleTag(tag: string) {
+    if (tags.includes(tag)) {
+      onTagsChange(tags.filter((t) => t !== tag));
+    } else {
+      onTagsChange([...tags, tag]);
+    }
+  }
+
+  function handleAddCustomTag() {
+    const cleaned = customTagInput.trim().replace(/^#/, "");
+    if (cleaned && !tags.includes(cleaned)) {
+      onTagsChange([...tags, cleaned]);
+      setCustomTagInput("");
+    }
+  }
 
   return (
     <div className="shrink-0 px-6 pt-1 pb-5">
-      <div className="mb-2.5 flex items-center gap-2 overflow-x-auto pb-0.5">
+      {/* Suggestions */}
+      <div className="mb-2 flex items-center gap-2 overflow-x-auto pb-0.5">
         <span className="shrink-0 text-xs font-semibold text-muted-foreground">
           Suggested
         </span>
@@ -63,7 +157,7 @@ export function Composer({
               onChange(suggestion);
               inputRef.current?.focus();
             }}
-            className="h-[34px] shrink-0 rounded-full border border-primary-border bg-background px-3.5 text-[13px] font-medium whitespace-nowrap text-primary-strong transition-colors hover:bg-primary-soft focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-primary"
+            className="h-[32px] shrink-0 rounded-full border border-primary-border bg-background px-3 text-[13px] font-medium whitespace-nowrap text-primary-strong transition-colors hover:bg-primary-soft focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-primary"
           >
             {suggestion}
           </button>
@@ -75,19 +169,84 @@ export function Composer({
           event.preventDefault();
           onSubmit();
         }}
-        className="rounded-xl border border-border bg-surface p-1"
+        className="relative rounded-xl border border-border bg-surface p-1 shadow-xs"
       >
+        {/* Modern Replying-To Banner (WhatsApp / Discord / Messenger style) */}
+        {replyingTo ? (
+          <div className="mx-1 mt-1 mb-1 flex items-center justify-between gap-2 rounded-lg border-l-4 border-primary bg-primary-soft/80 px-3 py-1.5 text-xs">
+            <div className="flex min-w-0 items-center gap-2">
+              <ReplyIcon className="size-3.5 text-primary shrink-0" />
+              <div className="min-w-0 truncate">
+                <span className="font-semibold text-primary-strong">
+                  Replying to {replyingTo.authorName}:{" "}
+                </span>
+                <span className="text-muted-foreground">{replyingTo.body}</span>
+              </div>
+            </div>
+            <button
+              type="button"
+              aria-label="Cancel reply"
+              onClick={onCancelReply}
+              className="flex size-5 shrink-0 items-center justify-center rounded text-muted-foreground hover:bg-white/80 hover:text-foreground"
+            >
+              <X className="size-3.5" />
+            </button>
+          </div>
+        ) : null}
+
+        {/* Selected Tags Chips */}
+        {tags.length > 0 ? (
+          <div className="mx-2 mt-1.5 flex flex-wrap gap-1">
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className="inline-flex items-center gap-1 rounded-md bg-warning-soft px-2 py-0.5 text-xs font-semibold text-warning"
+              >
+                #{tag}
+                <button
+                  type="button"
+                  onClick={() => handleToggleTag(tag)}
+                  className="hover:text-black"
+                >
+                  <X className="size-3" />
+                </button>
+              </span>
+            ))}
+          </div>
+        ) : null}
+
+        {/* Selected Target Language Badge */}
+        {targetLanguage ? (
+          <div className="mx-2 mt-1.5 flex items-center gap-1.5 text-xs text-primary font-medium">
+            <Languages className="size-3" />
+            <span>
+              Auto-translate to:{" "}
+              <b>
+                {TARGET_LANGUAGES.find((l) => l.code === targetLanguage)?.label}
+              </b>
+            </span>
+            <button
+              type="button"
+              onClick={() => onTargetLanguageChange(null)}
+              className="ml-1 text-muted-foreground hover:text-foreground"
+            >
+              <X className="size-3" />
+            </button>
+          </div>
+        ) : null}
+
+        {/* Attached File Preview */}
         {attachment ? (
           <div className="mx-1 mt-1 flex items-center gap-2 rounded-lg border border-border bg-background px-2.5 py-1.5 text-[13px]">
             <Paperclip
               aria-hidden="true"
-              className="size-3.5 shrink-0"
+              className="size-3.5 shrink-0 text-primary"
               strokeWidth={2}
             />
             <span className="min-w-0 flex-1 truncate font-semibold">
               {attachment.name}
             </span>
-            <span className="shrink-0 text-muted-foreground">
+            <span className="shrink-0 text-muted-foreground text-xs">
               {attachment.size}
             </span>
             <button
@@ -111,7 +270,7 @@ export function Composer({
           onChange={(event) => onChange(event.target.value)}
           placeholder={placeholder}
           autoComplete="off"
-          className="h-11 w-full border-0 bg-transparent px-2 text-[15px] text-foreground outline-none placeholder:text-muted-foreground"
+          className="h-11 w-full border-0 bg-transparent px-2.5 text-[15px] text-foreground outline-none placeholder:text-muted-foreground"
         />
 
         <div className="flex flex-wrap items-center gap-0.5 pb-1">
@@ -140,22 +299,49 @@ export function Composer({
             onClick={() => fileRef.current?.click()}
             className={cn(
               "flex size-9 items-center justify-center rounded-lg text-ink-soft transition-colors hover:bg-border/70 focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-primary",
+              attachment && "text-primary bg-primary-soft",
             )}
           >
             <Paperclip className="size-[18px]" strokeWidth={2} />
           </button>
 
-          <button
-            type="button"
-            aria-label="Insert emoji"
-            title="Emoji"
-            onClick={() => onChange(`${value} 🙂`)}
-            className="flex size-9 items-center justify-center rounded-lg text-ink-soft transition-colors hover:bg-border/70 focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-primary"
-          >
-            <Smile className="size-[18px]" strokeWidth={2} />
-          </button>
+          {/* Emoji Picker Popover */}
+          <div ref={emojiContainerRef} className="relative">
+            <button
+              type="button"
+              aria-label="Insert emoji"
+              title="Emoji"
+              onClick={() => setShowEmojiPicker((v) => !v)}
+              className={cn(
+                "flex size-9 items-center justify-center rounded-lg text-ink-soft transition-colors hover:bg-border/70 focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-primary",
+                showEmojiPicker && "bg-border text-foreground",
+              )}
+            >
+              <Smile className="size-[18px]" strokeWidth={2} />
+            </button>
 
-          <span aria-hidden="true" className="mx-1.5 h-5 w-px bg-border" />
+            {showEmojiPicker ? (
+              <div className="absolute bottom-11 left-0 z-30 w-64 rounded-xl border border-border bg-background p-2.5 shadow-xl">
+                <p className="mb-1.5 text-xs font-semibold text-muted-foreground">
+                  Pick an emoji
+                </p>
+                <div className="grid grid-cols-8 gap-1">
+                  {COMMON_EMOJIS.map((emoji) => (
+                    <button
+                      key={emoji}
+                      type="button"
+                      onClick={() => handleSelectEmoji(emoji)}
+                      className="flex size-7 items-center justify-center rounded text-base hover:bg-surface active:scale-95"
+                    >
+                      {emoji}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+          </div>
+
+          <span aria-hidden="true" className="mx-1 h-5 w-px bg-border" />
 
           <button
             type="button"
@@ -170,33 +356,136 @@ export function Composer({
             <Sparkles className="size-4" strokeWidth={2} />
             Suggest
           </button>
-          <button
-            type="button"
-            aria-label="Translate draft"
-            title="Translate (coming soon)"
-            className={toolButtonStyles}
-          >
-            <Languages className="size-4" strokeWidth={2} />
-            Translate
-          </button>
+
+          {/* Translate Options Dropdown */}
+          <div ref={translateContainerRef} className="relative">
+            <button
+              type="button"
+              aria-label="Translate draft"
+              title="Translate options"
+              onClick={() => setShowTranslatePicker((v) => !v)}
+              className={cn(
+                toolButtonStyles,
+                targetLanguage && "bg-primary-soft text-primary-strong",
+              )}
+            >
+              <Languages className="size-4" strokeWidth={2} />
+              Translate
+            </button>
+
+            {showTranslatePicker ? (
+              <div className="absolute bottom-11 left-0 z-30 w-52 rounded-xl border border-border bg-background p-1.5 shadow-xl">
+                <p className="px-2 py-1 text-xs font-semibold text-muted-foreground">
+                  Translate message to:
+                </p>
+                {TARGET_LANGUAGES.map((lang) => (
+                  <button
+                    key={lang.code}
+                    type="button"
+                    onClick={() => {
+                      onTargetLanguageChange(
+                        targetLanguage === lang.code ? null : lang.code,
+                      );
+                      setShowTranslatePicker(false);
+                    }}
+                    className={cn(
+                      "flex w-full items-center justify-between rounded-lg px-2 py-1.5 text-left text-xs transition-colors hover:bg-surface",
+                      targetLanguage === lang.code &&
+                        "bg-primary-soft font-semibold text-primary",
+                    )}
+                  >
+                    <span>{lang.label}</span>
+                    {targetLanguage === lang.code ? (
+                      <Check className="size-3.5" />
+                    ) : null}
+                  </button>
+                ))}
+              </div>
+            ) : null}
+          </div>
+
           <button
             type="button"
             aria-label="Ask the bot"
-            title="Bot (coming soon)"
+            title="Bot assistant"
+            onClick={() => {
+              onChange("Bot: How can I help you today?");
+            }}
             className={toolButtonStyles}
           >
             <Bot className="size-4" strokeWidth={2} />
             Bot
           </button>
-          <button
-            type="button"
-            aria-label="Tag this reply"
-            title="Tagify"
-            className={cn(toolButtonStyles, "bg-warning-soft text-warning")}
-          >
-            <Tag className="size-4" strokeWidth={2} />
-            Tagify
-          </button>
+
+          {/* Tagify Options Popover */}
+          <div ref={tagContainerRef} className="relative">
+            <button
+              type="button"
+              aria-label="Tag this reply"
+              title="Tagify"
+              onClick={() => setShowTagPicker((v) => !v)}
+              className={cn(
+                toolButtonStyles,
+                tags.length > 0
+                  ? "bg-warning-soft text-warning font-bold"
+                  : "hover:bg-border/70",
+              )}
+            >
+              <Tag className="size-4" strokeWidth={2} />
+              Tagify {tags.length > 0 ? `(${tags.length})` : ""}
+            </button>
+
+            {showTagPicker ? (
+              <div className="absolute bottom-11 left-0 z-30 w-64 rounded-xl border border-border bg-background p-3 shadow-xl">
+                <p className="mb-2 text-xs font-semibold text-muted-foreground">
+                  Attach tags to message:
+                </p>
+                <div className="flex flex-wrap gap-1.5 mb-2.5">
+                  {AVAILABLE_TAGS.map((tag) => {
+                    const active = tags.includes(tag);
+                    return (
+                      <button
+                        key={tag}
+                        type="button"
+                        onClick={() => handleToggleTag(tag)}
+                        className={cn(
+                          "rounded-md px-2 py-1 text-xs font-medium transition-colors",
+                          active
+                            ? "bg-warning-soft text-warning font-semibold ring-1 ring-warning/30"
+                            : "bg-surface text-ink-soft hover:bg-border/60",
+                        )}
+                      >
+                        #{tag}
+                      </button>
+                    );
+                  })}
+                </div>
+
+                <div className="flex items-center gap-1 border-t border-border pt-2">
+                  <input
+                    type="text"
+                    value={customTagInput}
+                    onChange={(e) => setCustomTagInput(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        e.preventDefault();
+                        handleAddCustomTag();
+                      }
+                    }}
+                    placeholder="New tag..."
+                    className="min-w-0 flex-1 rounded border border-border bg-surface px-2 py-1 text-xs outline-none"
+                  />
+                  <button
+                    type="button"
+                    onClick={handleAddCustomTag}
+                    className="rounded bg-primary px-2 py-1 text-xs font-semibold text-white hover:bg-primary/90"
+                  >
+                    Add
+                  </button>
+                </div>
+              </div>
+            ) : null}
+          </div>
 
           <button
             type="submit"

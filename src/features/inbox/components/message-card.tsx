@@ -12,14 +12,17 @@ import { authorById, channelById, selfAuthor } from "@/features/inbox/data";
 import type { ChannelId, Message, Reaction } from "@/features/inbox/types";
 import { cn } from "@/lib/utils";
 
+import { ChannelIcon } from "@/features/inbox/components/channel-icon";
+
 function ChannelTag({ channel }: { channel: ChannelId }) {
   const source = channelById[channel];
 
   return (
     <span
-      className="inline-flex h-5 items-center rounded-md px-2 text-xs font-semibold"
+      className="inline-flex h-5 items-center gap-1.5 rounded-md px-2 text-xs font-semibold"
       style={{ backgroundColor: source.soft, color: source.softForeground }}
     >
+      <ChannelIcon channel={channel} className="size-3" />
       {source.label}
     </span>
   );
@@ -75,20 +78,31 @@ function ReactionPills({
 
 type MessageCardProps = {
   message: Message;
+  highlightedMessageId?: string | null;
+  onHoverReply?: (messageId: string | null) => void;
   onToggleReaction: (messageId: string, emoji: string, replyId?: string) => void;
-  onReply: (authorName: string) => void;
+  onReply: (replyData: { id: string; authorName: string; body: string }) => void;
 };
 
 export function MessageCard({
   message,
+  highlightedMessageId,
+  onHoverReply,
   onToggleReaction,
   onReply,
 }: MessageCardProps) {
   const author = authorById[message.authorId] ?? selfAuthor;
   const channel = message.channel ? channelById[message.channel] : undefined;
+  const isTargeted = highlightedMessageId === message.id;
 
   return (
-    <article className="group relative flex gap-3.5 px-6 py-2.5 transition-colors hover:bg-surface/70">
+    <article
+      id={`msg-${message.id}`}
+      className={cn(
+        "group relative flex gap-3.5 px-6 py-2.5 transition-all duration-200",
+        isTargeted ? "bg-primary-soft/90 ring-2 ring-primary/40 rounded-xl" : "hover:bg-surface/70",
+      )}
+    >
       <Avatar
         initials={author.initials}
         background={author.avatar.background}
@@ -101,6 +115,23 @@ export function MessageCard({
           {channel ? <ChannelTag channel={channel.id} /> : null}
           <span className="text-xs text-muted-foreground">{message.time}</span>
         </div>
+
+        {/* Quoted message reference (WhatsApp / Discord / Messenger style) */}
+        {message.replyTo ? (
+          <div
+            onMouseEnter={() => onHoverReply?.(message.replyTo?.id ?? null)}
+            onMouseLeave={() => onHoverReply?.(null)}
+            className="my-1.5 flex max-w-lg cursor-pointer items-center gap-2 rounded-lg border-l-4 border-primary bg-primary-soft/50 px-3 py-1.5 text-xs text-ink-soft transition-colors hover:bg-primary-soft"
+          >
+            <ReplyIcon className="size-3 text-primary-strong shrink-0" />
+            <div className="min-w-0 flex-1 truncate">
+              <span className="font-semibold text-primary-strong">
+                {message.replyTo.authorName}:{" "}
+              </span>
+              <span className="text-muted-foreground">{message.replyTo.body}</span>
+            </div>
+          </div>
+        ) : null}
 
         <p className="mt-0.5 text-[15px] leading-relaxed text-ink-soft">
           {message.body}
@@ -137,7 +168,6 @@ export function MessageCard({
             <Paperclip
               aria-hidden="true"
               className="size-4 shrink-0"
-              strokeWidth={2}
             />
             <b className="font-semibold">{message.attachment.name}</b>
             <span className="text-muted-foreground">
@@ -157,7 +187,11 @@ export function MessageCard({
               const replyAuthor = authorById[reply.authorId] ?? selfAuthor;
 
               return (
-                <div key={reply.id} className="relative flex gap-2.5">
+                <div
+                  key={reply.id}
+                  id={`msg-${reply.id}`}
+                  className="relative flex gap-2.5"
+                >
                   <span
                     aria-hidden="true"
                     className="absolute top-3.5 -left-[22px] h-0.5 w-[18px] bg-thread"
@@ -177,6 +211,23 @@ export function MessageCard({
                         {reply.time}
                       </span>
                     </div>
+
+                    {/* Quoted preview on reply */}
+                    {reply.replyTo ? (
+                      <div
+                        onMouseEnter={() => onHoverReply?.(reply.replyTo?.id ?? null)}
+                        onMouseLeave={() => onHoverReply?.(null)}
+                        className="my-1 flex max-w-md cursor-pointer items-center gap-1.5 rounded border-l-2 border-primary bg-primary-soft/40 px-2 py-1 text-xs text-ink-soft hover:bg-primary-soft"
+                      >
+                        <span className="font-semibold text-primary-strong">
+                          {reply.replyTo.authorName}:
+                        </span>
+                        <span className="truncate text-muted-foreground">
+                          {reply.replyTo.body}
+                        </span>
+                      </div>
+                    ) : null}
+
                     <p className="mt-0.5 text-[15px] leading-relaxed text-ink-soft">
                       {reply.body}
                     </p>
@@ -222,7 +273,13 @@ export function MessageCard({
           type="button"
           aria-label={`Reply to ${author.name}`}
           title="Reply"
-          onClick={() => onReply(author.name)}
+          onClick={() =>
+            onReply({
+              id: message.id,
+              authorName: author.name,
+              body: message.body,
+            })
+          }
           className={toolbarButtonStyles}
         >
           <ReplyIcon className="size-[18px]" strokeWidth={2} />
