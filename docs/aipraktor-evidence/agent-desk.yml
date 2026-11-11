@@ -1,0 +1,195 @@
+- generic [active] [ref=f6e1]:
+  - generic [ref=f6e2]:
+    - generic [ref=f6e3]:
+      - complementary [ref=f6e4]:
+        - generic [ref=f6e11]:
+          - generic [ref=f6e12]: AiPraktor
+          - generic [ref=f6e13]: control plane
+        - navigation [ref=f6e14]:
+          - link "Setup guide 0/8" [ref=f6e190] [cursor=pointer]:
+            - /url: /dashboard#setup-guide
+            - text: Setup guide
+            - generic [ref=f6e194]: 0/8
+          - generic [ref=f6e15]:
+            - generic [ref=f6e16]: Work
+            - link "Overview" [ref=f6e17] [cursor=pointer]:
+              - /url: /dashboard
+            - link "Inbox" [ref=f6e23] [cursor=pointer]:
+              - /url: /dashboard/inbox
+            - link "Notifications" [ref=f6e27] [cursor=pointer]:
+              - /url: /dashboard/notifications
+            - link "Comments" [ref=f6e36] [cursor=pointer]:
+              - /url: /dashboard/comments
+            - link "Saved replies ⚡ Auto" [ref=f6e40] [cursor=pointer]:
+              - /url: /dashboard/saved-replies
+              - text: Saved replies
+              - generic "Saved replies can answer customers automatically, free" [ref=f6e43]:
+                - text: ⚡
+                - generic [ref=f6e44]: Auto
+            - link "Orders" [ref=f6e45] [cursor=pointer]:
+              - /url: /dashboard/orders
+            - link "Activity" [ref=f6e49] [cursor=pointer]:
+              - /url: /dashboard/activity
+            - link "Analytics" [ref=f6e52] [cursor=pointer]:
+              - /url: /dashboard/analytics
+            - link "Announcements" [ref=f6e55] [cursor=pointer]:
+              - /url: /dashboard/announcements
+          - generic [ref=f6e59]:
+            - generic [ref=f6e60]: Grow
+            - link "Follow-ups" [ref=f6e61] [cursor=pointer]:
+              - /url: /dashboard/followups
+            - link "Broadcasts" [ref=f6e67] [cursor=pointer]:
+              - /url: /dashboard/broadcasts
+            - link "Products" [ref=f6e71] [cursor=pointer]:
+              - /url: /dashboard/products
+            - link "Posts" [ref=f6e76] [cursor=pointer]:
+              - /url: /dashboard/posts
+            - link "Website chat" [ref=f6e82] [cursor=pointer]:
+              - /url: /dashboard/website
+            - link "Agent Desk" [ref=f6e86] [cursor=pointer]:
+              - /url: /dashboard/agent-desk
+          - generic [ref=f6e89]:
+            - generic [ref=f6e90]: Set up
+            - link "Pages" [ref=f6e91] [cursor=pointer]:
+              - /url: /dashboard/pages
+            - link "Business settings" [ref=f6e97] [cursor=pointer]:
+              - /url: /dashboard/business
+            - link "Billing" [ref=f6e102] [cursor=pointer]:
+              - /url: /dashboard/billing
+            - link "Team" [ref=f6e105] [cursor=pointer]:
+              - /url: /dashboard/submasters
+            - link "Setup" [ref=f6e111] [cursor=pointer]:
+              - /url: /dashboard/setup
+            - link "Video guide" [ref=f6e115] [cursor=pointer]:
+              - /url: /dashboard/videos
+          - generic [ref=f6e119]:
+            - generic [ref=f6e120]: Help
+            - link "AiPraktor Agent" [ref=f6e121] [cursor=pointer]:
+              - /url: /dashboard/help
+            - link "Feedback" [ref=f6e125] [cursor=pointer]:
+              - /url: /dashboard/feedback
+        - generic [ref=f6e128]:
+          - generic "Auto-revert sweeper is running" [ref=f6e130]: SYSTEM ONLINE
+          - generic [ref=f6e135]:
+            - generic [ref=f6e136]: Signed in · Business owner
+            - generic [ref=f6e137]: navinmdnawshin@gmail.com
+          - switch "On duty" [checked] [ref=f6e195] [cursor=pointer]
+          - link "This device" [ref=f6e138] [cursor=pointer]:
+            - /url: /dashboard/device
+          - button "Sign out" [ref=f6e141] [cursor=pointer]
+      - main [ref=f6e145]:
+        - generic [ref=f6e146]:
+          - generic [ref=f6e147]:
+            - generic [ref=f6e148]: LIVE
+            - generic [ref=f6e151]: AI ⟷ HUMAN
+          - generic [ref=f6e152]:
+            - button "Watch how · 5 videos" [ref=f6e198] [cursor=pointer]
+            - radiogroup "Colour theme" [ref=f6e153]:
+              - radio "Light" [checked] [ref=f6e154]
+              - radio "Dark" [ref=f6e162] [cursor=pointer]
+            - generic "Auto-revert sweeper is running" [ref=f6e167]: SYSTEM ONLINE
+            - generic [ref=f6e172]: 11:39:41
+        - generic [ref=f6e205]:
+          - button "The AiPraktor Agent is now on for everyone. See what it can do in a 9-minute video" [ref=f6e208] [cursor=pointer]
+          - button "Read" [ref=f6e209] [cursor=pointer]
+          - button "Hide this line" [ref=f6e210] [cursor=pointer]
+        - generic [ref=f6e175]:
+          - generic [ref=f6e177]:
+            - generic [ref=f6e178]: agent desk
+            - heading "Agent Desk" [level=1] [ref=f6e179]
+            - paragraph [ref=f6e180]: Your part of your assistant's instructions. Add what it should know, test it with a message, and publish it when it answers the way you want.
+          - generic [ref=f6e181]:
+            - generic [ref=f6e182]: Page
+            - generic [ref=f6e214]: Coffee 9
+            - 'button "Video: what the agent can do · 9 min" [ref=f6e216] [cursor=pointer]'
+          - generic [ref=f6e220]:
+            - group "Language" [ref=f6e222]:
+              - button "বাংলা" [ref=f6e223] [cursor=pointer]
+              - button "English" [ref=f6e224] [cursor=pointer]
+            - generic [ref=f6e225]:
+              - generic [ref=f6e226]:
+                - status "Loading" [ref=f6e228]
+                - generic [ref=f6e231]:
+                  - generic [ref=f6e232]: Business name and open hours
+                  - paragraph [ref=f6e238]: Your assistant introduces your shop by this name and tells customers when your team is around. Saved straight away.
+                  - generic [ref=f6e239]:
+                    - generic [ref=f6e240]:
+                      - generic [ref=f6e241]: Business name
+                      - textbox "Business name" [ref=f6e242]:
+                        - /placeholder: e.g. Rima Fashion House
+                        - text: Coffee 9
+                    - generic [ref=f6e243]:
+                      - generic [ref=f6e244]: Open hours
+                      - textbox "Open hours" [ref=f6e245]:
+                        - /placeholder: e.g. Every day, 10 am – 10 pm
+                  - button "Save" [disabled] [ref=f6e247]
+                - generic [ref=f6e250]:
+                  - generic [ref=f6e251]:
+                    - generic [ref=f6e252]:
+                      - generic [ref=f6e253]: Your instructions
+                      - paragraph [ref=f6e254]: What your assistant knows about your shop and how you want it to answer. Add a block for anything — an offer, a policy, your delivery charges written however they work for you.
+                    - generic "Characters in your own instructions, as drafted" [ref=f6e255]: 0 characters
+                  - generic [ref=f6e256]:
+                    - generic [ref=f6e257]:
+                      - generic [ref=f6e259]:
+                        - strong [ref=f6e260]: About the shop
+                        - generic [ref=f6e261]: Empty
+                      - paragraph [ref=f6e262]: What your shop is and what you sell, your address, your hotline and how customers pay. Plain sentences, one fact per line. Your shop name and opening hours are set separately, and delivery charges have their own block.
+                      - button "Write" [ref=f6e264] [cursor=pointer]
+                    - generic [ref=f6e268]:
+                      - generic [ref=f6e270]:
+                        - strong [ref=f6e271]: Delivery — charges, times and when you ship
+                        - generic [ref=f6e272]: Empty
+                      - paragraph [ref=f6e273]: "Three things, one per line — your assistant quotes them exactly and works the rest out. 1. WHAT DELIVERY COSTS, however it works for you — by area, by weight, or both. \"Delivery charge — Inside Dhaka: 70 BDT. Outside Dhaka: 140 BDT.\" 2. HOW LONG IT TAKES once the courier has it. \"Delivery time — after handover it usually reaches the customer within about 24 hours inside Dhaka and about 48 hours outside Dhaka.\" 3. WHEN YOU HAND PARCELS OVER. This is the one most shops forget, and it is what lets the assistant tell a customer which day their order arrives instead of saying it does not know. \"Shipping — orders placed before 5pm are normally handed to the courier the same day; after that, the next working day.\" Leave out anything that is not true for your shop — the assistant hands the chat to your team rather than guessing at what is missing."
+                      - button "Write" [ref=f6e275] [cursor=pointer]
+                    - generic [ref=f6e279]:
+                      - generic [ref=f6e281]:
+                        - strong [ref=f6e282]: Your voice
+                        - generic [ref=f6e283]: Empty
+                      - paragraph [ref=f6e284]: "How your shop sounds: formal or friendly, which emojis you use, your greeting for a brand-new conversation, and what you never say."
+                      - button "Write" [ref=f6e286] [cursor=pointer]
+                    - generic [ref=f6e290]:
+                      - generic [ref=f6e292]:
+                        - strong [ref=f6e293]: Your exact words
+                        - generic [ref=f6e294]: Empty
+                      - paragraph [ref=f6e295]: Answers you want given word for word — the reply to a discount request, your refund or exchange policy, your warranty line, what to say when something is out of stock. Put each one on its own line, in the language the customer reads.
+                      - button "Write" [ref=f6e297] [cursor=pointer]
+                    - generic [ref=f6e301]:
+                      - generic [ref=f6e303]:
+                        - strong [ref=f6e304]: Anything else
+                        - generic [ref=f6e305]: Empty
+                      - paragraph [ref=f6e306]: Rules that fit nowhere else — a promotion running this week, a product to push, a question your customers keep asking. Short and specific beats long and general.
+                      - button "Write" [ref=f6e308] [cursor=pointer]
+                  - button "Add instruction" [ref=f6e312] [cursor=pointer]
+                - generic [ref=f6e314]:
+                  - generic [ref=f6e315]:
+                    - generic [ref=f6e316]: Status
+                    - button "Checking…" [disabled] [ref=f6e323]
+                  - generic [ref=f6e329]: Checking…
+                - generic [ref=f6e330]:
+                  - generic [ref=f6e331]: Published versions
+                  - paragraph [ref=f6e332]: Nothing published from this desk yet. Your first publish can be undone.
+                  - button "Undo last publish" [disabled] [ref=f6e333]
+              - generic [ref=f6e338]:
+                - generic [ref=f6e339]:
+                  - generic [ref=f6e340]:
+                    - generic [ref=f6e341]: Test it
+                    - paragraph [ref=f6e342]: Write, send photos or a voice note as if you were a customer — your real assistant answers, with your published instructions. You see exactly what a customer would see. Nobody else sees it.
+                  - button "New chat" [disabled] [ref=f6e343]
+                - generic [ref=f6e346]:
+                  - generic [ref=f6e348]:
+                    - generic [ref=f6e349]: Write the first message as a customer
+                    - generic [ref=f6e350]: e.g. “How much is delivery?” — or send a product photo and ask “price?”
+                  - generic [ref=f6e352]:
+                    - button "Send photos" [ref=f6e354] [cursor=pointer]
+                    - generic [ref=f6e359]:
+                      - textbox "Write as the customer…" [ref=f6e360]
+                      - button "Speak instead of typing" [ref=f6e361] [cursor=pointer]
+                    - button "Voice note" [ref=f6e365] [cursor=pointer]
+                - paragraph [ref=f6e367]: Test photos and voice notes are kept only for testing and deleted after 8 days.
+    - note [ref=f6e368]:
+      - paragraph [ref=f6e369]: First time here? Short videos show how this works.
+      - generic [ref=f6e370]:
+        - button "Watch" [ref=f6e371] [cursor=pointer]
+        - button "Don't need it" [ref=f6e375] [cursor=pointer]
+  - alert [ref=f6e189]

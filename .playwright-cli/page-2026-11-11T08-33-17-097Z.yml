@@ -1,0 +1,164 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Primary navigation" [ref=e4]:
+      - generic [ref=e10]:
+        - paragraph [ref=e11]: Unified Inbox
+        - paragraph [ref=e12]: ws_1794374612651_f3d05g
+      - generic [ref=e13]:
+        - generic [ref=e14]: Practice mode
+        - generic "Realtime connection is active (SSE)" [ref=e15]: Live · synced 3s
+      - navigation [ref=e19]:
+        - generic [ref=e20]:
+          - paragraph [ref=e21]: Work
+          - generic [ref=e22]:
+            - button "Overview" [ref=e23]
+            - button "Inbox 9" [ref=e30]:
+              - generic [ref=e34]: Inbox
+              - generic [ref=e35]: "9"
+            - button "Saved replies" [ref=e36]
+            - button "Comments" [ref=e40]
+            - button "Notifications 5" [ref=e44]:
+              - generic [ref=e48]: Notifications
+              - generic [ref=e49]: "5"
+            - button "Activity" [ref=e50]
+            - button "Analytics" [ref=e56]
+        - generic [ref=e60]:
+          - paragraph [ref=e61]: Grow
+          - generic [ref=e62]:
+            - button "Leads" [ref=e63]
+            - button "Orders" [ref=e69]
+            - button "Follow-ups" [ref=e74]
+            - button "Broadcasts" [ref=e81]
+            - button "Products" [ref=e86]
+            - button "Posts" [ref=e92]
+        - generic [ref=e98]:
+          - paragraph [ref=e99]: AI
+          - generic [ref=e100]:
+            - button "Agent Desk" [ref=e101]
+            - button "Knowledge" [ref=e106]
+        - generic [ref=e110]:
+          - paragraph [ref=e111]: Set up
+          - generic [ref=e112]:
+            - button "Setup guide 3/8" [ref=e113]:
+              - generic [ref=e117]: Setup guide
+              - generic [ref=e118]: 3/8
+            - button "Channels" [ref=e119]
+            - button "Website chat" [ref=e125]
+            - button "Business" [ref=e130]
+            - button "Team" [ref=e135]
+            - button "Groups" [ref=e142]
+            - button "Billing" [ref=e147]
+            - button "Workspace settings" [ref=e151]
+      - generic [ref=e156]:
+        - button "Quick actions ⌘K" [ref=e157]:
+          - text: Quick actions
+          - generic [ref=e158]: ⌘K
+        - generic [ref=e159]:
+          - generic [aria-hidden] [ref=e160]: YN
+          - generic [ref=e161]:
+            - paragraph [ref=e162]: You
+            - paragraph [ref=e163]: Owner · Manager group
+    - generic [ref=e7776]:
+      - generic [ref=e7777]:
+        - generic [ref=e7778]:
+          - heading "Team" [level=1] [ref=e7779]
+          - paragraph [ref=e7780]: Invite teammates, scope them to pages, and put them in exactly one permission group.
+        - button "Watch how · 1 min" [ref=e7782]
+      - generic [ref=e7788]:
+        - generic [ref=e7789]:
+          - generic [ref=e7790]:
+            - paragraph [ref=e7792]: Teammates
+            - paragraph [ref=e7799]: "4"
+          - generic [ref=e7800]:
+            - paragraph [ref=e7802]: Active
+            - paragraph [ref=e7807]: "3"
+          - generic [ref=e7808]:
+            - paragraph [ref=e7810]: Pending invites
+            - paragraph [ref=e7811]: "1"
+          - generic [ref=e7812]:
+            - paragraph [ref=e7814]: Groups
+            - paragraph [ref=e7815]: "5"
+        - generic [ref=e7816]:
+          - table [ref=e7818]:
+            - rowgroup [ref=e7819]:
+              - row [ref=e7820]:
+                - columnheader "Teammate" [ref=e7821]
+                - columnheader "Role" [ref=e7822]
+                - columnheader "Group" [ref=e7823]
+                - columnheader "Pages" [ref=e7824]
+                - columnheader [ref=e7825]
+            - rowgroup [ref=e7826]:
+              - row [ref=e7827]:
+                - cell [ref=e7828]:
+                  - paragraph [ref=e7829]: You
+                  - paragraph [ref=e7830]: you@unifiedinbox.io
+                - cell "Owner" [ref=e7831]
+                - cell "Manager" [ref=e7833]
+                - cell "All pages" [ref=e7834]
+                - cell "active" [ref=e7837]
+              - row [ref=e7840]:
+                - cell [ref=e7841]:
+                  - paragraph [ref=e7842]: Sarah Jenkins
+                  - paragraph [ref=e7843]: sarah@unifiedinbox.io
+                - cell "Admin" [ref=e7844]
+                - cell "Inbox" [ref=e7846]
+                - cell "WhatsApp Messenger Instagram" [ref=e7847]:
+                  - generic [ref=e7848]:
+                    - generic [ref=e7849]: WhatsApp
+                    - generic [ref=e7850]: Messenger
+                    - generic [ref=e7851]: Instagram
+                - cell "active Remove Sarah Jenkins" [ref=e7852]:
+                  - generic [ref=e7853]:
+                    - generic [ref=e7854]: active
+                    - button "Remove Sarah Jenkins" [ref=e7855]
+              - row [ref=e7859]:
+                - cell [ref=e7860]:
+                  - paragraph [ref=e7861]: Tanvir Islam
+                  - paragraph [ref=e7862]: tanvir@unifiedinbox.io
+                - cell "Member" [ref=e7863]
+                - cell "Orders" [ref=e7865]
+                - cell "Website chat WhatsApp" [ref=e7866]:
+                  - generic [ref=e7867]:
+                    - generic [ref=e7868]: Website chat
+                    - generic [ref=e7869]: WhatsApp
+                - cell "active Remove Tanvir Islam" [ref=e7870]:
+                  - generic [ref=e7871]:
+                    - generic [ref=e7872]: active
+                    - button "Remove Tanvir Islam" [ref=e7873]
+              - row [ref=e7877]:
+                - cell [ref=e7878]:
+                  - paragraph [ref=e7879]: Nabila Karim
+                  - paragraph [ref=e7880]: nabila@unifiedinbox.io
+                - cell "Viewer" [ref=e7881]
+                - cell "Accounts" [ref=e7883]
+                - cell "All pages" [ref=e7884]
+                - cell "invited Remove Nabila Karim" [ref=e7887]:
+                  - generic [ref=e7888]:
+                    - generic [ref=e7889]: invited
+                    - button "Remove Nabila Karim" [ref=e7890]
+          - generic [ref=e7894]:
+            - generic [ref=e7896]:
+              - heading "Invite" [level=2] [ref=e7897]
+              - paragraph [ref=e7898]: They join one group at a time.
+            - generic [ref=e7900]:
+              - generic [ref=e7901]:
+                - text: Email
+                - textbox "Email" [ref=e7902]:
+                  - /placeholder: name@company.com
+              - generic [ref=e7903]:
+                - text: Role
+                - combobox "Role" [ref=e7904]:
+                  - option "Admin"
+                  - option "Member" [selected]
+                  - option "Viewer"
+              - generic [ref=e7905]:
+                - text: Group
+                - combobox "Group" [ref=e7906]:
+                  - option "Manager"
+                  - option "Inbox" [selected]
+                  - option "Orders"
+                  - option "Products"
+                  - option "Accounts"
+              - button "Send invite" [disabled] [ref=e7907]
+              - paragraph [ref=e7911]: Invite links expire after 7 days.
+  - alert [ref=e969]

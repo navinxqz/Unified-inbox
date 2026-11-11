@@ -1,0 +1,197 @@
+- generic [active] [ref=f9e1]:
+  - generic [ref=f9e2]:
+    - generic [ref=f9e3]:
+      - complementary [ref=f9e4]:
+        - generic [ref=f9e11]:
+          - generic [ref=f9e12]: AiPraktor
+          - generic [ref=f9e13]: control plane
+        - navigation [ref=f9e14]:
+          - link "Setup guide 0/8" [ref=f9e214] [cursor=pointer]:
+            - /url: /dashboard#setup-guide
+            - text: Setup guide
+            - generic [ref=f9e218]: 0/8
+          - generic [ref=f9e15]:
+            - generic [ref=f9e16]: Work
+            - link "Overview" [ref=f9e17] [cursor=pointer]:
+              - /url: /dashboard
+            - link "Inbox" [ref=f9e23] [cursor=pointer]:
+              - /url: /dashboard/inbox
+            - link "Notifications" [ref=f9e27] [cursor=pointer]:
+              - /url: /dashboard/notifications
+            - link "Comments" [ref=f9e36] [cursor=pointer]:
+              - /url: /dashboard/comments
+            - link "Saved replies ⚡ Auto" [ref=f9e40] [cursor=pointer]:
+              - /url: /dashboard/saved-replies
+              - text: Saved replies
+              - generic "Saved replies can answer customers automatically, free" [ref=f9e43]:
+                - text: ⚡
+                - generic [ref=f9e44]: Auto
+            - link "Orders" [ref=f9e45] [cursor=pointer]:
+              - /url: /dashboard/orders
+            - link "Activity" [ref=f9e49] [cursor=pointer]:
+              - /url: /dashboard/activity
+            - link "Analytics" [ref=f9e52] [cursor=pointer]:
+              - /url: /dashboard/analytics
+            - link "Announcements" [ref=f9e56] [cursor=pointer]:
+              - /url: /dashboard/announcements
+          - generic [ref=f9e60]:
+            - generic [ref=f9e61]: Grow
+            - link "Follow-ups" [ref=f9e62] [cursor=pointer]:
+              - /url: /dashboard/followups
+            - link "Broadcasts" [ref=f9e68] [cursor=pointer]:
+              - /url: /dashboard/broadcasts
+            - link "Products" [ref=f9e72] [cursor=pointer]:
+              - /url: /dashboard/products
+            - link "Posts" [ref=f9e77] [cursor=pointer]:
+              - /url: /dashboard/posts
+            - link "Knowledge" [ref=f9e219] [cursor=pointer]:
+              - /url: /dashboard/knowledge
+            - link "Website chat" [ref=f9e83] [cursor=pointer]:
+              - /url: /dashboard/website
+            - link "Agent Desk" [ref=f9e87] [cursor=pointer]:
+              - /url: /dashboard/agent-desk
+          - generic [ref=f9e89]:
+            - generic [ref=f9e90]: Set up
+            - link "Pages" [ref=f9e91] [cursor=pointer]:
+              - /url: /dashboard/pages
+            - link "Business settings" [ref=f9e97] [cursor=pointer]:
+              - /url: /dashboard/business
+            - link "Billing" [ref=f9e102] [cursor=pointer]:
+              - /url: /dashboard/billing
+            - link "Team" [ref=f9e105] [cursor=pointer]:
+              - /url: /dashboard/submasters
+            - link "Setup" [ref=f9e111] [cursor=pointer]:
+              - /url: /dashboard/setup
+            - link "Video guide" [ref=f9e115] [cursor=pointer]:
+              - /url: /dashboard/videos
+          - generic [ref=f9e119]:
+            - generic [ref=f9e120]: Help
+            - link "AiPraktor Agent" [ref=f9e121] [cursor=pointer]:
+              - /url: /dashboard/help
+            - link "Feedback" [ref=f9e125] [cursor=pointer]:
+              - /url: /dashboard/feedback
+        - generic [ref=f9e128]:
+          - generic "Auto-revert sweeper is running" [ref=f9e130]: SYSTEM ONLINE
+          - generic [ref=f9e135]:
+            - generic [ref=f9e136]: Signed in · Business owner
+            - generic [ref=f9e137]: navinmdnawshin@gmail.com
+          - switch "On duty" [checked] [ref=f9e223] [cursor=pointer]
+          - link "This device" [ref=f9e138] [cursor=pointer]:
+            - /url: /dashboard/device
+          - button "Sign out" [ref=f9e141] [cursor=pointer]
+      - main [ref=f9e145]:
+        - generic [ref=f9e146]:
+          - generic [ref=f9e147]:
+            - generic [ref=f9e148]: LIVE
+            - generic [ref=f9e151]: AI ⟷ HUMAN
+          - generic [ref=f9e152]:
+            - button "Watch how · 2 videos" [ref=f9e226] [cursor=pointer]
+            - radiogroup "Colour theme" [ref=f9e153]:
+              - radio "Light" [checked] [ref=f9e154]
+              - radio "Dark" [ref=f9e162] [cursor=pointer]
+            - generic "Auto-revert sweeper is running" [ref=f9e167]: SYSTEM ONLINE
+            - generic [ref=f9e172]: 11:40:42
+        - generic [ref=f9e233]:
+          - button "The AiPraktor Agent is now on for everyone. See what it can do in a 9-minute video" [ref=f9e236] [cursor=pointer]
+          - button "Read" [ref=f9e237] [cursor=pointer]
+          - button "Hide this line" [ref=f9e238] [cursor=pointer]
+        - generic [ref=f9e242]:
+          - generic [ref=f9e243]:
+            - generic [ref=f9e244]:
+              - generic [ref=f9e245]: analytics
+              - heading "Analytics" [level=1] [ref=f9e246]
+              - paragraph [ref=f9e247]: Messages handled, how much the AI finishes alone, and how fast the first reply comes — plus handoff volume and reversions.
+            - generic [ref=f9e248]:
+              - button "7d" [ref=f9e249] [cursor=pointer]
+              - button "14d" [pressed] [ref=f9e250] [cursor=pointer]
+              - button "30d" [ref=f9e251] [cursor=pointer]
+          - tablist "Analytics views" [ref=f9e252]:
+            - tab "Overview" [selected] [ref=f9e253] [cursor=pointer]
+            - tab "People" [ref=f9e254] [cursor=pointer]
+          - generic [ref=f9e276]:
+            - text: Handoffs
+            - generic [ref=f9e279]: · when a chat moved between the AI and a person
+          - generic [ref=f9e280]:
+            - generic [ref=f9e281]:
+              - generic [ref=f9e282]: Handoffs to humans
+              - generic [ref=f9e287]: "0"
+            - generic [ref=f9e288]:
+              - generic [ref=f9e289]: Auto-reversions
+              - generic [ref=f9e294]: "0"
+            - generic [ref=f9e295]:
+              - generic [ref=f9e296]: Total events
+              - generic [ref=f9e300]: "0"
+            - generic [ref=f9e301]:
+              - generic [ref=f9e302]: Avg events / day
+              - generic [ref=f9e307]: "0"
+          - generic [ref=f9e308]:
+            - text: Response & SLA
+            - generic [ref=f9e311]: · how fast humans pick up · 0 measured in 14d
+          - generic [ref=f9e312]:
+            - generic [ref=f9e313]:
+              - generic [ref=f9e314]: Avg first response
+              - generic [ref=f9e319]: 0m
+            - generic [ref=f9e320]:
+              - generic [ref=f9e321]: SLA breach rate
+              - generic [ref=f9e325]: 0%
+            - link "Waiting now 0" [ref=f9e326] [cursor=pointer]:
+              - /url: /dashboard/inbox?view=waiting
+              - generic [ref=f9e327]:
+                - generic [ref=f9e328]: Waiting now
+                - generic [ref=f9e333]: "0"
+            - generic [ref=f9e334]:
+              - generic [ref=f9e335]: Longest wait now
+              - generic [ref=f9e340]: 0m
+          - generic [ref=f9e341]:
+            - generic [ref=f9e342]:
+              - generic [ref=f9e343]: Activity over time
+              - generic [ref=f9e344]:
+                - generic [ref=f9e345]: Handoffs
+                - generic [ref=f9e348]: Auto-reverts
+              - generic [ref=f9e351]:
+                - 'generic "2026-10-29: 0 handoffs, 0 reverts" [ref=f9e352]': 10-29
+                - 'generic "2026-10-30: 0 handoffs, 0 reverts" [ref=f9e355]': 10-30
+                - 'generic "2026-10-31: 0 handoffs, 0 reverts" [ref=f9e358]': 10-31
+                - 'generic "2026-11-01: 0 handoffs, 0 reverts" [ref=f9e361]': 11-01
+                - 'generic "2026-11-02: 0 handoffs, 0 reverts" [ref=f9e364]': 11-02
+                - 'generic "2026-11-03: 0 handoffs, 0 reverts" [ref=f9e367]': 11-03
+                - 'generic "2026-11-04: 0 handoffs, 0 reverts" [ref=f9e370]': 11-04
+                - 'generic "2026-11-05: 0 handoffs, 0 reverts" [ref=f9e373]': 11-05
+                - 'generic "2026-11-06: 0 handoffs, 0 reverts" [ref=f9e376]': 11-06
+                - 'generic "2026-11-07: 0 handoffs, 0 reverts" [ref=f9e379]': 11-07
+                - 'generic "2026-11-08: 0 handoffs, 0 reverts" [ref=f9e382]': 11-08
+                - 'generic "2026-11-09: 0 handoffs, 0 reverts" [ref=f9e385]': 11-09
+                - 'generic "2026-11-10: 0 handoffs, 0 reverts" [ref=f9e388]': 11-10
+                - 'generic "2026-11-11: 0 handoffs, 0 reverts" [ref=f9e391]': 11-11
+            - generic [ref=f9e394]:
+              - generic [ref=f9e395]: Current split
+              - generic [ref=f9e400]:
+                - generic [ref=f9e401]: "1"
+                - generic [ref=f9e402]: chats
+              - generic [ref=f9e403]:
+                - generic [ref=f9e404]:
+                  - generic [ref=f9e409]: AI
+                  - generic [ref=f9e410]: "0"
+                  - generic [ref=f9e411]: 0%
+                - generic [ref=f9e412]:
+                  - generic [ref=f9e417]: Human
+                  - generic [ref=f9e418]: "0"
+                  - generic [ref=f9e419]: 0%
+                - generic [ref=f9e420]:
+                  - generic [ref=f9e425]: Reverting
+                  - generic [ref=f9e426]: "0"
+                  - generic [ref=f9e427]: 0%
+          - generic [ref=f9e428]:
+            - generic [ref=f9e429]:
+              - generic [ref=f9e430]: Busiest pages
+              - generic [ref=f9e431]: No handoffs in this window.
+            - generic [ref=f9e432]:
+              - generic [ref=f9e433]: By source
+              - generic [ref=f9e434]: No data.
+      - button "AiPraktor Agent" [ref=f9e436] [cursor=pointer]
+    - note [ref=f9e441]:
+      - paragraph [ref=f9e442]: First time here? Short videos show how this works.
+      - generic [ref=f9e443]:
+        - button "Watch" [ref=f9e444] [cursor=pointer]
+        - button "Don't need it" [ref=f9e448] [cursor=pointer]
+  - alert [ref=f9e213]

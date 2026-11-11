@@ -1,0 +1,317 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e74]:
+      - dialog [ref=e75]:
+        - generic [ref=e76]:
+          - generic [ref=e81]: alerts
+          - heading "Turn on notifications?" [level=2] [ref=e82]
+          - paragraph [ref=e83]: Get an alert the moment a customer on your page needs you — even with the app closed or your phone locked. You can turn this off anytime.
+          - generic [ref=e84]:
+            - button "Enable notifications" [ref=e85] [cursor=pointer]
+            - button "Not now" [ref=e86] [cursor=pointer]
+          - generic [ref=e87]:
+            - generic [ref=e88]: You can change this any time under This device.
+            - button "Don't ask again" [ref=e89] [cursor=pointer]
+      - complementary [ref=e90]:
+        - generic [ref=e97]:
+          - generic [ref=e98]: AiPraktor
+          - generic [ref=e99]: control plane
+        - navigation [ref=e100]:
+          - link "Setup guide 0/8" [ref=e101] [cursor=pointer]:
+            - /url: /dashboard#setup-guide
+            - text: Setup guide
+            - generic [ref=e105]: 0/8
+          - generic [ref=e106]:
+            - generic [ref=e107]: Work
+            - link "Overview" [ref=e108] [cursor=pointer]:
+              - /url: /dashboard
+            - link "Inbox" [ref=e115] [cursor=pointer]:
+              - /url: /dashboard/inbox
+            - link "Notifications" [ref=e119] [cursor=pointer]:
+              - /url: /dashboard/notifications
+            - link "Comments" [ref=e123] [cursor=pointer]:
+              - /url: /dashboard/comments
+            - link "Saved replies ⚡ Auto" [ref=e127] [cursor=pointer]:
+              - /url: /dashboard/saved-replies
+              - text: Saved replies
+              - generic "Saved replies can answer customers automatically, free" [ref=e130]:
+                - text: ⚡
+                - generic [ref=e131]: Auto
+            - link "Orders" [ref=e132] [cursor=pointer]:
+              - /url: /dashboard/orders
+            - link "Activity" [ref=e136] [cursor=pointer]:
+              - /url: /dashboard/activity
+            - link "Analytics" [ref=e139] [cursor=pointer]:
+              - /url: /dashboard/analytics
+            - link "Announcements" [ref=e142] [cursor=pointer]:
+              - /url: /dashboard/announcements
+          - generic [ref=e146]:
+            - generic [ref=e147]: Grow
+            - link "Follow-ups" [ref=e148] [cursor=pointer]:
+              - /url: /dashboard/followups
+            - link "Broadcasts" [ref=e154] [cursor=pointer]:
+              - /url: /dashboard/broadcasts
+            - link "Products" [ref=e158] [cursor=pointer]:
+              - /url: /dashboard/products
+            - link "Posts" [ref=e163] [cursor=pointer]:
+              - /url: /dashboard/posts
+            - link "Knowledge" [ref=e169] [cursor=pointer]:
+              - /url: /dashboard/knowledge
+            - link "Website chat" [ref=e173] [cursor=pointer]:
+              - /url: /dashboard/website
+            - link "Agent Desk" [ref=e177] [cursor=pointer]:
+              - /url: /dashboard/agent-desk
+          - generic [ref=e179]:
+            - generic [ref=e180]: Set up
+            - link "Pages" [ref=e181] [cursor=pointer]:
+              - /url: /dashboard/pages
+            - link "Business settings" [ref=e187] [cursor=pointer]:
+              - /url: /dashboard/business
+            - link "Billing" [ref=e192] [cursor=pointer]:
+              - /url: /dashboard/billing
+            - link "Team" [ref=e195] [cursor=pointer]:
+              - /url: /dashboard/submasters
+            - link "Setup" [ref=e201] [cursor=pointer]:
+              - /url: /dashboard/setup
+            - link "Video guide" [ref=e205] [cursor=pointer]:
+              - /url: /dashboard/videos
+          - generic [ref=e209]:
+            - generic [ref=e210]: Help
+            - link "AiPraktor Agent" [ref=e211] [cursor=pointer]:
+              - /url: /dashboard/help
+            - link "Feedback" [ref=e215] [cursor=pointer]:
+              - /url: /dashboard/feedback
+        - generic [ref=e218]:
+          - generic "Auto-revert sweeper is running" [ref=e220]: SYSTEM ONLINE
+          - generic [ref=e225]:
+            - generic [ref=e226]: Signed in · Business owner
+            - generic [ref=e227]: navinmdnawshin@gmail.com
+          - switch "On duty" [checked] [ref=e228] [cursor=pointer]
+          - link "This device" [ref=e230] [cursor=pointer]:
+            - /url: /dashboard/device
+          - button "Sign out" [ref=e233] [cursor=pointer]
+      - main [ref=e237]:
+        - generic [ref=e238]:
+          - generic [ref=e239]:
+            - generic [ref=e240]: LIVE
+            - generic [ref=e243]: AI ⟷ HUMAN
+          - generic [ref=e244]:
+            - button "Watch how · 2 videos" [ref=e246] [cursor=pointer]
+            - radiogroup "Colour theme" [ref=e252]:
+              - radio "Light" [checked] [ref=e253]
+              - radio "Dark" [ref=e261] [cursor=pointer]
+            - generic "Auto-revert sweeper is running" [ref=e266]: SYSTEM ONLINE
+            - generic [ref=e271]: 11:36:07
+        - generic [ref=e273]:
+          - button "The AiPraktor Agent is now on for everyone. See what it can do in a 9-minute video" [ref=e276] [cursor=pointer]
+          - button "Read" [ref=e277] [cursor=pointer]
+          - button "Hide this line" [ref=e278] [cursor=pointer]
+        - generic [ref=e284]:
+          - generic [ref=e286]:
+            - generic [ref=e287]: Setup is free — the video guide shows every step
+            - generic [ref=e294]:
+              - paragraph [ref=e295]: Stuck somewhere? Our team can set it all up for you. Ask, and we will call you to talk it through.
+              - generic [ref=e296]:
+                - link "Video guide" [ref=e297] [cursor=pointer]:
+                  - /url: /dashboard/videos
+                - button "Ask for the setup service" [ref=e301] [cursor=pointer]
+                - button "Hide this" [ref=e302] [cursor=pointer]
+          - region "Setup guide" [ref=e304]:
+            - generic [ref=e305]:
+              - generic [ref=e306]:
+                - generic [ref=e311]: Setup guide
+                - generic [ref=e312]: Practice mode
+              - group "Language" [ref=e314]:
+                - button "বাংলা" [ref=e315] [cursor=pointer]
+                - button "EN" [ref=e316] [cursor=pointer]
+            - generic [ref=e317]:
+              - generic [ref=e318]:
+                - generic [ref=e319]:
+                  - generic [ref=e320]: "0"
+                  - generic [ref=e321]: / 8
+                - generic [ref=e322]:
+                  - progressbar [ref=e323]
+                  - generic [ref=e324]: 0 of 8 done · about 20 minutes left
+              - paragraph [ref=e325]: Your assistant answers test chats only. Nothing reaches a customer before you go live. Until then, keep answering your customers in Messenger / Meta Business Suite as before — their messages do not come to the Inbox here before you go live. Your free trial days start counting when you go live.
+              - generic [ref=e326]:
+                - generic [ref=e327]: Next step
+                - generic [ref=e328]: Connect your Facebook page
+                - paragraph [ref=e329]: Until the page is connected, no customer message reaches your assistant.
+                - list [ref=e330]:
+                  - listitem [ref=e331]: Press Connect with Facebook and sign in with the Facebook account that manages your page.
+                  - listitem [ref=e332]: When Facebook asks which pages, choose your page.
+                  - listitem [ref=e333]: Leave every permission switched on — with one off, messages do not arrive.
+                - generic [ref=e334]:
+                  - link "Connect the page" [ref=e335] [cursor=pointer]:
+                    - /url: /dashboard/setup?step=channels
+                  - generic [ref=e338]: This turns green by itself when it is done.
+              - generic [ref=e339]:
+                - generic [ref=e340]: Before you go live
+                - 'button "to do Your business Still missing: what you sell, open hours, hotline 3 min" [ref=e342] [cursor=pointer]':
+                  - img "to do" [ref=e343]
+                  - generic [ref=e345]:
+                    - generic [ref=e346]: Your business
+                    - generic [ref=e347]: "Still missing: what you sell, open hours, hotline"
+                  - generic [ref=e348]: 3 min
+                - button "locked AI credit Your free credit arrives when your page is connected. Automatic" [ref=e352] [cursor=pointer]:
+                  - img "locked" [ref=e353]
+                  - generic [ref=e356]:
+                    - generic [ref=e357]: AI credit
+                    - generic [ref=e358]: Your free credit arrives when your page is connected.
+                  - generic [ref=e359]: Automatic
+                - button "locked Add your products Finish “AI credit” first. 10 min" [ref=e363] [cursor=pointer]:
+                  - img "locked" [ref=e364]
+                  - generic [ref=e367]:
+                    - generic [ref=e368]: Add your products
+                    - generic [ref=e369]: Finish “AI credit” first.
+                  - generic [ref=e370]: 10 min
+                - button "to do How customers pay The payment rule is not written yet. 2 min" [ref=e374] [cursor=pointer]:
+                  - img "to do" [ref=e375]
+                  - generic [ref=e377]:
+                    - generic [ref=e378]: How customers pay
+                    - generic [ref=e379]: The payment rule is not written yet.
+                  - generic [ref=e380]: 2 min
+                - button "to do Turn on alerts on your phone No device has alerts on. 1 min" [ref=e384] [cursor=pointer]:
+                  - img "to do" [ref=e385]
+                  - generic [ref=e387]:
+                    - generic [ref=e388]: Turn on alerts on your phone
+                    - generic [ref=e389]: No device has alerts on.
+                  - generic [ref=e390]: 1 min
+                - button "locked Assistant check Finish “Connect your Facebook page” first. 1 min" [ref=e394] [cursor=pointer]:
+                  - img "locked" [ref=e395]
+                  - generic [ref=e398]:
+                    - generic [ref=e399]: Assistant check
+                    - generic [ref=e400]: Finish “Connect your Facebook page” first.
+                  - generic [ref=e401]: 1 min
+                - button "locked Go live First connect your page; then we check by ourselves that your assistant answers. 1 min" [ref=e405] [cursor=pointer]:
+                  - img "locked" [ref=e406]
+                  - generic [ref=e409]:
+                    - generic [ref=e410]: Go live
+                    - generic [ref=e411]: First connect your page; then we check by ourselves that your assistant answers.
+                  - generic [ref=e412]: 1 min
+              - button "After you go live 5" [ref=e416] [cursor=pointer]:
+                - generic [ref=e417]: After you go live
+                - generic [ref=e418]: "5"
+              - button "AiPraktor switches these on 1" [ref=e422] [cursor=pointer]:
+                - generic [ref=e423]: AiPraktor switches these on
+                - generic [ref=e424]: "1"
+          - generic [ref=e427]:
+            - generic [ref=e428]:
+              - generic [ref=e429]: Good morning · signed in as client admin
+              - heading "Your control room" [level=1] [ref=e430]
+              - paragraph [ref=e431]: 1 page · 0 conversations · your AI is handling 0% of them
+            - generic [ref=e432]:
+              - generic [ref=e433]: updated just now
+              - group "Time range" [ref=e435]:
+                - button "7d" [ref=e436] [cursor=pointer]
+                - button "14d" [pressed] [ref=e437] [cursor=pointer]
+                - button "30d" [ref=e438] [cursor=pointer]
+          - generic [ref=e439]:
+            - link "Conversations 0 0 with a person right now" [ref=e440] [cursor=pointer]:
+              - /url: /dashboard/inbox?view=all
+              - generic [ref=e441]: Conversations
+              - generic [ref=e446]: "0"
+              - generic [ref=e447]: 0 with a person right now
+            - link "Handled by AI 0% 0 chats answered automatically" [ref=e448] [cursor=pointer]:
+              - /url: /dashboard/analytics
+              - generic [ref=e449]: Handled by AI
+              - generic [ref=e455]: 0%
+              - generic [ref=e456]: 0 chats answered automatically
+            - link "Waiting on a human 0 nobody kept waiting" [ref=e457] [cursor=pointer]:
+              - /url: /dashboard/inbox?view=waiting
+              - generic [ref=e458]: Waiting on a human
+              - generic [ref=e464]: "0"
+              - generic [ref=e465]: nobody kept waiting
+          - navigation "Jump to" [ref=e469]:
+            - link "Inbox" [ref=e470] [cursor=pointer]:
+              - /url: /dashboard/inbox
+            - link "Follow-ups" [ref=e474] [cursor=pointer]:
+              - /url: /dashboard/followups
+            - link "Your pages 1" [ref=e480] [cursor=pointer]:
+              - /url: /dashboard/pages
+              - text: Your pages
+              - generic [ref=e486]: "1"
+            - link "Your team" [ref=e487] [cursor=pointer]:
+              - /url: /dashboard/submasters
+            - link "Analytics" [ref=e493] [cursor=pointer]:
+              - /url: /dashboard/analytics
+            - link "Activity log" [ref=e496] [cursor=pointer]:
+              - /url: /dashboard/activity
+          - generic [ref=e499]:
+            - generic [ref=e500]:
+              - generic [ref=e501]:
+                - generic [ref=e502]:
+                  - generic [ref=e503]: Live queue
+                  - link "Open inbox" [ref=e513] [cursor=pointer]:
+                    - /url: /dashboard/inbox?view=waiting
+                - generic [ref=e518]:
+                  - generic [ref=e523]: Nobody is waiting
+                  - generic [ref=e524]: Every conversation is either with the AI or already answered by someone.
+              - generic [ref=e525]:
+                - generic [ref=e526]:
+                  - generic [ref=e527]: Your pages
+                  - link "All pages" [ref=e536] [cursor=pointer]:
+                    - /url: /dashboard/pages
+                - link "Never connected Coffee 9 0 chats · facebook · 0 open leads" [ref=e540] [cursor=pointer]:
+                  - /url: /dashboard/pages/page_1794374612666_0y3u81
+                  - generic "Never connected" [ref=e541]
+                  - generic [ref=e542]:
+                    - generic [ref=e543]: Coffee 9
+                    - generic [ref=e547]: 0 chats · facebook · 0 open leads
+              - generic [ref=e548]:
+                - generic [ref=e549]:
+                  - generic [ref=e550]: Live activity
+                  - link "Full log" [ref=e557] [cursor=pointer]:
+                    - /url: /dashboard/activity
+                - generic [ref=e561]:
+                  - generic [ref=e565]: Quiet so far
+                  - generic [ref=e566]: Every handoff, takeover and automatic return to AI appears here as it happens.
+            - generic [ref=e567]:
+              - generic [ref=e568]:
+                - generic [ref=e569]:
+                  - generic [ref=e570]: Traffic & routing
+                  - generic [ref=e575]:
+                    - generic [ref=e576]: 14d
+                    - link "Analytics" [ref=e577] [cursor=pointer]:
+                      - /url: /dashboard/analytics
+                - generic [ref=e580]:
+                  - generic [ref=e596]:
+                    - generic [ref=e597]: 0 handoffs to a person
+                    - generic [ref=e598]: 0 auto-returned to AI
+                  - generic [ref=e601]:
+                    - generic [ref=e602]:
+                      - generic [ref=e604]: AI 0%
+                      - generic [ref=e605]: "0"
+                    - generic [ref=e606]:
+                      - generic [ref=e608]: Human
+                      - generic [ref=e609]: "0"
+                    - generic [ref=e610]:
+                      - generic [ref=e612]: Reverting
+                      - generic [ref=e613]: "0"
+                  - generic [ref=e614]:
+                    - generic [ref=e615]:
+                      - generic [ref=e616]: Avg first reply
+                      - generic [ref=e621]: —
+                    - generic [ref=e622]:
+                      - generic [ref=e623]: Median
+                      - generic [ref=e628]: —
+                    - generic [ref=e629]:
+                      - generic [ref=e630]: Answered late
+                      - generic [ref=e634]: 0%
+                  - generic [ref=e635]: reply times start counting the first time someone claims a waiting chat
+              - generic [ref=e636]:
+                - generic [ref=e637]:
+                  - generic [ref=e638]: Your team
+                  - link "Manage" [ref=e647] [cursor=pointer]:
+                    - /url: /dashboard/submasters
+                - generic [ref=e651]:
+                  - generic [ref=e658]: No teammates yet
+                  - generic [ref=e659]: Add a teammate so incoming chats can be shared out — you will see who answered what here.
+      - button "AiPraktor Agent" [ref=e660] [cursor=pointer]
+      - button "Just tell me what you need" [ref=e665] [cursor=pointer]
+    - note [ref=e666]:
+      - paragraph [ref=e667]: First time here? Short videos show how this works.
+      - generic [ref=e668]:
+        - button "Watch" [ref=e669] [cursor=pointer]
+        - button "Don't need it" [ref=e673] [cursor=pointer]
+  - alert [ref=e7]: AiPraktor — AI agents that act for your business

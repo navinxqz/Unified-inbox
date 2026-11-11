@@ -1,0 +1,106 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e9754]:
+    - generic [ref=e9755]:
+      - heading "Billing" [level=1] [ref=e9757]
+      - generic [ref=e9758]:
+        - button "Export ledger" [ref=e9759]
+        - button "Top up" [ref=e9763]
+        - button "Watch how · 1 min" [ref=e9767]
+    - generic [ref=e9772]:
+      - generic [ref=e9773]:
+        - generic [ref=e9774]:
+          - paragraph [ref=e9776]: Credit balance
+          - paragraph [ref=e9781]: 2,240
+          - paragraph [ref=e9782]: plan · Growth
+        - generic [ref=e9783]:
+          - paragraph [ref=e9785]: Plan
+          - paragraph [ref=e9790]: Growth
+          - paragraph [ref=e9791]: monthly
+        - generic [ref=e9792]:
+          - paragraph [ref=e9794]: Spent this month
+          - paragraph [ref=e9798]: "22"
+          - paragraph [ref=e9799]: credits
+        - generic [ref=e9800]:
+          - paragraph [ref=e9802]: Card on file
+          - paragraph [ref=e9806]: "Yes"
+          - paragraph [ref=e9807]: •••• 4242
+      - generic [ref=e9808]:
+        - generic [ref=e9809]:
+          - generic [ref=e9811]:
+            - heading "Ledger" [level=2] [ref=e9812]
+            - paragraph [ref=e9813]: Itemized, newest first.
+          - table [ref=e9816]:
+            - rowgroup [ref=e9817]:
+              - row [ref=e9818]:
+                - columnheader "When" [ref=e9819]
+                - columnheader "Request" [ref=e9820]
+                - columnheader "Credits" [ref=e9821]
+                - columnheader "Balance" [ref=e9822]
+            - rowgroup [ref=e9823]:
+              - row [ref=e9824]:
+                - cell "Just now" [ref=e9825]
+                - cell "Top-up · card •••• 4242 top-up" [ref=e9826]:
+                  - text: Top-up · card •••• 4242
+                  - generic [ref=e9827]: top-up
+                - cell "+1,000" [ref=e9829]
+                - cell "2,240" [ref=e9830]
+              - row [ref=e9831]:
+                - cell "Today · 10:58 AM" [ref=e9832]
+                - cell "AI reply · Website chat reply" [ref=e9833]:
+                  - text: AI reply · Website chat
+                  - generic [ref=e9834]: reply
+                - cell "-2" [ref=e9836]
+                - cell "1,240" [ref=e9837]
+              - row [ref=e9838]:
+                - cell "Today · 10:41 AM" [ref=e9839]
+                - cell "Agent Desk publish (re-index) indexing" [ref=e9840]:
+                  - text: Agent Desk publish (re-index)
+                  - generic [ref=e9841]: indexing
+                - cell "-12" [ref=e9843]
+                - cell "1,242" [ref=e9844]
+              - row [ref=e9845]:
+                - cell "Today · 10:24 AM" [ref=e9846]
+                - cell "AI reply · Instagram reply" [ref=e9847]:
+                  - text: AI reply · Instagram
+                  - generic [ref=e9848]: reply
+                - cell "-2" [ref=e9850]
+                - cell "1,254" [ref=e9851]
+              - row [ref=e9852]:
+                - cell "Today · 9:38 AM" [ref=e9853]
+                - cell "Auto-translation · Bangla → English translation" [ref=e9854]:
+                  - text: Auto-translation · Bangla → English
+                  - generic [ref=e9855]: translation
+                - cell "-1" [ref=e9857]
+                - cell "1,256" [ref=e9858]
+              - row [ref=e9859]:
+                - cell "Today · 9:12 AM" [ref=e9860]
+                - 'cell "Photo product match · Post #post-1 photo-match" [ref=e9861]':
+                  - text: "Photo product match · Post #post-1"
+                  - generic [ref=e9862]: photo-match
+                - cell "-5" [ref=e9864]
+                - cell "1,257" [ref=e9865]
+              - row [ref=e9866]:
+                - cell "Yesterday · 6:20 PM" [ref=e9867]
+                - cell "Top-up · card •••• 4242 top-up" [ref=e9868]:
+                  - text: Top-up · card •••• 4242
+                  - generic [ref=e9869]: top-up
+                - cell "+1,500" [ref=e9871]
+                - cell "1,262" [ref=e9872]
+        - generic [ref=e9873]:
+          - generic [ref=e9874]:
+            - heading "Low-balance warning" [level=2] [ref=e9877]
+            - generic [ref=e9878]:
+              - generic [ref=e9879]:
+                - text: Warn me below (credits)
+                - spinbutton "Warn me below (credits)" [ref=e9880]: "200"
+              - paragraph [ref=e9881]: When the balance drops under this number, the sidebar and this page show a warning. Replies keep working until credits actually run out.
+          - generic [ref=e9882]:
+            - generic [ref=e9884]:
+              - heading "Auto top-up" [level=2] [ref=e9885]
+              - paragraph [ref=e9886]: Never miss a customer because of credits.
+            - generic [ref=e9887]:
+              - generic [ref=e9888] [cursor=pointer]:
+                - switch "Auto top-up when balance is low" [ref=e9889]
+                - generic [ref=e9891]: Auto top-up when balance is low
+              - paragraph [ref=e9892]: Turn this on to keep replies running without watching the balance.
+  - alert [ref=e969]

@@ -1,0 +1,131 @@
+- generic [active] [ref=f14e1]:
+  - generic [ref=f14e3]:
+    - complementary [ref=f14e4]:
+      - generic [ref=f14e11]:
+        - generic [ref=f14e12]: AiPraktor
+        - generic [ref=f14e13]: control plane
+      - navigation [ref=f14e14]:
+        - generic [ref=f14e15]:
+          - generic [ref=f14e16]: Work
+          - link "Overview" [ref=f14e17] [cursor=pointer]:
+            - /url: /dashboard
+          - link "Inbox" [ref=f14e23] [cursor=pointer]:
+            - /url: /dashboard/inbox
+          - link "Notifications" [ref=f14e27] [cursor=pointer]:
+            - /url: /dashboard/notifications
+          - link "Leads" [ref=f14e31] [cursor=pointer]:
+            - /url: /dashboard/leads
+          - link "Comments" [ref=f14e36] [cursor=pointer]:
+            - /url: /dashboard/comments
+          - link "Saved replies ⚡ Auto" [ref=f14e40] [cursor=pointer]:
+            - /url: /dashboard/saved-replies
+            - text: Saved replies
+            - generic "Saved replies can answer customers automatically, free" [ref=f14e43]:
+              - text: ⚡
+              - generic [ref=f14e44]: Auto
+          - link "Orders" [ref=f14e45] [cursor=pointer]:
+            - /url: /dashboard/orders
+          - link "Activity" [ref=f14e50] [cursor=pointer]:
+            - /url: /dashboard/activity
+          - link "Analytics" [ref=f14e53] [cursor=pointer]:
+            - /url: /dashboard/analytics
+          - link "Announcements" [ref=f14e56] [cursor=pointer]:
+            - /url: /dashboard/announcements
+        - generic [ref=f14e60]:
+          - generic [ref=f14e61]: Grow
+          - link "Follow-ups" [ref=f14e62] [cursor=pointer]:
+            - /url: /dashboard/followups
+          - link "Broadcasts" [ref=f14e68] [cursor=pointer]:
+            - /url: /dashboard/broadcasts
+          - link "Products" [ref=f14e72] [cursor=pointer]:
+            - /url: /dashboard/products
+          - link "Posts" [ref=f14e77] [cursor=pointer]:
+            - /url: /dashboard/posts
+          - link "Website chat" [ref=f14e83] [cursor=pointer]:
+            - /url: /dashboard/website
+          - link "Agent Desk" [ref=f14e87] [cursor=pointer]:
+            - /url: /dashboard/agent-desk
+        - generic [ref=f14e89]:
+          - generic [ref=f14e90]: Set up
+          - link "Pages" [ref=f14e91] [cursor=pointer]:
+            - /url: /dashboard/pages
+          - link "Business settings" [ref=f14e97] [cursor=pointer]:
+            - /url: /dashboard/business
+          - link "Billing" [ref=f14e102] [cursor=pointer]:
+            - /url: /dashboard/billing
+          - link "Team" [ref=f14e105] [cursor=pointer]:
+            - /url: /dashboard/submasters
+          - link "Setup" [ref=f14e111] [cursor=pointer]:
+            - /url: /dashboard/setup
+          - link "Video guide" [ref=f14e115] [cursor=pointer]:
+            - /url: /dashboard/videos
+        - generic [ref=f14e119]:
+          - generic [ref=f14e120]: Help
+          - link "AiPraktor Agent" [ref=f14e121] [cursor=pointer]:
+            - /url: /dashboard/help
+          - link "Feedback" [ref=f14e125] [cursor=pointer]:
+            - /url: /dashboard/feedback
+      - generic [ref=f14e128]:
+        - generic "Auto-revert sweeper is running" [ref=f14e130]: SYSTEM ONLINE
+        - generic [ref=f14e135]:
+          - generic [ref=f14e136]: Signed in · Business owner
+          - generic [ref=f14e137]: navinmdnawshin@gmail.com
+        - link "This device" [ref=f14e138] [cursor=pointer]:
+          - /url: /dashboard/device
+        - button "Sign out" [ref=f14e141] [cursor=pointer]
+    - main [ref=f14e145]:
+      - generic [ref=f14e146]:
+        - generic [ref=f14e147]:
+          - generic [ref=f14e148]: LIVE
+          - generic [ref=f14e151]: AI ⟷ HUMAN
+        - generic [ref=f14e152]:
+          - radiogroup "Colour theme" [ref=f14e153]:
+            - radio "Light" [checked] [ref=f14e154]
+            - radio "Dark" [ref=f14e162] [cursor=pointer]
+          - generic "Auto-revert sweeper is running" [ref=f14e167]: SYSTEM ONLINE
+          - generic [ref=f14e172]: 11:42:12
+      - generic [ref=f14e175]:
+        - generic [ref=f14e177]:
+          - generic [ref=f14e178]: orders
+          - heading "Courier" [level=1] [ref=f14e179]
+          - paragraph [ref=f14e180]: The cash your couriers are holding, and the sheet the rider signs when the day's parcels are handed over.
+        - navigation "Orders, customers, scanning, the courier, people to chase and the report" [ref=f14e181]:
+          - link "Orders" [ref=f14e182] [cursor=pointer]:
+            - /url: /dashboard/orders
+          - link "Customers" [ref=f14e183] [cursor=pointer]:
+            - /url: /dashboard/orders/customers
+          - link "Scan" [ref=f14e184] [cursor=pointer]:
+            - /url: /dashboard/orders/scan
+          - generic [ref=f14e190] [cursor=pointer]: Courier
+          - link "To chase" [ref=f14e196] [cursor=pointer]:
+            - /url: /dashboard/orders/incomplete
+          - link "Report" [ref=f14e200] [cursor=pointer]:
+            - /url: /dashboard/orders/report
+          - link "Discounts" [ref=f14e203] [cursor=pointer]:
+            - /url: /dashboard/orders/discounts
+        - generic [ref=f14e208]:
+          - strong [ref=f14e212]: Money with the couriers
+          - generic [ref=f14e213]: parcels of the last 45 days
+          - button "Reading…" [disabled] [ref=f14e214]
+        - generic [ref=f14e225]:
+          - generic [ref=f14e226]:
+            - strong [ref=f14e227]: Handover sheet
+            - generic [ref=f14e228]: the parcels booked here on one day
+          - generic [ref=f14e229]:
+            - generic [ref=f14e230]:
+              - generic [ref=f14e231]: Courier
+              - combobox "Courier" [ref=f14e232] [cursor=pointer]:
+                - option "Every courier" [selected]
+                - option "Steadfast"
+                - option "Pathao"
+                - option "RedX"
+                - option "eCourier"
+            - generic [ref=f14e233]:
+              - generic [ref=f14e234]: Day (Dhaka)
+              - textbox "Day (Dhaka)" [ref=f14e235]: 2026-11-11
+            - button "Refresh" [disabled] [ref=f14e236]
+            - button "Print" [disabled] [ref=f14e240]
+          - status "Reading the day's parcels…" [ref=f14e246]
+        - link "Orders" [ref=f14e251] [cursor=pointer]:
+          - /url: /dashboard/orders
+  - alert [ref=f14e254]

@@ -77,3 +77,53 @@
   `rules.md` and `context.md` are explicitly kept tracked.
 - Pushed the initial project commit; remote already had a LICENSE commit, so the
   local branch was rebased onto `origin/main` before pushing.
+
+## Changes — 2026-11-11 (AiPraktor feature parity)
+
+- **Shell**: replaced the 44px icon `AppRail` (deleted) with a labeled, grouped
+  sidebar (`primary-nav.tsx`: Work / Grow / AI / Set up) carrying live badges for
+  inbox, notifications, and setup progress, plus a realtime "Live · synced" pill.
+  Modules switch by state + hash deep-link (`#orders`, `#agent-desk`, …) so the app
+  stays a single page; the mobile drawer reuses the same nav.
+- **Conversation model** (AI ⟷ human state machine): `mode` = `ai | human |
+  reverting` with `handoff.reason`, `revertAtMs`, `claimedBy`, `waitingSinceMs`.
+  Handoff from the thread header (5 reasons), claim, `.`-shortcut takeover, return
+  to AI, and a 5-second sweeper that auto-reverts unanswered human chats and logs
+  it to Activity. Answering from the inbox implicitly takes the chat to human.
+- **Inbox UX**: rail views moved into the conversation list as tabs; waiting
+  customers sort first with a live SLA badge; per-row AI/human dots; slash (`/`)
+  saved-reply autocomplete in the composer; AI copilot drawer with summary,
+  intent detection, saved-reply suggestions, insert-into-composer, and capture
+  lead / draft order actions.
+- **23 modules** behind the nav, all persisted in `localStorage`: overview, inbox,
+  saved replies, comments (classification queue + moderation rules/blocklist),
+  notifications, activity, analytics, leads (drag-and-drop pipeline), orders +
+  coupons, follow-ups, broadcasts, products, posts + moderation, Agent Desk,
+  knowledge base, setup guide (practice → live), channels, website chat, business,
+  team, groups, billing (card + bKash/Nagad top-up), settings.
+- **Channels**: provider + health surfaced in `channels-manager.tsx`; new
+  `channel-connect-dialog.tsx` simulates a second-account OAuth connect and
+  updates counts/handles; `channel-sidebar.tsx` now navigates to the module.
+- **Settings**: new AI & handoff section — auto-revert window (30–1440m), SLA target
+  (5–60m), wait-before-answer batching (0–15s).
+- **Command palette** (`⌘K`) now jumps to every module and channel filter.
+- **Types/data/storage**: extended `ChannelId` (Instagram, Discord, Gmail, website)
+  and added all module domain types; `_v3` storage keys with default-merged
+  settings; generic `useStoredState` + `MODULE_STORAGE_KEYS` for module slices.
+- **Shared UI**: `module-ui.tsx` (ModuleShell, Walkthrough dialog, tabs, cards,
+  stats, ModeBadge, SlaBadge, Toggle, Field, DataBar, EmptyState, SavedFlash) and
+  `use-now.ts` (SSR-safe shared clock via `useSyncExternalStore`).
+
+## Verification — 2026-11-11
+
+- `npm run check` — exit 0 (typegen + tsc + eslint, no warnings).
+- `npm run build` — exit 0 (static `/` and `/_not-found`).
+- Playwright smoke (Edge, `next start`): all 23 modules render without errors;
+  billing top-up modal adds credits + ledger row and persists; handoff → claim →
+  return-to-AI and `.` takeover behave correctly with a live countdown; sweeper
+  clears expired human chats; `/` saved-reply insert, copilot insert, slash
+  autocomplete, channel connect dialog, mobile nav drawer, and 390px layout all
+  pass; `console error` reports 0 errors.
+- Note: `docs/aipraktor-competitor-analysis.md`, `docs/aipraktor-evidence/`, the two
+  reference PNGs, and `.playwright-cli/` remain untracked; `.env.example` and
+  `rules.md` are pre-existing user edits.

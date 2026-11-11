@@ -1,0 +1,171 @@
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e2]:
+    - generic [ref=f3e3]:
+      - complementary [ref=f3e4]:
+        - generic [ref=f3e11]:
+          - generic [ref=f3e12]: AiPraktor
+          - generic [ref=f3e13]: control plane
+        - navigation [ref=f3e14]:
+          - link "Setup guide 0/8" [ref=f3e206] [cursor=pointer]:
+            - /url: /dashboard#setup-guide
+            - text: Setup guide
+            - generic [ref=f3e210]: 0/8
+          - generic [ref=f3e15]:
+            - generic [ref=f3e16]: Work
+            - link "Overview" [ref=f3e17] [cursor=pointer]:
+              - /url: /dashboard
+            - link "Inbox" [ref=f3e23] [cursor=pointer]:
+              - /url: /dashboard/inbox
+            - link "Notifications" [ref=f3e27] [cursor=pointer]:
+              - /url: /dashboard/notifications
+            - link "Comments" [ref=f3e36] [cursor=pointer]:
+              - /url: /dashboard/comments
+            - link "Saved replies ⚡ Auto" [ref=f3e40] [cursor=pointer]:
+              - /url: /dashboard/saved-replies
+              - text: Saved replies
+              - generic "Saved replies can answer customers automatically, free" [ref=f3e43]:
+                - text: ⚡
+                - generic [ref=f3e44]: Auto
+            - link "Orders" [ref=f3e45] [cursor=pointer]:
+              - /url: /dashboard/orders
+            - link "Activity" [ref=f3e49] [cursor=pointer]:
+              - /url: /dashboard/activity
+            - link "Analytics" [ref=f3e52] [cursor=pointer]:
+              - /url: /dashboard/analytics
+            - link "Announcements" [ref=f3e55] [cursor=pointer]:
+              - /url: /dashboard/announcements
+          - generic [ref=f3e59]:
+            - generic [ref=f3e60]: Grow
+            - link "Follow-ups" [ref=f3e61] [cursor=pointer]:
+              - /url: /dashboard/followups
+            - link "Broadcasts" [ref=f3e67] [cursor=pointer]:
+              - /url: /dashboard/broadcasts
+            - link "Products" [ref=f3e71] [cursor=pointer]:
+              - /url: /dashboard/products
+            - link "Posts" [ref=f3e76] [cursor=pointer]:
+              - /url: /dashboard/posts
+            - link "Knowledge" [ref=f3e211] [cursor=pointer]:
+              - /url: /dashboard/knowledge
+            - link "Website chat" [ref=f3e82] [cursor=pointer]:
+              - /url: /dashboard/website
+            - link "Agent Desk" [ref=f3e86] [cursor=pointer]:
+              - /url: /dashboard/agent-desk
+          - generic [ref=f3e88]:
+            - generic [ref=f3e89]: Set up
+            - link "Pages" [ref=f3e90] [cursor=pointer]:
+              - /url: /dashboard/pages
+            - link "Business settings" [ref=f3e97] [cursor=pointer]:
+              - /url: /dashboard/business
+            - link "Billing" [ref=f3e102] [cursor=pointer]:
+              - /url: /dashboard/billing
+            - link "Team" [ref=f3e105] [cursor=pointer]:
+              - /url: /dashboard/submasters
+            - link "Setup" [ref=f3e111] [cursor=pointer]:
+              - /url: /dashboard/setup
+            - link "Video guide" [ref=f3e115] [cursor=pointer]:
+              - /url: /dashboard/videos
+          - generic [ref=f3e119]:
+            - generic [ref=f3e120]: Help
+            - link "AiPraktor Agent" [ref=f3e121] [cursor=pointer]:
+              - /url: /dashboard/help
+            - link "Feedback" [ref=f3e125] [cursor=pointer]:
+              - /url: /dashboard/feedback
+        - generic [ref=f3e128]:
+          - generic "Auto-revert sweeper is running" [ref=f3e130]: SYSTEM ONLINE
+          - generic [ref=f3e135]:
+            - generic [ref=f3e136]: Signed in · Business owner
+            - generic [ref=f3e137]: navinmdnawshin@gmail.com
+          - switch "On duty" [checked] [ref=f3e215] [cursor=pointer]
+          - link "This device" [ref=f3e138] [cursor=pointer]:
+            - /url: /dashboard/device
+          - button "Sign out" [ref=f3e141] [cursor=pointer]
+      - main [ref=f3e145]:
+        - generic [ref=f3e146]:
+          - generic [ref=f3e147]:
+            - generic [ref=f3e148]: LIVE
+            - generic [ref=f3e151]: AI ⟷ HUMAN
+          - generic [ref=f3e152]:
+            - button "Watch how · 6 videos" [ref=f3e218] [cursor=pointer]
+            - radiogroup "Colour theme" [ref=f3e153]:
+              - radio "Light" [checked] [ref=f3e154]
+              - radio "Dark" [ref=f3e162] [cursor=pointer]
+            - generic "Auto-revert sweeper is running" [ref=f3e167]: SYSTEM ONLINE
+            - generic [ref=f3e172]: 11:38:35
+        - generic [ref=f3e225]:
+          - button "The AiPraktor Agent is now on for everyone. See what it can do in a 9-minute video" [ref=f3e228] [cursor=pointer]
+          - button "Read" [ref=f3e229] [cursor=pointer]
+          - button "Hide this line" [ref=f3e230] [cursor=pointer]
+        - generic [ref=f3e234]:
+          - generic [ref=f3e235]:
+            - generic [ref=f3e236]:
+              - generic [ref=f3e237]: pages
+              - heading "Pages" [level=1] [ref=f3e238]
+              - paragraph [ref=f3e239]: "Your business's channels: its Facebook pages (Instagram answers on them), its WhatsApp numbers and its website chat. Every page shares the business's products, offers and instructions and keeps its own inbox. Switch the AI off on any one of them whenever you like, and on again — messages are saved either way."
+            - generic [ref=f3e240]:
+              - link "Business settings" [ref=f3e241] [cursor=pointer]:
+                - /url: /dashboard/business
+              - button "Add another Facebook page" [ref=f3e246] [cursor=pointer]
+              - generic [ref=f3e248]: WhatsApp is not switched on yet — pay for it on Billing (Billing → WhatsApp); it switches on once the payment is checked.
+          - button "Another Facebook page" [ref=f3e251] [cursor=pointer]
+          - generic [ref=f3e254]:
+            - generic [ref=f3e255]:
+              - img "Messenger" [ref=f3e256]
+              - generic [ref=f3e259]:
+                - link "Coffee 9" [ref=f3e260] [cursor=pointer]:
+                  - /url: /dashboard/pages/page_1794374612666_0y3u81?settings=1
+                - generic [ref=f3e261]: Facebook page
+            - generic [ref=f3e265]:
+              - img "Messenger" [ref=f3e266]
+              - generic [ref=f3e269]:
+                - generic [ref=f3e270]: Messenger messages
+                - generic [ref=f3e271]: Not connected yet
+              - link "Connect" [ref=f3e272] [cursor=pointer]:
+                - /url: /dashboard/pages/page_1794374612666_0y3u81?settings=1
+            - generic [ref=f3e273]:
+              - generic [ref=f3e274]: Not connected to Facebook yet.
+              - link "Connect" [ref=f3e275] [cursor=pointer]:
+                - /url: /dashboard/setup?step=channels
+            - generic [ref=f3e278]:
+              - generic [ref=f3e279]:
+                - generic [ref=f3e283]: "0"
+                - text: with the AI
+              - generic [ref=f3e284]:
+                - generic [ref=f3e288]: "0"
+                - text: with your team
+              - generic [ref=f3e289]: 0 chats
+            - generic [ref=f3e290]:
+              - generic [ref=f3e291]: Nobody is waiting
+              - link "Settings" [ref=f3e293] [cursor=pointer]:
+                - /url: /dashboard/pages/page_1794374612666_0y3u81?settings=1
+          - generic "Wait before answering" [ref=f3e297]:
+            - heading "Wait before answering" [level=2] [ref=f3e298]
+            - paragraph [ref=f3e302]: The AI waits a few seconds before it answers, so a customer who writes one question in two or three messages gets one answer. A smaller number means faster replies.
+            - generic [ref=f3e303]:
+              - generic [ref=f3e304]: Seconds to wait
+              - spinbutton "Seconds to wait" [ref=f3e305]
+              - generic [ref=f3e306]: 0–15 · standard 15
+              - button "Save" [disabled] [ref=f3e307]
+            - paragraph [ref=f3e310]: A customer whose second message arrives after these 15 seconds gets a second answer, and each answer is charged to your credit. At 0 that happens with every message. Photos have their own short wait, which this does not change.
+          - generic "Leads switch" [ref=f3e311]:
+            - generic [ref=f3e312]:
+              - generic [ref=f3e313]:
+                - heading "Leads are off" [level=2] [ref=f3e314]
+                - paragraph [ref=f3e319]: The AI does not write down leads and you get no follow-up notifications. Phone numbers customers give still go onto their chat, so you can see them in the Inbox. Leads you already had are kept — switch on to see them again.
+              - switch "Leads" [ref=f3e320] [cursor=pointer]
+          - generic "Sales reported to Meta" [ref=f3e322]:
+            - generic [ref=f3e323]:
+              - generic [ref=f3e324]:
+                - heading "Sales reported to Meta · on" [level=2] [ref=f3e325]
+                - paragraph [ref=f3e329]: When your team confirms an order that came through Messenger, we tell Meta about the sale — the amount only, never the customer’s name, phone or address — so your Facebook ads learn which chats buy and find more people like them. Free.
+                - list [ref=f3e330]:
+                  - listitem [ref=f3e331]:
+                    - strong [ref=f3e332]: Coffee 9
+                    - text: — Ready — the next confirmed Messenger order is reported.
+              - switch "Sales reported to Meta" [checked] [ref=f3e333] [cursor=pointer]
+      - button "AiPraktor Agent" [ref=f3e335] [cursor=pointer]
+    - note [ref=f3e340]:
+      - paragraph [ref=f3e341]: First time here? Short videos show how this works.
+      - generic [ref=f3e342]:
+        - button "Watch" [ref=f3e343] [cursor=pointer]
+        - button "Don't need it" [ref=f3e347] [cursor=pointer]
+  - alert [ref=f3e205]

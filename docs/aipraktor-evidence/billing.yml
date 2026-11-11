@@ -1,0 +1,242 @@
+- generic [active] [ref=f21e1]:
+  - generic [ref=f21e2]:
+    - generic [ref=f21e3]:
+      - complementary [ref=f21e4]:
+        - generic [ref=f21e11]:
+          - generic [ref=f21e12]: AiPraktor
+          - generic [ref=f21e13]: control plane
+        - navigation [ref=f21e14]:
+          - link "Setup guide 0/8" [ref=f21e216] [cursor=pointer]:
+            - /url: /dashboard#setup-guide
+            - text: Setup guide
+            - generic [ref=f21e220]: 0/8
+          - generic [ref=f21e15]:
+            - generic [ref=f21e16]: Work
+            - link "Overview" [ref=f21e17] [cursor=pointer]:
+              - /url: /dashboard
+            - link "Inbox" [ref=f21e23] [cursor=pointer]:
+              - /url: /dashboard/inbox
+            - link "Notifications" [ref=f21e27] [cursor=pointer]:
+              - /url: /dashboard/notifications
+            - link "Comments" [ref=f21e36] [cursor=pointer]:
+              - /url: /dashboard/comments
+            - link "Saved replies ⚡ Auto" [ref=f21e40] [cursor=pointer]:
+              - /url: /dashboard/saved-replies
+              - text: Saved replies
+              - generic "Saved replies can answer customers automatically, free" [ref=f21e43]:
+                - text: ⚡
+                - generic [ref=f21e44]: Auto
+            - link "Orders" [ref=f21e45] [cursor=pointer]:
+              - /url: /dashboard/orders
+            - link "Activity" [ref=f21e49] [cursor=pointer]:
+              - /url: /dashboard/activity
+            - link "Analytics" [ref=f21e52] [cursor=pointer]:
+              - /url: /dashboard/analytics
+            - link "Announcements" [ref=f21e55] [cursor=pointer]:
+              - /url: /dashboard/announcements
+          - generic [ref=f21e59]:
+            - generic [ref=f21e60]: Grow
+            - link "Follow-ups" [ref=f21e61] [cursor=pointer]:
+              - /url: /dashboard/followups
+            - link "Broadcasts" [ref=f21e67] [cursor=pointer]:
+              - /url: /dashboard/broadcasts
+            - link "Products" [ref=f21e71] [cursor=pointer]:
+              - /url: /dashboard/products
+            - link "Posts" [ref=f21e76] [cursor=pointer]:
+              - /url: /dashboard/posts
+            - link "Knowledge" [ref=f21e221] [cursor=pointer]:
+              - /url: /dashboard/knowledge
+            - link "Website chat" [ref=f21e82] [cursor=pointer]:
+              - /url: /dashboard/website
+            - link "Agent Desk" [ref=f21e86] [cursor=pointer]:
+              - /url: /dashboard/agent-desk
+          - generic [ref=f21e88]:
+            - generic [ref=f21e89]: Set up
+            - link "Pages" [ref=f21e90] [cursor=pointer]:
+              - /url: /dashboard/pages
+            - link "Business settings" [ref=f21e96] [cursor=pointer]:
+              - /url: /dashboard/business
+            - link "Billing" [ref=f21e101] [cursor=pointer]:
+              - /url: /dashboard/billing
+            - link "Team" [ref=f21e105] [cursor=pointer]:
+              - /url: /dashboard/submasters
+            - link "Setup" [ref=f21e111] [cursor=pointer]:
+              - /url: /dashboard/setup
+            - link "Video guide" [ref=f21e115] [cursor=pointer]:
+              - /url: /dashboard/videos
+          - generic [ref=f21e119]:
+            - generic [ref=f21e120]: Help
+            - link "AiPraktor Agent" [ref=f21e121] [cursor=pointer]:
+              - /url: /dashboard/help
+            - link "Feedback" [ref=f21e125] [cursor=pointer]:
+              - /url: /dashboard/feedback
+        - generic [ref=f21e128]:
+          - generic "Auto-revert sweeper is running" [ref=f21e130]: SYSTEM ONLINE
+          - generic [ref=f21e135]:
+            - generic [ref=f21e136]: Signed in · Business owner
+            - generic [ref=f21e137]: navinmdnawshin@gmail.com
+          - switch "On duty" [checked] [ref=f21e225] [cursor=pointer]
+          - link "This device" [ref=f21e138] [cursor=pointer]:
+            - /url: /dashboard/device
+          - button "Sign out" [ref=f21e141] [cursor=pointer]
+      - main [ref=f21e145]:
+        - generic [ref=f21e146]:
+          - generic [ref=f21e147]:
+            - generic [ref=f21e148]: LIVE
+            - generic [ref=f21e151]: AI ⟷ HUMAN
+          - generic [ref=f21e152]:
+            - button "Watch how · 2 videos" [ref=f21e228] [cursor=pointer]
+            - radiogroup "Colour theme" [ref=f21e153]:
+              - radio "Light" [ref=f21e154] [cursor=pointer]
+              - radio "Dark" [checked] [ref=f21e162]
+            - generic "Auto-revert sweeper is running" [ref=f21e167]: SYSTEM ONLINE
+            - generic [ref=f21e172]: 11:44:20
+        - generic [ref=f21e235]:
+          - button "The AiPraktor Agent is now on for everyone. See what it can do in a 9-minute video" [ref=f21e238] [cursor=pointer]
+          - button "Read" [ref=f21e239] [cursor=pointer]
+          - button "Hide this line" [ref=f21e240] [cursor=pointer]
+        - generic [ref=f21e175]:
+          - generic [ref=f21e176]:
+            - generic [ref=f21e177]: billing
+            - heading "Billing" [level=1] [ref=f21e178]
+            - paragraph [ref=f21e179]: Your AI credit, how to add more, and everything it was spent on. No monthly fee — you only pay for what your assistant does.
+          - generic [ref=f21e180]:
+            - region [ref=f21e244]:
+              - generic [ref=f21e245]:
+                - heading "AI credit" [level=2] [ref=f21e249]
+                - generic [ref=f21e250]: No credit yet
+              - paragraph [ref=f21e252]: Prices include AiPraktor’s service. Every top-up is added to your credit in full.
+              - generic [ref=f21e253]:
+                - generic [ref=f21e254]:
+                  - generic [ref=f21e255]: Balance
+                  - generic [ref=f21e256]: ৳0
+                - button "Add credit" [ref=f21e257] [cursor=pointer]
+              - generic [ref=f21e260]:
+                - generic [ref=f21e266]: We warn you when the balance falls to ৳10 (the standard).
+                - button "Change" [ref=f21e267] [cursor=pointer]
+            - region [ref=f21e268]:
+              - heading "Your customers" [level=2] [ref=f21e275]
+              - group "Period" [ref=f21e276]:
+                - button "Today" [ref=f21e277] [cursor=pointer]
+                - button "Yesterday" [ref=f21e278] [cursor=pointer]
+                - button "7 days" [ref=f21e279] [cursor=pointer]
+                - button "30 days" [ref=f21e280] [cursor=pointer]
+                - button "This month" [pressed] [ref=f21e281] [cursor=pointer]
+                - button "Last month" [ref=f21e282] [cursor=pointer]
+                - button "Pick dates" [ref=f21e283] [cursor=pointer]
+              - generic [ref=f21e284]: Counting your customers…
+              - button "See every AI request — what, when, for which customer, and its price" [ref=f21e285] [cursor=pointer]
+            - region [ref=f21e292]:
+              - heading "Setup service" [level=2] [ref=f21e296]
+              - paragraph [ref=f21e297]: Setting up yourself is free — the video guide shows every step. Busy, or would rather not do it? Our support agent can do it all for you, start to finish, until you are satisfied. The cost differs from business to business — ask below, and our support agent calls you and tells you before anything is paid.
+              - generic [ref=f21e298]:
+                - button "Ask for the setup service" [ref=f21e299] [cursor=pointer]
+                - link "Video guide" [ref=f21e300] [cursor=pointer]:
+                  - /url: /dashboard/videos
+            - generic [ref=f21e301]:
+              - region [ref=f21e302]:
+                - heading "Add credit" [level=2] [ref=f21e305]
+                - group "What this payment is for" [ref=f21e306]:
+                  - button "AI credit" [pressed] [ref=f21e307] [cursor=pointer]
+                  - button "WhatsApp · ৳900 a month" [ref=f21e308] [cursor=pointer]
+                - paragraph [ref=f21e311]: Pay by bKash, Nagad or bank transfer, then send us the Transaction ID. We check the payment and add the credit to your account. One balance is shared by all your pages — Facebook, Instagram and WhatsApp.
+                - generic [ref=f21e312]: 1 · Choose an amount
+                - group "Top-up amount" [ref=f21e313]:
+                  - button "৳1,000" [pressed] [ref=f21e314] [cursor=pointer]
+                  - button "৳2,000" [ref=f21e315] [cursor=pointer]
+                  - button "৳5,000" [ref=f21e316] [cursor=pointer]
+                  - button "৳10,000" [ref=f21e317] [cursor=pointer]
+                - generic [ref=f21e318]:
+                  - generic [ref=f21e319]: Or another amount
+                  - generic [ref=f21e320]:
+                    - generic [aria-hidden]: ৳
+                    - textbox "Or another amount" [ref=f21e321]:
+                      - /placeholder: "1000"
+                  - generic [ref=f21e322]: Minimum ৳1,000
+                - generic [ref=f21e323]:
+                  - generic [ref=f21e324]:
+                    - generic [ref=f21e325]: You pay
+                    - generic [ref=f21e326]: ৳1,000
+                  - generic [ref=f21e328]:
+                    - generic [ref=f21e329]: Credit added
+                    - generic [ref=f21e330]: ৳1,000
+                  - paragraph [ref=f21e331]: The full amount becomes credit. Prices include AiPraktor’s service.
+                - generic [ref=f21e332]: 2 · Send the payment
+                - tablist "How you pay" [ref=f21e333]:
+                  - tab "bKash" [selected] [ref=f21e334] [cursor=pointer]
+                  - tab "Nagad" [ref=f21e337] [cursor=pointer]
+                  - tab "Bank transfer" [ref=f21e340] [cursor=pointer]
+                - tabpanel "bKash" [ref=f21e343]:
+                  - list [ref=f21e344]:
+                    - listitem [ref=f21e345]:
+                      - generic [aria-hidden] [ref=f21e346]: "1"
+                      - generic [ref=f21e347]: Open your bKash app and choose Send Money.
+                    - listitem [ref=f21e348]:
+                      - generic [aria-hidden] [ref=f21e349]: "2"
+                      - generic [ref=f21e350]:
+                        - text: To 01724501119
+                        - generic [ref=f21e351]: (Personal)
+                      - button "Copy number" [ref=f21e352] [cursor=pointer]: Copy
+                    - listitem [ref=f21e356]:
+                      - generic [aria-hidden] [ref=f21e357]: "3"
+                      - generic [ref=f21e358]: Amount ৳1,000
+                      - button "Copy amount" [ref=f21e359] [cursor=pointer]: Copy
+                    - listitem [ref=f21e363]:
+                      - generic [aria-hidden] [ref=f21e364]: "4"
+                      - generic [ref=f21e365]: Reference AP-99B7E4 — so we can find your payment
+                      - button "Copy reference" [ref=f21e366] [cursor=pointer]: Copy
+                    - listitem [ref=f21e370]:
+                      - generic [aria-hidden] [ref=f21e371]: "5"
+                      - generic [ref=f21e372]: Enter the Transaction ID you get below.
+                - generic [ref=f21e373]: 3 · Confirm your top-up
+                - generic [ref=f21e374]:
+                  - generic [ref=f21e375]:
+                    - generic [ref=f21e376]:
+                      - generic [ref=f21e377]: Transaction ID
+                      - textbox "Transaction ID" [ref=f21e378]:
+                        - /placeholder: 8N7A6D5K2P
+                      - generic [ref=f21e379]: From bKash’s confirmation message.
+                    - generic [ref=f21e380]:
+                      - generic [ref=f21e381]: Sent from (your number) · optional
+                      - textbox "Sent from (your number) · optional" [ref=f21e382]:
+                        - /placeholder: 01XXXXXXXXX
+                  - generic [ref=f21e384]:
+                    - generic [ref=f21e385]: Note · optional
+                    - textbox "Note · optional" [ref=f21e386]:
+                      - /placeholder: Anything we should know
+                  - generic [ref=f21e387]:
+                    - button "I’ve paid — confirm my top-up" [disabled] [ref=f21e388]
+                    - generic [ref=f21e389]:
+                      - text: Nothing is charged here. This tells us to look for your payment. AI credit does not expire and is not refundable (
+                      - link "Terms" [ref=f21e390] [cursor=pointer]:
+                        - /url: /terms#fees
+                      - text: ).
+              - generic [ref=f21e391]:
+                - region [ref=f21e392]:
+                  - heading "Your top-ups" [level=2] [ref=f21e398]
+                  - paragraph [ref=f21e399]: No top-ups yet. When you send one, it appears here and shows its progress until the credit is added.
+                - region [ref=f21e400]:
+                  - generic [ref=f21e401]:
+                    - heading "Statement" [level=2] [ref=f21e405]
+                    - button "Download CSV" [disabled] [ref=f21e406]
+                  - group "Statement period" [ref=f21e410]:
+                    - button "30 days" [pressed] [ref=f21e411] [cursor=pointer]
+                    - button "90 days" [ref=f21e412] [cursor=pointer]
+                    - button "365 days" [ref=f21e413] [cursor=pointer]
+                  - generic [ref=f21e414]: Loading your statement…
+          - group [ref=f21e415]:
+            - generic "Every AI request, one by one Today, yesterday or any dates · what it was for · which customer · its price · download as CSV" [ref=f21e416] [cursor=pointer]:
+              - generic [ref=f21e420]:
+                - text: Every AI request, one by one
+                - generic [ref=f21e421]: Today, yesterday or any dates · what it was for · which customer · its price · download as CSV
+            - option "Everything" [selected]
+            - option "Succeeded and failed" [selected]
+            - option "Succeeded only"
+            - option "Failed only"
+      - button "AiPraktor Agent" [ref=f21e424] [cursor=pointer]
+    - note [ref=f21e429]:
+      - paragraph [ref=f21e430]: First time here? Short videos show how this works.
+      - generic [ref=f21e431]:
+        - button "Watch" [ref=f21e432] [cursor=pointer]
+        - button "Don't need it" [ref=f21e436] [cursor=pointer]
+  - alert [ref=f21e215]

@@ -12,4 +12,5 @@ These rules apply to every change in this Next.js frontend.
 8. Do not expose or commit credentials, tokens, passwords, or environment values.
 9. Verify changes with the narrowest relevant lint, type-check, or build command. Do not fix unrelated failures without approval.
 10. After every approved change, update `context.md` with what changed, relevant decisions, verification performed, and any remaining issue.
-
+11. Finally find all the implicit state machines in my project. Make the best decision that will elevate all three: the user experience (UX), developer experience (DX), and agent experience (AX) always, without breaking anything.
+12. Use the necessary skills that is available to ensure security, bugs, error of the project.

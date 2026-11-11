@@ -1,0 +1,36 @@
+- generic [ref=e1]:
+  - generic [ref=e8]:
+    - generic [ref=e9]:
+      - group "Language · ভাষা" [ref=e11]:
+        - button "বাংলা" [ref=e12] [cursor=pointer]
+        - button "EN" [active] [pressed] [ref=e13] [cursor=pointer]
+      - generic [ref=e14]:
+        - generic [ref=e15]: aipraktor control plane
+        - img [aria-hidden] [ref=e20]:
+          - generic [ref=e26]: AI
+          - generic [ref=e29]: HUMAN
+        - heading "Route every conversation" [level=1] [ref=e64]
+        - paragraph [ref=e31]: Hand chats between your AI agent and your team in real time — with automatic time-based reversion back to AI.
+      - tablist "Sign-in method" [ref=e65]:
+        - tab "Email & password" [selected] [ref=e66] [cursor=pointer]
+        - tab "Access key" [ref=e34] [cursor=pointer]
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - generic [ref=e37]: Email
+          - textbox "Email" [ref=e67]:
+            - /placeholder: you@business.com
+        - generic [ref=e40]:
+          - generic [ref=e41]:
+            - generic [ref=e42] [cursor=pointer]: Password
+            - button "Show password" [ref=e68] [cursor=pointer]: Show
+          - textbox "Password" [ref=e69]:
+            - /placeholder: ••••••••
+        - link "Forgot your password?" [ref=e70] [cursor=pointer]:
+          - /url: /forgot
+        - button "Sign in" [disabled] [ref=e71]
+      - generic [ref=e53]: Client & team sign-in · encrypted
+    - link "New here? Create your account" [ref=e72] [cursor=pointer]:
+      - /url: /signup
+    - link "Back to aipraktor.com" [ref=e73] [cursor=pointer]:
+      - /url: /
+  - alert [ref=e7]: লগইন — AiPraktor

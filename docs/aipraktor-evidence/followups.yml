@@ -1,0 +1,184 @@
+- generic [active] [ref=f15e1]:
+  - generic [ref=f15e2]:
+    - generic [ref=f15e3]:
+      - complementary [ref=f15e4]:
+        - generic [ref=f15e11]:
+          - generic [ref=f15e12]: AiPraktor
+          - generic [ref=f15e13]: control plane
+        - navigation [ref=f15e14]:
+          - link "Setup guide 0/8" [ref=f15e253] [cursor=pointer]:
+            - /url: /dashboard#setup-guide
+            - text: Setup guide
+            - generic [ref=f15e257]: 0/8
+          - generic [ref=f15e15]:
+            - generic [ref=f15e16]: Work
+            - link "Overview" [ref=f15e17] [cursor=pointer]:
+              - /url: /dashboard
+            - link "Inbox" [ref=f15e23] [cursor=pointer]:
+              - /url: /dashboard/inbox
+            - link "Notifications" [ref=f15e27] [cursor=pointer]:
+              - /url: /dashboard/notifications
+            - link "Comments" [ref=f15e36] [cursor=pointer]:
+              - /url: /dashboard/comments
+            - link "Saved replies ⚡ Auto" [ref=f15e40] [cursor=pointer]:
+              - /url: /dashboard/saved-replies
+              - text: Saved replies
+              - generic "Saved replies can answer customers automatically, free" [ref=f15e43]:
+                - text: ⚡
+                - generic [ref=f15e44]: Auto
+            - link "Orders" [ref=f15e45] [cursor=pointer]:
+              - /url: /dashboard/orders
+            - link "Activity" [ref=f15e49] [cursor=pointer]:
+              - /url: /dashboard/activity
+            - link "Analytics" [ref=f15e52] [cursor=pointer]:
+              - /url: /dashboard/analytics
+            - link "Announcements" [ref=f15e55] [cursor=pointer]:
+              - /url: /dashboard/announcements
+          - generic [ref=f15e59]:
+            - generic [ref=f15e60]: Grow
+            - link "Follow-ups" [ref=f15e61] [cursor=pointer]:
+              - /url: /dashboard/followups
+            - link "Broadcasts" [ref=f15e68] [cursor=pointer]:
+              - /url: /dashboard/broadcasts
+            - link "Products" [ref=f15e72] [cursor=pointer]:
+              - /url: /dashboard/products
+            - link "Posts" [ref=f15e77] [cursor=pointer]:
+              - /url: /dashboard/posts
+            - link "Knowledge" [ref=f15e258] [cursor=pointer]:
+              - /url: /dashboard/knowledge
+            - link "Website chat" [ref=f15e83] [cursor=pointer]:
+              - /url: /dashboard/website
+            - link "Agent Desk" [ref=f15e87] [cursor=pointer]:
+              - /url: /dashboard/agent-desk
+          - generic [ref=f15e89]:
+            - generic [ref=f15e90]: Set up
+            - link "Pages" [ref=f15e91] [cursor=pointer]:
+              - /url: /dashboard/pages
+            - link "Business settings" [ref=f15e97] [cursor=pointer]:
+              - /url: /dashboard/business
+            - link "Billing" [ref=f15e102] [cursor=pointer]:
+              - /url: /dashboard/billing
+            - link "Team" [ref=f15e105] [cursor=pointer]:
+              - /url: /dashboard/submasters
+            - link "Setup" [ref=f15e111] [cursor=pointer]:
+              - /url: /dashboard/setup
+            - link "Video guide" [ref=f15e115] [cursor=pointer]:
+              - /url: /dashboard/videos
+          - generic [ref=f15e119]:
+            - generic [ref=f15e120]: Help
+            - link "AiPraktor Agent" [ref=f15e121] [cursor=pointer]:
+              - /url: /dashboard/help
+            - link "Feedback" [ref=f15e125] [cursor=pointer]:
+              - /url: /dashboard/feedback
+        - generic [ref=f15e128]:
+          - generic "Auto-revert sweeper is running" [ref=f15e130]: SYSTEM ONLINE
+          - generic [ref=f15e135]:
+            - generic [ref=f15e136]: Signed in · Business owner
+            - generic [ref=f15e137]: navinmdnawshin@gmail.com
+          - switch "On duty" [checked] [ref=f15e262] [cursor=pointer]
+          - link "This device" [ref=f15e138] [cursor=pointer]:
+            - /url: /dashboard/device
+          - button "Sign out" [ref=f15e141] [cursor=pointer]
+      - main [ref=f15e145]:
+        - generic [ref=f15e146]:
+          - generic [ref=f15e147]:
+            - generic [ref=f15e148]: LIVE
+            - generic [ref=f15e151]: AI ⟷ HUMAN
+          - generic [ref=f15e152]:
+            - 'button "Watch how · 1 min — Follow-ups: automatic reminders" [ref=f15e265] [cursor=pointer]':
+              - generic [ref=f15e269]: Watch how · 1 min
+            - radiogroup "Colour theme" [ref=f15e153]:
+              - radio "Light" [checked] [ref=f15e154]
+              - radio "Dark" [ref=f15e162] [cursor=pointer]
+            - generic "Auto-revert sweeper is running" [ref=f15e167]: SYSTEM ONLINE
+            - generic [ref=f15e172]: 11:42:28
+        - generic [ref=f15e272]:
+          - button "The AiPraktor Agent is now on for everyone. See what it can do in a 9-minute video" [ref=f15e275] [cursor=pointer]
+          - button "Read" [ref=f15e276] [cursor=pointer]
+          - button "Hide this line" [ref=f15e277] [cursor=pointer]
+        - generic [ref=f15e175]:
+          - generic [ref=f15e176]:
+            - generic [ref=f15e177]:
+              - generic [ref=f15e178]: follow-ups
+              - heading "Follow-ups" [level=1] [ref=f15e179]
+              - paragraph [ref=f15e180]: "Automatic reminders to customers who asked and went quiet. A customer is judged 3 quiet hours after their last message: warm gets one reminder, hot gets two, always inside a day. The system may choose silence — a person owns the chat, they already ordered, they said no — and says why."
+            - generic [ref=f15e181]:
+              - button "7d" [ref=f15e182] [cursor=pointer]
+              - button "14d" [ref=f15e183] [cursor=pointer]
+              - button "30d" [ref=f15e184] [cursor=pointer]
+          - generic [ref=f15e185]:
+            - generic [ref=f15e186]:
+              - generic [ref=f15e187]: Watching now
+              - generic [ref=f15e192]: "0"
+              - generic [ref=f15e193]: judged 3 h after their last message
+            - generic [ref=f15e194]:
+              - generic [ref=f15e195]: Planned
+              - generic [ref=f15e201]: "0"
+              - generic [ref=f15e202]: judged — a reminder is scheduled
+            - generic [ref=f15e203]:
+              - generic [ref=f15e204]: Sent · 14d
+              - generic [ref=f15e209]: "0"
+            - generic [ref=f15e210]:
+              - generic [ref=f15e211]: Replied · 14d
+              - generic [ref=f15e215]: "0"
+              - generic [ref=f15e216]: no sends yet
+            - generic [ref=f15e217]:
+              - generic [ref=f15e218]: Ordered after · 14d
+              - generic [ref=f15e226]: "0"
+              - generic [ref=f15e227]: no sends yet
+          - generic [ref=f15e228]:
+            - generic [ref=f15e229]:
+              - generic [ref=f15e235]: Where reminders run
+              - generic [ref=f15e236]: · 1 of 1 pages on
+            - generic [ref=f15e281]: Hot customers are reminded 3 h and 20 h after their last message, warm customers after 20 h. Never more than 2 per visit, never after Meta's 24-hour window, and never in a chat a person on your team has taken over.
+            - generic [ref=f15e284]:
+              - switch "Coffee 9 ON" [checked] [ref=f15e285] [cursor=pointer]:
+                - generic [ref=f15e287]: Coffee 9
+                - generic [ref=f15e288]: "ON"
+              - group "Which customers Coffee 9 reminds" [ref=f15e289]:
+                - button "Both" [pressed] [ref=f15e290] [cursor=pointer]
+                - button "Hot only" [ref=f15e291] [cursor=pointer]
+                - button "Warm only" [ref=f15e292] [cursor=pointer]
+            - generic [ref=f15e293]:
+              - generic [ref=f15e294]:
+                - generic [ref=f15e297]: An offer with the last reminder
+                - generic [ref=f15e298]: · a discount card (no code), valid for hours — the AI honours it only until then
+              - generic [ref=f15e300]:
+                - switch "Coffee 9 no offer" [ref=f15e301] [cursor=pointer]:
+                  - generic [ref=f15e303]: Coffee 9
+                  - generic [ref=f15e304]: no offer
+                - generic [ref=f15e305]: "off"
+                - button "edit" [ref=f15e306] [cursor=pointer]
+            - generic [ref=f15e307]:
+              - text: "Every page chooses who its reminders are for:"
+              - strong [ref=f15e308]: hot
+              - text: customers asked about a product and its delivery, address or quantity (or said they would order);
+              - strong [ref=f15e309]: warm
+              - text: ones only asked about the product or its price. Switching a kind off cancels the reminders already planned for it, within a minute.
+          - generic [ref=f15e239]:
+            - button "Watching 0" [ref=f15e310] [cursor=pointer]:
+              - text: Watching
+              - generic [ref=f15e311]: "0"
+            - button "Upcoming 0" [ref=f15e312] [cursor=pointer]:
+              - text: Upcoming
+              - generic [ref=f15e313]: "0"
+            - button "Sent 0" [ref=f15e314] [cursor=pointer]:
+              - text: Sent
+              - generic [ref=f15e315]: "0"
+            - button "Skipped 0" [ref=f15e316] [cursor=pointer]:
+              - text: Skipped
+              - generic [ref=f15e317]: "0"
+            - button "For the team 0" [ref=f15e318] [cursor=pointer]:
+              - text: For the team
+              - generic [ref=f15e319]: "0"
+            - button "All" [ref=f15e245] [cursor=pointer]
+          - generic [ref=f15e320]:
+            - generic [ref=f15e325]: Nobody is being watched right now
+            - generic [ref=f15e326]: The moment a customer on a switched-on page writes, they appear here with the minute they will be judged (3 h after their last message).
+      - button "AiPraktor Agent" [ref=f15e327] [cursor=pointer]
+    - note [ref=f15e332]:
+      - paragraph [ref=f15e333]: First time here? A 1 min video shows how this works.
+      - generic [ref=f15e334]:
+        - button "Watch" [ref=f15e335] [cursor=pointer]
+        - button "Don't need it" [ref=f15e339] [cursor=pointer]
+  - alert [ref=f15e252]

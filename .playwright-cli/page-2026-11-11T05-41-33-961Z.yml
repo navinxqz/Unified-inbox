@@ -1,0 +1,125 @@
+- generic [active] [ref=f11e1]:
+  - generic [ref=f11e3]:
+    - complementary [ref=f11e4]:
+      - generic [ref=f11e11]:
+        - generic [ref=f11e12]: AiPraktor
+        - generic [ref=f11e13]: control plane
+      - navigation [ref=f11e14]:
+        - generic [ref=f11e15]:
+          - generic [ref=f11e16]: Work
+          - link "Overview" [ref=f11e17] [cursor=pointer]:
+            - /url: /dashboard
+          - link "Inbox" [ref=f11e23] [cursor=pointer]:
+            - /url: /dashboard/inbox
+          - link "Notifications" [ref=f11e27] [cursor=pointer]:
+            - /url: /dashboard/notifications
+          - link "Leads" [ref=f11e31] [cursor=pointer]:
+            - /url: /dashboard/leads
+          - link "Comments" [ref=f11e37] [cursor=pointer]:
+            - /url: /dashboard/comments
+          - link "Saved replies ⚡ Auto" [ref=f11e41] [cursor=pointer]:
+            - /url: /dashboard/saved-replies
+            - text: Saved replies
+            - generic "Saved replies can answer customers automatically, free" [ref=f11e44]:
+              - text: ⚡
+              - generic [ref=f11e45]: Auto
+          - link "Orders" [ref=f11e46] [cursor=pointer]:
+            - /url: /dashboard/orders
+          - link "Activity" [ref=f11e50] [cursor=pointer]:
+            - /url: /dashboard/activity
+          - link "Analytics" [ref=f11e53] [cursor=pointer]:
+            - /url: /dashboard/analytics
+          - link "Announcements" [ref=f11e56] [cursor=pointer]:
+            - /url: /dashboard/announcements
+        - generic [ref=f11e60]:
+          - generic [ref=f11e61]: Grow
+          - link "Follow-ups" [ref=f11e62] [cursor=pointer]:
+            - /url: /dashboard/followups
+          - link "Broadcasts" [ref=f11e68] [cursor=pointer]:
+            - /url: /dashboard/broadcasts
+          - link "Products" [ref=f11e72] [cursor=pointer]:
+            - /url: /dashboard/products
+          - link "Posts" [ref=f11e77] [cursor=pointer]:
+            - /url: /dashboard/posts
+          - link "Website chat" [ref=f11e83] [cursor=pointer]:
+            - /url: /dashboard/website
+          - link "Agent Desk" [ref=f11e87] [cursor=pointer]:
+            - /url: /dashboard/agent-desk
+        - generic [ref=f11e89]:
+          - generic [ref=f11e90]: Set up
+          - link "Pages" [ref=f11e91] [cursor=pointer]:
+            - /url: /dashboard/pages
+          - link "Business settings" [ref=f11e97] [cursor=pointer]:
+            - /url: /dashboard/business
+          - link "Billing" [ref=f11e102] [cursor=pointer]:
+            - /url: /dashboard/billing
+          - link "Team" [ref=f11e105] [cursor=pointer]:
+            - /url: /dashboard/submasters
+          - link "Setup" [ref=f11e111] [cursor=pointer]:
+            - /url: /dashboard/setup
+          - link "Video guide" [ref=f11e115] [cursor=pointer]:
+            - /url: /dashboard/videos
+        - generic [ref=f11e119]:
+          - generic [ref=f11e120]: Help
+          - link "AiPraktor Agent" [ref=f11e121] [cursor=pointer]:
+            - /url: /dashboard/help
+          - link "Feedback" [ref=f11e125] [cursor=pointer]:
+            - /url: /dashboard/feedback
+      - generic [ref=f11e128]:
+        - generic "Auto-revert sweeper is running" [ref=f11e130]: SYSTEM ONLINE
+        - generic [ref=f11e135]:
+          - generic [ref=f11e136]: Signed in · Business owner
+          - generic [ref=f11e137]: navinmdnawshin@gmail.com
+        - link "This device" [ref=f11e138] [cursor=pointer]:
+          - /url: /dashboard/device
+        - button "Sign out" [ref=f11e141] [cursor=pointer]
+    - main [ref=f11e145]:
+      - generic [ref=f11e146]:
+        - generic [ref=f11e147]:
+          - generic [ref=f11e148]: LIVE
+          - generic [ref=f11e151]: AI ⟷ HUMAN
+        - generic [ref=f11e152]:
+          - radiogroup "Colour theme" [ref=f11e153]:
+            - radio "Light" [checked] [ref=f11e154]
+            - radio "Dark" [ref=f11e162] [cursor=pointer]
+          - generic "Auto-revert sweeper is running" [ref=f11e167]: SYSTEM ONLINE
+          - generic [ref=f11e172]: 11:41:33
+      - generic [ref=f11e175]:
+        - generic [ref=f11e176]:
+          - generic [ref=f11e177]:
+            - generic [ref=f11e178]: leads
+            - heading "Leads" [level=1] [ref=f11e179]
+            - paragraph [ref=f11e180]: Every potential customer — captured by your AI, from chats, or added by hand.
+          - combobox [ref=f11e181] [cursor=pointer]:
+            - option "All pages" [selected]
+        - generic [ref=f11e182]:
+          - generic [ref=f11e183]:
+            - generic [ref=f11e184]: Open leads
+            - generic [ref=f11e190]: "0"
+          - generic [ref=f11e192]:
+            - generic [ref=f11e193]: Pipeline value
+            - generic [ref=f11e198]: ৳0
+          - generic [ref=f11e200]:
+            - generic [ref=f11e201]: Due today
+            - generic [ref=f11e210]: "0"
+          - generic [ref=f11e212]:
+            - generic [ref=f11e213]: Won (30d)
+            - generic [ref=f11e221]: "0"
+        - generic [ref=f11e223]:
+          - generic [ref=f11e224]:
+            - button "Today" [ref=f11e225] [cursor=pointer]
+            - button "Pipeline" [ref=f11e226] [cursor=pointer]
+            - button "List" [ref=f11e227] [cursor=pointer]
+            - button "Results" [ref=f11e228] [cursor=pointer]
+          - textbox "Press / to search" [ref=f11e233]:
+            - /placeholder: Search name, phone, need, notes…
+          - combobox "Whose leads to show" [ref=f11e234] [cursor=pointer]:
+            - option "Anyone" [selected]
+            - option "Assigned to me"
+            - option "Unassigned"
+          - button "Filters" [ref=f11e235] [cursor=pointer]
+          - button "Export" [ref=f11e237] [cursor=pointer]
+          - button "Add lead" [ref=f11e242] [cursor=pointer]
+        - generic [ref=f11e244]: Loading…
+        - generic [ref=f11e245]: J / K move · Enter open · / search
+  - alert [ref=f11e246]

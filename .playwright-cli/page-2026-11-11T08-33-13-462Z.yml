@@ -1,0 +1,150 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Primary navigation" [ref=e4]:
+      - generic [ref=e10]:
+        - paragraph [ref=e11]: Unified Inbox
+        - paragraph [ref=e12]: ws_1794374612651_f3d05g
+      - generic [ref=e13]:
+        - generic [ref=e14]: Practice mode
+        - generic "Realtime connection is active (SSE)" [ref=e15]: Live · synced 14s
+      - navigation [ref=e19]:
+        - generic [ref=e20]:
+          - paragraph [ref=e21]: Work
+          - generic [ref=e22]:
+            - button "Overview" [ref=e23]
+            - button "Inbox 9" [ref=e30]:
+              - generic [ref=e34]: Inbox
+              - generic [ref=e35]: "9"
+            - button "Saved replies" [ref=e36]
+            - button "Comments" [ref=e40]
+            - button "Notifications 5" [ref=e44]:
+              - generic [ref=e48]: Notifications
+              - generic [ref=e49]: "5"
+            - button "Activity" [ref=e50]
+            - button "Analytics" [ref=e56]
+        - generic [ref=e60]:
+          - paragraph [ref=e61]: Grow
+          - generic [ref=e62]:
+            - button "Leads" [ref=e63]
+            - button "Orders" [ref=e69]
+            - button "Follow-ups" [ref=e74]
+            - button "Broadcasts" [ref=e81]
+            - button "Products" [ref=e86]
+            - button "Posts" [ref=e92]
+        - generic [ref=e98]:
+          - paragraph [ref=e99]: AI
+          - generic [ref=e100]:
+            - button "Agent Desk" [ref=e101]
+            - button "Knowledge" [ref=e106]
+        - generic [ref=e110]:
+          - paragraph [ref=e111]: Set up
+          - generic [ref=e112]:
+            - button "Setup guide 3/8" [ref=e113]:
+              - generic [ref=e117]: Setup guide
+              - generic [ref=e118]: 3/8
+            - button "Channels" [ref=e119]
+            - button "Website chat" [ref=e125]
+            - button "Business" [ref=e130]
+            - button "Team" [ref=e135]
+            - button "Groups" [ref=e142]
+            - button "Billing" [ref=e147]
+            - button "Workspace settings" [ref=e151]
+      - generic [ref=e156]:
+        - button "Quick actions ⌘K" [ref=e157]:
+          - text: Quick actions
+          - generic [ref=e158]: ⌘K
+        - generic [ref=e159]:
+          - generic [aria-hidden] [ref=e160]: YN
+          - generic [ref=e161]:
+            - paragraph [ref=e162]: You
+            - paragraph [ref=e163]: Owner · Manager group
+    - generic [ref=e7548]:
+      - generic [ref=e7549]:
+        - generic [ref=e7550]:
+          - heading "Website chat" [level=1] [ref=e7551]
+          - paragraph [ref=e7552]: One-line widget, origin-checked, with a per-visitor AI cap and an optional name + phone lead gate.
+        - button "Watch how · 1 min" [ref=e7554]
+      - generic [ref=e7560]:
+        - generic [ref=e7561]:
+          - generic [ref=e7563]:
+            - heading "Deployment mode" [level=2] [ref=e7564]
+            - paragraph [ref=e7565]: Test is the safe default for new sites.
+          - generic [ref=e7567]:
+            - button "Off Widget hidden everywhere. No chats are accepted." [ref=e7568]:
+              - generic [ref=e7569]: "Off"
+              - generic [ref=e7571]: Widget hidden everywhere. No chats are accepted.
+            - button "Test Live only on the domains you list, capped per visitor — safe for rehearsal." [pressed] [ref=e7572]:
+              - generic [ref=e7573]: Test
+              - generic [ref=e7577]: Live only on the domains you list, capped per visitor — safe for rehearsal.
+            - button "On Live for every visitor on the allowed domains." [ref=e7578]:
+              - generic [ref=e7579]: "On"
+              - generic [ref=e7581]: Live for every visitor on the allowed domains.
+        - generic [ref=e7582]:
+          - generic [ref=e7583]:
+            - generic [ref=e7584]:
+              - generic [ref=e7586]:
+                - heading "Allowed domains" [level=2] [ref=e7587]
+                - paragraph [ref=e7588]: "Origin-checked: unknown domains are refused."
+              - generic [ref=e7589]:
+                - generic [ref=e7590]:
+                  - generic [ref=e7591]:
+                    - text: Add a domain
+                    - textbox "Add a domain" [ref=e7592]:
+                      - /placeholder: shop.example.com
+                  - button "Allow" [disabled] [ref=e7593]
+                - generic [ref=e7595]:
+                  - generic [ref=e7596]:
+                    - generic [ref=e7600]:
+                      - paragraph [ref=e7601]: unifiedinbox.io
+                      - paragraph [ref=e7602]: site_0f3a91c4d7b28e41
+                    - generic [ref=e7603]: 200/day AI cap
+                    - generic [ref=e7604] [cursor=pointer]:
+                      - switch "Lead gate for unifiedinbox.io" [checked] [ref=e7605]
+                      - generic [ref=e7607]: Lead gate for unifiedinbox.io
+                    - button "Remove unifiedinbox.io" [ref=e7608]
+                  - generic [ref=e7612]:
+                    - generic [ref=e7616]:
+                      - paragraph [ref=e7617]: shop.unifiedinbox.io
+                      - paragraph [ref=e7618]: site_7c2d55ab9e13f004
+                    - generic [ref=e7619]: 200/day AI cap
+                    - generic [ref=e7620] [cursor=pointer]:
+                      - switch "Lead gate for shop.unifiedinbox.io" [ref=e7621]
+                      - generic [ref=e7623]: Lead gate for shop.unifiedinbox.io
+                    - button "Remove shop.unifiedinbox.io" [ref=e7624]
+                - paragraph [ref=e7628]: Every widget request is origin-checked and the widget is rendered in a sandboxed iframe — the host page never gets direct script access.
+            - generic [ref=e7632]:
+              - generic [ref=e7634]:
+                - heading "Embed code" [level=2] [ref=e7635]
+                - paragraph [ref=e7636]: One line, before </body>.
+              - generic [ref=e7637]:
+                - generic [ref=e7638]: <script src="https://cdn.unifiedinbox.io/embed.js" data-site="site_0f3a91c4d7b28e41" async></script>
+                - button "Copy embed code" [ref=e7639]
+          - generic [ref=e7643]:
+            - generic [ref=e7644]:
+              - heading "Branding" [level=2] [ref=e7647]
+              - generic [ref=e7649]:
+                - generic [ref=e7650]:
+                  - text: Widget name
+                  - textbox "Widget name" [ref=e7651]: Inbox Assistant
+                - generic [ref=e7652]:
+                  - text: Greeting
+                  - textbox "Greeting" [ref=e7653]: Hi! How can we help you today?
+                - generic [ref=e7654]:
+                  - text: Accent colour
+                  - generic [ref=e7655]:
+                    - textbox "Accent colour" [ref=e7656] [cursor=pointer]: "#4f46e5"
+                    - textbox [ref=e7657]: "#4F46E5"
+            - generic [ref=e7658]:
+              - heading "Preview" [level=2] [ref=e7661]
+              - generic [ref=e7662]:
+                - generic [ref=e7664]:
+                  - generic [ref=e7669]:
+                    - paragraph [ref=e7670]: Inbox Assistant
+                    - paragraph [ref=e7671]: online now
+                  - generic [ref=e7672]:
+                    - paragraph [ref=e7673]: Hi! How can we help you today?
+                    - paragraph [ref=e7674]: Name + phone gate shown before the first message.
+                - paragraph [ref=e7675]:
+                  - text: "Mode:"
+                  - generic [ref=e7680]: test
+  - alert [ref=e969]

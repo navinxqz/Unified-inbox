@@ -1,0 +1,87 @@
+- generic [active] [ref=f25e1]:
+  - generic [ref=f25e3]:
+    - complementary [ref=f25e4]:
+      - generic [ref=f25e11]:
+        - generic [ref=f25e12]: AiPraktor
+        - generic [ref=f25e13]: control plane
+      - navigation [ref=f25e14]:
+        - generic [ref=f25e15]:
+          - generic [ref=f25e16]: Work
+          - link "Overview" [ref=f25e17] [cursor=pointer]:
+            - /url: /dashboard
+          - link "Inbox" [ref=f25e23] [cursor=pointer]:
+            - /url: /dashboard/inbox
+          - link "Notifications" [ref=f25e27] [cursor=pointer]:
+            - /url: /dashboard/notifications
+          - link "Leads" [ref=f25e31] [cursor=pointer]:
+            - /url: /dashboard/leads
+          - link "Comments" [ref=f25e36] [cursor=pointer]:
+            - /url: /dashboard/comments
+          - link "Saved replies ⚡ Auto" [ref=f25e40] [cursor=pointer]:
+            - /url: /dashboard/saved-replies
+            - text: Saved replies
+            - generic "Saved replies can answer customers automatically, free" [ref=f25e43]:
+              - text: ⚡
+              - generic [ref=f25e44]: Auto
+          - link "Orders" [ref=f25e45] [cursor=pointer]:
+            - /url: /dashboard/orders
+          - link "Activity" [ref=f25e49] [cursor=pointer]:
+            - /url: /dashboard/activity
+          - link "Analytics" [ref=f25e52] [cursor=pointer]:
+            - /url: /dashboard/analytics
+          - link "Announcements" [ref=f25e55] [cursor=pointer]:
+            - /url: /dashboard/announcements
+        - generic [ref=f25e59]:
+          - generic [ref=f25e60]: Grow
+          - link "Follow-ups" [ref=f25e61] [cursor=pointer]:
+            - /url: /dashboard/followups
+          - link "Broadcasts" [ref=f25e67] [cursor=pointer]:
+            - /url: /dashboard/broadcasts
+          - link "Products" [ref=f25e71] [cursor=pointer]:
+            - /url: /dashboard/products
+          - link "Posts" [ref=f25e76] [cursor=pointer]:
+            - /url: /dashboard/posts
+          - link "Website chat" [ref=f25e82] [cursor=pointer]:
+            - /url: /dashboard/website
+          - link "Agent Desk" [ref=f25e86] [cursor=pointer]:
+            - /url: /dashboard/agent-desk
+        - generic [ref=f25e88]:
+          - generic [ref=f25e89]: Set up
+          - link "Pages" [ref=f25e90] [cursor=pointer]:
+            - /url: /dashboard/pages
+          - link "Business settings" [ref=f25e97] [cursor=pointer]:
+            - /url: /dashboard/business
+          - link "Billing" [ref=f25e102] [cursor=pointer]:
+            - /url: /dashboard/billing
+          - link "Team" [ref=f25e105] [cursor=pointer]:
+            - /url: /dashboard/submasters
+          - link "Setup" [ref=f25e111] [cursor=pointer]:
+            - /url: /dashboard/setup
+          - link "Video guide" [ref=f25e115] [cursor=pointer]:
+            - /url: /dashboard/videos
+        - generic [ref=f25e119]:
+          - generic [ref=f25e120]: Help
+          - link "AiPraktor Agent" [ref=f25e121] [cursor=pointer]:
+            - /url: /dashboard/help
+          - link "Feedback" [ref=f25e125] [cursor=pointer]:
+            - /url: /dashboard/feedback
+      - generic [ref=f25e128]:
+        - generic "Auto-revert sweeper is running" [ref=f25e130]: SYSTEM ONLINE
+        - generic [ref=f25e135]:
+          - generic [ref=f25e136]: Signed in · Business owner
+          - generic [ref=f25e137]: navinmdnawshin@gmail.com
+        - link "This device" [ref=f25e138] [cursor=pointer]:
+          - /url: /dashboard/device
+        - button "Sign out" [ref=f25e141] [cursor=pointer]
+    - main [ref=f25e145]:
+      - generic [ref=f25e146]:
+        - generic [ref=f25e147]:
+          - generic [ref=f25e148]: LIVE
+          - generic [ref=f25e151]: AI ⟷ HUMAN
+        - generic [ref=f25e152]:
+          - radiogroup "Colour theme" [ref=f25e153]:
+            - radio "Light" [ref=f25e154] [cursor=pointer]
+            - radio "Dark" [checked] [ref=f25e162]
+          - generic "Auto-revert sweeper is running" [ref=f25e167]: SYSTEM ONLINE
+          - generic [ref=f25e172]: 11:46:44
+  - alert [ref=f25e177]

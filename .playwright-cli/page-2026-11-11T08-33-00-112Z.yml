@@ -1,0 +1,171 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Primary navigation" [ref=e4]:
+      - generic [ref=e10]:
+        - paragraph [ref=e11]: Unified Inbox
+        - paragraph [ref=e12]: ws_1794374612651_f3d05g
+      - generic [ref=e13]:
+        - generic [ref=e14]: Practice mode
+        - generic "Realtime connection is active (SSE)" [ref=e15]: Live · synced 1s
+      - navigation [ref=e19]:
+        - generic [ref=e20]:
+          - paragraph [ref=e21]: Work
+          - generic [ref=e22]:
+            - button "Overview" [ref=e23]
+            - button "Inbox 9" [ref=e30]:
+              - generic [ref=e34]: Inbox
+              - generic [ref=e35]: "9"
+            - button "Saved replies" [ref=e36]
+            - button "Comments" [ref=e40]
+            - button "Notifications 5" [ref=e44]:
+              - generic [ref=e48]: Notifications
+              - generic [ref=e49]: "5"
+            - button "Activity" [ref=e50]
+            - button "Analytics" [ref=e56]
+        - generic [ref=e60]:
+          - paragraph [ref=e61]: Grow
+          - generic [ref=e62]:
+            - button "Leads" [ref=e63]
+            - button "Orders" [ref=e69]
+            - button "Follow-ups" [ref=e74]
+            - button "Broadcasts" [ref=e81]
+            - button "Products" [ref=e86]
+            - button "Posts" [ref=e92]
+        - generic [ref=e98]:
+          - paragraph [ref=e99]: AI
+          - generic [ref=e100]:
+            - button "Agent Desk" [ref=e101]
+            - button "Knowledge" [ref=e106]
+        - generic [ref=e110]:
+          - paragraph [ref=e111]: Set up
+          - generic [ref=e112]:
+            - button "Setup guide 3/8" [ref=e113]:
+              - generic [ref=e117]: Setup guide
+              - generic [ref=e118]: 3/8
+            - button "Channels" [ref=e119]
+            - button "Website chat" [ref=e125]
+            - button "Business" [ref=e130]
+            - button "Team" [ref=e135]
+            - button "Groups" [ref=e142]
+            - button "Billing" [ref=e147]
+            - button "Workspace settings" [ref=e151]
+      - generic [ref=e156]:
+        - button "Quick actions ⌘K" [ref=e157]:
+          - text: Quick actions
+          - generic [ref=e158]: ⌘K
+        - generic [ref=e159]:
+          - generic [aria-hidden] [ref=e160]: YN
+          - generic [ref=e161]:
+            - paragraph [ref=e162]: You
+            - paragraph [ref=e163]: Owner · Manager group
+    - generic [ref=e6426]:
+      - generic [ref=e6427]:
+        - generic [ref=e6428]:
+          - heading "Broadcasts" [level=1] [ref=e6429]
+          - paragraph [ref=e6430]: Send to a filtered audience — with the 23-hour window rules made explicit.
+        - button "Watch how · 1 min" [ref=e6432]
+      - generic [ref=e6438]:
+        - generic [ref=e6439]:
+          - generic [ref=e6440]:
+            - paragraph [ref=e6442]: Sent broadcasts
+            - paragraph [ref=e6447]: "2"
+          - generic [ref=e6448]:
+            - paragraph [ref=e6450]: Recipients reached
+            - paragraph [ref=e6457]: "1392"
+          - generic [ref=e6458]:
+            - paragraph [ref=e6460]: Drafts
+            - paragraph [ref=e6465]: "1"
+          - generic [ref=e6466]:
+            - paragraph [ref=e6468]: Window compliant
+            - paragraph [ref=e6473]: All sends
+            - paragraph [ref=e6474]: checked before dispatch
+        - generic [ref=e6475]:
+          - generic [ref=e6476]:
+            - generic [ref=e6478]:
+              - heading "New broadcast" [level=2] [ref=e6479]
+              - paragraph [ref=e6480]: Compose, filter, test, send.
+            - generic [ref=e6482]:
+              - generic [ref=e6483]:
+                - text: Broadcast name
+                - textbox "Broadcast name" [ref=e6484]:
+                  - /placeholder: Eid restock alert
+              - generic [ref=e6485]:
+                - generic [ref=e6486]:
+                  - text: Channel
+                  - combobox "Channel" [ref=e6487]:
+                    - option "whatsapp" [selected]
+                    - option "messenger"
+                    - option "instagram"
+                    - option "email"
+                    - option "telegram"
+                    - option "discord"
+                - generic [ref=e6488]:
+                  - text: Format
+                  - combobox "Format" [ref=e6489]:
+                    - option "Text"
+                    - option "Card"
+                    - option "Image"
+                    - option "Template" [selected]
+                    - option "Video"
+                    - option "Audio"
+                    - option "Poll"
+              - paragraph [ref=e6490]: whatsapp · Official Cloud API · template messages allowed
+              - generic [ref=e6491]:
+                - text: Message
+                - textbox "Message" [ref=e6492]:
+                  - /placeholder: "Hi {{name}} — the Trail Jacket is back in stock in every size. Use EID20 for 20% off today."
+              - generic [ref=e6493]:
+                - paragraph [ref=e6494]: Audience
+                - generic [ref=e6495]:
+                  - generic [ref=e6496]:
+                    - text: Active within (days)
+                    - spinbutton "Active within (days)" [ref=e6497]: "30"
+                  - generic [ref=e6498]:
+                    - text: Interest tag
+                    - textbox "Interest tag" [ref=e6499]:
+                      - /placeholder: restock
+                      - text: restock
+                - generic [ref=e6500]:
+                  - generic [ref=e6501] [cursor=pointer]:
+                    - switch "Only customers who bought before" [checked] [ref=e6502]
+                    - generic [ref=e6504]: Only customers who bought before
+                  - generic [ref=e6505] [cursor=pointer]:
+                    - switch "Skip anyone who got a broadcast in the last 7 days" [checked] [ref=e6506]
+                    - generic [ref=e6508]: Skip anyone who got a broadcast in the last 7 days
+              - generic [ref=e6509]: Window check passed for this channel. Audience is filtered before dispatch.
+              - generic [ref=e6513]:
+                - button "Send test to my phone" [ref=e6514]
+                - button "Send broadcast" [disabled] [ref=e6518]
+                - generic [ref=e6522]: Send stays locked until you test first.
+          - generic [ref=e6525]:
+            - generic [ref=e6527]:
+              - heading "History" [level=2] [ref=e6528]
+              - paragraph [ref=e6529]: Every send is auditable.
+            - generic [ref=e6531]:
+              - generic [ref=e6532]:
+                - generic [ref=e6533]:
+                  - paragraph [ref=e6534]: Eid restock alert
+                  - generic [ref=e6535]: sent
+                - generic [ref=e6536]:
+                  - generic [ref=e6537]: whatsapp
+                  - generic [ref=e6540]: Template
+                  - generic [ref=e6541]: 412 recipients
+                  - generic [ref=e6542]: 58m ago
+              - generic [ref=e6543]:
+                - generic [ref=e6544]:
+                  - paragraph [ref=e6545]: Weekend flash sale
+                  - generic [ref=e6546]: draft
+                - generic [ref=e6547]:
+                  - generic [ref=e6548]: messenger
+                  - generic [ref=e6551]: Card
+                  - generic [ref=e6552]: 0 recipients
+              - generic [ref=e6553]:
+                - generic [ref=e6554]:
+                  - paragraph [ref=e6555]: New arrivals — August
+                  - generic [ref=e6556]: sent
+                - generic [ref=e6557]:
+                  - generic [ref=e6558]: email
+                  - generic [ref=e6562]: Image
+                  - generic [ref=e6563]: 980 recipients
+                  - generic [ref=e6564]: 3 days ago
+  - alert [ref=e969]

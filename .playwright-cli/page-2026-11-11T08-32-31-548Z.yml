@@ -1,0 +1,190 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Primary navigation" [ref=e4]:
+      - generic [ref=e10]:
+        - paragraph [ref=e11]: Unified Inbox
+        - paragraph [ref=e12]: ws_1794374612651_f3d05g
+      - generic [ref=e13]:
+        - generic [ref=e14]: Practice mode
+        - generic "Realtime connection is active (SSE)" [ref=e15]: Live · synced 2s
+      - navigation [ref=e19]:
+        - generic [ref=e20]:
+          - paragraph [ref=e21]: Work
+          - generic [ref=e22]:
+            - button "Overview" [ref=e23]
+            - button "Inbox 9" [ref=e30]:
+              - generic [ref=e34]: Inbox
+              - generic [ref=e35]: "9"
+            - button "Saved replies" [ref=e36]
+            - button "Comments" [ref=e40]
+            - button "Notifications 5" [ref=e44]:
+              - generic [ref=e48]: Notifications
+              - generic [ref=e49]: "5"
+            - button "Activity" [ref=e50]
+            - button "Analytics" [ref=e56]
+        - generic [ref=e60]:
+          - paragraph [ref=e61]: Grow
+          - generic [ref=e62]:
+            - button "Leads" [ref=e63]
+            - button "Orders" [ref=e69]
+            - button "Follow-ups" [ref=e74]
+            - button "Broadcasts" [ref=e81]
+            - button "Products" [ref=e86]
+            - button "Posts" [ref=e92]
+        - generic [ref=e98]:
+          - paragraph [ref=e99]: AI
+          - generic [ref=e100]:
+            - button "Agent Desk" [ref=e101]
+            - button "Knowledge" [ref=e106]
+        - generic [ref=e110]:
+          - paragraph [ref=e111]: Set up
+          - generic [ref=e112]:
+            - button "Setup guide 3/8" [ref=e113]:
+              - generic [ref=e117]: Setup guide
+              - generic [ref=e118]: 3/8
+            - button "Channels" [ref=e119]
+            - button "Website chat" [ref=e125]
+            - button "Business" [ref=e130]
+            - button "Team" [ref=e135]
+            - button "Groups" [ref=e142]
+            - button "Billing" [ref=e147]
+            - button "Workspace settings" [ref=e151]
+      - generic [ref=e156]:
+        - button "Quick actions ⌘K" [ref=e157]:
+          - text: Quick actions
+          - generic [ref=e158]: ⌘K
+        - generic [ref=e159]:
+          - generic [aria-hidden] [ref=e160]: YN
+          - generic [ref=e161]:
+            - paragraph [ref=e162]: You
+            - paragraph [ref=e163]: Owner · Manager group
+    - generic [ref=e4597]:
+      - generic [ref=e4598]:
+        - generic [ref=e4599]:
+          - heading "Workspace Settings & Configuration" [level=2] [ref=e4600]
+          - paragraph [ref=e4601]: Configure your company profile, appearance, SLA automation, AI assistants, and notification preferences.
+        - button "Save Changes" [ref=e4602]
+      - generic [ref=e4608]:
+        - generic [ref=e4609]:
+          - heading "General Information" [level=3] [ref=e4610]
+          - generic [ref=e4614]:
+            - generic [ref=e4615]:
+              - generic [ref=e4616]: Workspace Name
+              - textbox [ref=e4617]: Unified Inbox
+            - generic [ref=e4618]:
+              - generic [ref=e4619]: Workspace Slug / Subdomain
+              - generic [ref=e4620]:
+                - generic [ref=e4621]: app.unifiedinbox.io/
+                - textbox [ref=e4622]: inbox
+            - generic [ref=e4623]:
+              - generic [ref=e4624]: Primary Support Email
+              - textbox [ref=e4625]: support@unifiedinbox.io
+            - generic [ref=e4626]:
+              - generic [ref=e4627]: Operational Timezone
+              - combobox [ref=e4628]:
+                - option "UTC - 05:00 Eastern Time (US & Canada)" [selected]
+                - option "UTC + 00:00 Greenwich Mean Time"
+                - option "UTC + 06:00 Dhaka Standard Time"
+                - option "UTC + 08:00 Singapore / Hong Kong"
+        - generic [ref=e4629]:
+          - heading "AI Copilot & Multi-Lingual Automation" [level=3] [ref=e4630]
+          - generic [ref=e4634]:
+            - generic [ref=e4635]:
+              - generic [ref=e4636]:
+                - paragraph [ref=e4637]: Smart AI Suggestions
+                - paragraph [ref=e4638]: Predict and generate recommended canned responses per ticket.
+              - checkbox [checked] [ref=e4639]
+            - generic [ref=e4640]:
+              - generic [ref=e4641]:
+                - paragraph [ref=e4642]: Automatic Translation
+                - paragraph [ref=e4643]: Real-time translation for foreign inbound language messages.
+              - checkbox [checked] [ref=e4644]
+            - generic [ref=e4645]:
+              - generic [ref=e4646]: Default Translation Language
+              - combobox [ref=e4647]:
+                - option "English" [selected]
+                - option "Spanish (Español)"
+                - option "French (Français)"
+                - option "Bengali (বাংলা)"
+                - option "German (Deutsch)"
+                - option "Japanese (日本語)"
+        - generic [ref=e4648]:
+          - heading "AI & Handoff Automation" [level=3] [ref=e4649]
+          - generic [ref=e4653]:
+            - generic [ref=e4654]:
+              - generic [ref=e4655]: Auto-revert window (unanswered human chats)
+              - combobox [ref=e4656]:
+                - option "30 minutes"
+                - option "1 hour" [selected]
+                - option "2 hours"
+                - option "4 hours"
+                - option "8 hours"
+                - option "24 hours"
+              - paragraph [ref=e4657]: When a human claims a chat and nobody answers, the AI takes it back after this window.
+            - generic [ref=e4658]:
+              - generic [ref=e4659]: SLA target for a waiting customer
+              - combobox [ref=e4660]:
+                - option "5 minutes"
+                - option "10 minutes"
+                - option "15 minutes" [selected]
+                - option "20 minutes"
+                - option "30 minutes"
+                - option "45 minutes"
+                - option "60 minutes"
+              - paragraph [ref=e4661]: Waiting conversations past this target are flagged in the inbox and counted in Analytics.
+            - generic [ref=e4662]:
+              - generic [ref=e4663]: Wait before the AI answers
+              - combobox [ref=e4664]:
+                - option "Answer immediately"
+                - option "1 seconds"
+                - option "2 seconds"
+                - option "3 seconds"
+                - option "5 seconds"
+                - option "8 seconds"
+                - option "10 seconds"
+                - option "15 seconds" [selected]
+              - paragraph [ref=e4665]: A short delay batches multi-part messages so the AI answers once instead of three times.
+        - generic [ref=e4666]:
+          - heading "Custom Tags & Triage Taxonomy" [level=3] [ref=e4667]
+          - generic [ref=e4671]:
+            - generic [ref=e4672]:
+              - generic [ref=e4673]:
+                - text: "#urgent"
+                - button "×" [ref=e4675]
+              - generic [ref=e4676]:
+                - text: "#invoice"
+                - button "×" [ref=e4678]
+              - generic [ref=e4679]:
+                - text: "#contract"
+                - button "×" [ref=e4681]
+              - generic [ref=e4682]:
+                - text: "#enterprise"
+                - button "×" [ref=e4684]
+              - generic [ref=e4685]:
+                - text: "#sla"
+                - button "×" [ref=e4687]
+            - generic [ref=e4688]:
+              - textbox "New tag name (e.g. vip)..." [ref=e4689]
+              - textbox "Tag color" [ref=e4690] [cursor=pointer]: "#4f46e5"
+              - button "Add Tag" [ref=e4691]
+        - generic [ref=e4692]:
+          - heading "Notification Rules & Routing" [level=3] [ref=e4693]
+          - generic [ref=e4697]:
+            - generic [ref=e4698]:
+              - generic [ref=e4699]:
+                - paragraph [ref=e4700]: Audible Sound Alerts
+                - paragraph [ref=e4701]: Play sound when new high-priority customer message arrives.
+              - checkbox [checked] [ref=e4702]
+            - generic [ref=e4703]:
+              - generic [ref=e4704]:
+                - paragraph [ref=e4705]: Browser Desktop Notifications
+                - paragraph [ref=e4706]: Push desktop notification for unassigned tickets.
+              - checkbox [checked] [ref=e4707]
+            - generic [ref=e4708]:
+              - generic [ref=e4709]: Team Email Digest
+              - combobox [ref=e4710]:
+                - option "Instant per message"
+                - option "Daily morning summary" [selected]
+                - option "Weekly performance digest"
+                - option "Muted (Off)"
+  - alert [ref=e969]

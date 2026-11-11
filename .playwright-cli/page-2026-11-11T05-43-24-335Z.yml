@@ -1,0 +1,94 @@
+- generic [active] [ref=f18e1]:
+  - generic [ref=f18e3]:
+    - complementary [ref=f18e4]:
+      - generic [ref=f18e11]:
+        - generic [ref=f18e12]: AiPraktor
+        - generic [ref=f18e13]: control plane
+      - navigation [ref=f18e14]:
+        - generic [ref=f18e15]:
+          - generic [ref=f18e16]: Work
+          - link "Overview" [ref=f18e17] [cursor=pointer]:
+            - /url: /dashboard
+          - link "Inbox" [ref=f18e23] [cursor=pointer]:
+            - /url: /dashboard/inbox
+          - link "Notifications" [ref=f18e27] [cursor=pointer]:
+            - /url: /dashboard/notifications
+          - link "Leads" [ref=f18e31] [cursor=pointer]:
+            - /url: /dashboard/leads
+          - link "Comments" [ref=f18e36] [cursor=pointer]:
+            - /url: /dashboard/comments
+          - link "Saved replies ⚡ Auto" [ref=f18e40] [cursor=pointer]:
+            - /url: /dashboard/saved-replies
+            - text: Saved replies
+            - generic "Saved replies can answer customers automatically, free" [ref=f18e43]:
+              - text: ⚡
+              - generic [ref=f18e44]: Auto
+          - link "Orders" [ref=f18e45] [cursor=pointer]:
+            - /url: /dashboard/orders
+          - link "Activity" [ref=f18e49] [cursor=pointer]:
+            - /url: /dashboard/activity
+          - link "Analytics" [ref=f18e52] [cursor=pointer]:
+            - /url: /dashboard/analytics
+          - link "Announcements" [ref=f18e55] [cursor=pointer]:
+            - /url: /dashboard/announcements
+        - generic [ref=f18e59]:
+          - generic [ref=f18e60]: Grow
+          - link "Follow-ups" [ref=f18e61] [cursor=pointer]:
+            - /url: /dashboard/followups
+          - link "Broadcasts" [ref=f18e67] [cursor=pointer]:
+            - /url: /dashboard/broadcasts
+          - link "Products" [ref=f18e71] [cursor=pointer]:
+            - /url: /dashboard/products
+          - link "Posts" [ref=f18e76] [cursor=pointer]:
+            - /url: /dashboard/posts
+          - link "Website chat" [ref=f18e83] [cursor=pointer]:
+            - /url: /dashboard/website
+          - link "Agent Desk" [ref=f18e87] [cursor=pointer]:
+            - /url: /dashboard/agent-desk
+        - generic [ref=f18e89]:
+          - generic [ref=f18e90]: Set up
+          - link "Pages" [ref=f18e91] [cursor=pointer]:
+            - /url: /dashboard/pages
+          - link "Business settings" [ref=f18e97] [cursor=pointer]:
+            - /url: /dashboard/business
+          - link "Billing" [ref=f18e102] [cursor=pointer]:
+            - /url: /dashboard/billing
+          - link "Team" [ref=f18e105] [cursor=pointer]:
+            - /url: /dashboard/submasters
+          - link "Setup" [ref=f18e111] [cursor=pointer]:
+            - /url: /dashboard/setup
+          - link "Video guide" [ref=f18e115] [cursor=pointer]:
+            - /url: /dashboard/videos
+        - generic [ref=f18e119]:
+          - generic [ref=f18e120]: Help
+          - link "AiPraktor Agent" [ref=f18e121] [cursor=pointer]:
+            - /url: /dashboard/help
+          - link "Feedback" [ref=f18e125] [cursor=pointer]:
+            - /url: /dashboard/feedback
+      - generic [ref=f18e128]:
+        - generic "Auto-revert sweeper is running" [ref=f18e130]: SYSTEM ONLINE
+        - generic [ref=f18e135]:
+          - generic [ref=f18e136]: Signed in · Business owner
+          - generic [ref=f18e137]: navinmdnawshin@gmail.com
+        - link "This device" [ref=f18e138] [cursor=pointer]:
+          - /url: /dashboard/device
+        - button "Sign out" [ref=f18e141] [cursor=pointer]
+    - main [ref=f18e145]:
+      - generic [ref=f18e146]:
+        - generic [ref=f18e147]:
+          - generic [ref=f18e148]: LIVE
+          - generic [ref=f18e151]: AI ⟷ HUMAN
+        - generic [ref=f18e152]:
+          - radiogroup "Colour theme" [ref=f18e153]:
+            - radio "Light" [ref=f18e154] [cursor=pointer]
+            - radio "Dark" [checked] [ref=f18e162]
+          - generic "Auto-revert sweeper is running" [ref=f18e167]: SYSTEM ONLINE
+          - generic [ref=f18e172]: 11:43:24
+      - generic [ref=f18e175]:
+        - generic [ref=f18e177]:
+          - generic [ref=f18e178]: posts
+          - heading "Posts" [level=1] [ref=f18e179]
+          - paragraph [ref=f18e180]: "Every Facebook or Instagram post a customer comments on is read once: AiPraktor remembers which of your products each photo shows, so the AI can answer a question under any photo with today's price."
+        - paragraph [ref=f18e181]: "Tip: when you post several photos, give each photo a short caption with the product's name and code. The AI then knows every product for certain, at no cost."
+        - status "Loading posts…" [ref=f18e183]
+  - alert [ref=f18e187]

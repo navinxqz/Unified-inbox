@@ -1,0 +1,93 @@
+- generic [active] [ref=f1e1]:
+  - generic [ref=f1e3]:
+    - complementary [ref=f1e4]:
+      - generic [ref=f1e11]:
+        - generic [ref=f1e12]: AiPraktor
+        - generic [ref=f1e13]: control plane
+      - navigation [ref=f1e14]:
+        - generic [ref=f1e15]:
+          - generic [ref=f1e16]: Work
+          - link "Overview" [ref=f1e17] [cursor=pointer]:
+            - /url: /dashboard
+          - link "Inbox" [ref=f1e23] [cursor=pointer]:
+            - /url: /dashboard/inbox
+          - link "Notifications" [ref=f1e27] [cursor=pointer]:
+            - /url: /dashboard/notifications
+          - link "Leads" [ref=f1e31] [cursor=pointer]:
+            - /url: /dashboard/leads
+          - link "Comments" [ref=f1e36] [cursor=pointer]:
+            - /url: /dashboard/comments
+          - link "Saved replies ⚡ Auto" [ref=f1e40] [cursor=pointer]:
+            - /url: /dashboard/saved-replies
+            - text: Saved replies
+            - generic "Saved replies can answer customers automatically, free" [ref=f1e43]:
+              - text: ⚡
+              - generic [ref=f1e44]: Auto
+          - link "Orders" [ref=f1e45] [cursor=pointer]:
+            - /url: /dashboard/orders
+          - link "Activity" [ref=f1e49] [cursor=pointer]:
+            - /url: /dashboard/activity
+          - link "Analytics" [ref=f1e52] [cursor=pointer]:
+            - /url: /dashboard/analytics
+          - link "Announcements" [ref=f1e55] [cursor=pointer]:
+            - /url: /dashboard/announcements
+        - generic [ref=f1e59]:
+          - generic [ref=f1e60]: Grow
+          - link "Follow-ups" [ref=f1e61] [cursor=pointer]:
+            - /url: /dashboard/followups
+          - link "Broadcasts" [ref=f1e67] [cursor=pointer]:
+            - /url: /dashboard/broadcasts
+          - link "Products" [ref=f1e71] [cursor=pointer]:
+            - /url: /dashboard/products
+          - link "Posts" [ref=f1e76] [cursor=pointer]:
+            - /url: /dashboard/posts
+          - link "Website chat" [ref=f1e82] [cursor=pointer]:
+            - /url: /dashboard/website
+          - link "Agent Desk" [ref=f1e86] [cursor=pointer]:
+            - /url: /dashboard/agent-desk
+        - generic [ref=f1e88]:
+          - generic [ref=f1e89]: Set up
+          - link "Pages" [ref=f1e90] [cursor=pointer]:
+            - /url: /dashboard/pages
+          - link "Business settings" [ref=f1e96] [cursor=pointer]:
+            - /url: /dashboard/business
+          - link "Billing" [ref=f1e101] [cursor=pointer]:
+            - /url: /dashboard/billing
+          - link "Team" [ref=f1e104] [cursor=pointer]:
+            - /url: /dashboard/submasters
+          - link "Setup" [ref=f1e110] [cursor=pointer]:
+            - /url: /dashboard/setup
+          - link "Video guide" [ref=f1e114] [cursor=pointer]:
+            - /url: /dashboard/videos
+        - generic [ref=f1e119]:
+          - generic [ref=f1e120]: Help
+          - link "AiPraktor Agent" [ref=f1e121] [cursor=pointer]:
+            - /url: /dashboard/help
+          - link "Feedback" [ref=f1e125] [cursor=pointer]:
+            - /url: /dashboard/feedback
+      - generic [ref=f1e128]:
+        - generic "Auto-revert sweeper is running" [ref=f1e130]: SYSTEM ONLINE
+        - generic [ref=f1e135]:
+          - generic [ref=f1e136]: Signed in · Business owner
+          - generic [ref=f1e137]: navinmdnawshin@gmail.com
+        - link "This device" [ref=f1e138] [cursor=pointer]:
+          - /url: /dashboard/device
+        - button "Sign out" [ref=f1e141] [cursor=pointer]
+    - main [ref=f1e145]:
+      - generic [ref=f1e146]:
+        - generic [ref=f1e147]:
+          - generic [ref=f1e148]: LIVE
+          - generic [ref=f1e151]: AI ⟷ HUMAN
+        - generic [ref=f1e152]:
+          - radiogroup "Colour theme" [ref=f1e153]:
+            - radio "Light" [ref=f1e154] [cursor=pointer]
+            - radio "Dark" [checked] [ref=f1e162]
+          - generic "Auto-revert sweeper is running" [ref=f1e167]: SYSTEM ONLINE
+          - generic [ref=f1e172]: 11:54:10
+      - generic [ref=f1e175]:
+        - generic [ref=f1e176]: learn each screen
+        - heading "Video guide" [level=1] [ref=f1e177]
+        - generic [ref=f1e181]:
+          - paragraph [ref=f1e182]: The short video for every screen, in one place. Press the one you need — it plays in the corner while you carry on working.
+          - paragraph [ref=f1e183]: No videos yet.
+  - alert [ref=f1e184]

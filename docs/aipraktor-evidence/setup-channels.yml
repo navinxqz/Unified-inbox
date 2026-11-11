@@ -1,0 +1,166 @@
+- generic [active] [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - generic [ref=f2e3]:
+      - complementary [ref=f2e4]:
+        - generic [ref=f2e11]:
+          - generic [ref=f2e12]: AiPraktor
+          - generic [ref=f2e13]: control plane
+        - navigation [ref=f2e14]:
+          - link "Setup guide 0/8" [ref=f2e180] [cursor=pointer]:
+            - /url: /dashboard#setup-guide
+            - text: Setup guide
+            - generic [ref=f2e184]: 0/8
+          - generic [ref=f2e15]:
+            - generic [ref=f2e16]: Work
+            - link "Overview" [ref=f2e17] [cursor=pointer]:
+              - /url: /dashboard
+            - link "Inbox" [ref=f2e23] [cursor=pointer]:
+              - /url: /dashboard/inbox
+            - link "Notifications" [ref=f2e27] [cursor=pointer]:
+              - /url: /dashboard/notifications
+            - link "Comments" [ref=f2e36] [cursor=pointer]:
+              - /url: /dashboard/comments
+            - link "Saved replies ⚡ Auto" [ref=f2e40] [cursor=pointer]:
+              - /url: /dashboard/saved-replies
+              - text: Saved replies
+              - generic "Saved replies can answer customers automatically, free" [ref=f2e43]:
+                - text: ⚡
+                - generic [ref=f2e44]: Auto
+            - link "Orders" [ref=f2e45] [cursor=pointer]:
+              - /url: /dashboard/orders
+            - link "Activity" [ref=f2e49] [cursor=pointer]:
+              - /url: /dashboard/activity
+            - link "Analytics" [ref=f2e52] [cursor=pointer]:
+              - /url: /dashboard/analytics
+            - link "Announcements" [ref=f2e55] [cursor=pointer]:
+              - /url: /dashboard/announcements
+          - generic [ref=f2e59]:
+            - generic [ref=f2e60]: Grow
+            - link "Follow-ups" [ref=f2e61] [cursor=pointer]:
+              - /url: /dashboard/followups
+            - link "Broadcasts" [ref=f2e67] [cursor=pointer]:
+              - /url: /dashboard/broadcasts
+            - link "Products" [ref=f2e71] [cursor=pointer]:
+              - /url: /dashboard/products
+            - link "Posts" [ref=f2e76] [cursor=pointer]:
+              - /url: /dashboard/posts
+            - link "Knowledge" [ref=f2e185] [cursor=pointer]:
+              - /url: /dashboard/knowledge
+            - link "Website chat" [ref=f2e82] [cursor=pointer]:
+              - /url: /dashboard/website
+            - link "Agent Desk" [ref=f2e86] [cursor=pointer]:
+              - /url: /dashboard/agent-desk
+          - generic [ref=f2e88]:
+            - generic [ref=f2e89]: Set up
+            - link "Pages" [ref=f2e90] [cursor=pointer]:
+              - /url: /dashboard/pages
+            - link "Business settings" [ref=f2e96] [cursor=pointer]:
+              - /url: /dashboard/business
+            - link "Billing" [ref=f2e101] [cursor=pointer]:
+              - /url: /dashboard/billing
+            - link "Team" [ref=f2e104] [cursor=pointer]:
+              - /url: /dashboard/submasters
+            - link "Setup" [ref=f2e110] [cursor=pointer]:
+              - /url: /dashboard/setup
+            - link "Video guide" [ref=f2e115] [cursor=pointer]:
+              - /url: /dashboard/videos
+          - generic [ref=f2e119]:
+            - generic [ref=f2e120]: Help
+            - link "AiPraktor Agent" [ref=f2e121] [cursor=pointer]:
+              - /url: /dashboard/help
+            - link "Feedback" [ref=f2e125] [cursor=pointer]:
+              - /url: /dashboard/feedback
+        - generic [ref=f2e128]:
+          - generic "Auto-revert sweeper is running" [ref=f2e130]: SYSTEM ONLINE
+          - generic [ref=f2e135]:
+            - generic [ref=f2e136]: Signed in · Business owner
+            - generic [ref=f2e137]: navinmdnawshin@gmail.com
+          - switch "On duty" [checked] [ref=f2e189] [cursor=pointer]
+          - link "This device" [ref=f2e138] [cursor=pointer]:
+            - /url: /dashboard/device
+          - button "Sign out" [ref=f2e141] [cursor=pointer]
+      - main [ref=f2e145]:
+        - generic [ref=f2e146]:
+          - generic [ref=f2e147]:
+            - generic [ref=f2e148]: LIVE
+            - generic [ref=f2e151]: AI ⟷ HUMAN
+          - generic [ref=f2e152]:
+            - button "Watch how · 1 min — Connect your Facebook page" [ref=f2e192] [cursor=pointer]:
+              - generic [ref=f2e196]: Watch how · 1 min
+            - radiogroup "Colour theme" [ref=f2e153]:
+              - radio "Light" [checked] [ref=f2e154]
+              - radio "Dark" [ref=f2e162] [cursor=pointer]
+            - generic "Auto-revert sweeper is running" [ref=f2e167]: SYSTEM ONLINE
+            - generic [ref=f2e172]: 11:38:01
+        - generic [ref=f2e199]:
+          - button "The AiPraktor Agent is now on for everyone. See what it can do in a 9-minute video" [ref=f2e202] [cursor=pointer]
+          - button "Read" [ref=f2e203] [cursor=pointer]
+          - button "Hide this line" [ref=f2e204] [cursor=pointer]
+        - generic [ref=f2e174]:
+          - 'button "From sign-up to live: the whole road in one video Video · 5 min · follow along as you watch Watch the video" [ref=f2e209] [cursor=pointer]':
+            - generic [ref=f2e214]:
+              - strong [ref=f2e215]: "From sign-up to live: the whole road in one video"
+              - generic [ref=f2e216]: Video · 5 min · follow along as you watch
+            - generic [ref=f2e217]: Watch the video
+          - generic [ref=f2e175]:
+            - generic [ref=f2e218]:
+              - generic [ref=f2e219]: setting up · Coffee 9
+              - heading "Let's get you live" [level=1] [ref=f2e220]
+              - paragraph [ref=f2e221]: 7 short steps. You can stop at any point and come back to the same place.
+            - generic [ref=f2e222]:
+              - generic [ref=f2e223]: Practice modeYour assistant answers test chats only. Nothing reaches a customer before you go live. Your free trial days start counting when you go live.
+              - group "Language · ভাষা" [ref=f2e224]:
+                - button "বাংলা" [ref=f2e225] [cursor=pointer]
+                - button "EN" [ref=f2e226] [cursor=pointer]
+            - generic [ref=f2e227]:
+              - button "Facebook" [ref=f2e228] [cursor=pointer]
+              - button "Your business" [ref=f2e231] [cursor=pointer]
+              - button "Add your products" [ref=f2e237] [cursor=pointer]
+              - button "Turn on alerts on your phone" [ref=f2e242] [cursor=pointer]
+              - button "Courier" [ref=f2e248] [cursor=pointer]
+              - button "Your team" [ref=f2e254] [cursor=pointer]
+              - button "Go live" [ref=f2e260] [cursor=pointer]
+            - paragraph [ref=f2e266]: Connecting your page is what lets the assistant read and answer messages. Instagram comes with it — one tick, no second sign-in.
+            - generic [ref=f2e267]:
+              - generic [ref=f2e268]:
+                - generic [ref=f2e269]: Coffee 9
+                - generic [ref=f2e270]:
+                  - generic [ref=f2e271]:
+                    - generic [ref=f2e272]:
+                      - strong [ref=f2e275]: Facebook
+                      - generic [ref=f2e276]: not connected
+                    - paragraph [ref=f2e277]: Sign in once and this page is connected — its messages start arriving and its Instagram is found, without anything to set up in Meta’s dashboard.
+                    - generic [ref=f2e278]:
+                      - text: On Facebook’s screen, tick
+                      - strong [ref=f2e279]: the page you want to connect
+                      - text: and continue. If another page is already ticked there, leave it ticked — unticking it switches that page off.
+                    - generic [ref=f2e280] [cursor=pointer]:
+                      - checkbox "Also ask for Instagram permissions — untick if there is no Instagram account; asking later costs a second sign-in" [checked] [ref=f2e281]
+                      - text: Also ask for Instagram permissions
+                      - generic [ref=f2e282]: — untick if there is no Instagram account; asking later costs a second sign-in
+                    - button "Connect with Facebook" [ref=f2e284] [cursor=pointer]
+                  - generic [ref=f2e287]:
+                    - generic [ref=f2e288]:
+                      - generic [ref=f2e289]: 📸
+                      - strong [ref=f2e290]: Instagram
+                      - generic [ref=f2e291]: not connected
+                    - paragraph [ref=f2e292]: Connect Facebook first — an Instagram account is reached through the page it is linked to, using that same key.
+              - generic [ref=f2e293]:
+                - generic [ref=f2e294]: The page will not connect?
+                - paragraph [ref=f2e295]: Do not worry — we will connect it together with you. Press the button and we are told, and we ring your number. Meanwhile you can carry on with the next steps.
+                - button "Help me connect" [ref=f2e296] [cursor=pointer]
+              - paragraph [ref=f2e297]:
+                - strong [ref=f2e298]: Looking for WhatsApp?
+                - text: "It is not part of this setup. A WhatsApp number needs a paid session of its own: you pay for it yourself on the Billing screen (Billing → WhatsApp), and it is switched on as soon as the payment is checked — after that you link your number yourself, right here or on Pages → your WhatsApp number. WhatsApp is its own channel of your business, not a part of your Facebook page."
+            - generic [ref=f2e299]:
+              - button "Back" [disabled] [ref=f2e300]
+              - button "Later" [ref=f2e304] [cursor=pointer]
+            - paragraph [ref=f2e307]: Whatever you leave stays at the top of your Overview — it is not lost.
+            - button "Stuck? Tell the AiPraktor Agent" [ref=f2e309] [cursor=pointer]
+      - button "AiPraktor Agent" [ref=f2e313] [cursor=pointer]
+    - note [ref=f2e318]:
+      - paragraph [ref=f2e319]: First time here? A 1 min video shows how this works.
+      - generic [ref=f2e320]:
+        - button "Watch" [ref=f2e321] [cursor=pointer]
+        - button "Don't need it" [ref=f2e325] [cursor=pointer]
+  - alert [ref=f2e179]

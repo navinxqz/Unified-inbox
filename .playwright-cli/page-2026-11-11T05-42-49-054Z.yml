@@ -1,0 +1,101 @@
+- generic [active] [ref=f16e1]:
+  - generic [ref=f16e3]:
+    - complementary [ref=f16e4]:
+      - generic [ref=f16e11]:
+        - generic [ref=f16e12]: AiPraktor
+        - generic [ref=f16e13]: control plane
+      - navigation [ref=f16e14]:
+        - link "Setup guide 0/8" [ref=f16e15] [cursor=pointer]:
+          - /url: /dashboard#setup-guide
+          - text: Setup guide
+          - generic [ref=f16e19]: 0/8
+        - generic [ref=f16e20]:
+          - generic [ref=f16e21]: Work
+          - link "Overview" [ref=f16e22] [cursor=pointer]:
+            - /url: /dashboard
+          - link "Inbox" [ref=f16e28] [cursor=pointer]:
+            - /url: /dashboard/inbox
+          - link "Notifications" [ref=f16e32] [cursor=pointer]:
+            - /url: /dashboard/notifications
+          - link "Comments" [ref=f16e36] [cursor=pointer]:
+            - /url: /dashboard/comments
+          - link "Saved replies ⚡ Auto" [ref=f16e40] [cursor=pointer]:
+            - /url: /dashboard/saved-replies
+            - text: Saved replies
+            - generic "Saved replies can answer customers automatically, free" [ref=f16e43]:
+              - text: ⚡
+              - generic [ref=f16e44]: Auto
+          - link "Orders" [ref=f16e45] [cursor=pointer]:
+            - /url: /dashboard/orders
+          - link "Activity" [ref=f16e49] [cursor=pointer]:
+            - /url: /dashboard/activity
+          - link "Analytics" [ref=f16e52] [cursor=pointer]:
+            - /url: /dashboard/analytics
+          - link "Announcements" [ref=f16e55] [cursor=pointer]:
+            - /url: /dashboard/announcements
+        - generic [ref=f16e59]:
+          - generic [ref=f16e60]: Grow
+          - link "Follow-ups" [ref=f16e61] [cursor=pointer]:
+            - /url: /dashboard/followups
+          - link "Broadcasts" [ref=f16e67] [cursor=pointer]:
+            - /url: /dashboard/broadcasts
+          - link "Products" [ref=f16e72] [cursor=pointer]:
+            - /url: /dashboard/products
+          - link "Posts" [ref=f16e77] [cursor=pointer]:
+            - /url: /dashboard/posts
+          - link "Website chat" [ref=f16e83] [cursor=pointer]:
+            - /url: /dashboard/website
+          - link "Agent Desk" [ref=f16e87] [cursor=pointer]:
+            - /url: /dashboard/agent-desk
+        - generic [ref=f16e89]:
+          - generic [ref=f16e90]: Set up
+          - link "Pages" [ref=f16e91] [cursor=pointer]:
+            - /url: /dashboard/pages
+          - link "Business settings" [ref=f16e97] [cursor=pointer]:
+            - /url: /dashboard/business
+          - link "Billing" [ref=f16e102] [cursor=pointer]:
+            - /url: /dashboard/billing
+          - link "Team" [ref=f16e105] [cursor=pointer]:
+            - /url: /dashboard/submasters
+          - link "Setup" [ref=f16e111] [cursor=pointer]:
+            - /url: /dashboard/setup
+          - link "Video guide" [ref=f16e115] [cursor=pointer]:
+            - /url: /dashboard/videos
+        - generic [ref=f16e119]:
+          - generic [ref=f16e120]: Help
+          - link "AiPraktor Agent" [ref=f16e121] [cursor=pointer]:
+            - /url: /dashboard/help
+          - link "Feedback" [ref=f16e125] [cursor=pointer]:
+            - /url: /dashboard/feedback
+      - generic [ref=f16e128]:
+        - generic "Auto-revert sweeper is running" [ref=f16e130]: SYSTEM ONLINE
+        - generic [ref=f16e135]:
+          - generic [ref=f16e136]: Signed in · Business owner
+          - generic [ref=f16e137]: navinmdnawshin@gmail.com
+        - link "This device" [ref=f16e138] [cursor=pointer]:
+          - /url: /dashboard/device
+        - button "Sign out" [ref=f16e141] [cursor=pointer]
+    - main [ref=f16e145]:
+      - generic [ref=f16e146]:
+        - generic [ref=f16e147]:
+          - generic [ref=f16e148]: LIVE
+          - generic [ref=f16e151]: AI ⟷ HUMAN
+        - generic [ref=f16e152]:
+          - radiogroup "Colour theme" [ref=f16e153]:
+            - radio "Light" [checked] [ref=f16e154]
+            - radio "Dark" [ref=f16e162] [cursor=pointer]
+          - generic "Auto-revert sweeper is running" [ref=f16e167]: SYSTEM ONLINE
+          - generic [ref=f16e172]: 11:42:48
+      - generic [ref=f16e175]:
+        - generic [ref=f16e176]:
+          - generic [ref=f16e177]: broadcast desk
+          - heading "Broadcasts" [level=1] [ref=f16e178]
+        - paragraph [ref=f16e179]:
+          - text: A short offer to everyone who wrote to you in the last few hours — a free-delivery hour, a stock clearance with product cards, a discount card. Only people who messaged within the last
+          - strong [ref=f16e180]: 23 hours
+          - text: can receive it (Meta's rule), and nothing goes out before a test lands on your own phone.
+        - generic [ref=f16e182]:
+          - button "New" [ref=f16e183] [cursor=pointer]
+          - button "Drafts & scheduled · 0" [ref=f16e185] [cursor=pointer]
+          - button "Sent · 0" [ref=f16e189] [cursor=pointer]
+  - alert [ref=f16e193]

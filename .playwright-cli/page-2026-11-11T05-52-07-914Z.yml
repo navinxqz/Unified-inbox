@@ -1,0 +1,1146 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - link "AiPraktor — home" [ref=e6] [cursor=pointer]:
+          - /url: "#top"
+          - generic [ref=e10]: AiPraktor
+        - navigation "Main" [ref=e11]:
+          - link "কীভাবে কাজ করে" [ref=e12] [cursor=pointer]:
+            - /url: "#order"
+          - link "ফিচার" [ref=e13] [cursor=pointer]:
+            - /url: "#features"
+          - link "খরচ" [ref=e14] [cursor=pointer]:
+            - /url: "#pricing"
+          - link "প্রশ্ন-উত্তর" [ref=e15] [cursor=pointer]:
+            - /url: "#faq"
+        - generic [ref=e16]:
+          - button "বাংলা EN" [ref=e18] [cursor=pointer]:
+            - generic [ref=e19]: বাংলা
+            - generic [aria-hidden] [ref=e20]: "|"
+            - generic [ref=e21]: EN
+          - link "ড্যাশবোর্ড" [ref=e1171] [cursor=pointer]:
+            - /url: /dashboard
+          - link "ফ্রি শুরু করুন" [ref=e23] [cursor=pointer]:
+            - /url: /signup
+    - main [ref=e24]:
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - link "নতুন এখন সার্ভিস ব্যবসার বুকিংও নেয়" [ref=e28] [cursor=pointer]:
+            - /url: "#services"
+            - generic [ref=e29]: নতুন
+            - generic [ref=e30]: এখন সার্ভিস ব্যবসার বুকিংও নেয়
+          - paragraph [ref=e33]: AI AUTOMATION FOR MESSENGER · INSTAGRAM · WHATSAPP
+          - heading "ব্যবসা চালান আপনি, ঝামেলা সামলাবে AI" [level=1] [ref=e34]:
+            - generic [ref=e35]: ব্যবসা
+            - generic [ref=e36]: চালান
+            - generic [ref=e37]: আপনি,
+            - generic [ref=e38]: ঝামেলা
+            - generic [ref=e39]: সামলাবে
+            - generic [ref=e40]: AI
+          - paragraph [ref=e41]: রাত-দিন মেসেজের উত্তর, ছবি দেখে প্রোডাক্ট চেনা, অর্ডার নেওয়া, কুরিয়ারের খবর, রিভিউ চাওয়া — যে কাজগুলোর পেছনে প্রতিদিন ঘণ্টার পর ঘণ্টা চলে যায়, AiPraktor সেগুলো নিজেই করে। আপনি মন দিন ব্যবসা বড় করায়।
+          - list [ref=e42]:
+            - listitem [ref=e43]: মাসিক ফি নেই
+            - listitem [ref=e46]: ১০ মিনিটে সেটআপ
+            - listitem [ref=e49]: ফ্রি AI ক্রেডিট দিয়ে শুরু
+            - listitem [ref=e52]: যখন খুশি বন্ধ
+          - generic [ref=e55]:
+            - link "ফ্রি শুরু করুন" [ref=e56] [cursor=pointer]:
+              - /url: /signup
+            - button "লাইভ চ্যাটে প্রশ্ন করুন" [ref=e57] [cursor=pointer]
+          - paragraph [ref=e62]: ছোট অনলাইন শপ হোক বা বড় ব্র্যান্ড — প্রোডাক্ট বা সার্ভিস, সবার জন্য।
+          - generic [ref=e63]:
+            - paragraph [ref=e64]: গ্রাহক যেখানে, এজেন্টও সেখানে
+            - list "গ্রাহক যেখানে, এজেন্টও সেখানে" [ref=e65]:
+              - listitem [ref=e66]: Messenger
+              - listitem [ref=e69]: Instagram
+              - listitem [ref=e72]: WhatsApp
+              - listitem [ref=e75]: Facebook কমেন্ট
+        - generic [ref=e78]:
+          - 'img "A real-looking Messenger chat between the shop Clothing Brand and a customer, Tasnim, playing on a loop: the salam, a row of kurti cards, the customer''s own photo recognised as the Mint Chikankari Kurti, a size question, a voice note with the address, order #22961 confirmed with a receipt totalling ৳1,720, a five-star rating, courier updates with Track buttons, and a review request after delivery." [ref=e80]':
+            - generic [ref=e1175]:
+              - generic [ref=e1176]: 4:25
+              - generic [ref=e1185]:
+                - generic [ref=e1188]: CB
+                - generic [ref=e1189]:
+                  - generic [ref=e1190]: Clothing Brand
+                  - generic [ref=e1191]: Active now
+              - generic [ref=e1198]:
+                - generic [ref=e1415]: 11:42 PM
+                - generic [ref=e1417]: Assalamualaikum
+                - generic [ref=e1421]:
+                  - generic [ref=e1422]: CB
+                  - generic [ref=e1423]: ওয়ালাইকুম আসসালাম ম্যাম 😊 Clothing Brand-এ আপনাকে স্বাগতম। আজ কী খুঁজছেন?
+                - generic [ref=e1424]: কুর্তি
+                - generic [ref=e1427]: জ্বি ম্যাম, নতুন কালেকশনের কুর্তিগুলো দেখুন 👇
+                - generic [ref=e1432]:
+                  - generic [ref=e1433]:
+                    - generic [ref=e1437]:
+                      - generic [ref=e1438]: Floral Print Kurti
+                      - generic [ref=e1439]: দাম ৳1,350 · কোড KT1042
+                    - generic [ref=e1440]: এটি নিতে চাই
+                    - generic [ref=e1441]: বিস্তারিত
+                  - generic [ref=e1442]:
+                    - generic [ref=e1446]:
+                      - generic [ref=e1447]: Mint Chikankari Kurti
+                      - generic [ref=e1448]: দাম ৳1,650 · কোড KT1087
+                    - generic [ref=e1449]: এটি নিতে চাই
+                    - generic [ref=e1450]: বিস্তারিত
+                  - generic [ref=e1451]:
+                    - generic [ref=e1455]:
+                      - generic [ref=e1456]: Mustard Embroidered Kurti
+                      - generic [ref=e1457]: দাম ৳1,550 · কোড KT1063
+                    - generic [ref=e1458]: এটি নিতে চাই
+                    - generic [ref=e1459]: বিস্তারিত
+                  - generic [ref=e1460]:
+                    - generic [ref=e1464]:
+                      - generic [ref=e1465]: Navy Block Print Kurti
+                      - generic [ref=e1466]: দাম ৳1,250 · কোড KT1019
+                    - generic [ref=e1467]: এটি নিতে চাই
+                    - generic [ref=e1468]: বিস্তারিত
+                - generic [ref=e1470]:
+                  - generic [ref=e1471]: CB
+                  - generic [ref=e1472]: কোনটা পছন্দ হয়েছে, ম্যাম?
+                - generic [ref=e1478]: eta ki apnader? ei color ta khujchi
+                - generic [ref=e1483]:
+                  - generic [ref=e1487]:
+                    - generic [ref=e1488]: Mint Chikankari Kurti
+                    - generic [ref=e1489]: দাম ৳1,650 · কোড KT1087
+                  - generic [ref=e1490]: এটি নিতে চাই
+                  - generic [ref=e1491]: বিস্তারিত
+                - generic [ref=e1493]:
+                  - generic [ref=e1494]: CB
+                  - generic [ref=e1495]: "জ্বি ম্যাম, এটা আমাদের Mint Chikankari Kurti 😊 💰 দাম: ৳1,650 📏 সাইজ: M, L, XL কোন সাইজটি নেবেন?"
+                - generic [ref=e1496]: L e bust koto?
+                - generic [ref=e1500]:
+                  - generic [ref=e1501]: CB
+                  - generic [ref=e1502]: জ্বি ম্যাম, L সাইজে বুক ৪০ ইঞ্চি, লম্বা ৪৪ ইঞ্চি 📏 ✅ L সাইজ এখন স্টকে আছে। L-টাই রাখব?
+                - generic [ref=e1503]: ha L nibo. kobe pabo?
+                - generic [ref=e1507]:
+                  - generic [ref=e1508]: CB
+                  - generic [ref=e1509]: জ্বি ম্যাম, L সাইজটা আপনার জন্য রাখছি। 🚚 এখন রাত, তাই কাল সকালেই কুরিয়ারে দেওয়ার চেষ্টা করব — ঢাকার ভেতরে সাধারণত ২৪ ঘণ্টায় পৌঁছে যায়। অর্ডার কনফার্ম করতে আপনার নাম, ফোন নম্বর ও পুরো ঠিকানা দিন।
+                - generic [ref=e1510]: 0:09
+                - generic [ref=e1542]:
+                  - generic [ref=e1546]:
+                    - generic [ref=e1547]: Mint Chikankari Kurti
+                    - generic [ref=e1548]: দাম ৳1,650 · কোড KT1087
+                  - generic [ref=e1549]: বিস্তারিত
+                - generic [ref=e1550]: "✅ জ্বি ম্যাম, অর্ডার #22961 কনফার্ম হয়েছে। 💰 মোট: ৳1,720 (ডেলিভারিসহ) 🚚 কাল সকালেই কুরিয়ারে দিচ্ছি। 📦 কুরিয়ারে দিলেই আপনাকে জানিয়ে দেব।"
+                - generic [ref=e1555]:
+                  - generic [ref=e1556]:
+                    - generic [ref=e1557]: RECEIPT
+                    - generic [ref=e1558]: Tasnim Akter
+                    - generic [ref=e1559]: "Order #22961"
+                    - generic [ref=e1560]: Payment method · Cash on Delivery
+                  - generic [ref=e1561]:
+                    - generic [ref=e1565]:
+                      - generic [ref=e1566]: Mint Chikankari Kurti
+                      - generic [ref=e1567]: কোড KT1087 · Size L · Qty 1
+                    - generic [ref=e1568]: ৳1,650
+                  - generic [ref=e1569]:
+                    - generic [ref=e1570]:
+                      - generic [ref=e1571]: Subtotal
+                      - text: ৳1,650
+                    - generic [ref=e1572]:
+                      - generic [ref=e1573]: Shipping
+                      - text: ৳70
+                    - generic [ref=e1574]:
+                      - generic [ref=e1575]: Total
+                      - text: ৳1,720
+                - generic [ref=e1576]: ধন্যবাদ ম্যাম 🙏
+                - generic [ref=e1580]:
+                  - generic [ref=e1581]: CB
+                  - generic [ref=e1582]:
+                    - generic [ref=e1583]:
+                      - generic [ref=e1584]: আমাদের সেবা কেমন লেগেছে?
+                      - generic [ref=e1585]: একটি রেটিং দিন 🙏
+                    - generic [ref=e1597]: Rate us
+                - generic [ref=e1598]: You rated ★★★★★
+                - generic [ref=e1601]:
+                  - generic [ref=e1602]: CB
+                  - generic [ref=e1603]: অনেক ধন্যবাদ ম্যাম, আপনার ৫ স্টার আমাদের অনুপ্রেরণা 😊
+                - generic [ref=e1604]: Tomorrow 10:15 AM
+                - generic [ref=e1607]:
+                  - generic [ref=e1608]: CB
+                  - generic [ref=e1609]:
+                    - generic [ref=e1610]: "আপনার অর্ডার #22961 কুরিয়ারে (Steadfast) হস্তান্তর হয়েছে।"
+                    - generic [ref=e1611]: ট্র্যাক করুন
+                - generic [ref=e1612]: Sat 1:40 PM
+                - generic [ref=e1615]:
+                  - generic [ref=e1616]: CB
+                  - generic [ref=e1617]:
+                    - generic [ref=e1618]: "আজ আপনার পার্সেল (অর্ডার #22961) ডেলিভারি হবে, রাইডার কল করবে, ৳1,720 প্রস্তুত রাখুন।"
+                    - generic [ref=e1619]: ট্র্যাক করুন
+                - generic [ref=e1620]: Sat 4:25 PM
+                - generic [ref=e1623]:
+                  - generic [ref=e1624]: CB
+                  - generic [ref=e1625]:
+                    - generic [ref=e1626]: "আপনার অর্ডার #22961 ডেলিভারি হয়েছে — ধন্যবাদ! 🙏 আমাদের সার্ভিস কেমন লাগল, নিচের লিংকে আমাদের পেজে একটি রিভিউ দিলে খুশি হব।"
+                    - generic [ref=e1627]: রিভিউ দিন
+                - text: CB CB
+              - generic [ref=e1199]: Aa
+          - generic [ref=e81]:
+            - paragraph [ref=e82]:
+              - generic [ref=e84]: "চলছে: Clothing Brand-এর একটা অর্ডারের উদাহরণ, প্রথম সালাম থেকে রিভিউ পর্যন্ত"
+            - button "থামান" [ref=e85] [cursor=pointer]
+          - list "কথোপকথনের ধাপ" [ref=e89]:
+            - listitem [ref=e90]: সালাম
+            - listitem [ref=e91]: পছন্দ
+            - listitem [ref=e92]: ছবি
+            - listitem [ref=e93]: সাইজ
+            - listitem [ref=e94]: অর্ডার
+            - listitem [ref=e95]: রসিদ
+            - listitem [ref=e96]: কুরিয়ার
+            - listitem [ref=e97]: রিভিউ
+      - region "এক নজরে" [ref=e98]:
+        - generic [ref=e99]:
+          - generic [ref=e100]:
+            - generic [ref=e101]: ২৪/৭
+            - generic [ref=e102]: রাত ৩টায়ও গ্রাহক উত্তর পান
+          - generic [ref=e103]:
+            - generic [ref=e104]: ১০ মিনিট
+            - generic [ref=e105]: সেটআপ শেষ, কোনো কোডিং ছাড়াই
+          - generic [ref=e106]:
+            - generic [ref=e107]: ৳০
+            - generic [ref=e108]: মাসিক ফি
+          - generic [ref=e109]:
+            - generic [ref=e110]: ৩টা অ্যাপ
+            - generic [ref=e111]: এক এজেন্ট, এক ড্যাশবোর্ড
+      - generic [ref=e113]:
+        - generic [ref=e114]:
+          - paragraph [ref=e115]: ONE AGENT · EVERY INBOX
+          - heading "Messenger, Instagram, WhatsApp — সব ইনবক্স এক এজেন্টের হাতে" [level=2] [ref=e116]
+          - paragraph [ref=e117]: পোস্টের কমেন্টেরও উত্তর দেয়, দরকার হলে ইনবক্সে মেসেজ পাঠায়। সব জায়গায় একই ক্যাটালগ, একই নিয়ম — আর প্রতিটা গ্রাহকের সব কথা জমা থাকে, আবার লিখলে সাম্প্রতিক কথাগুলো মনে রেখেই উত্তর দেয়।
+        - generic [ref=e118]:
+          - generic [ref=e119]:
+            - generic [ref=e124]:
+              - generic [ref=e125]: Messenger
+              - generic [ref=e126]: "পেজের ইনবক্স: লেখা, ছবি, ভয়েস, বাটন"
+            - generic [ref=e131]:
+              - generic [ref=e132]: Instagram
+              - generic [ref=e133]: DM-এর উত্তর একই ক্যাটালগ থেকে
+            - generic [ref=e138]:
+              - generic [ref=e139]: WhatsApp
+              - generic [ref=e140]: আপনার নিজের নম্বর, ফোনও আগের মতো চলে
+            - generic [ref=e145]:
+              - generic [ref=e146]: কমেন্ট
+              - generic [ref=e147]: কমেন্টে নাম ধরে উত্তর, সাথে ইনবক্সে মেসেজ
+          - generic [ref=e157]:
+            - heading "একটাই এজেন্ট" [level=3] [ref=e162]
+            - list [ref=e163]:
+              - listitem [ref=e164]: একই ক্যাটালগ, একই নিয়ম
+              - listitem [ref=e165]: সব কথোপকথন জমা রাখে, সাম্প্রতিক কথা মনে রাখে
+              - listitem [ref=e166]: উত্তর বাংলায়, ইংরেজিতে বা দুটোতেই — আপনি বেছে নেন
+      - generic [ref=e168]:
+        - generic [ref=e169]:
+          - paragraph [ref=e170]: AN EXAMPLE ORDER · START TO FINISH
+          - heading "একটা অর্ডার, শুরু থেকে শেষ — কীভাবে সামলায় দেখুন" [level=2] [ref=e171]
+          - paragraph [ref=e172]: নিচে স্ক্রল করুন। ফোনে ঠিক সেটাই দেখবেন, যা আপনার গ্রাহক দেখেন।
+        - generic [ref=e173]:
+          - 'img "Rafi''s Messenger chat with Clothing Brand, filling as you scroll: category buttons and a panjabi carousel, the customer''s own photo matched to the Ivory Embroidered Panjabi, a size answer from the size chart, a polite follow-up, a voice note and order #22987 with its receipt, a five-star rating and two Pathao courier updates, and the review request after delivery." [ref=e175]':
+            - generic [ref=e1218]:
+              - generic [ref=e1219]: 4:40
+              - generic [ref=e1228]:
+                - generic [ref=e1231]: CB
+                - generic [ref=e1232]:
+                  - generic [ref=e1233]: Clothing Brand
+                  - generic [ref=e1234]: Active now
+              - generic [ref=e1241]:
+                - generic [ref=e1242]: Today 2:14 PM
+                - generic [ref=e1628]: Assalamualaikum vai, ki ki ache apnader?
+                - generic [ref=e1632]:
+                  - generic [ref=e1633]: CB
+                  - generic [ref=e1634]: ওয়ালাইকুম আসসালাম স্যার 😊 Clothing Brand-এ আপনাকে স্বাগতম। কী খুঁজছেন, বেছে নিন 👇
+                - generic [ref=e1635]: পাঞ্জাবি
+                - generic [ref=e1638]: জ্বি স্যার, আমাদের নতুন পাঞ্জাবিগুলো দেখুন 👇
+                - generic [ref=e1643]:
+                  - generic [ref=e1644]:
+                    - generic [ref=e1648]:
+                      - generic [ref=e1649]: Ivory Embroidered Panjabi
+                      - generic [ref=e1650]: দাম ৳2,450 · কোড PJ2210
+                    - generic [ref=e1651]: এটি নিতে চাই
+                    - generic [ref=e1652]: বিস্তারিত
+                  - generic [ref=e1653]:
+                    - generic [ref=e1657]:
+                      - generic [ref=e1658]: Maroon Silk Panjabi
+                      - generic [ref=e1659]: দাম ৳2,850 · কোড PJ2231
+                    - generic [ref=e1660]: এটি নিতে চাই
+                    - generic [ref=e1661]: বিস্তারিত
+                  - generic [ref=e1662]:
+                    - generic [ref=e1666]:
+                      - generic [ref=e1667]: Navy Cotton Panjabi
+                      - generic [ref=e1668]: দাম ৳1,950 · কোড PJ2198
+                    - generic [ref=e1669]: এটি নিতে চাই
+                    - generic [ref=e1670]: বিস্তারিত
+                  - generic [ref=e1671]:
+                    - generic [ref=e1675]:
+                      - generic [ref=e1676]: Olive Linen Panjabi
+                      - generic [ref=e1677]: দাম ৳2,250 · কোড PJ2244
+                    - generic [ref=e1678]: এটি নিতে চাই
+                    - generic [ref=e1679]: বিস্তারিত
+                - generic [ref=e1681]:
+                  - generic [ref=e1682]: CB
+                  - generic [ref=e1683]: কোনটা পছন্দ হয়েছে, স্যার?
+                - generic [ref=e1689]: ei design ta ache?
+                - generic [ref=e1694]:
+                  - generic [ref=e1698]:
+                    - generic [ref=e1699]: Ivory Embroidered Panjabi
+                    - generic [ref=e1700]: দাম ৳2,450 · কোড PJ2210
+                  - generic [ref=e1701]: এটি নিতে চাই
+                  - generic [ref=e1702]: বিস্তারিত
+                - generic [ref=e1704]:
+                  - generic [ref=e1705]: CB
+                  - generic [ref=e1706]: "জ্বি স্যার, এটা আমাদের Ivory Embroidered Panjabi 😊 💰 দাম: ৳2,450 📏 সাইজ: 38, 40, 42, 44 কোন সাইজটি নেবেন?"
+                - generic [ref=e1707]: amar height 5'8", weight 72 kg. kon size lagbe?
+                - generic [ref=e1711]:
+                  - generic [ref=e1712]: CB
+                  - generic [ref=e1713]: "জ্বি স্যার, আপনার মাপে 42 সাইজটা সবচেয়ে ভালো ফিট হবে 👍 📏 42: লম্বা ৪২ ইঞ্চি, বুক ৪৪ ইঞ্চি ✅ 42 সাইজ এখন স্টকে আছে। 42-টাই রাখব?"
+                - generic [ref=e1714]: 5:20 PM
+                - generic [ref=e1717]:
+                  - generic [ref=e1718]: CB
+                  - generic [ref=e1719]: স্যার, Ivory Embroidered Panjabi-টা কি নেবেন? 😊 ✅ 42 সাইজ এখনও স্টকে আছে। কনফার্ম করলে আজকেই কুরিয়ারে দেওয়ার চেষ্টা করব।
+                - generic [ref=e1720]: ji nibo, 42 ta
+                - generic [ref=e1724]:
+                  - generic [ref=e1725]: CB
+                  - generic [ref=e1726]: জ্বি স্যার, 42 সাইজটা আপনার জন্য রাখছি। অর্ডার কনফার্ম করতে আপনার নাম, ফোন নম্বর ও পুরো ঠিকানা দিন — পেলেই কনফার্ম করে দিচ্ছি।
+                - generic [ref=e1727]: 0:11
+                - generic [ref=e1759]:
+                  - generic [ref=e1763]:
+                    - generic [ref=e1764]: Ivory Embroidered Panjabi
+                    - generic [ref=e1765]: দাম ৳2,450 · কোড PJ2210
+                  - generic [ref=e1766]: বিস্তারিত
+                - generic [ref=e1767]: "✅ জ্বি স্যার, অর্ডার #22987 কনফার্ম হয়েছে। 💰 মোট: ৳2,520 (ডেলিভারিসহ) 🚚 আজকেই কুরিয়ারে দেওয়ার চেষ্টা করছি — ঢাকার ভেতরে সাধারণত ২৪ ঘণ্টায় পৌঁছে যায়। 📦 কুরিয়ারে দিলেই আপনাকে জানিয়ে দেব।"
+                - generic [ref=e1772]:
+                  - generic [ref=e1773]:
+                    - generic [ref=e1774]: RECEIPT
+                    - generic [ref=e1775]: Rafi Ahmed
+                    - generic [ref=e1776]: "Order #22987"
+                    - generic [ref=e1777]: Payment method · Cash on Delivery
+                  - generic [ref=e1778]:
+                    - generic [ref=e1782]:
+                      - generic [ref=e1783]: Ivory Embroidered Panjabi
+                      - generic [ref=e1784]: কোড PJ2210 · Size 42 · Qty 1
+                    - generic [ref=e1785]: ৳2,450
+                  - generic [ref=e1786]:
+                    - generic [ref=e1787]:
+                      - generic [ref=e1788]: Subtotal
+                      - text: ৳2,450
+                    - generic [ref=e1789]:
+                      - generic [ref=e1790]: Shipping
+                      - text: ৳70
+                    - generic [ref=e1791]:
+                      - generic [ref=e1792]: Total
+                      - text: ৳2,520
+                - generic [ref=e1793]: ধন্যবাদ স্যার 🙏
+                - generic [ref=e1797]:
+                  - generic [ref=e1798]: CB
+                  - generic [ref=e1799]:
+                    - generic [ref=e1800]:
+                      - generic [ref=e1801]: আমাদের সেবা কেমন লেগেছে?
+                      - generic [ref=e1802]: একটি রেটিং দিন 🙏
+                    - generic [ref=e1814]: Rate us
+                - generic [ref=e1815]: You rated ★★★★★
+                - generic [ref=e1818]:
+                  - generic [ref=e1819]: CB
+                  - generic [ref=e1820]: অনেক ধন্যবাদ স্যার, আপনার ৫ স্টার আমাদের অনুপ্রেরণা 😊
+                - generic [ref=e1821]: Tomorrow 10:10 AM
+                - generic [ref=e1824]:
+                  - generic [ref=e1825]: CB
+                  - generic [ref=e1826]:
+                    - generic [ref=e1827]: "আপনার অর্ডার #22987 কুরিয়ারে (Pathao) হস্তান্তর হয়েছে।"
+                    - generic [ref=e1828]: ট্র্যাক করুন
+                - generic [ref=e1829]: 1:30 PM
+                - generic [ref=e1832]:
+                  - generic [ref=e1833]: CB
+                  - generic [ref=e1834]:
+                    - generic [ref=e1835]: "আজ আপনার পার্সেল (অর্ডার #22987) ডেলিভারি হবে, রাইডার কল করবে, ৳2,520 প্রস্তুত রাখুন।"
+                    - generic [ref=e1836]: ট্র্যাক করুন
+                - generic [ref=e1837]: 4:40 PM
+                - generic [ref=e1840]:
+                  - generic [ref=e1841]: CB
+                  - generic [ref=e1842]:
+                    - generic [ref=e1843]: "আপনার অর্ডার #22987 ডেলিভারি হয়েছে — ধন্যবাদ! 🙏 আমাদের সার্ভিস কেমন লাগল, নিচের লিংকে আমাদের পেজে একটি রিভিউ দিলে খুশি হব।"
+                    - generic [ref=e1844]: রিভিউ দিন
+                - generic [ref=e1845]: Panjabi ta joss hoise vai 😍 review dilam
+                - generic [ref=e1849]:
+                  - generic [ref=e1850]: CB
+                  - generic [ref=e1851]: শুনে খুব ভালো লাগল স্যার 🥰 রিভিউয়ের জন্য অনেক ধন্যবাদ। আবার আসবেন!
+              - generic [ref=e1244]: Aa
+          - generic [ref=e176]:
+            - article [ref=e177]:
+              - generic [ref=e178]: 01 / 07
+              - heading "আগে জেনে নেয়, তারপর দেখায়" [level=3] [ref=e179]
+              - paragraph [ref=e180]: কেউ শুধু ‘কী কী আছে?’ লিখলে এলোমেলো দশটা ছবি ছুড়ে দেয় না। কয়েকটা অপশন দিয়ে আগে জেনে নেয় কী খুঁজছেন, তারপর ঠিক সেগুলোরই কার্ড দেখায় — দাম, কোড আর বাটনসহ।
+              - generic [ref=e181]: ক্যাটাগরি বাটন → প্রোডাক্ট ক্যারোসেল
+            - article [ref=e183]:
+              - generic [ref=e184]: 02 / 07
+              - heading "ছবি দেখেই চিনে ফেলে" [level=3] [ref=e185]
+              - paragraph [ref=e186]: গ্রাহক অন্য কোথাও দেখা একটা ছবি পাঠালেন? প্রোডাক্ট কোড, হুবহু ছবি আর দেখতে কেমন — তিনভাবে মিলিয়ে আপনার ক্যাটালগ থেকে ঠিক প্রোডাক্টটা বের করে। নিশ্চিত না হলে আন্দাজে কিছু বলে না, কাছাকাছি তিনটা দেখিয়ে জিজ্ঞেস করে নেয়।
+              - generic [ref=e187]: কোড → হুবহু ছবি → দেখতে কেমন
+            - article [ref=e189]:
+              - generic [ref=e190]: 03 / 07
+              - heading "সাইজ, মাপ, স্টক — ঠিকঠাক উত্তর" [level=3] [ref=e191]
+              - paragraph [ref=e192]: মাপ জানতে চাইলে সাইজ চার্ট দেখে বলে দেয়, কোন সাইজ স্টকে আছে সেটাও। দাম কখনো নিজে থেকে বানায় না — আপনার ক্যাটালগে যা আছে, সেটাই বলে।
+              - generic [ref=e193]: উত্তর আসে আপনার ক্যাটালগ থেকে
+            - article [ref=e195]:
+              - generic [ref=e196]: 04 / 07
+              - heading "চুপ হয়ে গেলে ভদ্রভাবে মনে করিয়ে দেয়" [level=3] [ref=e197]
+              - paragraph [ref=e198]: দাম জেনে গ্রাহক চুপ? মেটার ২৪ ঘণ্টার নিয়মের ভেতরেই সুন্দর করে একবার মনে করিয়ে দেয়। কাদের মনে করাবে — হট না ওয়ার্ম — সেটা আপনি বেছে নেন।
+              - generic [ref=e199]: ২৪ ঘণ্টার ভেতরে · হট / ওয়ার্ম
+            - article [ref=e201]:
+              - generic [ref=e202]: 05 / 07
+              - heading "ভয়েস নোটেই অর্ডার কনফার্ম" [level=3] [ref=e203]
+              - paragraph [ref=e204]: টাইপ না করে গ্রাহক ভয়েসে নাম, নম্বর আর ঠিকানা বললেন — AI শুনে বোঝে, অর্ডার কনফার্ম করে, আর আপনার ক্যাটালগের দাম দিয়ে রসিদ পাঠায়। ইংরেজি অক্ষরে বাংলা লিখলেও বোঝে, উত্তর দেয় বাংলায়।
+              - generic [ref=e205]: "ভয়েস → লেখা → অর্ডার #22987"
+            - article [ref=e207]:
+              - generic [ref=e208]: 06 / 07
+              - heading "রেটিং চায়, কুরিয়ারের খবর নিজেই দেয়" [level=3] [ref=e209]
+              - paragraph [ref=e210]: অর্ডারের পর গ্রাহকের কাছে রেটিং চেয়ে নেয়। পার্সেল কুরিয়ারে দিলে, ডেলিভারির দিন সকালে — প্রতিটা আপডেট নিজে থেকেই চ্যাটে চলে যায়, ট্র্যাক করার বাটনসহ। Steadfast আর Pathao, দুটোতেই।
+              - generic [ref=e211]: Steadfast · Pathao · ট্র্যাক বাটন
+            - article [ref=e213]:
+              - generic [ref=e214]: 07 / 07
+              - heading "ডেলিভারির পর রিভিউ চেয়ে নেয়" [level=3] [ref=e215]
+              - paragraph [ref=e216]: পার্সেল পৌঁছালে ধন্যবাদ জানিয়ে আপনার পেজে রিভিউ দিতে বলে। খুশি গ্রাহকের একটা রিভিউ মানে পরের গ্রাহকের ভরসা।
+              - generic [ref=e217]: ডেলিভারি → ধন্যবাদ → রিভিউ লিংক
+      - generic [ref=e220]:
+        - generic [ref=e222]:
+          - img "Two days later Rafi writes that the panjabi is too small and asks to exchange it for 44. The agent apologises, says a representative is looking at it now and hands the chat to the team; Nusrat from Clothing Brand replies that the 44 goes out today, the rider collects the old one, and the exchange costs nothing." [ref=e224]:
+            - generic [ref=e1263]:
+              - generic [ref=e1264]: 12:06
+              - generic [ref=e1273]:
+                - generic [ref=e1276]: CB
+                - generic [ref=e1277]:
+                  - generic [ref=e1278]: Clothing Brand
+                  - generic [ref=e1279]: Active now
+              - generic [ref=e1286]:
+                - generic [ref=e1287]: Mon 11:05 AM
+                - generic [ref=e1289]: vai parcel paisi, kintu size ta choto hoye geche 😕 44 lagbe, exchange kora jabe?
+                - generic [ref=e1853]:
+                  - generic [ref=e1854]: CB
+                  - generic [ref=e1855]: দুঃখিত স্যার 🙏 বিষয়টা আমাদের একজন প্রতিনিধি এখনই দেখছেন, একটু অপেক্ষা করুন।
+                - generic [ref=e1856]: টিমের কাছে পাঠানো হয়েছে
+                - generic [ref=e1858]:
+                  - generic [ref=e1859]:
+                    - generic [ref=e1860]: CB
+                    - generic [ref=e1861]: স্যার, কোনো চিন্তা করবেন না 😊 আজই 44 সাইজটা পাঠিয়ে দিচ্ছি, রাইডার আগেরটা নিয়ে আসবে। এক্সচেঞ্জে আলাদা কোনো খরচ লাগবে না।
+                  - generic [ref=e1862]: নুসরাত · Clothing Brand
+              - generic [ref=e1292]: Aa
+          - generic [ref=e225]:
+            - generic [ref=e226]:
+              - paragraph [ref=e227]: WHEN A PERSON IS NEEDED
+              - heading "যেখানে মানুষের দরকার, সেখানে আপনার টিম" [level=2] [ref=e228]
+              - paragraph [ref=e229]: গ্রাহক অভিযোগ করলে, টাকা ফেরত চাইলে বা বিশেষ কিছু চাইলে AI নিজেই আপনার টিমকে ডাকে — কেন ডাকল, সেটাও লিখে রাখে। কাজ শেষে চ্যাট আবার AI-এর হাতে ফিরে যায়।
+              - generic [ref=e237]:
+                - paragraph [ref=e238]: ১ · AI বুঝে নেয় মানুষ লাগবে, কারণও লিখে রাখে
+                - paragraph [ref=e1308]: ২ · টিমের সবাই সাথে সাথে জানে
+                - paragraph [ref=e1309]: ৩ · একজন এক ট্যাপে দায়িত্ব নেন
+                - paragraph [ref=e1310]: ৪ · টাইমার চলে, কতক্ষণ তা আপনি ঠিক করেন
+                - paragraph [ref=e1311]: ৫ · সময় শেষে চ্যাট নিজেই AI-তে ফেরে
+            - generic [aria-hidden] [ref=e239]:
+              - generic [ref=e245]:
+                - generic [ref=e246]:
+                  - generic [ref=e247]: AiPraktor · push
+                  - generic [ref=e248]: now
+                - generic [ref=e249]: রাফি · সাইজ এক্সচেঞ্জ চান · অপেক্ষা ০:৪২
+              - generic [ref=e250]:
+                - generic [ref=e251]: Phone push
+                - generic [ref=e252]: Chrome extension
+                - generic [ref=e253]: Dashboard
+              - generic [ref=e254]:
+                - generic [ref=e255]:
+                  - generic [ref=e256]: Notifications
+                  - generic [ref=e257]: Needs attention
+                - generic [ref=e258]:
+                  - generic [ref=e259]: Nothing waiting
+                  - generic [ref=e260]:
+                    - generic [ref=e261]: রা
+                    - generic [ref=e262]:
+                      - generic [ref=e263]: রাফি
+                      - generic [ref=e264]:
+                        - generic [ref=e265]: Human
+                        - generic [ref=e266]: "কারণ: অভিযোগ"
+                    - generic [ref=e267]:
+                      - generic [ref=e268]: 0:42
+                      - generic [ref=e269]:
+                        - generic [ref=e270]: Claim
+                        - generic [ref=e271]: ✓ নুসরাত
+              - generic [ref=e272]:
+                - generic [ref=e273]:
+                  - generic [ref=e274]: Conversation mode
+                  - generic [ref=e275]: রাফি · Messenger
+                - generic [ref=e276]:
+                  - generic [ref=e277]:
+                    - generic [ref=e278]: AI
+                    - generic [ref=e279]: AI এই চ্যাট সামলাচ্ছে
+                  - generic [ref=e1312]:
+                    - generic [ref=e1313]: Human
+                    - generic [ref=e1314]: "কারণ: অভিযোগ"
+                    - generic [ref=e1315]: টিমকে ডাকা হয়েছে
+                  - generic [ref=e1316]:
+                    - generic [ref=e1317]: Human · নুসরাত
+                    - generic [ref=e1318]:
+                      - text: Timer
+                      - generic [ref=e1319]: 00:00:00
+                  - generic [ref=e1320]:
+                    - generic [ref=e1321]: Back to AI
+                    - generic [ref=e1322]: নিজে থেকেই — কাউকে মনে রাখতে হয়নি
+        - list [ref=e280]:
+          - listitem [ref=e281]:
+            - generic [ref=e282]: "01"
+            - text: AI নিজেই বোঝে কখন মানুষ লাগবে, আর কারণটা লিখে রাখে
+          - listitem [ref=e283]:
+            - generic [ref=e284]: "02"
+            - text: ফোনে পুশ, ক্রোম এক্সটেনশন আর ড্যাশবোর্ড — টিম সাথে সাথে জানে
+          - listitem [ref=e285]:
+            - generic [ref=e286]: "03"
+            - text: এক ট্যাপে দায়িত্ব নিন, গ্রাহক কতক্ষণ অপেক্ষা করছেন তাও দেখুন
+          - listitem [ref=e287]:
+            - generic [ref=e288]: "04"
+            - text: ১ ঘণ্টা, ৪ ঘণ্টা, নাকি যতক্ষণ না ফেরান — আপনি ঠিক করেন
+          - listitem [ref=e289]:
+            - generic [ref=e290]: "05"
+            - text: সময় শেষে চ্যাট নিজেই AI-তে ফেরে, কাউকে মনে রাখতে হয় না
+          - listitem [ref=e291]:
+            - generic [ref=e292]: "06"
+            - text: Messenger বা WhatsApp থেকেই একটা ‘.’ লিখে চ্যাট নিজের হাতে নিন
+      - generic [ref=e294]:
+        - generic [ref=e295]:
+          - paragraph [ref=e296]: YOUR AI ASSISTANT · EVERY CUSTOMER'S FULL STORY
+          - heading "প্রতিটা গ্রাহকের পুরো গল্প এক জায়গায় — পাশে একজন AI সহকারী" [level=2] [ref=e297]
+          - paragraph [ref=e298]: গ্রাহকের সাথে আগে কী কথা হয়েছে, কোন ছবি পাঠিয়েছেন, ভয়েসে কী বলেছেন, কী কিনেছেন — সব এক টাইমলাইনে। যেকোনো প্রশ্ন করুন, এক ক্লিকে সারাংশ নিন, আর পরের মেসেজটা AI-কে দিয়ে লিখিয়ে নিন।
+        - 'img "A dashboard chat drawer for Rafi Ahmed on Messenger: the full timeline (the customer''s photo and what the AI saw in it, the card that was viewed, the voice note in words, order #22987 delivered with a five-star rating, and today''s size complaint). Beside it the AI assistant answers the owner''s question about past orders and drafts the next reply." [ref=e299]':
+          - generic [ref=e300]:
+            - generic [ref=e301]: রা
+            - generic [ref=e302]:
+              - generic [ref=e303]: রাফি আহমেদ · Messenger
+              - generic [ref=e304]: 2 অর্ডার · শেষ কথা আজ
+            - generic [ref=e305]: Human · নুসরাত
+          - list [ref=e306]:
+            - listitem [ref=e307]:
+              - generic [ref=e308]: 📷
+              - generic [ref=e309]: "ছবি পাঠিয়েছেন — AI যা দেখেছে: আইভরি রঙের পাঞ্জাবি, গলা আর বোতামের পাশে সোনালি সুতার কাজ"
+              - time [ref=e310]: শুক্র ২:১৫
+            - listitem [ref=e311]:
+              - generic [ref=e312]: 🛍️
+              - generic [ref=e313]: কার্ড দেখেছেন — Ivory Embroidered Panjabi · ৳2,450
+              - time [ref=e314]: শুক্র ২:১৫
+            - listitem [ref=e315]:
+              - generic [ref=e316]: 🎤
+              - generic [ref=e317]: "ভয়েস নোট — লেখায়: রাফি আহমেদ, বাসা ৭, রোড ১২, মিরপুর ১০, ঢাকা"
+              - time [ref=e318]: শুক্র ৫:২৪
+            - listitem [ref=e319]:
+              - generic [ref=e320]: ✅
+              - generic [ref=e321]: "অর্ডার #22987 · ডেলিভারড · ⭐ ৫/৫"
+              - time [ref=e322]: শনি ৪:৪০
+            - listitem [ref=e323]:
+              - generic [ref=e324]: 💬
+              - generic [ref=e325]: "আজ: “সাইজ ছোট হয়েছে, 44 লাগবে” — টিমের কাছে পাঠানো হয়েছে"
+              - time [ref=e326]: আজ ১১:০৫
+          - generic [ref=e327]:
+            - generic [ref=e328]: AI সহকারী
+            - generic [ref=e331]:
+              - generic [ref=e332]: সারাংশ
+              - generic [ref=e333]: প্রশ্ন করুন
+              - generic [ref=e334]: পরের রিপ্লাই
+              - generic [ref=e335]: লিড বানান
+            - generic [ref=e358]: যেকোনো প্রশ্ন করুন…
+        - list [ref=e363]:
+          - listitem [ref=e364]:
+            - generic [ref=e367]: সারাংশ
+            - text: পুরো সম্পর্কটা এক প্যারায়, কথা শুরুর আগেই
+          - listitem [ref=e368]:
+            - generic [ref=e371]: যা খুশি জিজ্ঞেস করুন
+            - text: ‘ইনি আগে কী কিনেছেন?’ ‘শেষবার কী নিয়ে অভিযোগ ছিল?’
+          - listitem [ref=e372]:
+            - generic [ref=e375]: পরের রিপ্লাই
+            - text: AI লিখে দেয়, আপনি দেখে পাঠান
+          - listitem [ref=e376]:
+            - generic [ref=e379]: লিড
+            - text: কথার ভেতর থেকে নাম, ফোন আর আগ্রহ তুলে এনে লিড বানায়
+          - listitem [ref=e380]:
+            - generic [ref=e383]: ক্রোম এক্সটেনশন
+            - text: Meta Business Suite-এর পাশেই একই সহকারী
+      - generic [ref=e385]:
+        - generic [ref=e386]:
+          - paragraph [ref=e387]: THE DASHBOARD · PHONE AND LAPTOP
+          - heading "পুরো ব্যবসা এক ড্যাশবোর্ডে — ফোনেও, ল্যাপটপেও" [level=2] [ref=e388]
+          - paragraph [ref=e389]: আপনার পুরো টিমের জন্য একটাই অ্যাপ। ফোনে ইনস্টল করে নিন, নোটিফিকেশন পাবেন। কে কোন পেজ দেখবে, সেটা আপনি ঠিক করেন।
+        - generic [ref=e390]:
+          - article [ref=e391]:
+            - generic [ref=e392]: Inbox
+            - heading "ইনবক্স" [level=3] [ref=e393]
+            - paragraph [ref=e394]: যিনি সবচেয়ে বেশিক্ষণ অপেক্ষা করছেন, তিনি সবার ওপরে
+            - generic [aria-hidden] [ref=e395]:
+              - generic [ref=e396]:
+                - generic [ref=e397]: "3"
+                - generic [ref=e398]: waiting now
+              - generic [ref=e399]:
+                - generic [ref=e400]: রা
+                - generic [ref=e401]:
+                  - text: রাফি
+                  - generic [ref=e402]: অভিযোগ
+                - generic [ref=e406]: 8:32
+              - generic [ref=e407]:
+                - generic [ref=e408]: সা
+                - generic [ref=e409]:
+                  - text: সাদিয়া
+                  - generic [ref=e410]: বিশেষ অনুরোধ
+                - generic [ref=e414]: 6:25
+              - generic [ref=e415]:
+                - generic [ref=e416]: তা
+                - generic [ref=e417]:
+                  - text: তানভীর
+                  - generic [ref=e418]: পেমেন্ট
+                - generic [ref=e422]: 5:02
+          - article [ref=e423]:
+            - generic [ref=e424]: Notifications
+            - heading "নোটিফিকেশন" [level=3] [ref=e425]
+            - paragraph [ref=e426]: কেউ দেখে বন্ধ না করা পর্যন্ত থেকে যায়
+            - generic [aria-hidden] [ref=e427]:
+              - generic [ref=e428]:
+                - generic [ref=e430]: Needs attention
+                - generic [ref=e431]: "2"
+              - generic [ref=e432]:
+                - generic [ref=e434]: Done
+                - generic [ref=e435]: "14"
+          - article [ref=e436]:
+            - generic [ref=e437]: Leads
+            - heading "লিড" [level=3] [ref=e438]
+            - paragraph [ref=e439]: ৬ ধাপের পাইপলাইন, আজ কাকে ফোন করবেন
+            - generic [ref=e448]:
+              - generic [ref=e449]: Stage 4 of 6
+              - generic [ref=e450]: Today · 3
+          - article [ref=e451]:
+            - generic [ref=e452]: Orders
+            - heading "অর্ডার" [level=3] [ref=e453]
+            - paragraph [ref=e454]: রসিদ, এক ক্লিকে কুরিয়ার বুকিং, ইনভয়েস
+            - generic [aria-hidden] [ref=e455]:
+              - generic [ref=e456]: কনফার্ম
+              - generic [ref=e458]: শিপড
+              - generic [ref=e460]: ডেলিভারড
+          - article [ref=e462]:
+            - generic [ref=e463]: Follow-ups
+            - heading "ফলো-আপ" [level=3] [ref=e464]
+            - paragraph [ref=e465]: হট না ওয়ার্ম — কাকে মনে করাবে
+            - generic [aria-hidden] [ref=e466]:
+              - generic [ref=e467]:
+                - generic [ref=e468]: Hot
+                - emphasis [ref=e469]
+                - generic [ref=e470]: "4"
+              - generic [ref=e471]:
+                - generic [ref=e472]: Warm
+                - emphasis [ref=e473]
+                - generic [ref=e474]: "7"
+              - generic [ref=e475]:
+                - generic [ref=e476]: Cold
+                - emphasis [ref=e477]
+                - generic [ref=e478]: "12"
+          - article [ref=e479]:
+            - generic [ref=e480]: Broadcasts
+            - heading "ব্রডকাস্ট" [level=3] [ref=e481]
+            - paragraph [ref=e482]: গত ২৩ ঘণ্টায় যারা লিখেছেন, তাদের কাছে অফার
+            - generic [aria-hidden] [ref=e483]:
+              - generic [ref=e484]: "218"
+              - generic [ref=e485]: can get today's offer
+          - article [ref=e486]:
+            - generic [ref=e487]: Bookings
+            - heading "বুকিং" [level=3] [ref=e488]
+            - paragraph [ref=e489]: সার্ভিস ব্যবসার বুকিং, এক ট্যাপে কনফার্ম
+            - generic [ref=e494]: Request → confirmed in one tap
+          - article [ref=e495]:
+            - generic [ref=e496]: Knowledge base
+            - heading "নলেজ বেস" [level=3] [ref=e497]
+            - paragraph [ref=e498]: আপনার ডকুমেন্ট থেকে খুঁটিনাটি উত্তর
+            - generic [aria-hidden] [ref=e499]:
+              - generic [ref=e500]: রিটার্ন নীতি কী?
+              - generic [ref=e505]: 3 passages found · meaning + words
+          - article [ref=e506]:
+            - generic [ref=e507]: Analytics
+            - heading "অ্যানালিটিক্স" [level=3] [ref=e508]
+            - paragraph [ref=e509]: AI কতটা সামলাল, টিম কত দ্রুত উত্তর দিল
+            - generic [aria-hidden] [ref=e510]:
+              - generic [ref=e511]:
+                - emphasis [ref=e514]
+                - emphasis [ref=e517]
+                - emphasis [ref=e520]
+                - emphasis [ref=e523]
+                - emphasis [ref=e526]
+                - emphasis [ref=e529]
+                - emphasis [ref=e532]
+              - generic [ref=e533]:
+                - generic [ref=e534]: AI
+                - generic [ref=e535]: Human
+                - generic [ref=e536]: অভিযোগ
+                - generic [ref=e537]: পেমেন্ট
+                - generic [ref=e538]: বিশেষ অনুরোধ
+          - article [ref=e539]:
+            - generic [ref=e540]: Team
+            - heading "টিম" [level=3] [ref=e541]
+            - paragraph [ref=e542]: মালিক আর টিমমেট — যার যতটুকু দেখার
+            - generic [aria-hidden] [ref=e543]:
+              - generic [ref=e544]:
+                - generic [ref=e545]: মা
+                - generic [ref=e546]: মালিক
+                - generic [ref=e547]: Every page
+              - generic [ref=e548]:
+                - generic [ref=e549]: সু
+                - generic [ref=e550]: সুমন · টিমমেট
+                - generic [ref=e551]: Pages you give
+              - generic [ref=e552]:
+                - generic [ref=e553]: নু
+                - generic [ref=e554]: নুসরাত · টিমমেট
+                - generic [ref=e555]: Assigned chats
+      - generic [ref=e558]:
+        - article [ref=e559]:
+          - paragraph [ref=e560]: THE AGENT DESK
+          - heading "AI-কে শেখান নিজের ভাষায়" [level=2] [ref=e561]
+          - list [ref=e562]:
+            - listitem [ref=e563]: ‘ডেলিভারি চার্জ ৮০ টাকা করো’ — লিখে দিলেই হলো
+            - listitem [ref=e564]: AI আগে বর্তমান তথ্য দেখিয়ে নিশ্চিত হয়, তারপর টেস্ট করে
+            - listitem [ref=e565]: টেস্টের উত্তর দেখুন ঠিক গ্রাহকের ফোনে যেমন দেখাবে
+            - listitem [ref=e566]: আপনি ‘লাইভ করো’ বললে তবেই চালু, আগের ভার্সনে ফেরা এক ক্লিকে
+          - generic [ref=e568]:
+            - generic [ref=e569]:
+              - generic [ref=e570]: ডেলিভারি চার্জ
+              - generic [ref=e573]: কথার ধরন
+              - generic [ref=e576]: ঈদের অফার
+              - generic [ref=e579]:
+                - generic [ref=e580]: ডেলিভারি চার্জ ৮০ টাকা করো
+                - generic [ref=e581]:
+                  - generic [ref=e582]: Helper
+                  - text: এখন ঢাকার ভেতরে ৳70 আছে। ৳80 করে দেব?
+                - generic [ref=e583]: হ্যাঁ
+                - generic [ref=e584]:
+                  - generic [ref=e585]: Helper
+                  - text: করে দিয়েছি, টেস্টও পাস ✅ লাইভ করব?
+            - generic [ref=e586]:
+              - generic [ref=e587]:
+                - generic [ref=e588]: ডেলিভারি চার্জ কত?
+                - generic [ref=e589]: ঢাকার ভেতরে ৳80 ম্যাম 😊
+              - generic [ref=e590]: Test · customer view
+        - article [ref=e591]:
+          - paragraph [ref=e592]: SERVICES · BOOKINGS · ADMISSIONS
+          - heading "সার্ভিস ব্যবসাও চলবে — বুকিং, অ্যাপয়েন্টমেন্ট, ভর্তি" [level=2] [ref=e593]
+          - list [ref=e594]:
+            - listitem [ref=e595]: কোচিং, ক্লিনিক, সেলুন, ট্রাভেল — আপনার প্রশ্নগুলো দিয়েই তথ্য নেয়
+            - listitem [ref=e596]: বিকাশ বা নগদে অ্যাডভান্স দিলে ট্রানজেকশন আইডিসহ রেখে দেয়
+            - listitem [ref=e597]: বুকিং রিকোয়েস্ট আসে আপনার কাছে — এক ট্যাপে কনফার্ম
+            - listitem [ref=e598]: গ্রাহক পান কনফার্মেশন, আর আগের দিন ও কয়েক ঘণ্টা আগে রিমাইন্ডার
+            - listitem [ref=e599]: আপনার ডকুমেন্ট থেকে ফি, সিলেবাস, নিয়ম — খুঁটিনাটি সব উত্তর
+          - generic [ref=e601]:
+            - generic [ref=e602]:
+              - generic [ref=e603]:
+                - generic [ref=e604]: Booking request
+                - generic [ref=e605]:
+                  - emphasis [ref=e606]: Requested
+                  - emphasis [ref=e607]: Confirmed
+              - generic [ref=e608]:
+                - generic [ref=e609]: সাদিয়া · IELTS ব্যাচে ভর্তি
+                - generic [ref=e610]:
+                  - generic [ref=e611]: সময়
+                  - generic [ref=e612]: শনিবার সন্ধ্যা ৬টা
+                - generic [ref=e613]:
+                  - generic [ref=e614]: অ্যাডভান্স
+                  - generic [ref=e615]: ৳500 · বিকাশ · TrxID 8KD3X1QZ
+              - generic [ref=e617]:
+                - emphasis [ref=e618]: কনফার্ম
+                - emphasis [ref=e619]: ✓ কনফার্ম হয়েছে
+            - generic [ref=e620]:
+              - generic [ref=e621]: ⏰ আগের দিন
+              - generic [ref=e622]: ⏰ কয়েক ঘণ্টা আগে
+      - generic [ref=e624]:
+        - generic [ref=e625]:
+          - paragraph [ref=e626]: WHY AIPRAKTOR
+          - heading "সাধারণ চ্যাটবট নয় — সবচেয়ে এগিয়ে থাকা AI এজেন্ট" [level=2] [ref=e627]
+          - paragraph [ref=e628]: সাধারণ চ্যাটবট চলে বাঁধা মেনু আর কিওয়ার্ড দিয়ে। AiPraktor কথা বোঝে, ছবি দেখে, ভয়েস শোনে — আর কাজটা শেষ পর্যন্ত করে।
+        - table [ref=e630]:
+          - caption [ref=e631]: সাধারণ চ্যাটবট আর AiPraktor-এর তুলনা
+          - rowgroup [ref=e632]:
+            - row [ref=e633]:
+              - columnheader "সাধারণ চ্যাটবট" [ref=e634]
+              - columnheader "AiPraktor" [ref=e635]
+          - rowgroup [ref=e637]:
+            - row [ref=e638]:
+              - cell "বাঁধা মেনু আর কিওয়ার্ড — প্রশ্ন একটু ঘুরিয়ে করলেই আটকে যায়" [ref=e639]
+              - cell "মানুষের মতো কথা বোঝে, প্রশ্ন যেভাবেই করুন" [ref=e643]
+            - row [ref=e647]:
+              - cell "ছবি পাঠালে কিছুই বোঝে না" [ref=e648]
+              - cell "ছবি দেখে আপনার ক্যাটালগ থেকে ঠিক প্রোডাক্টটা চিনে ফেলে" [ref=e652]
+            - row [ref=e656]:
+              - cell "ভয়েস নোট পেলে চুপ" [ref=e657]
+              - cell "ভয়েস নোট শুনে উত্তর দেয়" [ref=e661]
+            - row [ref=e665]:
+              - cell "অর্ডার নিতে পারে না" [ref=e666]
+              - cell "অর্ডার নেয়, রসিদ পাঠায়, কুরিয়ারের আপডেট দেয়" [ref=e670]
+            - row [ref=e674]:
+              - cell "আগের কথা মনে রাখে না" [ref=e675]
+              - cell "সব কথোপকথন জমা রাখে, সাম্প্রতিক কথা মনে রাখে" [ref=e679]
+            - row [ref=e683]:
+              - cell "মানুষ লাগলে গ্রাহককে ঝুলিয়ে রাখে" [ref=e684]
+              - cell "টিমকে ডাকে, কাজ শেষে নিজেই ফিরে আসে" [ref=e688]
+            - row [ref=e692]:
+              - cell "এক অ্যাপ, এক ইনবক্স" [ref=e693]
+              - cell "Messenger, Instagram, WhatsApp আর কমেন্ট — এক জায়গায়" [ref=e697]
+            - row [ref=e701]:
+              - cell "প্রতি মাসে ফি, ব্যবহার করুন বা না করুন" [ref=e702]
+              - cell "মাসিক ফি নেই — যতটুকু কাজ, ততটুকু খরচ" [ref=e706]
+      - generic [ref=e711]:
+        - generic [ref=e712]:
+          - paragraph [ref=e713]: AI OR A MODERATOR
+          - heading "একই প্রশ্ন, দুই রকম উত্তর" [level=2] [ref=e714]
+          - paragraph [ref=e715]: রাত ১১টা ৪২ মিনিটে একজন গ্রাহক একই মেসেজ পাঠালেন দুটো পেজে। একটায় উত্তর দেন একজন মডারেটর, অন্যটায় AiPraktor। আপনাকে কিছুই করতে হবে না — শুধু দেখুন।
+        - generic [ref=e716]:
+          - generic [ref=e717]:
+            - paragraph [ref=e718]:
+              - generic [ref=e720]: "চলছে: একটা উদাহরণ — একই গ্রাহক, একই রাত, দুই পেজে একই প্রশ্ন"
+            - button "থামান" [ref=e721] [cursor=pointer]
+          - generic [ref=e725]:
+            - paragraph [ref=e726]: মডারেটর উত্তর দিলে
+            - paragraph [ref=e729]:
+              - generic [ref=e730]: প্রথম উত্তরের অপেক্ষা
+              - generic [ref=e731]: —
+            - img "An example Messenger chat, playing by itself. At 11:42 PM a customer sends the shop Clothing Brand a photo and asks whether it is available and what it costs. Nobody answers until 9:18 the next morning. The moderator then replies in a word or two, answers one of two questions, and says to check the page when asked for more designs. The customer stops replying." [ref=e732]:
+              - generic [ref=e1326]:
+                - generic [ref=e1327]: 11:42
+                - generic [ref=e1336]:
+                  - generic [ref=e1339]: CB
+                  - generic [ref=e1340]:
+                    - generic [ref=e1341]: Clothing Brand
+                    - generic [ref=e1342]: Active now
+                - generic [ref=e1350]: Aa
+          - list "মডারেটর আর AiPraktor-এর উত্তরের তুলনা" [ref=e733]:
+            - listitem [ref=e734]:
+              - generic [ref=e735]: প্রথম উত্তর
+              - generic [ref=e736]:
+                - generic [ref=e737]: "মডারেটর উত্তর দিলে:"
+                - generic [ref=e738]: ৯ ঘণ্টা ৩৬ মিনিট পর
+              - generic [ref=e741]:
+                - generic [ref=e742]: "AiPraktor উত্তর দিলে:"
+                - generic [ref=e745]: এক মিনিটের মধ্যে
+            - listitem [ref=e746]:
+              - generic [ref=e747]: উত্তরের ধরন
+              - generic [ref=e748]:
+                - generic [ref=e749]: "মডারেটর উত্তর দিলে:"
+                - generic [ref=e750]: এক-দুই শব্দে
+              - generic [ref=e753]:
+                - generic [ref=e754]: "AiPraktor উত্তর দিলে:"
+                - generic [ref=e757]: দাম, সাইজ, স্টক — গুছিয়ে
+            - listitem [ref=e758]:
+              - generic [ref=e759]: এক মেসেজে দুই প্রশ্ন
+              - generic [ref=e760]:
+                - generic [ref=e761]: "মডারেটর উত্তর দিলে:"
+                - generic [ref=e762]: একটার উত্তর
+              - generic [ref=e765]:
+                - generic [ref=e766]: "AiPraktor উত্তর দিলে:"
+                - generic [ref=e769]: দুটোরই উত্তর
+            - listitem [ref=e770]:
+              - generic [ref=e771]: আরও ডিজাইন চাইলে
+              - generic [ref=e772]:
+                - generic [ref=e773]: "মডারেটর উত্তর দিলে:"
+                - generic [ref=e774]: “পেজে দেখুন”
+              - generic [ref=e777]:
+                - generic [ref=e778]: "AiPraktor উত্তর দিলে:"
+                - generic [ref=e781]: কার্ড সাজিয়ে দেখায়
+            - listitem [ref=e782]:
+              - generic [ref=e783]: শেষ পর্যন্ত
+              - generic [ref=e784]:
+                - generic [ref=e785]: "মডারেটর উত্তর দিলে:"
+                - generic [ref=e786]: গ্রাহক আর ফেরেননি
+              - generic [ref=e789]:
+                - generic [ref=e790]: "AiPraktor উত্তর দিলে:"
+                - generic [ref=e793]: অর্ডার কনফার্ম, রসিদসহ
+          - generic [ref=e794]:
+            - paragraph [ref=e795]: AiPraktor উত্তর দিলে
+            - paragraph [ref=e798]:
+              - generic [ref=e799]: প্রথম উত্তরের অপেক্ষা
+              - generic [ref=e800]: —
+            - 'img "The same customer and the same questions, answered by AiPraktor. Within a minute: the product card with its price and sizes; then stock and the delivery charge in one reply; a row of more designs; and by 11:46 PM a confirmed order with a receipt totalling ৳2,520." [ref=e801]':
+              - generic [ref=e1369]:
+                - generic [ref=e1370]: 11:42
+                - generic [ref=e1379]:
+                  - generic [ref=e1382]: CB
+                  - generic [ref=e1383]:
+                    - generic [ref=e1384]: Clothing Brand
+                    - generic [ref=e1385]: Active now
+                - generic [ref=e1393]: Aa
+        - generic [ref=e803]:
+          - generic [ref=e804]:
+            - text: THE COST OF ONE REPLY
+            - heading "একটা উত্তরের খরচ কত? হিসাবটা ধাপে ধাপে" [level=3] [ref=e805]
+            - paragraph [ref=e806]: ধরা যাক, মডারেটরের বেতন মাসে ৳১৫,০০০। সংখ্যাগুলো নিজের হিসাবের সাথে মিলিয়ে নিন।
+            - paragraph [ref=e807]: ৳১৫,০০০ ÷ (২৫ দিন × ৮ ঘণ্টা × ৬০ মিনিট) = মিনিটে ৳১.২৫
+            - list [ref=e808]:
+              - listitem [ref=e809]:
+                - generic [aria-hidden] [ref=e810]: "01"
+                - generic [ref=e811]:
+                  - generic [ref=e812]: মাসিক বেতন
+                  - generic [ref=e813]: উদাহরণ হিসেবে ধরা
+                - strong [ref=e814]: ৳১৫,০০০
+              - listitem [ref=e815]:
+                - generic [aria-hidden] [ref=e816]: "02"
+                - generic [ref=e817]:
+                  - generic [ref=e818]: মাসে কাজের দিন
+                  - generic [ref=e819]: ৩০ দিন − ৪ দিন সাপ্তাহিক ছুটি − ১ দিন অন্য ছুটি
+                - strong [ref=e820]: ২৫ দিন
+              - listitem [ref=e821]:
+                - generic [aria-hidden] [ref=e822]: "03"
+                - generic [ref=e823]:
+                  - generic [ref=e824]: মাসে কাজের সময়
+                  - generic [ref=e825]: ২৫ দিন × ৮ ঘণ্টা
+                - strong [ref=e826]: ২০০ ঘণ্টা
+              - listitem [ref=e827]:
+                - generic [aria-hidden] [ref=e828]: "04"
+                - generic [ref=e829]:
+                  - generic [ref=e830]: এক ঘণ্টার খরচ
+                  - generic [ref=e831]: ৳১৫,০০০ ÷ ২০০ ঘণ্টা
+                - strong [ref=e832]: ৳৭৫
+              - listitem [ref=e833]:
+                - generic [aria-hidden] [ref=e834]: "05"
+                - generic [ref=e835]:
+                  - generic [ref=e836]: এক মিনিটের খরচ
+                  - generic [ref=e837]: ৳৭৫ ÷ ৬০ মিনিট
+                - strong [ref=e838]: ৳১.২৫
+              - listitem [ref=e839]:
+                - generic [aria-hidden] [ref=e840]: "06"
+                - generic [ref=e841]:
+                  - generic [ref=e842]: একটা উত্তর লিখতে
+                  - generic [ref=e843]: মেসেজ পড়া, দাম আর স্টক দেখা, টাইপ করা
+                - strong [ref=e844]: ১ মিনিট বা বেশি
+          - generic [ref=e845]:
+            - generic [ref=e846]:
+              - generic [ref=e847]:
+                - generic [ref=e848]:
+                  - generic [ref=e849]: মডারেটরের একটা উত্তর
+                  - generic [ref=e850]: ১২৫ পয়সা বা বেশি
+                - generic [ref=e852]: অর্থাৎ ৳১.২৫
+              - generic [ref=e854]:
+                - generic [ref=e855]: AI-এর হাতে পুরো একজন গ্রাহক — প্রথম মেসেজ থেকে শেষ পর্যন্ত
+                - generic [ref=e856]: গড়ে ৳১–২
+            - paragraph [ref=e858]: অর্থাৎ হাতে লেখা একটা উত্তরের খরচে AI গড়ে পুরো একজন গ্রাহককে সামলায় — আর প্রতিটা উত্তর যায় এক মিনিটের মধ্যে, রাত-দিন যেকোনো সময়ে।
+            - list [ref=e859]:
+              - listitem [ref=e860]: হিসাবে ধরা হয়েছে, মডারেটর পুরো ৮ ঘণ্টাই একটানা উত্তর দেন। খাওয়া, নামাজ আর বিশ্রামের সময় বাদ দিলে প্রতিটা উত্তরের খরচ আরও বেশি।
+              - listitem [ref=e861]: বোনাস, ওভারটাইম আর রাতের শিফটের খরচ এই হিসাবে ধরা হয়নি।
+              - listitem [ref=e862]: AI-এর খরচ কাটে আপনার AI ক্রেডিট থেকে — গ্রাহকপ্রতি অঙ্কটা আমাদের ক্লায়েন্টদের গড়, আমাদের সার্ভিসসহ। পুরো হিসাব ঠিক নিচের ‘খরচ’ অংশে।
+        - generic [ref=e863]:
+          - article [ref=e864]:
+            - heading "২৪ ঘণ্টা, কোনো ছুটি নেই" [level=3] [ref=e868]
+            - paragraph [ref=e869]: রাত ৩টা, শুক্রবার বা ঈদের দিন — গ্রাহক লিখলেই উত্তর পান।
+          - article [ref=e870]:
+            - heading "প্রতিবার গোছানো উত্তর" [level=3] [ref=e874]
+            - paragraph [ref=e875]: দাম, সাইজ, স্টক, ডেলিভারি — এক মেসেজে, সাজিয়ে। দিনের প্রথম উত্তর আর হাজারতম উত্তর একই যত্নে।
+          - article [ref=e876]:
+            - heading "নিজে থেকেই প্রোডাক্ট দেখায়" [level=3] [ref=e880]
+            - paragraph [ref=e881]: আরও ডিজাইন চাইলে আপনার ক্যাটালগ থেকে ছবি আর দামসহ কার্ড দেখায়।
+          - article [ref=e882]:
+            - heading "কিছুই হারায় না" [level=3] [ref=e886]
+            - paragraph [ref=e887]: প্রতিটা অর্ডার, অ্যালার্ট আর টিমকে ডাকার কারণ লেখা থাকে। কেউ দেখে বন্ধ না করা পর্যন্ত নোটিফিকেশন থেকে যায়।
+        - paragraph [ref=e888]:
+          - text: যেখানে মানুষ লাগবে — অভিযোগ, টাকা ফেরত, বিশেষ অনুরোধ — সেখানে AI নিজেই আপনার টিমকে ডাকে। আপনার লোকজন সময় দেন সেই কাজে, যেটা মানুষ ছাড়া হয় না।
+          - link "কীভাবে ডাকে, দেখুন" [ref=e889] [cursor=pointer]:
+            - /url: "#handover"
+      - generic [ref=e893]:
+        - generic [ref=e894]:
+          - paragraph [ref=e895]: PAY AS YOU GO · NO MONTHLY FEE
+          - heading "মাসিক ফি নেই। যতটুকু কাজ, ততটুকুই খরচ।" [level=2] [ref=e896]
+          - paragraph [ref=e897]: প্যাকেজ নেই, মাস শেষে বিলও নেই। মেসেজ এলে সামান্য খরচ হয়, না এলে উত্তরের খরচও নেই।
+        - generic [ref=e898]:
+          - generic [aria-hidden] [ref=e899]:
+            - generic [ref=e900]: ১–২
+            - generic [ref=e901]: টাকা
+          - generic [ref=e902]:
+            - paragraph [ref=e903]: আমাদের ক্লায়েন্টদের হিসাবে গড়ে একজন গ্রাহককে শুরু থেকে শেষ পর্যন্ত সামলাতে ৳১ থেকে ৳২ খরচ হয় — আমাদের চার্জসহ।
+            - generic [ref=e904]: আপনার নিজের পেজের আসল হিসাব দেখবেন বিলিং পেজে — কোন উত্তরে কত কাটল, প্রতিটার হিসাব পয়সা ধরে লেখা থাকে।
+        - generic [ref=e905]:
+          - article [ref=e906]:
+            - heading "ফ্রি AI ক্রেডিট দিয়ে শুরু" [level=3] [ref=e910]
+            - paragraph [ref=e911]: পেজ যুক্ত করলেই ৳৫০ ফ্রি AI ক্রেডিট — ৭ দিন নিজের পেজে চালিয়ে দেখুন। কোনো কার্ড লাগবে না।
+          - article [ref=e912]:
+            - heading "মেসেজ এলে খরচ, না এলে নয়" [level=3] [ref=e916]
+            - paragraph [ref=e917]: মাসিক ফি নেই, বাঁধা কোনো খরচও নেই — বিক্রি কম হলে খরচও কম। ক্রেডিটের মেয়াদ শেষ হয় না; এক রিচার্জে এক বছর চললেও আপত্তি নেই।
+          - article [ref=e918]:
+            - heading "বিকাশ, নগদ বা ব্যাংকে রিচার্জ" [level=3] [ref=e922]
+            - paragraph [ref=e923]: ৳১,০০০ বা ৳২,০০০ — যখন দরকার, তখন। টাকা পাঠানোর আগেই স্ক্রিনে পুরো হিসাব দেখে নেবেন।
+          - article [ref=e924]:
+            - heading "হঠাৎ বিলের ভয় নেই" [level=3] [ref=e928]
+            - paragraph [ref=e929]: ক্রেডিট শেষ হওয়ার আগেই ইমেইলে জানিয়ে দেওয়া হয়। শেষ হলে AI থেমে যায়, রিচার্জ করলেই আবার নিজে থেকে চালু।
+        - generic [ref=e930]:
+          - generic [ref=e931]:
+            - text: Your AI credit
+            - generic [ref=e933]: ফ্রি ক্রেডিট
+            - generic [aria-hidden] [ref=e936]:
+              - generic [ref=e937]: AI চালু · সব চ্যানেলে
+              - generic [ref=e939]: ক্রেডিট কম · ইমেইল গেছে
+              - generic [ref=e941]: ক্রেডিট শেষ · AI থেমেছে
+              - generic [ref=e943]: রিচার্জ হয়েছে · আবার নিজে থেকে চালু
+          - generic [ref=e945]:
+            - paragraph [ref=e946]: খরচ নিয়ে আরও কিছু জানার থাকলে লাইভ চ্যাটে জিজ্ঞেস করুন — AI এজেন্ট এক মিনিটের মধ্যে উত্তর দেবে।
+            - button "লাইভ চ্যাটে জিজ্ঞেস করুন" [ref=e947] [cursor=pointer]
+      - generic [ref=e954]:
+        - generic [ref=e955]:
+          - paragraph [ref=e956]: ZERO RISK
+          - heading "শুরু করতে এক টাকাও লাগবে না" [level=2] [ref=e957]
+          - paragraph [ref=e958]: চুক্তি নেই, মাসিক ফি নেই, কোনো বাধ্যবাধকতা নেই। একবার চালু করে দেখুন — পার্থক্যটা আপনার গ্রাহকরাই টের পাবেন।
+        - generic [ref=e959]:
+          - list [ref=e960]:
+            - listitem [ref=e961]:
+              - generic [ref=e965]:
+                - generic [ref=e966]: ফ্রি AI ক্রেডিট দিয়ে শুরু
+                - generic [ref=e967]: পকেট থেকে কিছু না দিয়েই নিজের পেজে চালিয়ে দেখুন
+            - listitem [ref=e968]:
+              - generic [ref=e972]:
+                - generic [ref=e973]: মাসিক ফি বা চুক্তি নেই
+                - generic [ref=e974]: যতদিন ইচ্ছা ব্যবহার করুন, যখন খুশি থামান
+            - listitem [ref=e975]:
+              - generic [ref=e979]:
+                - generic [ref=e980]: বন্ধ করলেও ডেটা থাকে
+                - generic [ref=e981]: সব কথোপকথন আর অর্ডার থেকে যায়, কিছুই মুছে যায় না
+            - listitem [ref=e982]:
+              - generic [ref=e986]:
+                - generic [ref=e987]: ১০ মিনিটে চালু
+                - generic [ref=e988]: কোনো কোডিং বা টেকনিক্যাল জ্ঞান লাগবে না
+            - listitem [ref=e989]:
+              - generic [ref=e993]:
+                - generic [ref=e994]: নিয়ন্ত্রণ সবসময় আপনার
+                - generic [ref=e995]: যেকোনো চ্যাট এক ট্যাপে নিজের হাতে নিন
+          - link "ফ্রি শুরু করুন" [ref=e996] [cursor=pointer]:
+            - /url: /signup
+      - generic [ref=e998]:
+        - generic [ref=e999]:
+          - paragraph [ref=e1000]: YOUR DATA · YOUR CONTROL
+          - heading "আপনার ব্যবসার তথ্য, আপনার নিয়ন্ত্রণে" [level=2] [ref=e1001]
+          - paragraph [ref=e1002]: গ্রাহকের সাথে প্রতিটা কথা, প্রতিটা অর্ডার আপনার ব্যবসার সম্পদ। সেগুলো আমরা কীভাবে রাখি, সোজা ভাষায় বলছি।
+        - list [ref=e1003]:
+          - listitem [ref=e1004]:
+            - generic [ref=e1008]: কোনো ট্র্যাকার নেই
+            - paragraph [ref=e1009]: আমরা কোনো কুকি বসাই না, বিজ্ঞাপন বা অ্যানালিটিক্সের কোনো ট্র্যাকারও চালাই না। কারো ডেটা বিক্রি করি না।
+          - listitem [ref=e1010]:
+            - generic [ref=e1014]: চাবিগুলো এনক্রিপ্ট করা
+            - paragraph [ref=e1015]: Facebook, WhatsApp আর AI সংযোগের চাবি এনক্রিপ্ট করে রাখা হয় — কোনো স্ক্রিনে বা ব্রাউজারে কখনো দেখানো হয় না।
+          - listitem [ref=e1016]:
+            - generic [ref=e1020]: প্রতি রাতে এনক্রিপ্টেড ব্যাকআপ
+            - paragraph [ref=e1021]: রাখা হয় আলাদা একটা সার্ভারে। ব্যাকআপ খোলার চাবি কোনো সার্ভারেই থাকে না।
+          - listitem [ref=e1022]:
+            - generic [ref=e1026]: কে কী দেখবে, আপনি ঠিক করেন
+            - paragraph [ref=e1027]: টিমমেট দেখেন পুরো ব্যবসা, অথবা শুধু আপনার বেছে দেওয়া পেজগুলো। অন্য কোনো ব্যবসা আপনার তথ্য কখনো দেখতে পায় না।
+          - listitem [ref=e1028]:
+            - generic [ref=e1032]: চাইলে সব মুছে ফেলুন
+            - paragraph [ref=e1033]: বন্ধ করলেও কিছু মুছে যায় না। আর বললেই আপনার সব তথ্য মুছে দিই।
+        - paragraph [ref=e1034]:
+          - text: "বিস্তারিত:"
+          - link "প্রাইভেসি পলিসি" [ref=e1035] [cursor=pointer]:
+            - /url: /privacy
+          - text: ·
+          - link "ডেটা মুছে ফেলা" [ref=e1036] [cursor=pointer]:
+            - /url: /data-deletion
+      - generic [ref=e1038]:
+        - generic [ref=e1039]:
+          - paragraph [ref=e1040]: LIVE IN 10 MINUTES
+          - heading "১০ মিনিটেই চালু" [level=2] [ref=e1041]
+          - paragraph [ref=e1042]: কোনো টেকনিক্যাল জ্ঞান লাগবে না। মাঝপথে থামলেও সমস্যা নেই — যেখানে থেমেছিলেন, সেখান থেকেই শুরু।
+        - list [ref=e1043]:
+          - listitem [ref=e1044]:
+            - generic [ref=e1045]: ০:০০
+            - generic [ref=e1046]:
+              - text: সাইন আপ
+              - generic [ref=e1047]: নাম, ব্যবসার নাম আর ইমেইল
+          - listitem [ref=e1048]:
+            - generic [ref=e1049]: ০:০২
+            - generic [ref=e1050]:
+              - text: Facebook পেজ কানেক্ট
+              - generic [ref=e1051]: এক ক্লিকে; Instagram থাকলে নিজে থেকেই যুক্ত হয়
+          - listitem [ref=e1052]:
+            - generic [ref=e1053]: ০:০৪
+            - generic [ref=e1054]:
+              - text: WhatsApp (চাইলে)
+              - generic [ref=e1055]: স্ক্রিনের QR কোড স্ক্যান করুন, ফোন আগের মতোই চলবে
+          - listitem [ref=e1056]:
+            - generic [ref=e1057]: ০:০৬
+            - generic [ref=e1058]:
+              - text: ব্যবসার তথ্য দিন
+              - generic [ref=e1059]: কী বিক্রি করেন, ডেলিভারি চার্জ, সময়, ঠিকানা, প্রোডাক্ট লিস্ট
+          - listitem [ref=e1060]:
+            - generic [ref=e1061]: ০:০৮
+            - generic [ref=e1062]:
+              - text: একটা টেস্ট মেসেজ
+              - generic [ref=e1063]: গ্রাহকের ফোনে উত্তর কেমন দেখাবে, আগেই দেখে নিন
+          - listitem [ref=e1064]:
+            - generic [ref=e1065]: ১০:০০
+            - generic [ref=e1066]:
+              - text: লাইভ!
+              - generic [ref=e1067]: এখন থেকে আপনার এজেন্ট গ্রাহকদের উত্তর দিচ্ছে
+      - generic [ref=e1070]:
+        - generic [ref=e1071]:
+          - paragraph [ref=e1072]: QUESTIONS · ANSWERS
+          - heading "শুরু করার আগে যা জানতে চান" [level=2] [ref=e1073]
+          - paragraph [ref=e1074]: যে প্রশ্নগুলো সবচেয়ে বেশি আসে, তার সোজা উত্তর।
+          - generic [ref=e1075]:
+            - paragraph [ref=e1076]: এখানে নেই এমন কিছু জানতে চাইলে লাইভ চ্যাটে জিজ্ঞেস করুন — এক মিনিটের মধ্যে উত্তর পাবেন।
+            - button "লাইভ চ্যাটে জিজ্ঞেস করুন" [ref=e1077] [cursor=pointer]
+        - generic [ref=e1082]:
+          - group [ref=e1083]:
+            - generic "AI ভুল উত্তর দিলে কী হবে?" [active] [ref=e1084] [cursor=pointer]
+            - paragraph [ref=e1866]: AI উত্তর দেয় আপনার দেওয়া তথ্য থেকেই — প্রোডাক্ট লিস্ট, দাম, ডেলিভারি চার্জ, নিয়ম। দাম কখনো নিজে থেকে বানায় না, আর নিশ্চিত না হলে আন্দাজ না করে গ্রাহককে জিজ্ঞেস করে নেয় বা আপনার টিমকে ডাকে। যেকোনো চ্যাট আপনি এক ট্যাপে নিজের হাতে নিতে পারেন। কোনো উত্তর বদলাতে চাইলে নিজের ভাষায় লিখে দিলেই হয় — আগে টেস্ট করে দেখবেন, তারপর চালু।
+          - group [ref=e1087]:
+            - generic "আমার Facebook-এর পাসওয়ার্ড কি দিতে হবে?" [ref=e1088] [cursor=pointer]
+            - paragraph [ref=e1863]: না। Facebook-এর নিজের লগইন পেজে আপনি অনুমতি দেন — পাসওয়ার্ড আমরা দেখি না, চাইও না। যেকোনো সময় ড্যাশবোর্ড থেকে, বা Facebook-এর সেটিংস থেকে, সংযোগটা তুলে নিতে পারেন।
+          - group [ref=e1091]:
+            - generic "পেজ বা নম্বর ব্যান হওয়ার ঝুঁকি আছে?" [ref=e1092] [cursor=pointer]
+            - paragraph [ref=e1864]: Facebook পেজ আর Instagram চলে মেটার অফিসিয়াল ব্যবস্থায়, আর AI মেটার মেসেজিং নিয়ম মেনে চলে — ২৪ ঘণ্টার নিয়মসহ। WhatsApp যুক্ত হয় আপনার নিজের নম্বরে, WhatsApp Web-এর মতো লিংকড ডিভাইস হিসেবে। এটা মেটার অফিসিয়াল Business API না, তাই নম্বরের কিছুটা ঝুঁকি থাকেই। সেটা কম রাখতে AiPraktor WhatsApp-এ শুধু তাদেরই মেসেজ দেয় যারা আপনাকে মেসেজ করেছেন — গণহারে মেসেজ বা ব্রডকাস্ট কখনো পাঠায় না। আর সব কথোপকথন আমাদের কাছে জমা থাকে, তাই কখনো নম্বর বদলাতে হলেও গ্রাহকের ইতিহাস হারায় না।
+          - group [ref=e1095]:
+            - generic "গ্রাহকের চ্যাট কারা দেখতে পায়?" [ref=e1096] [cursor=pointer]
+            - paragraph [ref=e1865]: আপনি, আর আপনার আমন্ত্রণ পাওয়া টিমমেটরা — তাঁরা দেখেন পুরো ব্যবসা, অথবা শুধু আপনার বেছে দেওয়া পেজগুলো। সার্ভিসটা চালায় বলে AiPraktor-এর কাছেও অ্যাক্সেস থাকে। অন্য কোনো ব্যবসা আপনার তথ্য কখনো দেখতে পায় না — প্রতিটা অনুরোধে সার্ভার এটা যাচাই করে। উত্তর লেখার জন্য দরকারি অংশটুকুই শুধু AI প্রোভাইডারের কাছে যায়।
+          - group [ref=e1099]:
+            - generic "খরচ কীভাবে হয়?" [ref=e1100] [cursor=pointer]
+          - group [ref=e1409]:
+            - generic "আলাদা কোনো সার্ভিস চার্জ আছে?" [ref=e1410] [cursor=pointer]
+          - group [ref=e1103]:
+            - generic "ক্রেডিট শেষ হলে কী হয়?" [ref=e1104] [cursor=pointer]
+          - group [ref=e1107]:
+            - generic "সেটআপ করতে কী কী লাগবে?" [ref=e1108] [cursor=pointer]
+          - group [ref=e1111]:
+            - generic "কোন ভাষায় উত্তর দেয়?" [ref=e1112] [cursor=pointer]
+          - group [ref=e1115]:
+            - generic "বন্ধ করে দিলে আমার ডেটার কী হবে?" [ref=e1116] [cursor=pointer]
+          - link "সব প্রশ্নের উত্তর এক জায়গায় — হেল্প পেজ" [ref=e1119] [cursor=pointer]:
+            - /url: /help
+      - generic [ref=e1124]:
+        - generic [ref=e1125]:
+          - heading "আজ রাতের মেসেজগুলো AI-কে সামলাতে দিন।" [level=2] [ref=e1126]
+          - paragraph [ref=e1127]: ফ্রি AI ক্রেডিট দিয়ে শুরু করুন। ভালো না লাগলে যখন খুশি থামিয়ে দিন — কোনো প্রশ্ন নেই।
+        - generic [ref=e1128]:
+          - generic [ref=e1129]:
+            - link "ফ্রি শুরু করুন" [ref=e1130] [cursor=pointer]:
+              - /url: /signup
+            - button "লাইভ চ্যাটে কথা বলুন" [ref=e1131] [cursor=pointer]
+          - generic [ref=e1136]: প্রশ্ন থাকলে নিচের কোণের চ্যাটে লিখুন — আমাদের AI এজেন্ট এক মিনিটের মধ্যে উত্তর দেবে, দরকার হলে আমাদের টিমও আছে।
+    - contentinfo [ref=e1137]:
+      - generic [ref=e1138]:
+        - link "AiPraktor — back to top" [ref=e1139] [cursor=pointer]:
+          - /url: "#top"
+          - generic [ref=e1143]: AiPraktor
+        - paragraph [ref=e1144]: আইপ্রাক্‌টর · Praktor একটা গ্রিক শব্দ — মানে এজেন্ট, যে আপনার হয়ে কাজ করে।
+        - navigation "Legal" [ref=e1145]:
+          - link "Help" [ref=e1146] [cursor=pointer]:
+            - /url: /help
+          - link "Careers" [ref=e1147] [cursor=pointer]:
+            - /url: /careers
+          - link "Partners" [ref=e1148] [cursor=pointer]:
+            - /url: /partners
+          - link "Privacy" [ref=e1149] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms" [ref=e1150] [cursor=pointer]:
+            - /url: /terms
+          - link "Data deletion" [ref=e1151] [cursor=pointer]:
+            - /url: /data-deletion
+          - generic [ref=e1152]: support@aipraktor.com
+      - generic [ref=e1153]:
+        - generic [ref=e1154]: © 2026 AiPraktor
+        - navigation "AiPraktor অন্য জায়গায়" [ref=e1155]:
+          - link "Facebook পেজ" [ref=e1156] [cursor=pointer]:
+            - /url: https://www.facebook.com/AiPraktor
+          - link "Instagram" [ref=e1159] [cursor=pointer]:
+            - /url: https://www.instagram.com/aipraktor/
+          - link "Chrome এক্সটেনশন" [ref=e1162] [cursor=pointer]:
+            - /url: https://chromewebstore.google.com/detail/aipraktor-assistant/amnajnlfhelammpbnbbgcfhnbkjjjpmj
+    - button "সাহায্য ও যোগাযোগ" [ref=e1166] [cursor=pointer]
+  - alert [ref=e1413]

@@ -1,0 +1,282 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Primary navigation" [ref=e4]:
+      - generic [ref=e10]:
+        - paragraph [ref=e11]: Unified Inbox
+        - paragraph [ref=e12]: ws_1794374612651_f3d05g
+      - generic [ref=e13]:
+        - generic [ref=e14]: Practice mode
+        - generic "Realtime connection is active (SSE)" [ref=e15]: Live · synced 7s
+      - navigation [ref=e19]:
+        - generic [ref=e20]:
+          - paragraph [ref=e21]: Work
+          - generic [ref=e22]:
+            - button "Overview" [ref=e23]
+            - button "Inbox 9" [ref=e30]:
+              - generic [ref=e34]: Inbox
+              - generic [ref=e35]: "9"
+            - button "Saved replies" [ref=e36]
+            - button "Comments" [ref=e40]
+            - button "Notifications 6" [ref=e9180]:
+              - generic [ref=e48]: Notifications
+              - generic [ref=e49]: "6"
+            - button "Activity" [ref=e50]
+            - button "Analytics" [ref=e56]
+        - generic [ref=e60]:
+          - paragraph [ref=e61]: Grow
+          - generic [ref=e62]:
+            - button "Leads" [ref=e63]
+            - button "Orders" [ref=e69]
+            - button "Follow-ups" [ref=e74]
+            - button "Broadcasts" [ref=e81]
+            - button "Products" [ref=e86]
+            - button "Posts" [ref=e92]
+        - generic [ref=e98]:
+          - paragraph [ref=e99]: AI
+          - generic [ref=e100]:
+            - button "Agent Desk" [ref=e101]
+            - button "Knowledge" [ref=e106]
+        - generic [ref=e110]:
+          - paragraph [ref=e111]: Set up
+          - generic [ref=e112]:
+            - button "Setup guide 3/8" [ref=e113]:
+              - generic [ref=e117]: Setup guide
+              - generic [ref=e118]: 3/8
+            - button "Channels" [ref=e119]
+            - button "Website chat" [ref=e125]
+            - button "Business" [ref=e130]
+            - button "Team" [ref=e135]
+            - button "Groups" [ref=e142]
+            - button "Billing" [ref=e147]
+            - button "Workspace settings" [ref=e151]
+      - generic [ref=e156]:
+        - button "Quick actions ⌘K" [ref=e157]:
+          - text: Quick actions
+          - generic [ref=e158]: ⌘K
+        - generic [ref=e159]:
+          - generic [aria-hidden] [ref=e160]: YN
+          - generic [ref=e161]:
+            - paragraph [ref=e162]: You
+            - paragraph [ref=e163]: Owner · Manager group
+    - generic [ref=e8160]:
+      - region "Conversations" [ref=e8276]:
+        - generic [ref=e8277]:
+          - heading "Messages" [level=2] [ref=e8278]
+          - button "New message" [ref=e8279]
+        - generic [ref=e8284]:
+          - generic [ref=e8288]: Search people and messages
+          - searchbox "Search people and messages" [ref=e8289]: Program Files/Git/
+          - generic [aria-hidden] [ref=e8290]: /
+        - generic [ref=e8291]:
+          - button "All" [pressed] [ref=e8292]
+          - button "Priority" [ref=e8293]
+          - button "Tagify" [ref=e8294]
+          - button "Ignored" [ref=e8295]
+          - button "Bots" [ref=e8296]
+        - generic [ref=e8297]:
+          - button "Waiting first · 0" [pressed] [ref=e9291]
+          - button "Sort newest first" [ref=e8302]: Newest
+          - generic [ref=e8303]: All channels · 0
+        - paragraph [ref=e9292]: No conversations match this view.
+      - main [ref=e8539]:
+        - generic [ref=e8540]:
+          - button "Priya Nair View Info Gmail · 3 messages" [ref=e9293]:
+            - generic [aria-hidden] [ref=e9106]: PN
+            - generic [ref=e9107]:
+              - generic [ref=e9108]:
+                - heading "Priya Nair" [level=1] [ref=e9130]
+                - generic [ref=e9110]: View Info
+              - paragraph [ref=e9111]: Gmail · 3 messages
+          - button "Open AI copilot" [ref=e8546]
+          - button "Pin conversation" [ref=e8550]
+        - generic [ref=e9112]:
+          - generic [ref=e9113]: Human
+          - generic [ref=e9187]: Refund request
+          - generic "Unanswered human conversations revert to the AI automatically" [ref=e9188]: Reverts to AI in 58m 49s
+          - generic [ref=e9123]:
+            - generic [ref=e9201]: Claimed by You
+            - button "Return to AI" [ref=e9197]
+        - generic [ref=e8553]:
+          - paragraph [ref=e8555]: "New in Telegram — Sophia: “Sharing the Project Y update now.”"
+          - button "View" [ref=e8556]
+          - button "Ignore" [ref=e8557]
+        - generic [ref=e8558]:
+          - generic [ref=e8559]: Today
+          - article [ref=e9140]:
+            - generic [aria-hidden] [ref=e9141]: PN
+            - generic [ref=e9142]:
+              - generic [ref=e9143]:
+                - generic [ref=e9144]: Priya Nair
+                - generic [ref=e9145]: Gmail
+                - generic [ref=e9148]: 9:38 AM
+              - paragraph [ref=e9149]: "Re: Invoice #4821 — still waiting on the refund confirmation."
+              - generic [ref=e9150]:
+                - generic [ref=e9151]: "# refund"
+                - generic [ref=e9152]: "# invoice"
+              - generic [ref=e9153]:
+                - generic [ref=e9156]: invoice-4821.pdf
+                - generic [ref=e9157]: 96 KB
+            - generic:
+              - button "React to Priya Nair"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to Priya Nair"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e9158]:
+            - generic [aria-hidden] [ref=e9159]: YN
+            - generic [ref=e9160]:
+              - generic [ref=e9161]:
+                - generic [ref=e9162]: You
+                - generic [ref=e9163]: Gmail
+                - generic [ref=e9166]: 10:46 AM
+              - paragraph [ref=e9167]: Auto-reverted to AI · No human reply within the 60m window · Never answered
+            - generic:
+              - button "React to You"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to You"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e9294]:
+            - generic [aria-hidden] [ref=e9295]: YN
+            - generic [ref=e9296]:
+              - generic [ref=e9297]:
+                - generic [ref=e9298]: You
+                - generic [ref=e9299]: Gmail
+                - generic [ref=e9302]: 2:35 PM
+              - paragraph [ref=e9303]: /
+            - generic:
+              - button "React to You"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to You"
+              - button "Add tag"
+              - button "More actions"
+        - generic [ref=e8877]:
+          - generic [ref=e8878]:
+            - generic [ref=e8879]: Suggested
+            - button "Yes, delivery is confirmed for Thursday" [ref=e8880]
+            - button "Let me check and get back to you" [ref=e8881]
+            - button "I'll share the update within the hour" [ref=e8882]
+          - generic [ref=e8883]:
+            - generic [ref=e8884]: Message
+            - textbox "Message" [active] [ref=e8885]:
+              - /placeholder: Reply to Priya Nair on Gmail
+            - generic [ref=e8886]:
+              - button [aria-hidden] [ref=e8887]
+              - button "Attach a file" [ref=e8888]
+              - button "Insert emoji" [ref=e8892]
+              - button "Suggest a reply" [ref=e8897]: Suggest
+              - button "Translate draft" [ref=e8902]: Translate
+              - button "Ask the bot" [ref=e8907]: Bot
+              - button "Tag this reply" [ref=e8912]: Tagify
+              - button "Send" [disabled] [ref=e8916]
+      - complementary "Channels" [ref=e8920]:
+        - heading "Channels" [level=2] [ref=e8922]
+        - button "All channels 42" [ref=e8926]:
+          - generic [ref=e8932]: All channels
+          - generic [ref=e8933]: "42"
+        - generic [ref=e8935]:
+          - generic [ref=e8936]:
+            - generic "Drag to change priority order" [ref=e8937]
+            - button "WhatsApp 9" [ref=e8945]:
+              - generic [ref=e8949]: WhatsApp
+              - generic [ref=e8950]: "9"
+          - generic [ref=e8951]:
+            - generic "Drag to change priority order" [ref=e8952]
+            - button "Messenger 6" [ref=e8960]:
+              - generic [ref=e8964]: Messenger
+              - generic [ref=e8965]: "6"
+          - generic [ref=e8966]:
+            - generic "Drag to change priority order" [ref=e8967]
+            - button "Instagram 5" [ref=e8975]:
+              - generic [ref=e8979]: Instagram
+              - generic [ref=e8980]: "5"
+          - generic [ref=e8981]:
+            - generic "Drag to change priority order" [ref=e8982]
+            - button "Discord 3" [ref=e8990]:
+              - generic [ref=e8994]: Discord
+              - generic [ref=e8995]: "3"
+          - generic [ref=e8996]:
+            - generic "Drag to change priority order" [ref=e8997]
+            - button "Email 11" [ref=e9005]:
+              - generic [ref=e9010]: Email
+              - generic [ref=e9011]: "11"
+          - generic [ref=e9012]:
+            - generic "Drag to change priority order" [ref=e9013]
+            - button "Gmail 4" [ref=e9021]:
+              - generic [ref=e9025]: Gmail
+              - generic [ref=e9026]: "4"
+          - generic [ref=e9027]:
+            - generic "Drag to change priority order" [ref=e9028]
+            - button "Slack 12" [ref=e9036]:
+              - generic [ref=e9040]: Slack
+              - generic [ref=e9041]: "12"
+          - generic [ref=e9042]:
+            - generic "Drag to change priority order" [ref=e9043]
+            - button "Telegram 4" [ref=e9051]:
+              - generic [ref=e9055]: Telegram
+              - generic [ref=e9056]: "4"
+          - generic [ref=e9057]:
+            - generic "Drag to change priority order" [ref=e9058]
+            - button "Website chat 7" [ref=e9066]:
+              - generic [ref=e9071]: Website chat
+              - generic [ref=e9072]: "7"
+        - paragraph [ref=e9073]: Pick a channel to filter, or drag to reorder.
+        - button "Connect channel" [ref=e9074]
+        - generic [ref=e9076]: 9 channels connected
+    - generic [ref=e9202]:
+      - button "Close copilot" [ref=e9203]
+      - complementary "AI copilot" [ref=e9205]:
+        - generic [ref=e9206]:
+          - generic [ref=e9211]:
+            - paragraph [ref=e9212]: AI copilot
+            - paragraph [ref=e9213]: Priya Nair · Gmail
+          - button "Close copilot" [ref=e9214]
+        - generic [ref=e9218]:
+          - generic [ref=e9219]:
+            - generic [ref=e9220]: Human
+            - generic [ref=e9225]: After-sales
+          - generic [ref=e9226]:
+            - heading "Summary" [level=2] [ref=e9229]
+            - generic [ref=e9230]:
+              - paragraph [ref=e9231]: "Priya Nair last asked: “Re: Invoice #4821 — still waiting on the refund confirmation.”. 1 customer message in this thread."
+              - paragraph [ref=e9232]: Grounded in Agent Desk instructions, Knowledge, and the product catalog.
+          - generic [ref=e9236]:
+            - generic [ref=e9238]:
+              - heading "Suggested replies" [level=2] [ref=e9239]
+              - paragraph [ref=e9240]: Tap to drop into the composer.
+            - generic [ref=e9242]:
+              - 'button "Warm greeting Saved · /hi Hi {{name}}! Thanks for reaching out — how can I help you today?" [ref=e9243]':
+                - generic [ref=e9244]:
+                  - generic [ref=e9248]: Warm greeting
+                  - generic [ref=e9249]: Saved · /hi
+                - generic [ref=e9250]: "Hi {{name}}! Thanks for reaching out — how can I help you today?"
+              - button "Delivery charges Saved · /charges Delivery is ৳60 inside Dhaka and ৳120 outside Dhaka. Orders over ৳2,500 ship free." [ref=e9251]:
+                - generic [ref=e9252]:
+                  - generic [ref=e9256]: Delivery charges
+                  - generic [ref=e9257]: Saved · /charges
+                - generic [ref=e9258]: Delivery is ৳60 inside Dhaka and ৳120 outside Dhaka. Orders over ৳2,500 ship free.
+              - button "Stock + price Product question It's in stock right now. Which size would you like — I'll reserve it and share the exact price with delivery." [ref=e9259]:
+                - generic [ref=e9260]:
+                  - generic [ref=e9264]: Stock + price
+                  - generic [ref=e9265]: Product question
+                - generic [ref=e9266]: It's in stock right now. Which size would you like — I'll reserve it and share the exact price with delivery.
+              - button "Delivery timeline Delivery Inside Dhaka it arrives in 1–2 days (৳60), outside Dhaka 3–5 days (৳120). Free delivery over ৳2,500." [ref=e9267]:
+                - generic [ref=e9268]:
+                  - generic [ref=e9272]: Delivery timeline
+                  - generic [ref=e9273]: Delivery
+                - generic [ref=e9274]: Inside Dhaka it arrives in 1–2 days (৳60), outside Dhaka 3–5 days (৳120). Free delivery over ৳2,500.
+          - generic [ref=e9275]:
+            - generic [ref=e9277]:
+              - heading "Next actions" [level=2] [ref=e9278]
+              - paragraph [ref=e9279]: Run without leaving the thread.
+            - generic [ref=e9281]:
+              - button "Capture as lead" [ref=e9282]
+              - button "Draft an order" [ref=e9287]
+          - paragraph [ref=e9290]: The copilot never sends on its own — every suggestion waits for a human keystroke.
+  - alert [ref=e969]

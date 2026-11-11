@@ -1,0 +1,118 @@
+- generic [active] [ref=f1e1]:
+  - generic [ref=f1e3]:
+    - complementary [ref=f1e4]:
+      - generic [ref=f1e11]:
+        - generic [ref=f1e12]: AiPraktor
+        - generic [ref=f1e13]: control plane
+      - navigation [ref=f1e14]:
+        - generic [ref=f1e15]:
+          - generic [ref=f1e16]: Work
+          - link "Overview" [ref=f1e17] [cursor=pointer]:
+            - /url: /dashboard
+          - link "Inbox" [ref=f1e23] [cursor=pointer]:
+            - /url: /dashboard/inbox
+          - link "Notifications" [ref=f1e28] [cursor=pointer]:
+            - /url: /dashboard/notifications
+          - link "Leads" [ref=f1e32] [cursor=pointer]:
+            - /url: /dashboard/leads
+          - link "Comments" [ref=f1e37] [cursor=pointer]:
+            - /url: /dashboard/comments
+          - link "Saved replies ⚡ Auto" [ref=f1e41] [cursor=pointer]:
+            - /url: /dashboard/saved-replies
+            - text: Saved replies
+            - generic "Saved replies can answer customers automatically, free" [ref=f1e44]:
+              - text: ⚡
+              - generic [ref=f1e45]: Auto
+          - link "Orders" [ref=f1e46] [cursor=pointer]:
+            - /url: /dashboard/orders
+          - link "Activity" [ref=f1e50] [cursor=pointer]:
+            - /url: /dashboard/activity
+          - link "Analytics" [ref=f1e53] [cursor=pointer]:
+            - /url: /dashboard/analytics
+          - link "Announcements" [ref=f1e56] [cursor=pointer]:
+            - /url: /dashboard/announcements
+        - generic [ref=f1e60]:
+          - generic [ref=f1e61]: Grow
+          - link "Follow-ups" [ref=f1e62] [cursor=pointer]:
+            - /url: /dashboard/followups
+          - link "Broadcasts" [ref=f1e68] [cursor=pointer]:
+            - /url: /dashboard/broadcasts
+          - link "Products" [ref=f1e72] [cursor=pointer]:
+            - /url: /dashboard/products
+          - link "Posts" [ref=f1e77] [cursor=pointer]:
+            - /url: /dashboard/posts
+          - link "Website chat" [ref=f1e83] [cursor=pointer]:
+            - /url: /dashboard/website
+          - link "Agent Desk" [ref=f1e87] [cursor=pointer]:
+            - /url: /dashboard/agent-desk
+        - generic [ref=f1e89]:
+          - generic [ref=f1e90]: Set up
+          - link "Pages" [ref=f1e91] [cursor=pointer]:
+            - /url: /dashboard/pages
+          - link "Business settings" [ref=f1e97] [cursor=pointer]:
+            - /url: /dashboard/business
+          - link "Billing" [ref=f1e102] [cursor=pointer]:
+            - /url: /dashboard/billing
+          - link "Team" [ref=f1e105] [cursor=pointer]:
+            - /url: /dashboard/submasters
+          - link "Setup" [ref=f1e111] [cursor=pointer]:
+            - /url: /dashboard/setup
+          - link "Video guide" [ref=f1e115] [cursor=pointer]:
+            - /url: /dashboard/videos
+        - generic [ref=f1e119]:
+          - generic [ref=f1e120]: Help
+          - link "AiPraktor Agent" [ref=f1e121] [cursor=pointer]:
+            - /url: /dashboard/help
+          - link "Feedback" [ref=f1e125] [cursor=pointer]:
+            - /url: /dashboard/feedback
+      - generic [ref=f1e128]:
+        - generic "Auto-revert sweeper is running" [ref=f1e130]: SYSTEM ONLINE
+        - generic [ref=f1e135]:
+          - generic [ref=f1e136]: Signed in · Business owner
+          - generic [ref=f1e137]: navinmdnawshin@gmail.com
+        - link "This device" [ref=f1e138] [cursor=pointer]:
+          - /url: /dashboard/device
+        - button "Sign out" [ref=f1e141] [cursor=pointer]
+    - main [ref=f1e145]:
+      - generic [ref=f1e146]:
+        - generic [ref=f1e147]:
+          - generic [ref=f1e148]: LIVE
+          - generic [ref=f1e151]: AI ⟷ HUMAN
+        - generic [ref=f1e152]:
+          - radiogroup "Colour theme" [ref=f1e153]:
+            - radio "Light" [checked] [ref=f1e154]
+            - radio "Dark" [ref=f1e162] [cursor=pointer]
+          - generic "Auto-revert sweeper is running" [ref=f1e167]: SYSTEM ONLINE
+          - generic [ref=f1e172]: 11:36:30
+      - generic [ref=f1e176]:
+        - region "Conversations" [ref=f1e177]:
+          - generic [ref=f1e178]:
+            - generic [ref=f1e179]:
+              - heading "Inbox" [level=1] [ref=f1e180]
+              - button "Alerts" [ref=f1e181] [cursor=pointer]
+            - generic [ref=f1e188]:
+              - textbox "Search every conversation" [ref=f1e189]:
+                - /placeholder: Search name, phone or message
+              - generic "Press / to search" [ref=f1e191]: /
+            - tablist "Inbox view" [ref=f1e192]:
+              - tab "Waiting" [selected] [ref=f1e193] [cursor=pointer]
+              - tab "Unread" [ref=f1e194] [cursor=pointer]
+              - tab "Open" [ref=f1e195] [cursor=pointer]
+              - tab "Done" [ref=f1e196] [cursor=pointer]
+            - button "All" [pressed] [ref=f1e199] [cursor=pointer]
+            - generic [ref=f1e200]: 0 waiting · longest wait first
+        - region "Conversation" [ref=f1e249]:
+          - generic [ref=f1e250]:
+            - generic [ref=f1e254]: Choose a conversation
+            - paragraph [ref=f1e255]: The chat opens here, with the customer’s details beside it.
+            - generic [ref=f1e256]:
+              - generic [ref=f1e257]: ↑
+              - generic [ref=f1e258]: ↓
+              - text: move ·
+              - generic [ref=f1e259]: Enter
+              - text: opens ·
+              - generic [ref=f1e260]: E
+              - text: done ·
+              - generic [ref=f1e261]: /
+              - text: search
+  - alert [ref=f1e262]

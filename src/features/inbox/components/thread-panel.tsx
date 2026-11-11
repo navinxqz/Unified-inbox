@@ -3,21 +3,31 @@
 import { useEffect, useRef, useState } from "react";
 import {
   ChevronLeft,
+  Clock,
   Inbox,
   PanelRight,
   Pin,
+  Sparkles,
+  Undo2,
+  UserCheck,
 } from "lucide-react";
 
 import { Avatar } from "@/features/inbox/components/avatar";
 import { ChannelDot } from "@/features/inbox/components/channel-dot";
 import { Composer } from "@/features/inbox/components/composer";
 import { MessageCard } from "@/features/inbox/components/message-card";
+import { ModeBadge } from "@/features/inbox/components/module-ui";
+import { handoffReasonLabels } from "@/features/inbox/data";
+import { useNowMs } from "@/features/inbox/use-now";
 import type {
   Attachment,
   Channel,
+  ConversationMode,
+  HandoffReason,
   Message,
   Person,
   QuotedMessage,
+  SavedReply,
 } from "@/features/inbox/types";
 import { cn } from "@/lib/utils";
 
@@ -28,8 +38,12 @@ type ThreadPanelProps = {
   channel: Channel | null;
   messages: Message[];
   suggestions: string[];
+  savedReplies?: SavedReply[];
   banner: { title: string; text: string } | null;
   placeholder: string;
+  mode?: ConversationMode;
+  handoffReason?: HandoffReason;
+  revertAtMs?: number;
   onDismissBanner: () => void;
   onViewBanner: () => void;
   onToggleReaction: (messageId: string, emoji: string, replyId?: string) => void;
@@ -43,7 +57,22 @@ type ThreadPanelProps = {
   onOpenChannels: () => void;
   onOpenUserDetails?: () => void;
   onBack: () => void;
+  onHandoff?: (reason: HandoffReason) => void;
+  onClaim?: () => void;
+  onReturnToAi?: () => void;
+  onTakeover?: () => void;
+  onOpenCopilot?: () => void;
+  /** Text pushed into the composer by the copilot (nonce triggers re-insert). */
+  insertion?: { text: string; nonce: number };
 };
+
+const handoffReasons: HandoffReason[] = [
+  "complaint",
+  "refund",
+  "special-request",
+  "asked-for-human",
+  "low-confidence",
+];
 
 export function ThreadPanel({
   title,
@@ -52,8 +81,12 @@ export function ThreadPanel({
   channel,
   messages,
   suggestions,
+  savedReplies = [],
   banner,
   placeholder,
+  mode = "ai",
+  handoffReason,
+  revertAtMs,
   onDismissBanner,
   onViewBanner,
   onToggleReaction,
@@ -61,6 +94,12 @@ export function ThreadPanel({
   onOpenChannels,
   onOpenUserDetails,
   onBack,
+  onHandoff,
+  onClaim,
+  onReturnToAi,
+  onTakeover,
+  onOpenCopilot,
+  insertion,
 }: ThreadPanelProps) {
   const [pinned, setPinned] = useState(false);
   const [draft, setDraft] = useState("");
@@ -69,6 +108,8 @@ export function ThreadPanel({
   const [highlightedMessageId, setHighlightedMessageId] = useState<string | null>(null);
   const [tags, setTags] = useState<string[]>([]);
   const [targetLanguage, setTargetLanguage] = useState<string | null>(null);
+  const [handoffMenuOpen, setHandoffMenuOpen] = useState(false);
+  const now = useNowMs();
 
   const inputRef = useRef<HTMLInputElement>(null);
   const endRef = useRef<HTMLDivElement>(null);
@@ -77,9 +118,30 @@ export function ThreadPanel({
     endRef.current?.scrollIntoView({ block: "end" });
   }, [messages.length, title]);
 
+  // Render-phase sync: copilot pushes text into the composer without an effect.
+  const [lastInsertionNonce, setLastInsertionNonce] = useState<number | undefined>();
+  if (insertion && insertion.nonce !== lastInsertionNonce) {
+    setLastInsertionNonce(insertion.nonce);
+    setDraft(insertion.text);
+  }
+
+  const revertInSec =
+    revertAtMs && now !== null ? Math.max(0, Math.round((revertAtMs - now) / 1000)) : 0;
+  const revertLabel =
+    revertInSec >= 60
+      ? `${Math.floor(revertInSec / 60)}m ${String(revertInSec % 60).padStart(2, "0")}s`
+      : `${revertInSec}s`;
+
   function handleSend() {
     const body = draft.trim();
     if (!body && !attachment) return;
+
+    // "." is the operator takeover shortcut from the AiPraktor inbox.
+    if (body === "." && person && mode !== "human" && onTakeover) {
+      onTakeover();
+      setDraft("");
+      return;
+    }
 
     let translation: string | undefined = undefined;
     if (targetLanguage) {
@@ -179,6 +241,18 @@ export function ThreadPanel({
           </div>
         )}
 
+        {onOpenCopilot ? (
+          <button
+            type="button"
+            aria-label="Open AI copilot"
+            title="AI copilot"
+            onClick={onOpenCopilot}
+            className="flex size-9 shrink-0 items-center justify-center rounded-[10px] text-ink-soft transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          >
+            <Sparkles className="size-5" strokeWidth={2} />
+          </button>
+        ) : null}
+
         <button
           type="button"
           aria-label={pinned ? "Unpin conversation" : "Pin conversation"}
@@ -209,6 +283,87 @@ export function ThreadPanel({
           <PanelRight className="size-5" strokeWidth={2} />
         </button>
       </header>
+
+      {person ? (
+        <div className="flex flex-wrap items-center gap-2 border-b border-border-subtle bg-surface/50 px-4 py-1.5 md:px-6">
+          <ModeBadge mode={mode} />
+          {mode === "human" && handoffReason ? (
+            <span className="text-[11px] font-semibold text-muted-foreground">
+              {handoffReasonLabels[handoffReason]}
+            </span>
+          ) : null}
+          {mode === "human" && revertAtMs && now !== null ? (
+            <span
+              title="Unanswered human conversations revert to the AI automatically"
+              className="inline-flex items-center gap-1 rounded-full border border-amber-200 bg-warning-soft px-2 py-0.5 text-[11px] font-semibold text-warning"
+            >
+              <Clock className="size-3" />
+              Reverts to AI in {revertLabel}
+            </span>
+          ) : null}
+
+          <div className="ml-auto flex items-center gap-1.5">
+            {mode === "ai" ? (
+              <div className="relative">
+                <button
+                  type="button"
+                  onClick={() => setHandoffMenuOpen((value) => !value)}
+                  aria-expanded={handoffMenuOpen}
+                  className="inline-flex h-7 items-center gap-1 rounded-lg bg-warning-soft px-2 text-[11px] font-bold text-warning hover:bg-warning-soft/80"
+                >
+                  <UserCheck className="size-3.5" />
+                  Take over
+                </button>
+                {handoffMenuOpen ? (
+                  <div className="absolute top-full right-0 z-30 mt-1 w-52 rounded-xl border border-border bg-background p-1.5 shadow-xl">
+                    <p className="px-2 py-1 text-[10px] font-bold tracking-wide text-muted-foreground uppercase">
+                      Handoff reason
+                    </p>
+                    {handoffReasons.map((reason) => (
+                      <button
+                        key={reason}
+                        type="button"
+                        onClick={() => {
+                          onHandoff?.(reason);
+                          setHandoffMenuOpen(false);
+                        }}
+                        className="w-full rounded-lg px-2 py-1.5 text-left text-xs transition-colors hover:bg-surface"
+                      >
+                        {handoffReasonLabels[reason]}
+                      </button>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
+            ) : (
+              <>
+                {!person.claimedBy ? (
+                  <button
+                    type="button"
+                    onClick={onClaim}
+                    className="inline-flex h-7 items-center gap-1 rounded-lg border border-border bg-background px-2 text-[11px] font-bold text-ink-soft hover:bg-surface"
+                  >
+                    <UserCheck className="size-3.5" />
+                    Claim
+                  </button>
+                ) : (
+                  <span className="text-[11px] font-semibold text-muted-foreground">
+                    Claimed by {person.claimedBy}
+                  </span>
+                )}
+                <button
+                  type="button"
+                  onClick={onReturnToAi}
+                  className="inline-flex h-7 items-center gap-1 rounded-lg border border-border bg-background px-2 text-[11px] font-bold text-ink-soft hover:bg-surface"
+                >
+                  <Undo2 className="size-3.5" />
+                  Return to AI
+                </button>
+              </>
+            )}
+          </div>
+        </div>
+      ) : null}
 
       {banner ? (
         <div className="mx-4 mt-3 flex shrink-0 items-center gap-3 rounded-[10px] bg-banner py-2 pr-2 pl-4 text-white md:mx-6">
@@ -277,6 +432,7 @@ export function ThreadPanel({
           onChange={setDraft}
           placeholder={placeholder}
           suggestions={suggestions}
+          savedReplies={savedReplies}
           inputRef={inputRef}
           attachment={attachment}
           onAttachmentChange={setAttachment}

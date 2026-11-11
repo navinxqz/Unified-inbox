@@ -1,0 +1,137 @@
+- generic [active] [ref=f7e1]:
+  - generic [ref=f7e2]:
+    - generic [ref=f7e3]:
+      - complementary [ref=f7e4]:
+        - generic [ref=f7e11]:
+          - generic [ref=f7e12]: AiPraktor
+          - generic [ref=f7e13]: control plane
+        - navigation [ref=f7e14]:
+          - link "Setup guide 0/8" [ref=f7e190] [cursor=pointer]:
+            - /url: /dashboard#setup-guide
+            - text: Setup guide
+            - generic [ref=f7e194]: 0/8
+          - generic [ref=f7e15]:
+            - generic [ref=f7e16]: Work
+            - link "Overview" [ref=f7e17] [cursor=pointer]:
+              - /url: /dashboard
+            - link "Inbox" [ref=f7e23] [cursor=pointer]:
+              - /url: /dashboard/inbox
+            - link "Notifications" [ref=f7e27] [cursor=pointer]:
+              - /url: /dashboard/notifications
+            - link "Comments" [ref=f7e36] [cursor=pointer]:
+              - /url: /dashboard/comments
+            - link "Saved replies ⚡ Auto" [ref=f7e40] [cursor=pointer]:
+              - /url: /dashboard/saved-replies
+              - text: Saved replies
+              - generic "Saved replies can answer customers automatically, free" [ref=f7e44]:
+                - text: ⚡
+                - generic [ref=f7e45]: Auto
+            - link "Orders" [ref=f7e46] [cursor=pointer]:
+              - /url: /dashboard/orders
+            - link "Activity" [ref=f7e50] [cursor=pointer]:
+              - /url: /dashboard/activity
+            - link "Analytics" [ref=f7e53] [cursor=pointer]:
+              - /url: /dashboard/analytics
+            - link "Announcements" [ref=f7e56] [cursor=pointer]:
+              - /url: /dashboard/announcements
+          - generic [ref=f7e60]:
+            - generic [ref=f7e61]: Grow
+            - link "Follow-ups" [ref=f7e62] [cursor=pointer]:
+              - /url: /dashboard/followups
+            - link "Broadcasts" [ref=f7e68] [cursor=pointer]:
+              - /url: /dashboard/broadcasts
+            - link "Products" [ref=f7e72] [cursor=pointer]:
+              - /url: /dashboard/products
+            - link "Posts" [ref=f7e77] [cursor=pointer]:
+              - /url: /dashboard/posts
+            - link "Knowledge" [ref=f7e195] [cursor=pointer]:
+              - /url: /dashboard/knowledge
+            - link "Website chat" [ref=f7e83] [cursor=pointer]:
+              - /url: /dashboard/website
+            - link "Agent Desk" [ref=f7e87] [cursor=pointer]:
+              - /url: /dashboard/agent-desk
+          - generic [ref=f7e89]:
+            - generic [ref=f7e90]: Set up
+            - link "Pages" [ref=f7e91] [cursor=pointer]:
+              - /url: /dashboard/pages
+            - link "Business settings" [ref=f7e97] [cursor=pointer]:
+              - /url: /dashboard/business
+            - link "Billing" [ref=f7e102] [cursor=pointer]:
+              - /url: /dashboard/billing
+            - link "Team" [ref=f7e105] [cursor=pointer]:
+              - /url: /dashboard/submasters
+            - link "Setup" [ref=f7e111] [cursor=pointer]:
+              - /url: /dashboard/setup
+            - link "Video guide" [ref=f7e115] [cursor=pointer]:
+              - /url: /dashboard/videos
+          - generic [ref=f7e119]:
+            - generic [ref=f7e120]: Help
+            - link "AiPraktor Agent" [ref=f7e121] [cursor=pointer]:
+              - /url: /dashboard/help
+            - link "Feedback" [ref=f7e125] [cursor=pointer]:
+              - /url: /dashboard/feedback
+        - generic [ref=f7e128]:
+          - generic "Auto-revert sweeper is running" [ref=f7e130]: SYSTEM ONLINE
+          - generic [ref=f7e135]:
+            - generic [ref=f7e136]: Signed in · Business owner
+            - generic [ref=f7e137]: navinmdnawshin@gmail.com
+          - switch "On duty" [checked] [ref=f7e199] [cursor=pointer]
+          - link "This device" [ref=f7e138] [cursor=pointer]:
+            - /url: /dashboard/device
+          - button "Sign out" [ref=f7e141] [cursor=pointer]
+      - main [ref=f7e145]:
+        - generic [ref=f7e146]:
+          - generic [ref=f7e147]:
+            - generic [ref=f7e148]: LIVE
+            - generic [ref=f7e151]: AI ⟷ HUMAN
+          - generic [ref=f7e152]:
+            - button "Watch how · 2 videos" [ref=f7e202] [cursor=pointer]
+            - radiogroup "Colour theme" [ref=f7e153]:
+              - radio "Light" [checked] [ref=f7e154]
+              - radio "Dark" [ref=f7e162] [cursor=pointer]
+            - generic "Auto-revert sweeper is running" [ref=f7e167]: SYSTEM ONLINE
+            - generic [ref=f7e172]: 11:39:57
+        - generic [ref=f7e209]:
+          - button "The AiPraktor Agent is now on for everyone. See what it can do in a 9-minute video" [ref=f7e212] [cursor=pointer]
+          - button "Read" [ref=f7e213] [cursor=pointer]
+          - button "Hide this line" [ref=f7e214] [cursor=pointer]
+        - generic [ref=f7e175]:
+          - generic [ref=f7e176]:
+            - generic [ref=f7e177]:
+              - generic [ref=f7e178]: Inbox
+              - heading "Saved replies" [level=1] [ref=f7e179]
+              - paragraph [ref=f7e180]: Answers your team sends with / in any chat — and ones that go out by themselves, free, when a customer writes the same words.
+            - button "New reply" [ref=f7e182] [cursor=pointer]
+          - region "Saved replies" [ref=f7e184]:
+            - generic [ref=f7e218]:
+              - generic [ref=f7e222]: No saved replies yet
+              - generic [ref=f7e223]: Write the answers you send every day once — delivery charge, how to pay, return policy — then send them from any chat by typing /.
+              - button "New reply" [ref=f7e224] [cursor=pointer]
+              - button "See archived replies" [ref=f7e226] [cursor=pointer]
+          - region [ref=f7e227]:
+            - heading "AI helpers" [level=2] [ref=f7e228]
+            - paragraph [ref=f7e229]: Two helpers in the reply box. Each uses a little of your AI credit when it is used, so each is yours to switch.
+            - list [ref=f7e230]:
+              - listitem [ref=f7e231]:
+                - generic [ref=f7e235]:
+                  - generic [ref=f7e236]: Suggest the fitting reply
+                  - generic [ref=f7e237]: Above the reply box, the saved replies that fit the customer's last message offer themselves. One tap puts one in the box.
+                  - generic [ref=f7e238]: Uses a very small amount of your AI credit for each new customer message — and nothing while you have no saved replies.
+                - generic [ref=f7e239] [cursor=pointer]:
+                  - switch "Suggest the fitting reply" [checked] [ref=f7e240]
+                  - generic [ref=f7e241]: "On"
+              - listitem [ref=f7e242]:
+                - generic [ref=f7e247]:
+                  - generic [ref=f7e248]: Adapt with AI
+                  - generic [ref=f7e249]: A small button in the reply box rewrites a saved reply — or a message you typed — for the customer in front of you. Prices, numbers and links are never changed.
+                  - generic [ref=f7e250]: Uses a little of your AI credit each time somebody presses it.
+                - generic [ref=f7e251] [cursor=pointer]:
+                  - switch "Adapt with AI" [checked] [ref=f7e252]
+                  - generic [ref=f7e253]: "On"
+      - button "AiPraktor Agent" [ref=f7e254] [cursor=pointer]
+    - note [ref=f7e259]:
+      - paragraph [ref=f7e260]: First time here? Short videos show how this works.
+      - generic [ref=f7e261]:
+        - button "Watch" [ref=f7e262] [cursor=pointer]
+        - button "Don't need it" [ref=f7e266] [cursor=pointer]
+  - alert [ref=f7e189]

@@ -1,0 +1,117 @@
+- generic [ref=f13e1]:
+  - generic [ref=f13e3]:
+    - complementary [ref=f13e4]:
+      - generic [ref=f13e11]:
+        - generic [ref=f13e12]: AiPraktor
+        - generic [ref=f13e13]: control plane
+      - navigation [ref=f13e14]:
+        - generic [ref=f13e15]:
+          - generic [ref=f13e16]: Work
+          - link "Overview" [ref=f13e17] [cursor=pointer]:
+            - /url: /dashboard
+          - link "Inbox" [ref=f13e23] [cursor=pointer]:
+            - /url: /dashboard/inbox
+          - link "Notifications" [ref=f13e27] [cursor=pointer]:
+            - /url: /dashboard/notifications
+          - link "Leads" [ref=f13e31] [cursor=pointer]:
+            - /url: /dashboard/leads
+          - link "Comments" [ref=f13e36] [cursor=pointer]:
+            - /url: /dashboard/comments
+          - link "Saved replies ⚡ Auto" [ref=f13e40] [cursor=pointer]:
+            - /url: /dashboard/saved-replies
+            - text: Saved replies
+            - generic "Saved replies can answer customers automatically, free" [ref=f13e43]:
+              - text: ⚡
+              - generic [ref=f13e44]: Auto
+          - link "Orders" [ref=f13e45] [cursor=pointer]:
+            - /url: /dashboard/orders
+          - link "Activity" [ref=f13e50] [cursor=pointer]:
+            - /url: /dashboard/activity
+          - link "Analytics" [ref=f13e53] [cursor=pointer]:
+            - /url: /dashboard/analytics
+          - link "Announcements" [ref=f13e56] [cursor=pointer]:
+            - /url: /dashboard/announcements
+        - generic [ref=f13e60]:
+          - generic [ref=f13e61]: Grow
+          - link "Follow-ups" [ref=f13e62] [cursor=pointer]:
+            - /url: /dashboard/followups
+          - link "Broadcasts" [ref=f13e68] [cursor=pointer]:
+            - /url: /dashboard/broadcasts
+          - link "Products" [ref=f13e72] [cursor=pointer]:
+            - /url: /dashboard/products
+          - link "Posts" [ref=f13e77] [cursor=pointer]:
+            - /url: /dashboard/posts
+          - link "Website chat" [ref=f13e83] [cursor=pointer]:
+            - /url: /dashboard/website
+          - link "Agent Desk" [ref=f13e87] [cursor=pointer]:
+            - /url: /dashboard/agent-desk
+        - generic [ref=f13e89]:
+          - generic [ref=f13e90]: Set up
+          - link "Pages" [ref=f13e91] [cursor=pointer]:
+            - /url: /dashboard/pages
+          - link "Business settings" [ref=f13e97] [cursor=pointer]:
+            - /url: /dashboard/business
+          - link "Billing" [ref=f13e102] [cursor=pointer]:
+            - /url: /dashboard/billing
+          - link "Team" [ref=f13e105] [cursor=pointer]:
+            - /url: /dashboard/submasters
+          - link "Setup" [ref=f13e111] [cursor=pointer]:
+            - /url: /dashboard/setup
+          - link "Video guide" [ref=f13e115] [cursor=pointer]:
+            - /url: /dashboard/videos
+        - generic [ref=f13e119]:
+          - generic [ref=f13e120]: Help
+          - link "AiPraktor Agent" [ref=f13e121] [cursor=pointer]:
+            - /url: /dashboard/help
+          - link "Feedback" [ref=f13e125] [cursor=pointer]:
+            - /url: /dashboard/feedback
+      - generic [ref=f13e128]:
+        - generic "Auto-revert sweeper is running" [ref=f13e130]: SYSTEM ONLINE
+        - generic [ref=f13e135]:
+          - generic [ref=f13e136]: Signed in · Business owner
+          - generic [ref=f13e137]: navinmdnawshin@gmail.com
+        - link "This device" [ref=f13e138] [cursor=pointer]:
+          - /url: /dashboard/device
+        - button "Sign out" [ref=f13e141] [cursor=pointer]
+    - main [ref=f13e145]:
+      - generic [ref=f13e146]:
+        - generic [ref=f13e147]:
+          - generic [ref=f13e148]: LIVE
+          - generic [ref=f13e151]: AI ⟷ HUMAN
+        - generic [ref=f13e152]:
+          - radiogroup "Colour theme" [ref=f13e153]:
+            - radio "Light" [checked] [ref=f13e154]
+            - radio "Dark" [ref=f13e162] [cursor=pointer]
+          - generic "Auto-revert sweeper is running" [ref=f13e167]: SYSTEM ONLINE
+      - generic [ref=f13e174]:
+        - generic [ref=f13e176]:
+          - generic [ref=f13e177]: orders
+          - heading "Scan parcels" [level=1] [ref=f13e178]
+          - paragraph [ref=f13e179]: Scan the code on each invoice, or type the order number, to build a list — then move every order on it in one go.
+        - navigation "Orders, customers, scanning, the courier, people to chase and the report" [ref=f13e180]:
+          - link "Orders" [ref=f13e181] [cursor=pointer]:
+            - /url: /dashboard/orders
+          - link "Customers" [ref=f13e182] [cursor=pointer]:
+            - /url: /dashboard/orders/customers
+          - generic [ref=f13e183] [cursor=pointer]: Scan
+          - link "Courier" [ref=f13e189] [cursor=pointer]:
+            - /url: /dashboard/orders/handover
+          - link "To chase" [ref=f13e195] [cursor=pointer]:
+            - /url: /dashboard/orders/incomplete
+          - link "Report" [ref=f13e199] [cursor=pointer]:
+            - /url: /dashboard/orders/report
+          - link "Discounts" [ref=f13e202] [cursor=pointer]:
+            - /url: /dashboard/orders/discounts
+        - generic [ref=f13e206]:
+          - generic [ref=f13e207]: Scan an invoice's code, or type an order number and press Enter
+          - generic [ref=f13e208]:
+            - textbox "Scan an invoice's code, or type an order number and press Enter" [active] [ref=f13e215]:
+              - /placeholder: "#1001"
+            - button "Add" [disabled] [ref=f13e216]
+            - button "Use camera" [ref=f13e217] [cursor=pointer]
+        - generic [ref=f13e221]:
+          - generic [ref=f13e228]: Nothing scanned yet
+          - generic [ref=f13e229]: Every invoice printed from the Orders screen carries a small square code in its top corner. Scan it here, or type the order number.
+        - link "Orders" [ref=f13e231] [cursor=pointer]:
+          - /url: /dashboard/orders
+  - alert [ref=f13e234]

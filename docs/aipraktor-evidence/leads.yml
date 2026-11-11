@@ -1,0 +1,115 @@
+- generic [active] [ref=f11e1]:
+  - generic [ref=f11e2]:
+    - generic [ref=f11e3]:
+      - complementary [ref=f11e4]:
+        - generic [ref=f11e11]:
+          - generic [ref=f11e12]: AiPraktor
+          - generic [ref=f11e13]: control plane
+        - navigation [ref=f11e14]:
+          - link "Setup guide 0/8" [ref=f11e247] [cursor=pointer]:
+            - /url: /dashboard#setup-guide
+            - text: Setup guide
+            - generic [ref=f11e251]: 0/8
+          - generic [ref=f11e15]:
+            - generic [ref=f11e16]: Work
+            - link "Overview" [ref=f11e17] [cursor=pointer]:
+              - /url: /dashboard
+            - link "Inbox" [ref=f11e23] [cursor=pointer]:
+              - /url: /dashboard/inbox
+            - link "Notifications" [ref=f11e27] [cursor=pointer]:
+              - /url: /dashboard/notifications
+            - link "Comments" [ref=f11e37] [cursor=pointer]:
+              - /url: /dashboard/comments
+            - link "Saved replies ⚡ Auto" [ref=f11e41] [cursor=pointer]:
+              - /url: /dashboard/saved-replies
+              - text: Saved replies
+              - generic "Saved replies can answer customers automatically, free" [ref=f11e44]:
+                - text: ⚡
+                - generic [ref=f11e45]: Auto
+            - link "Orders" [ref=f11e46] [cursor=pointer]:
+              - /url: /dashboard/orders
+            - link "Activity" [ref=f11e50] [cursor=pointer]:
+              - /url: /dashboard/activity
+            - link "Analytics" [ref=f11e53] [cursor=pointer]:
+              - /url: /dashboard/analytics
+            - link "Announcements" [ref=f11e56] [cursor=pointer]:
+              - /url: /dashboard/announcements
+          - generic [ref=f11e60]:
+            - generic [ref=f11e61]: Grow
+            - link "Follow-ups" [ref=f11e62] [cursor=pointer]:
+              - /url: /dashboard/followups
+            - link "Broadcasts" [ref=f11e68] [cursor=pointer]:
+              - /url: /dashboard/broadcasts
+            - link "Products" [ref=f11e72] [cursor=pointer]:
+              - /url: /dashboard/products
+            - link "Posts" [ref=f11e77] [cursor=pointer]:
+              - /url: /dashboard/posts
+            - link "Knowledge" [ref=f11e252] [cursor=pointer]:
+              - /url: /dashboard/knowledge
+            - link "Website chat" [ref=f11e83] [cursor=pointer]:
+              - /url: /dashboard/website
+            - link "Agent Desk" [ref=f11e87] [cursor=pointer]:
+              - /url: /dashboard/agent-desk
+          - generic [ref=f11e89]:
+            - generic [ref=f11e90]: Set up
+            - link "Pages" [ref=f11e91] [cursor=pointer]:
+              - /url: /dashboard/pages
+            - link "Business settings" [ref=f11e97] [cursor=pointer]:
+              - /url: /dashboard/business
+            - link "Billing" [ref=f11e102] [cursor=pointer]:
+              - /url: /dashboard/billing
+            - link "Team" [ref=f11e105] [cursor=pointer]:
+              - /url: /dashboard/submasters
+            - link "Setup" [ref=f11e111] [cursor=pointer]:
+              - /url: /dashboard/setup
+            - link "Video guide" [ref=f11e115] [cursor=pointer]:
+              - /url: /dashboard/videos
+          - generic [ref=f11e119]:
+            - generic [ref=f11e120]: Help
+            - link "AiPraktor Agent" [ref=f11e121] [cursor=pointer]:
+              - /url: /dashboard/help
+            - link "Feedback" [ref=f11e125] [cursor=pointer]:
+              - /url: /dashboard/feedback
+        - generic [ref=f11e128]:
+          - generic "Auto-revert sweeper is running" [ref=f11e130]: SYSTEM ONLINE
+          - generic [ref=f11e135]:
+            - generic [ref=f11e136]: Signed in · Business owner
+            - generic [ref=f11e137]: navinmdnawshin@gmail.com
+          - switch "On duty" [checked] [ref=f11e256] [cursor=pointer]
+          - link "This device" [ref=f11e138] [cursor=pointer]:
+            - /url: /dashboard/device
+          - button "Sign out" [ref=f11e141] [cursor=pointer]
+      - main [ref=f11e145]:
+        - generic [ref=f11e146]:
+          - generic [ref=f11e147]:
+            - generic [ref=f11e148]: LIVE
+            - generic [ref=f11e151]: AI ⟷ HUMAN
+          - generic [ref=f11e152]:
+            - 'button "Watch how · 4 min — Leads: the switch, daily work, results and export" [ref=f11e259] [cursor=pointer]':
+              - generic [ref=f11e263]: Watch how · 4 min
+            - radiogroup "Colour theme" [ref=f11e153]:
+              - radio "Light" [checked] [ref=f11e154]
+              - radio "Dark" [ref=f11e162] [cursor=pointer]
+            - generic "Auto-revert sweeper is running" [ref=f11e167]: SYSTEM ONLINE
+            - generic [ref=f11e172]: 11:41:33
+        - generic [ref=f11e266]:
+          - button "The AiPraktor Agent is now on for everyone. See what it can do in a 9-minute video" [ref=f11e269] [cursor=pointer]
+          - button "Read" [ref=f11e270] [cursor=pointer]
+          - button "Hide this line" [ref=f11e271] [cursor=pointer]
+        - generic [ref=f11e175]:
+          - generic [ref=f11e276]:
+            - generic [ref=f11e277]: leads
+            - heading "Leads" [level=1] [ref=f11e278]
+          - generic "Leads switch" [ref=f11e279]:
+            - generic [ref=f11e280]:
+              - generic [ref=f11e281]:
+                - heading "Leads are off" [level=2] [ref=f11e282]
+                - paragraph [ref=f11e287]: The AI does not write down leads and you get no follow-up notifications. Phone numbers customers give still go onto their chat, so you can see them in the Inbox. Leads you already had are kept — switch on to see them again.
+              - switch "Leads" [ref=f11e288] [cursor=pointer]
+      - button "AiPraktor Agent" [ref=f11e290] [cursor=pointer]
+    - note [ref=f11e295]:
+      - paragraph [ref=f11e296]: First time here? A 4 min video shows how this works.
+      - generic [ref=f11e297]:
+        - button "Watch" [ref=f11e298] [cursor=pointer]
+        - button "Don't need it" [ref=f11e302] [cursor=pointer]
+  - alert [ref=f11e246]

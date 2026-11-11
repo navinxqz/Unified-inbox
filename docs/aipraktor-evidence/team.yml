@@ -1,0 +1,117 @@
+- generic [active] [ref=f22e1]:
+  - generic [ref=f22e2]:
+    - generic [ref=f22e3]:
+      - complementary [ref=f22e4]:
+        - generic [ref=f22e11]:
+          - generic [ref=f22e12]: AiPraktor
+          - generic [ref=f22e13]: control plane
+        - navigation [ref=f22e14]:
+          - link "Setup guide 0/8" [ref=f22e201] [cursor=pointer]:
+            - /url: /dashboard#setup-guide
+            - text: Setup guide
+            - generic [ref=f22e205]: 0/8
+          - generic [ref=f22e15]:
+            - generic [ref=f22e16]: Work
+            - link "Overview" [ref=f22e17] [cursor=pointer]:
+              - /url: /dashboard
+            - link "Inbox" [ref=f22e23] [cursor=pointer]:
+              - /url: /dashboard/inbox
+            - link "Notifications" [ref=f22e27] [cursor=pointer]:
+              - /url: /dashboard/notifications
+            - link "Comments" [ref=f22e36] [cursor=pointer]:
+              - /url: /dashboard/comments
+            - link "Saved replies ⚡ Auto" [ref=f22e40] [cursor=pointer]:
+              - /url: /dashboard/saved-replies
+              - text: Saved replies
+              - generic "Saved replies can answer customers automatically, free" [ref=f22e43]:
+                - text: ⚡
+                - generic [ref=f22e44]: Auto
+            - link "Orders" [ref=f22e45] [cursor=pointer]:
+              - /url: /dashboard/orders
+            - link "Activity" [ref=f22e49] [cursor=pointer]:
+              - /url: /dashboard/activity
+            - link "Analytics" [ref=f22e52] [cursor=pointer]:
+              - /url: /dashboard/analytics
+            - link "Announcements" [ref=f22e55] [cursor=pointer]:
+              - /url: /dashboard/announcements
+          - generic [ref=f22e59]:
+            - generic [ref=f22e60]: Grow
+            - link "Follow-ups" [ref=f22e61] [cursor=pointer]:
+              - /url: /dashboard/followups
+            - link "Broadcasts" [ref=f22e67] [cursor=pointer]:
+              - /url: /dashboard/broadcasts
+            - link "Products" [ref=f22e71] [cursor=pointer]:
+              - /url: /dashboard/products
+            - link "Posts" [ref=f22e76] [cursor=pointer]:
+              - /url: /dashboard/posts
+            - link "Knowledge" [ref=f22e206] [cursor=pointer]:
+              - /url: /dashboard/knowledge
+            - link "Website chat" [ref=f22e82] [cursor=pointer]:
+              - /url: /dashboard/website
+            - link "Agent Desk" [ref=f22e86] [cursor=pointer]:
+              - /url: /dashboard/agent-desk
+          - generic [ref=f22e88]:
+            - generic [ref=f22e89]: Set up
+            - link "Pages" [ref=f22e90] [cursor=pointer]:
+              - /url: /dashboard/pages
+            - link "Business settings" [ref=f22e96] [cursor=pointer]:
+              - /url: /dashboard/business
+            - link "Billing" [ref=f22e101] [cursor=pointer]:
+              - /url: /dashboard/billing
+            - link "Team" [ref=f22e104] [cursor=pointer]:
+              - /url: /dashboard/submasters
+            - link "Setup" [ref=f22e111] [cursor=pointer]:
+              - /url: /dashboard/setup
+            - link "Video guide" [ref=f22e115] [cursor=pointer]:
+              - /url: /dashboard/videos
+          - generic [ref=f22e119]:
+            - generic [ref=f22e120]: Help
+            - link "AiPraktor Agent" [ref=f22e121] [cursor=pointer]:
+              - /url: /dashboard/help
+            - link "Feedback" [ref=f22e125] [cursor=pointer]:
+              - /url: /dashboard/feedback
+        - generic [ref=f22e128]:
+          - generic "Auto-revert sweeper is running" [ref=f22e130]: SYSTEM ONLINE
+          - generic [ref=f22e135]:
+            - generic [ref=f22e136]: Signed in · Business owner
+            - generic [ref=f22e137]: navinmdnawshin@gmail.com
+          - switch "On duty" [checked] [ref=f22e210] [cursor=pointer]
+          - link "This device" [ref=f22e138] [cursor=pointer]:
+            - /url: /dashboard/device
+          - button "Sign out" [ref=f22e141] [cursor=pointer]
+      - main [ref=f22e145]:
+        - generic [ref=f22e146]:
+          - generic [ref=f22e147]:
+            - generic [ref=f22e148]: LIVE
+            - generic [ref=f22e151]: AI ⟷ HUMAN
+          - generic [ref=f22e152]:
+            - button "Watch how · 2 videos" [ref=f22e213] [cursor=pointer]
+            - radiogroup "Colour theme" [ref=f22e153]:
+              - radio "Light" [ref=f22e154] [cursor=pointer]
+              - radio "Dark" [checked] [ref=f22e162]
+            - generic "Auto-revert sweeper is running" [ref=f22e167]: SYSTEM ONLINE
+            - generic [ref=f22e172]: 11:44:39
+        - generic [ref=f22e220]:
+          - button "The AiPraktor Agent is now on for everyone. See what it can do in a 9-minute video" [ref=f22e223] [cursor=pointer]
+          - button "Read" [ref=f22e224] [cursor=pointer]
+          - button "Hide this line" [ref=f22e225] [cursor=pointer]
+        - generic [ref=f22e229]:
+          - generic [ref=f22e230]:
+            - generic [ref=f22e231]:
+              - generic [ref=f22e232]: access control
+              - heading "Team" [level=1] [ref=f22e233]
+              - paragraph [ref=f22e234]: Teammates who answer customers and work the orders. Each is invited by email and chooses their own password; a group says what they can do.
+            - button "Invite teammate" [ref=f22e235] [cursor=pointer]
+          - generic [ref=f22e239]:
+            - link "Groups" [ref=f22e240] [cursor=pointer]:
+              - /url: /dashboard/groups
+            - generic [ref=f22e243]: A group says what its people can do — Inbox, Orders, Products, Accounts and your own.
+          - generic [ref=f22e244]: No teammates yet. Invite someone to share the workload.
+          - button "Record of changes" [ref=f22e248] [cursor=pointer]
+      - button "AiPraktor Agent" [ref=f22e255] [cursor=pointer]
+    - note [ref=f22e260]:
+      - paragraph [ref=f22e261]: First time here? Short videos show how this works.
+      - generic [ref=f22e262]:
+        - button "Watch" [ref=f22e263] [cursor=pointer]
+        - button "Don't need it" [ref=f22e267] [cursor=pointer]
+  - alert [ref=f22e200]

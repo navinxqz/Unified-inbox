@@ -1,0 +1,93 @@
+- generic [active] [ref=f19e1]:
+  - generic [ref=f19e3]:
+    - complementary [ref=f19e4]:
+      - generic [ref=f19e11]:
+        - generic [ref=f19e12]: AiPraktor
+        - generic [ref=f19e13]: control plane
+      - navigation [ref=f19e14]:
+        - generic [ref=f19e15]:
+          - generic [ref=f19e16]: Work
+          - link "Overview" [ref=f19e17] [cursor=pointer]:
+            - /url: /dashboard
+          - link "Inbox" [ref=f19e23] [cursor=pointer]:
+            - /url: /dashboard/inbox
+          - link "Notifications" [ref=f19e27] [cursor=pointer]:
+            - /url: /dashboard/notifications
+          - link "Leads" [ref=f19e31] [cursor=pointer]:
+            - /url: /dashboard/leads
+          - link "Comments" [ref=f19e36] [cursor=pointer]:
+            - /url: /dashboard/comments
+          - link "Saved replies ⚡ Auto" [ref=f19e40] [cursor=pointer]:
+            - /url: /dashboard/saved-replies
+            - text: Saved replies
+            - generic "Saved replies can answer customers automatically, free" [ref=f19e43]:
+              - text: ⚡
+              - generic [ref=f19e44]: Auto
+          - link "Orders" [ref=f19e45] [cursor=pointer]:
+            - /url: /dashboard/orders
+          - link "Activity" [ref=f19e49] [cursor=pointer]:
+            - /url: /dashboard/activity
+          - link "Analytics" [ref=f19e52] [cursor=pointer]:
+            - /url: /dashboard/analytics
+          - link "Announcements" [ref=f19e55] [cursor=pointer]:
+            - /url: /dashboard/announcements
+        - generic [ref=f19e59]:
+          - generic [ref=f19e60]: Grow
+          - link "Follow-ups" [ref=f19e61] [cursor=pointer]:
+            - /url: /dashboard/followups
+          - link "Broadcasts" [ref=f19e67] [cursor=pointer]:
+            - /url: /dashboard/broadcasts
+          - link "Products" [ref=f19e71] [cursor=pointer]:
+            - /url: /dashboard/products
+          - link "Posts" [ref=f19e76] [cursor=pointer]:
+            - /url: /dashboard/posts
+          - link "Website chat" [ref=f19e82] [cursor=pointer]:
+            - /url: /dashboard/website
+          - link "Agent Desk" [ref=f19e86] [cursor=pointer]:
+            - /url: /dashboard/agent-desk
+        - generic [ref=f19e88]:
+          - generic [ref=f19e89]: Set up
+          - link "Pages" [ref=f19e90] [cursor=pointer]:
+            - /url: /dashboard/pages
+          - link "Business settings" [ref=f19e96] [cursor=pointer]:
+            - /url: /dashboard/business
+          - link "Billing" [ref=f19e101] [cursor=pointer]:
+            - /url: /dashboard/billing
+          - link "Team" [ref=f19e104] [cursor=pointer]:
+            - /url: /dashboard/submasters
+          - link "Setup" [ref=f19e110] [cursor=pointer]:
+            - /url: /dashboard/setup
+          - link "Video guide" [ref=f19e114] [cursor=pointer]:
+            - /url: /dashboard/videos
+        - generic [ref=f19e118]:
+          - generic [ref=f19e119]: Help
+          - link "AiPraktor Agent" [ref=f19e120] [cursor=pointer]:
+            - /url: /dashboard/help
+          - link "Feedback" [ref=f19e124] [cursor=pointer]:
+            - /url: /dashboard/feedback
+      - generic [ref=f19e127]:
+        - generic "Auto-revert sweeper is running" [ref=f19e129]: SYSTEM ONLINE
+        - generic [ref=f19e134]:
+          - generic [ref=f19e135]: Signed in · Business owner
+          - generic [ref=f19e136]: navinmdnawshin@gmail.com
+        - link "This device" [ref=f19e137] [cursor=pointer]:
+          - /url: /dashboard/device
+        - button "Sign out" [ref=f19e140] [cursor=pointer]
+    - main [ref=f19e144]:
+      - generic [ref=f19e145]:
+        - generic [ref=f19e146]:
+          - generic [ref=f19e147]: LIVE
+          - generic [ref=f19e150]: AI ⟷ HUMAN
+        - generic [ref=f19e151]:
+          - radiogroup "Colour theme" [ref=f19e152]:
+            - radio "Light" [ref=f19e153] [cursor=pointer]
+            - radio "Dark" [checked] [ref=f19e161]
+          - generic "Auto-revert sweeper is running" [ref=f19e166]: SYSTEM ONLINE
+          - generic [ref=f19e171]: 11:43:49
+      - generic [ref=f19e174]:
+        - generic [ref=f19e176]:
+          - generic [ref=f19e177]: what the AI can look up
+          - heading "Knowledge" [level=1] [ref=f19e178]
+          - generic [ref=f19e182]: Fees, requirements, packages, delivery and return rules, how things work — the long tail. The AI looks a fact up here when a question needs it. Hours, the address and payment numbers stay in your business facts.
+        - status "Loading" [ref=f19e184]
+  - alert [ref=f19e187]

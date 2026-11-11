@@ -1,0 +1,67 @@
+- generic [ref=f2e1]:
+  - generic [ref=f2e3]:
+    - generic [ref=f2e5]:
+      - group "Language · ভাষা" [ref=f2e7]:
+        - button "বাংলা" [ref=f2e8] [cursor=pointer]
+        - button "EN" [pressed] [ref=f2e9] [cursor=pointer]
+      - generic [ref=f2e10]:
+        - generic [ref=f2e11]: start free
+        - heading "Create your account" [level=1] [ref=f2e16]
+        - paragraph [ref=f2e17]: Your AI agent answers your Facebook, Instagram and WhatsApp messages, and hands the hard ones to your team.
+      - generic [ref=f2e18]:
+        - generic [ref=f2e19]:
+          - generic [ref=f2e20]: Your name
+          - textbox "Your name" [active] [ref=f2e22]:
+            - /placeholder: Rahim Uddin
+        - generic [ref=f2e23]:
+          - generic [ref=f2e24]: Business name
+          - textbox "Business name" [ref=f2e26]:
+            - /placeholder: Rahim Fashion House
+          - generic [ref=f2e27]: This is the name your customers know you by.
+        - generic [ref=f2e28]:
+          - generic [ref=f2e29]: Email
+          - textbox "Email" [ref=f2e31]:
+            - /placeholder: you@business.com
+        - generic [ref=f2e32]:
+          - generic [ref=f2e33]: Mobile number
+          - textbox "Mobile number" [ref=f2e35]:
+            - /placeholder: 01XXXXXXXXX
+          - generic [ref=f2e36]: If you get stuck during setup, we call this number to help.
+        - generic [ref=f2e37]:
+          - generic [ref=f2e38]: Facebook page or website link
+          - textbox "Facebook page or website link" [ref=f2e40]:
+            - /placeholder: facebook.com/yourpage
+          - generic [ref=f2e41]: If you do not know the link, write the page's name.
+        - generic [ref=f2e42]:
+          - generic [ref=f2e43]: About how many messages a day in total — all your pages and WhatsApp numbers together?
+          - generic [ref=f2e45]: If you have several Facebook pages, Instagram accounts or WhatsApp numbers, add all their messages up and pick the total — not one page's number.
+          - radiogroup "About how many messages a day in total — all your pages and WhatsApp numbers together?" [ref=f2e46]:
+            - radio "Under 50" [ref=f2e47] [cursor=pointer]
+            - radio "50–200" [ref=f2e48] [cursor=pointer]
+            - radio "200–500" [ref=f2e49] [cursor=pointer]
+            - radio "500–1,000" [ref=f2e50] [cursor=pointer]
+            - radio "1,000–2,000" [ref=f2e51] [cursor=pointer]
+            - radio "Over 2,000" [ref=f2e52] [cursor=pointer]
+        - generic [ref=f2e53]:
+          - generic [ref=f2e54]:
+            - generic [ref=f2e55] [cursor=pointer]: Password
+            - button "Show password" [ref=f2e56] [cursor=pointer]: Show
+          - textbox "Password" [ref=f2e60]:
+            - /placeholder: ••••••••••
+          - generic [ref=f2e61]: At least 10 characters. A short sentence you will remember works well.
+        - textbox [aria-hidden] [ref=f2e63]
+        - generic [ref=f2e64] [cursor=pointer]:
+          - checkbox "I agree to the terms and the privacy policy." [ref=f2e65]
+          - generic [ref=f2e66]:
+            - text: I agree to the
+            - link "terms" [ref=f2e67]:
+              - /url: /terms
+            - text: and the
+            - link "privacy policy" [ref=f2e68]:
+              - /url: /privacy
+            - text: .
+        - button "Create account" [ref=f2e69] [cursor=pointer]
+      - generic [ref=f2e72]: No card. Nothing charged during the trial.
+    - link "Already have an account? Sign in" [ref=f2e77] [cursor=pointer]:
+      - /url: /login
+  - alert [ref=f2e80]

@@ -1,0 +1,120 @@
+- generic [active] [ref=f5e1]:
+  - generic [ref=f5e2]:
+    - generic [ref=f5e3]:
+      - complementary [ref=f5e4]:
+        - generic [ref=f5e11]:
+          - generic [ref=f5e12]: AiPraktor
+          - generic [ref=f5e13]: control plane
+        - navigation [ref=f5e14]:
+          - link "Setup guide 0/8" [ref=f5e185] [cursor=pointer]:
+            - /url: /dashboard#setup-guide
+            - text: Setup guide
+            - generic [ref=f5e189]: 0/8
+          - generic [ref=f5e15]:
+            - generic [ref=f5e16]: Work
+            - link "Overview" [ref=f5e17] [cursor=pointer]:
+              - /url: /dashboard
+            - link "Inbox" [ref=f5e23] [cursor=pointer]:
+              - /url: /dashboard/inbox
+            - link "Notifications" [ref=f5e27] [cursor=pointer]:
+              - /url: /dashboard/notifications
+            - link "Comments" [ref=f5e36] [cursor=pointer]:
+              - /url: /dashboard/comments
+            - link "Saved replies ⚡ Auto" [ref=f5e40] [cursor=pointer]:
+              - /url: /dashboard/saved-replies
+              - text: Saved replies
+              - generic "Saved replies can answer customers automatically, free" [ref=f5e43]:
+                - text: ⚡
+                - generic [ref=f5e44]: Auto
+            - link "Orders" [ref=f5e45] [cursor=pointer]:
+              - /url: /dashboard/orders
+            - link "Activity" [ref=f5e49] [cursor=pointer]:
+              - /url: /dashboard/activity
+            - link "Analytics" [ref=f5e52] [cursor=pointer]:
+              - /url: /dashboard/analytics
+            - link "Announcements" [ref=f5e55] [cursor=pointer]:
+              - /url: /dashboard/announcements
+          - generic [ref=f5e59]:
+            - generic [ref=f5e60]: Grow
+            - link "Follow-ups" [ref=f5e61] [cursor=pointer]:
+              - /url: /dashboard/followups
+            - link "Broadcasts" [ref=f5e67] [cursor=pointer]:
+              - /url: /dashboard/broadcasts
+            - link "Products" [ref=f5e71] [cursor=pointer]:
+              - /url: /dashboard/products
+            - link "Posts" [ref=f5e76] [cursor=pointer]:
+              - /url: /dashboard/posts
+            - link "Knowledge" [ref=f5e190] [cursor=pointer]:
+              - /url: /dashboard/knowledge
+            - link "Website chat" [ref=f5e82] [cursor=pointer]:
+              - /url: /dashboard/website
+            - link "Agent Desk" [ref=f5e87] [cursor=pointer]:
+              - /url: /dashboard/agent-desk
+          - generic [ref=f5e89]:
+            - generic [ref=f5e90]: Set up
+            - link "Pages" [ref=f5e91] [cursor=pointer]:
+              - /url: /dashboard/pages
+            - link "Business settings" [ref=f5e97] [cursor=pointer]:
+              - /url: /dashboard/business
+            - link "Billing" [ref=f5e102] [cursor=pointer]:
+              - /url: /dashboard/billing
+            - link "Team" [ref=f5e105] [cursor=pointer]:
+              - /url: /dashboard/submasters
+            - link "Setup" [ref=f5e111] [cursor=pointer]:
+              - /url: /dashboard/setup
+            - link "Video guide" [ref=f5e115] [cursor=pointer]:
+              - /url: /dashboard/videos
+          - generic [ref=f5e119]:
+            - generic [ref=f5e120]: Help
+            - link "AiPraktor Agent" [ref=f5e121] [cursor=pointer]:
+              - /url: /dashboard/help
+            - link "Feedback" [ref=f5e125] [cursor=pointer]:
+              - /url: /dashboard/feedback
+        - generic [ref=f5e128]:
+          - generic "Auto-revert sweeper is running" [ref=f5e130]: SYSTEM ONLINE
+          - generic [ref=f5e135]:
+            - generic [ref=f5e136]: Signed in · Business owner
+            - generic [ref=f5e137]: navinmdnawshin@gmail.com
+          - switch "On duty" [checked] [ref=f5e194] [cursor=pointer]
+          - link "This device" [ref=f5e138] [cursor=pointer]:
+            - /url: /dashboard/device
+          - button "Sign out" [ref=f5e141] [cursor=pointer]
+      - main [ref=f5e145]:
+        - generic [ref=f5e146]:
+          - generic [ref=f5e147]:
+            - generic [ref=f5e148]: LIVE
+            - generic [ref=f5e151]: AI ⟷ HUMAN
+          - generic [ref=f5e152]:
+            - button "Watch how · 1 min — Put your AI on your own website" [ref=f5e197] [cursor=pointer]:
+              - generic [ref=f5e201]: Watch how · 1 min
+            - radiogroup "Colour theme" [ref=f5e153]:
+              - radio "Light" [checked] [ref=f5e154]
+              - radio "Dark" [ref=f5e162] [cursor=pointer]
+            - generic "Auto-revert sweeper is running" [ref=f5e167]: SYSTEM ONLINE
+            - generic [ref=f5e172]: 11:39:07
+        - generic [ref=f5e204]:
+          - button "The AiPraktor Agent is now on for everyone. See what it can do in a 9-minute video" [ref=f5e207] [cursor=pointer]
+          - button "Read" [ref=f5e208] [cursor=pointer]
+          - button "Hide this line" [ref=f5e209] [cursor=pointer]
+        - generic [ref=f5e175]:
+          - generic [ref=f5e177]:
+            - generic [ref=f5e178]: your website
+            - heading "Website chat" [level=1] [ref=f5e179]
+            - paragraph [ref=f5e180]: Live chat and voice call on your own website, answered by the same assistant that answers your page.
+          - note [ref=f5e213]:
+            - generic [ref=f5e217]:
+              - generic [ref=f5e218]: Go live first
+              - generic [ref=f5e219]: Your business is still in practice. Until you go live, your assistant does not answer website visitors — their messages go to your team. You can set this up now, but go live before you put it on your website.
+              - link "Open the setup guide →" [ref=f5e220] [cursor=pointer]:
+                - /url: /dashboard#setup-guide
+          - generic "Website chat" [ref=f5e222]:
+            - generic [ref=f5e223]: Website chat — put your assistant on your own website
+            - paragraph [ref=f5e227]: A support button on your website with Live chat and a Voice call, answered by the same assistant as this page, plus your WhatsApp, Messenger and phone. Set it up here, then paste one line into your website.
+            - button "Set up website chat" [ref=f5e228] [cursor=pointer]
+      - button "AiPraktor Agent" [ref=f5e229] [cursor=pointer]
+    - note [ref=f5e234]:
+      - paragraph [ref=f5e235]: First time here? A 1 min video shows how this works.
+      - generic [ref=f5e236]:
+        - button "Watch" [ref=f5e237] [cursor=pointer]
+        - button "Don't need it" [ref=f5e241] [cursor=pointer]
+  - alert [ref=f5e184]

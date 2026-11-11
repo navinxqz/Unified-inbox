@@ -1,0 +1,165 @@
+- generic [ref=f9e1]:
+  - generic [ref=f9e2]:
+    - generic [ref=f9e3]:
+      - complementary [ref=f9e4]:
+        - generic [ref=f9e11]:
+          - generic [ref=f9e12]: AiPraktor
+          - generic [ref=f9e13]: control plane
+        - navigation [ref=f9e14]:
+          - link "Setup guide 0/8" [ref=f9e214] [cursor=pointer]:
+            - /url: /dashboard#setup-guide
+            - text: Setup guide
+            - generic [ref=f9e218]: 0/8
+          - generic [ref=f9e15]:
+            - generic [ref=f9e16]: Work
+            - link "Overview" [ref=f9e17] [cursor=pointer]:
+              - /url: /dashboard
+            - link "Inbox" [ref=f9e23] [cursor=pointer]:
+              - /url: /dashboard/inbox
+            - link "Notifications" [ref=f9e27] [cursor=pointer]:
+              - /url: /dashboard/notifications
+            - link "Comments" [ref=f9e36] [cursor=pointer]:
+              - /url: /dashboard/comments
+            - link "Saved replies ⚡ Auto" [ref=f9e40] [cursor=pointer]:
+              - /url: /dashboard/saved-replies
+              - text: Saved replies
+              - generic "Saved replies can answer customers automatically, free" [ref=f9e43]:
+                - text: ⚡
+                - generic [ref=f9e44]: Auto
+            - link "Orders" [ref=f9e45] [cursor=pointer]:
+              - /url: /dashboard/orders
+            - link "Activity" [ref=f9e49] [cursor=pointer]:
+              - /url: /dashboard/activity
+            - link "Analytics" [ref=f9e52] [cursor=pointer]:
+              - /url: /dashboard/analytics
+            - link "Announcements" [ref=f9e56] [cursor=pointer]:
+              - /url: /dashboard/announcements
+          - generic [ref=f9e60]:
+            - generic [ref=f9e61]: Grow
+            - link "Follow-ups" [ref=f9e62] [cursor=pointer]:
+              - /url: /dashboard/followups
+            - link "Broadcasts" [ref=f9e68] [cursor=pointer]:
+              - /url: /dashboard/broadcasts
+            - link "Products" [ref=f9e72] [cursor=pointer]:
+              - /url: /dashboard/products
+            - link "Posts" [ref=f9e77] [cursor=pointer]:
+              - /url: /dashboard/posts
+            - link "Knowledge" [ref=f9e219] [cursor=pointer]:
+              - /url: /dashboard/knowledge
+            - link "Website chat" [ref=f9e83] [cursor=pointer]:
+              - /url: /dashboard/website
+            - link "Agent Desk" [ref=f9e87] [cursor=pointer]:
+              - /url: /dashboard/agent-desk
+          - generic [ref=f9e89]:
+            - generic [ref=f9e90]: Set up
+            - link "Pages" [ref=f9e91] [cursor=pointer]:
+              - /url: /dashboard/pages
+            - link "Business settings" [ref=f9e97] [cursor=pointer]:
+              - /url: /dashboard/business
+            - link "Billing" [ref=f9e102] [cursor=pointer]:
+              - /url: /dashboard/billing
+            - link "Team" [ref=f9e105] [cursor=pointer]:
+              - /url: /dashboard/submasters
+            - link "Setup" [ref=f9e111] [cursor=pointer]:
+              - /url: /dashboard/setup
+            - link "Video guide" [ref=f9e115] [cursor=pointer]:
+              - /url: /dashboard/videos
+          - generic [ref=f9e119]:
+            - generic [ref=f9e120]: Help
+            - link "AiPraktor Agent" [ref=f9e121] [cursor=pointer]:
+              - /url: /dashboard/help
+            - link "Feedback" [ref=f9e125] [cursor=pointer]:
+              - /url: /dashboard/feedback
+        - generic [ref=f9e128]:
+          - generic "Auto-revert sweeper is running" [ref=f9e130]: SYSTEM ONLINE
+          - generic [ref=f9e135]:
+            - generic [ref=f9e136]: Signed in · Business owner
+            - generic [ref=f9e137]: navinmdnawshin@gmail.com
+          - switch "On duty" [checked] [ref=f9e223] [cursor=pointer]
+          - link "This device" [ref=f9e138] [cursor=pointer]:
+            - /url: /dashboard/device
+          - button "Sign out" [ref=f9e141] [cursor=pointer]
+      - main [ref=f9e145]:
+        - generic [ref=f9e146]:
+          - generic [ref=f9e147]:
+            - generic [ref=f9e148]: LIVE
+            - generic [ref=f9e151]: AI ⟷ HUMAN
+          - generic [ref=f9e152]:
+            - button "Watch how · 2 videos" [ref=f9e226] [cursor=pointer]
+            - radiogroup "Colour theme" [ref=f9e153]:
+              - radio "Light" [checked] [ref=f9e154]
+              - radio "Dark" [ref=f9e162] [cursor=pointer]
+            - generic "Auto-revert sweeper is running" [ref=f9e167]: SYSTEM ONLINE
+            - generic [ref=f9e172]: 11:40:57
+        - generic [ref=f9e233]:
+          - button "The AiPraktor Agent is now on for everyone. See what it can do in a 9-minute video" [ref=f9e236] [cursor=pointer]
+          - button "Read" [ref=f9e237] [cursor=pointer]
+          - button "Hide this line" [ref=f9e238] [cursor=pointer]
+        - generic [ref=f9e242]:
+          - generic [ref=f9e243]:
+            - generic [ref=f9e244]:
+              - generic [ref=f9e245]: analytics
+              - heading "Analytics" [level=1] [ref=f9e246]
+              - paragraph [ref=f9e247]: Messages handled, how much the AI finishes alone, and how fast the first reply comes — plus handoff volume and reversions.
+            - generic [ref=f9e248]:
+              - button "7d" [ref=f9e249] [cursor=pointer]
+              - button "30d" [pressed] [ref=f9e251] [cursor=pointer]
+              - button "90d" [ref=f9e449] [cursor=pointer]
+          - tablist "Analytics views" [ref=f9e252]:
+            - tab "Overview" [ref=f9e253] [cursor=pointer]
+            - tab "People" [active] [selected] [ref=f9e254] [cursor=pointer]
+          - generic [ref=f9e450]:
+            - text: People
+            - generic [ref=f9e457]: · workload, speed, results and dropped work · last 30 days
+          - generic [ref=f9e458]:
+            - table [ref=f9e460]:
+              - rowgroup [ref=f9e461]:
+                - row [ref=f9e462]:
+                  - columnheader [ref=f9e463]:
+                    - button "Person" [ref=f9e464] [cursor=pointer]
+                  - columnheader [ref=f9e465]:
+                    - button "Chats" [ref=f9e466] [cursor=pointer]
+                  - columnheader [ref=f9e469]:
+                    - button "Taken over" [ref=f9e470] [cursor=pointer]
+                  - columnheader [ref=f9e471]:
+                    - button "Given" [ref=f9e472] [cursor=pointer]
+                  - columnheader [ref=f9e473]:
+                    - button "Answered" [ref=f9e474] [cursor=pointer]
+                  - columnheader [ref=f9e475]:
+                    - button "Replies" [ref=f9e476] [cursor=pointer]
+                  - columnheader [ref=f9e477]:
+                    - button "Typical reply" [ref=f9e478] [cursor=pointer]
+                  - columnheader [ref=f9e479]:
+                    - button "In time" [ref=f9e480] [cursor=pointer]
+                  - columnheader [ref=f9e481]:
+                    - button "Leads won" [ref=f9e482] [cursor=pointer]
+                  - columnheader [ref=f9e483]:
+                    - button "Leads lost" [ref=f9e484] [cursor=pointer]
+                  - columnheader [ref=f9e485]:
+                    - button "Dropped" [ref=f9e486] [cursor=pointer]
+                  - columnheader [ref=f9e487]:
+                    - button "Not opened" [ref=f9e488] [cursor=pointer]
+              - rowgroup [ref=f9e489]:
+                - row [ref=f9e490]:
+                  - cell "Md. Nawshin Navin navinmdnawshin@gmail.com" [ref=f9e491]:
+                    - generic [ref=f9e492]: Md. Nawshin Navin
+                    - generic [ref=f9e493]: navinmdnawshin@gmail.com
+                  - cell "0" [ref=f9e494]
+                  - cell "0" [ref=f9e495]
+                  - cell "0" [ref=f9e496]
+                  - cell "0" [ref=f9e497]
+                  - cell "0" [ref=f9e498]
+                  - cell "too few to judge" [ref=f9e499]
+                  - cell "too few to judge" [ref=f9e500]
+                  - cell "0" [ref=f9e501]
+                  - cell "0" [ref=f9e502]
+                  - cell "0" [ref=f9e503]
+                  - cell "0" [ref=f9e504]
+            - generic [ref=f9e505]: ▲ ▼ compare with the 30 days before. Under 10 chats a person's speed is not shown — too few to judge. Replies are counted since a reply sent from the Inbox began to carry its sender (October 2026); older replies name nobody.
+      - button "AiPraktor Agent" [ref=f9e436] [cursor=pointer]
+    - note [ref=f9e441]:
+      - paragraph [ref=f9e442]: First time here? Short videos show how this works.
+      - generic [ref=f9e443]:
+        - button "Watch" [ref=f9e444] [cursor=pointer]
+        - button "Don't need it" [ref=f9e448] [cursor=pointer]
+  - alert [ref=f9e213]

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import {
   Bell,
+  Bot,
   Check,
   Globe,
   Save,
@@ -236,7 +237,94 @@ export function SettingsDashboard({
           </div>
         </div>
 
-        {/* Section 3: Custom Tags & Taxonomy */}
+        {/* Section 3: AI & handoff automation */}
+        <div className="space-y-4">
+          <h3 className="flex items-center gap-2 text-sm font-bold text-foreground">
+            <Bot className="size-4 text-primary" />
+            AI &amp; Handoff Automation
+          </h3>
+
+          <div className="space-y-4 rounded-lg border border-border p-4 bg-surface/20 text-xs">
+            <div>
+              <label className="block text-[11px] font-semibold text-muted-foreground mb-1">
+                Auto-revert window (unanswered human chats)
+              </label>
+              <select
+                value={formData.autoRevertWindowMin}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    autoRevertWindowMin: Number(e.target.value),
+                  })
+                }
+                className="w-full rounded border border-border bg-background p-2 outline-none focus:border-primary text-xs"
+              >
+                {[30, 60, 120, 240, 480, 1440].map((minutes) => (
+                  <option key={minutes} value={minutes}>
+                    {minutes < 60
+                      ? `${minutes} minutes`
+                      : `${minutes / 60} hour${minutes === 60 ? "" : "s"}`}
+                  </option>
+                ))}
+              </select>
+              <p className="mt-1 text-[11px] text-muted-foreground">
+                When a human claims a chat and nobody answers, the AI takes it back
+                after this window.
+              </p>
+            </div>
+
+            <div>
+              <label className="block text-[11px] font-semibold text-muted-foreground mb-1">
+                SLA target for a waiting customer
+              </label>
+              <select
+                value={formData.slaTargetMin}
+                onChange={(e) =>
+                  setFormData({ ...formData, slaTargetMin: Number(e.target.value) })
+                }
+                className="w-full rounded border border-border bg-background p-2 outline-none focus:border-primary text-xs"
+              >
+                {[5, 10, 15, 20, 30, 45, 60].map((minutes) => (
+                  <option key={minutes} value={minutes}>
+                    {minutes} minutes
+                  </option>
+                ))}
+              </select>
+              <p className="mt-1 text-[11px] text-muted-foreground">
+                Waiting conversations past this target are flagged in the inbox and
+                counted in Analytics.
+              </p>
+            </div>
+
+            <div>
+              <label className="block text-[11px] font-semibold text-muted-foreground mb-1">
+                Wait before the AI answers
+              </label>
+              <select
+                value={formData.waitBeforeAnswerSec}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    waitBeforeAnswerSec: Number(e.target.value),
+                  })
+                }
+                className="w-full rounded border border-border bg-background p-2 outline-none focus:border-primary text-xs"
+              >
+                {[0, 1, 2, 3, 5, 8, 10, 15].map((seconds) => (
+                  <option key={seconds} value={seconds}>
+                    {seconds === 0 ? "Answer immediately" : `${seconds} seconds`}
+                  </option>
+                ))}
+              </select>
+              <p className="mt-1 text-[11px] text-muted-foreground">
+                A short delay batches multi-part messages so the AI answers once
+                instead of three times.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Section 4: Custom Tags & Taxonomy */}
         <div className="space-y-4">
           <h3 className="flex items-center gap-2 text-sm font-bold text-foreground">
             <Tag className="size-4 text-primary" />
@@ -293,7 +381,7 @@ export function SettingsDashboard({
           </div>
         </div>
 
-        {/* Section 4: Notification Preferences */}
+        {/* Section 5: Notification Preferences */}
         <div className="space-y-4">
           <h3 className="flex items-center gap-2 text-sm font-bold text-foreground">
             <Bell className="size-4 text-primary" />

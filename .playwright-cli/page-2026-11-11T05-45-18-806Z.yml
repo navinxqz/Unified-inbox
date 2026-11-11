@@ -1,0 +1,110 @@
+- generic [active] [ref=f24e1]:
+  - generic [ref=f24e3]:
+    - complementary [ref=f24e4]:
+      - generic [ref=f24e11]:
+        - generic [ref=f24e12]: AiPraktor
+        - generic [ref=f24e13]: control plane
+      - navigation [ref=f24e14]:
+        - generic [ref=f24e15]:
+          - generic [ref=f24e16]: Work
+          - link "Overview" [ref=f24e17] [cursor=pointer]:
+            - /url: /dashboard
+          - link "Inbox" [ref=f24e23] [cursor=pointer]:
+            - /url: /dashboard/inbox
+          - link "Notifications" [ref=f24e27] [cursor=pointer]:
+            - /url: /dashboard/notifications
+          - link "Leads" [ref=f24e31] [cursor=pointer]:
+            - /url: /dashboard/leads
+          - link "Comments" [ref=f24e36] [cursor=pointer]:
+            - /url: /dashboard/comments
+          - link "Saved replies ⚡ Auto" [ref=f24e40] [cursor=pointer]:
+            - /url: /dashboard/saved-replies
+            - text: Saved replies
+            - generic "Saved replies can answer customers automatically, free" [ref=f24e43]:
+              - text: ⚡
+              - generic [ref=f24e44]: Auto
+          - link "Orders" [ref=f24e45] [cursor=pointer]:
+            - /url: /dashboard/orders
+          - link "Activity" [ref=f24e49] [cursor=pointer]:
+            - /url: /dashboard/activity
+          - link "Analytics" [ref=f24e52] [cursor=pointer]:
+            - /url: /dashboard/analytics
+          - link "Announcements" [ref=f24e55] [cursor=pointer]:
+            - /url: /dashboard/announcements
+        - generic [ref=f24e59]:
+          - generic [ref=f24e60]: Grow
+          - link "Follow-ups" [ref=f24e61] [cursor=pointer]:
+            - /url: /dashboard/followups
+          - link "Broadcasts" [ref=f24e67] [cursor=pointer]:
+            - /url: /dashboard/broadcasts
+          - link "Products" [ref=f24e71] [cursor=pointer]:
+            - /url: /dashboard/products
+          - link "Posts" [ref=f24e76] [cursor=pointer]:
+            - /url: /dashboard/posts
+          - link "Website chat" [ref=f24e82] [cursor=pointer]:
+            - /url: /dashboard/website
+          - link "Agent Desk" [ref=f24e86] [cursor=pointer]:
+            - /url: /dashboard/agent-desk
+        - generic [ref=f24e88]:
+          - generic [ref=f24e89]: Set up
+          - link "Pages" [ref=f24e90] [cursor=pointer]:
+            - /url: /dashboard/pages
+          - link "Business settings" [ref=f24e96] [cursor=pointer]:
+            - /url: /dashboard/business
+          - link "Billing" [ref=f24e101] [cursor=pointer]:
+            - /url: /dashboard/billing
+          - link "Team" [ref=f24e104] [cursor=pointer]:
+            - /url: /dashboard/submasters
+          - link "Setup" [ref=f24e110] [cursor=pointer]:
+            - /url: /dashboard/setup
+          - link "Video guide" [ref=f24e114] [cursor=pointer]:
+            - /url: /dashboard/videos
+        - generic [ref=f24e118]:
+          - generic [ref=f24e119]: Help
+          - link "AiPraktor Agent" [ref=f24e120] [cursor=pointer]:
+            - /url: /dashboard/help
+          - link "Feedback" [ref=f24e124] [cursor=pointer]:
+            - /url: /dashboard/feedback
+      - generic [ref=f24e127]:
+        - generic "Auto-revert sweeper is running" [ref=f24e129]: SYSTEM ONLINE
+        - generic [ref=f24e134]:
+          - generic [ref=f24e135]: Signed in · Business owner
+          - generic [ref=f24e136]: navinmdnawshin@gmail.com
+        - link "This device" [ref=f24e137] [cursor=pointer]:
+          - /url: /dashboard/device
+        - button "Sign out" [ref=f24e140] [cursor=pointer]
+    - main [ref=f24e144]:
+      - generic [ref=f24e145]:
+        - generic [ref=f24e146]:
+          - generic [ref=f24e147]: LIVE
+          - generic [ref=f24e150]: AI ⟷ HUMAN
+        - generic [ref=f24e151]:
+          - radiogroup "Colour theme" [ref=f24e152]:
+            - radio "Light" [ref=f24e153] [cursor=pointer]
+            - radio "Dark" [checked] [ref=f24e161]
+          - generic "Auto-revert sweeper is running" [ref=f24e166]: SYSTEM ONLINE
+          - generic [ref=f24e171]: 11:45:18
+      - generic [ref=f24e174]:
+        - generic [ref=f24e176]:
+          - generic [ref=f24e177]: this device
+          - heading "This device" [level=1] [ref=f24e178]
+          - paragraph [ref=f24e179]: What this phone or computer does when a customer needs you. Change anything here, whatever you answered before — nothing on this page ever pops up by itself.
+        - region [ref=f24e180]:
+          - generic [ref=f24e181]:
+            - heading "Notifications" [level=2] [ref=f24e187]
+            - generic [ref=f24e188]: "off"
+          - paragraph [ref=f24e189]: This device gets no notifications. Turn them on to hear the moment a chat needs a person.
+          - button "Turn on" [ref=f24e191] [cursor=pointer]
+        - region [ref=f24e195]:
+          - generic [ref=f24e196]:
+            - heading "Sound on the Inbox" [level=2] [ref=f24e201]
+            - generic [ref=f24e202]: "off"
+          - paragraph [ref=f24e203]: A short ping (and a buzz on a phone) when a new chat starts waiting, while the Inbox is open on this device.
+          - button "Turn the sound on" [ref=f24e205] [cursor=pointer]
+        - region [ref=f24e206]:
+          - generic [ref=f24e207]:
+            - heading "The app" [level=2] [ref=f24e210]
+            - generic [ref=f24e211]: in the browser
+          - paragraph [ref=f24e212]: Open your browser's menu and choose Install app (or Add to Home screen).
+        - paragraph [ref=f24e213]: These settings are remembered on this device only — your other phone or computer keeps its own.
+  - alert [ref=f24e214]

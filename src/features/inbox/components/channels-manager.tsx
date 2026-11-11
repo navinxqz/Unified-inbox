@@ -2,17 +2,20 @@
 
 import { useState } from "react";
 import {
+  AlertTriangle,
   CheckCircle2,
   Copy,
   GripVertical,
   Key,
   Layers,
   Play,
+  Plug,
   Plus,
   Trash2,
   Webhook,
 } from "lucide-react";
 
+import { ChannelConnectDialog } from "@/features/inbox/components/channel-connect-dialog";
 import { ChannelIcon } from "@/features/inbox/components/channel-icon";
 import type {
   ApiKeyItem,
@@ -29,6 +32,7 @@ type ChannelsManagerProps = {
   onUpdateChannels: (channels: ChannelConnection[]) => void;
   onUpdateApiKeys: (keys: ApiKeyItem[]) => void;
   onSimulateWebhook: (channel: ChannelId) => void;
+  onLogActivity?: (action: string, subject: string) => void;
 };
 
 export function ChannelsManager({
@@ -38,11 +42,13 @@ export function ChannelsManager({
   onUpdateChannels,
   onUpdateApiKeys,
   onSimulateWebhook,
+  onLogActivity,
 }: ChannelsManagerProps) {
   const [activeTab, setActiveTab] = useState<"channels" | "webhooks" | "apikeys">("channels");
   const [newKeyName, setNewKeyName] = useState("");
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [draggedId, setDraggedId] = useState<ChannelId | null>(null);
+  const [connectOpen, setConnectOpen] = useState(false);
 
   function handleCopy(text: string, id: string) {
     if (typeof navigator !== "undefined" && navigator.clipboard) {
@@ -153,8 +159,18 @@ export function ChannelsManager({
       {/* Tab 1: Channels Manager */}
       {activeTab === "channels" && (
         <div className="space-y-4">
-          <div className="rounded-lg border border-border bg-surface-alt/40 p-3 text-xs text-muted-foreground">
-            <b>Channel Priority:</b> Drag channels using the vertical grip handle to prioritize which incoming channels get first-response routing in your inbox.
+          <div className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-border bg-surface-alt/40 p-3 text-xs text-muted-foreground">
+            <span>
+              <b>Channel Priority:</b> Drag channels using the vertical grip handle to prioritize which incoming channels get first-response routing in your inbox.
+            </span>
+            <button
+              type="button"
+              onClick={() => setConnectOpen(true)}
+              className="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-lg bg-primary px-2.5 text-[11px] font-semibold text-white hover:bg-primary/90"
+            >
+              <Plug className="size-3.5" />
+              Connect a channel
+            </button>
           </div>
 
           <div className="divide-y divide-border border border-border rounded-lg bg-surface/30">
@@ -197,6 +213,17 @@ export function ChannelsManager({
                           Paused
                         </span>
                       )}
+                      {channel.health === "degraded" ? (
+                        <span className="inline-flex items-center gap-1 rounded bg-warning-soft px-1.5 py-0.5 text-[10px] font-semibold text-warning">
+                          <AlertTriangle className="size-3" />
+                          Degraded
+                        </span>
+                      ) : null}
+                      {channel.provider ? (
+                        <span className="rounded bg-sky-50 px-1.5 py-0.5 text-[10px] font-semibold text-sky-700">
+                          {channel.provider}
+                        </span>
+                      ) : null}
                     </div>
                     <p className="text-xs text-muted-foreground mt-0.5">
                       Account: <span className="font-mono text-ink-soft">{channel.accountHandle}</span> · Synced {channel.lastSyncedAt}
@@ -348,6 +375,33 @@ export function ChannelsManager({
           </div>
         </div>
       )}
+
+      {connectOpen ? (
+        <ChannelConnectDialog
+          channels={channels}
+          onClose={() => setConnectOpen(false)}
+          onConnect={(channel, accountHandle) => {
+            onUpdateChannels(
+              channels.map((item) =>
+                item.id === channel.id
+                  ? {
+                      ...item,
+                      count: item.count + 1,
+                      status: "connected",
+                      enabled: true,
+                      lastSyncedAt: "Just now",
+                      accountHandle,
+                    }
+                  : item,
+              ),
+            );
+            onLogActivity?.(
+              `connected another ${channel.label} account (${accountHandle})`,
+              "Channels",
+            );
+          }}
+        />
+      ) : null}
     </div>
   );
 }

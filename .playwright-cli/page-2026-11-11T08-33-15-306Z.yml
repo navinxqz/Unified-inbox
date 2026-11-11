@@ -1,0 +1,126 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Primary navigation" [ref=e4]:
+      - generic [ref=e10]:
+        - paragraph [ref=e11]: Unified Inbox
+        - paragraph [ref=e12]: ws_1794374612651_f3d05g
+      - generic [ref=e13]:
+        - generic [ref=e14]: Practice mode
+        - generic "Realtime connection is active (SSE)" [ref=e15]: Live · synced 1s
+      - navigation [ref=e19]:
+        - generic [ref=e20]:
+          - paragraph [ref=e21]: Work
+          - generic [ref=e22]:
+            - button "Overview" [ref=e23]
+            - button "Inbox 9" [ref=e30]:
+              - generic [ref=e34]: Inbox
+              - generic [ref=e35]: "9"
+            - button "Saved replies" [ref=e36]
+            - button "Comments" [ref=e40]
+            - button "Notifications 5" [ref=e44]:
+              - generic [ref=e48]: Notifications
+              - generic [ref=e49]: "5"
+            - button "Activity" [ref=e50]
+            - button "Analytics" [ref=e56]
+        - generic [ref=e60]:
+          - paragraph [ref=e61]: Grow
+          - generic [ref=e62]:
+            - button "Leads" [ref=e63]
+            - button "Orders" [ref=e69]
+            - button "Follow-ups" [ref=e74]
+            - button "Broadcasts" [ref=e81]
+            - button "Products" [ref=e86]
+            - button "Posts" [ref=e92]
+        - generic [ref=e98]:
+          - paragraph [ref=e99]: AI
+          - generic [ref=e100]:
+            - button "Agent Desk" [ref=e101]
+            - button "Knowledge" [ref=e106]
+        - generic [ref=e110]:
+          - paragraph [ref=e111]: Set up
+          - generic [ref=e112]:
+            - button "Setup guide 3/8" [ref=e113]:
+              - generic [ref=e117]: Setup guide
+              - generic [ref=e118]: 3/8
+            - button "Channels" [ref=e119]
+            - button "Website chat" [ref=e125]
+            - button "Business" [ref=e130]
+            - button "Team" [ref=e135]
+            - button "Groups" [ref=e142]
+            - button "Billing" [ref=e147]
+            - button "Workspace settings" [ref=e151]
+      - generic [ref=e156]:
+        - button "Quick actions ⌘K" [ref=e157]:
+          - text: Quick actions
+          - generic [ref=e158]: ⌘K
+        - generic [ref=e159]:
+          - generic [aria-hidden] [ref=e160]: YN
+          - generic [ref=e161]:
+            - paragraph [ref=e162]: You
+            - paragraph [ref=e163]: Owner · Manager group
+    - generic [ref=e7681]:
+      - generic [ref=e7682]:
+        - generic [ref=e7683]:
+          - heading "Business" [level=1] [ref=e7684]
+          - paragraph [ref=e7685]: Set these facts once — the AI, every channel, and the website widget all read from here.
+        - generic [ref=e7686]:
+          - button "Save changes" [ref=e7687]
+          - button "Watch how · 1 min" [ref=e7692]
+      - generic [ref=e7698]:
+        - generic [ref=e7699]:
+          - text: Set once, applies everywhere.
+          - generic [ref=e7704]: Agent Desk
+          - generic [ref=e7708]: Website chat
+          - generic [ref=e7712]: Broadcasts
+        - generic [ref=e7716]:
+          - generic [ref=e7717]:
+            - heading "Identity" [level=2] [ref=e7720]
+            - generic [ref=e7722]:
+              - generic [ref=e7723]:
+                - text: Business name
+                - textbox "Business name" [ref=e7724]: Unified Inbox
+              - generic [ref=e7725]:
+                - text: Category
+                - textbox "Category" [ref=e7726]: Retail · outdoor apparel & accessories
+              - generic [ref=e7727]:
+                - text: Address
+                - textbox "Address" [ref=e7728]: House 42, Road 11, Banani, Dhaka 1213
+              - generic [ref=e7729]:
+                - text: Opening hours
+                - textbox "Opening hours" [ref=e7730]: Sat–Thu · 10:00–19:00 (closed Friday)
+          - generic [ref=e7731]:
+            - generic [ref=e7733]:
+              - heading "Policies the AI quotes" [level=2] [ref=e7734]
+              - paragraph [ref=e7735]: Keep these literal — replies copy them.
+            - generic [ref=e7737]:
+              - generic [ref=e7738]:
+                - text: Delivery policy
+                - textbox "Delivery policy" [ref=e7739]: "Inside Dhaka 1–2 days (৳60). Outside Dhaka 3–5 days (৳120). Free over ৳2,500. Couriers: Pathao (Dhaka) and DHL Express (nationwide)."
+              - generic [ref=e7740]:
+                - text: Return & refund policy
+                - textbox "Return & refund policy" [ref=e7741]: 7-day exchange for unused items with tags. Refunds return to the original payment method within 5 business days.
+              - generic [ref=e7742]:
+                - paragraph [ref=e7743]: Payment methods accepted
+                - generic [ref=e7744]:
+                  - button "Cash on delivery" [pressed] [ref=e7745]
+                  - button "bKash" [pressed] [ref=e7748]
+                  - button "Nagad" [pressed] [ref=e7751]
+                  - button "Card" [pressed] [ref=e7754]
+                  - button "Rocket" [ref=e7757]
+                  - button "Bank transfer" [ref=e7758]
+        - generic [ref=e7759]:
+          - generic [ref=e7761]:
+            - heading "What the AI will say" [level=2] [ref=e7762]
+            - paragraph [ref=e7763]: A live render of your current facts.
+          - generic [ref=e7765]:
+            - paragraph [ref=e7766]: Unified Inbox · Retail · outdoor apparel & accessories
+            - paragraph [ref=e7767]: House 42, Road 11, Banani, Dhaka 1213
+            - paragraph [ref=e7768]: Sat–Thu · 10:00–19:00 (closed Friday)
+            - paragraph [ref=e7769]: "Inside Dhaka 1–2 days (৳60). Outside Dhaka 3–5 days (৳120). Free over ৳2,500. Couriers: Pathao (Dhaka) and DHL Express (nationwide)."
+            - paragraph [ref=e7770]: 7-day exchange for unused items with tags. Refunds return to the original payment method within 5 business days.
+            - generic [ref=e7771]:
+              - generic [ref=e7772]: Cash on delivery
+              - generic [ref=e7773]: bKash
+              - generic [ref=e7774]: Nagad
+              - generic [ref=e7775]: Card
+  - alert [ref=e969]

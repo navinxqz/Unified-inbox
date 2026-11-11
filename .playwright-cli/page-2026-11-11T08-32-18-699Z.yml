@@ -1,0 +1,142 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Primary navigation" [ref=e4]:
+      - generic [ref=e10]:
+        - paragraph [ref=e11]: Unified Inbox
+        - paragraph [ref=e12]: ws_1794374612651_f3d05g
+      - generic [ref=e13]:
+        - generic [ref=e14]: Practice mode
+        - generic "Realtime connection is active (SSE)" [ref=e15]: Live · synced 5s
+      - navigation [ref=e19]:
+        - generic [ref=e20]:
+          - paragraph [ref=e21]: Work
+          - generic [ref=e22]:
+            - button "Overview" [ref=e23]
+            - button "Inbox 9" [ref=e30]:
+              - generic [ref=e34]: Inbox
+              - generic [ref=e35]: "9"
+            - button "Saved replies" [ref=e36]
+            - button "Comments" [ref=e40]
+            - button "Notifications 5" [ref=e44]:
+              - generic [ref=e48]: Notifications
+              - generic [ref=e49]: "5"
+            - button "Activity" [ref=e50]
+            - button "Analytics" [ref=e56]
+        - generic [ref=e60]:
+          - paragraph [ref=e61]: Grow
+          - generic [ref=e62]:
+            - button "Leads" [ref=e63]
+            - button "Orders" [ref=e69]
+            - button "Follow-ups" [ref=e74]
+            - button "Broadcasts" [ref=e81]
+            - button "Products" [ref=e86]
+            - button "Posts" [ref=e92]
+        - generic [ref=e98]:
+          - paragraph [ref=e99]: AI
+          - generic [ref=e100]:
+            - button "Agent Desk" [ref=e101]
+            - button "Knowledge" [ref=e106]
+        - generic [ref=e110]:
+          - paragraph [ref=e111]: Set up
+          - generic [ref=e112]:
+            - button "Setup guide 3/8" [ref=e113]:
+              - generic [ref=e117]: Setup guide
+              - generic [ref=e118]: 3/8
+            - button "Channels" [ref=e119]
+            - button "Website chat" [ref=e125]
+            - button "Business" [ref=e130]
+            - button "Team" [ref=e135]
+            - button "Groups" [ref=e142]
+            - button "Billing" [ref=e147]
+            - button "Workspace settings" [ref=e151]
+      - generic [ref=e156]:
+        - button "Quick actions ⌘K" [ref=e157]:
+          - text: Quick actions
+          - generic [ref=e158]: ⌘K
+        - generic [ref=e159]:
+          - generic [aria-hidden] [ref=e160]: YN
+          - generic [ref=e161]:
+            - paragraph [ref=e162]: You
+            - paragraph [ref=e163]: Owner · Manager group
+    - generic [ref=e3484]:
+      - generic [ref=e3485]:
+        - generic [ref=e3486]:
+          - heading "Knowledge" [level=1] [ref=e3487]
+          - paragraph [ref=e3488]: The retrieval layer behind the AI — policies, catalog, and FAQs it is allowed to ground answers in.
+        - button "Watch how · 1 min" [ref=e3490]
+      - generic [ref=e3496]:
+        - generic [ref=e3497]:
+          - generic [ref=e3498]:
+            - paragraph [ref=e3500]: Sources
+            - paragraph [ref=e3504]: "4"
+          - generic [ref=e3505]:
+            - paragraph [ref=e3507]: Indexed words
+            - paragraph [ref=e3512]: 1,956
+          - generic [ref=e3513]:
+            - paragraph [ref=e3515]: Indexing
+            - paragraph [ref=e3516]: "1"
+          - generic [ref=e3517]:
+            - paragraph [ref=e3519]: Retrieval
+            - paragraph [ref=e3524]: Hybrid
+        - generic [ref=e3525]:
+          - generic [ref=e3526]:
+            - generic [ref=e3528]:
+              - heading "Sources" [level=2] [ref=e3529]
+              - paragraph [ref=e3530]: Everything the AI may quote.
+            - generic [ref=e3531]:
+              - generic [ref=e3532]:
+                - generic [ref=e3533]:
+                  - text: Add a source
+                  - textbox "Add a source" [ref=e3534]:
+                    - /placeholder: Warranty policy / catalog.csv / help.example.com
+                - generic [ref=e3535]:
+                  - text: Type
+                  - combobox "Type" [ref=e3536]:
+                    - option "Text" [selected]
+                    - option "File"
+                    - option "URL"
+                - button "Add" [disabled] [ref=e3537]
+              - generic [ref=e3539]:
+                - generic [ref=e3540]:
+                  - generic [ref=e3544]:
+                    - paragraph [ref=e3545]: Delivery & returns policy
+                    - paragraph [ref=e3546]: 412 words · 2 days ago
+                  - generic [ref=e3547]: ready
+                  - button "Remove Delivery & returns policy" [ref=e3548]
+                - generic [ref=e3552]:
+                  - generic [ref=e3557]:
+                    - paragraph [ref=e3558]: Product catalog 2026.csv
+                    - paragraph [ref=e3559]: 1,240 words · 1 day ago
+                  - generic [ref=e3560]: ready
+                  - button "Remove Product catalog 2026.csv" [ref=e3561]
+                - generic [ref=e3565]:
+                  - generic [ref=e3569]:
+                    - paragraph [ref=e3570]: Size guide
+                    - paragraph [ref=e3571]: 208 words · 4 days ago
+                  - generic [ref=e3572]: ready
+                  - button "Remove Size guide" [ref=e3573]
+                - generic [ref=e3577]:
+                  - generic [ref=e3582]:
+                    - paragraph [ref=e3583]: FAQ — payments & refunds
+                    - paragraph [ref=e3584]: 96 words · Just now
+                  - generic [ref=e3585]: indexing
+                  - button "Remove FAQ — payments & refunds" [ref=e3586]
+          - generic [ref=e3590]:
+            - generic [ref=e3591]:
+              - heading "Retrieval mode" [level=2] [ref=e3594]
+              - generic [ref=e3595]:
+                - generic [ref=e3596] [cursor=pointer]:
+                  - switch "Hybrid — meaning + words" [checked] [ref=e3597]
+                  - generic [ref=e3599]: Hybrid — meaning + words
+                - paragraph [ref=e3600]: "Retrieval runs on demand: the AI searches this knowledge base for each question, then answers only from what it found."
+            - generic [ref=e3601]:
+              - generic [ref=e3603]:
+                - heading "Test a question" [level=2] [ref=e3604]
+                - paragraph [ref=e3605]: See which source grounds the answer.
+              - generic [ref=e3607]:
+                - generic [ref=e3608]:
+                  - generic [ref=e3612]: Test question
+                  - textbox "Test question" [ref=e3613]:
+                    - /placeholder: How long is delivery outside Dhaka?
+                - button "Run retrieval test" [disabled] [ref=e3614]
+  - alert [ref=e969]

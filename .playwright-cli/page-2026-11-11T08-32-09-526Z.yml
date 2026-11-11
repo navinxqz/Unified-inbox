@@ -1,0 +1,180 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Primary navigation" [ref=e4]:
+      - generic [ref=e10]:
+        - paragraph [ref=e11]: Unified Inbox
+        - paragraph [ref=e12]: ws_1794374612651_f3d05g
+      - generic [ref=e13]:
+        - generic [ref=e14]: Practice mode
+        - generic "Realtime connection is active (SSE)" [ref=e15]: Live · synced 10s
+      - navigation [ref=e19]:
+        - generic [ref=e20]:
+          - paragraph [ref=e21]: Work
+          - generic [ref=e22]:
+            - button "Overview" [ref=e23]
+            - button "Inbox 9" [ref=e30]:
+              - generic [ref=e34]: Inbox
+              - generic [ref=e35]: "9"
+            - button "Saved replies" [ref=e36]
+            - button "Comments" [ref=e40]
+            - button "Notifications 5" [ref=e44]:
+              - generic [ref=e48]: Notifications
+              - generic [ref=e49]: "5"
+            - button "Activity" [ref=e50]
+            - button "Analytics" [ref=e56]
+        - generic [ref=e60]:
+          - paragraph [ref=e61]: Grow
+          - generic [ref=e62]:
+            - button "Leads" [ref=e63]
+            - button "Orders" [ref=e69]
+            - button "Follow-ups" [ref=e74]
+            - button "Broadcasts" [ref=e81]
+            - button "Products" [ref=e86]
+            - button "Posts" [ref=e92]
+        - generic [ref=e98]:
+          - paragraph [ref=e99]: AI
+          - generic [ref=e100]:
+            - button "Agent Desk" [ref=e101]
+            - button "Knowledge" [ref=e106]
+        - generic [ref=e110]:
+          - paragraph [ref=e111]: Set up
+          - generic [ref=e112]:
+            - button "Setup guide 3/8" [ref=e113]:
+              - generic [ref=e117]: Setup guide
+              - generic [ref=e118]: 3/8
+            - button "Channels" [ref=e119]
+            - button "Website chat" [ref=e125]
+            - button "Business" [ref=e130]
+            - button "Team" [ref=e135]
+            - button "Groups" [ref=e142]
+            - button "Billing" [ref=e147]
+            - button "Workspace settings" [ref=e151]
+      - generic [ref=e156]:
+        - button "Quick actions ⌘K" [ref=e157]:
+          - text: Quick actions
+          - generic [ref=e158]: ⌘K
+        - generic [ref=e159]:
+          - generic [aria-hidden] [ref=e160]: YN
+          - generic [ref=e161]:
+            - paragraph [ref=e162]: You
+            - paragraph [ref=e163]: Owner · Manager group
+    - generic [ref=e2705]:
+      - generic [ref=e2706]:
+        - generic [ref=e2707]:
+          - heading "Follow-ups" [level=1] [ref=e2708]
+          - paragraph [ref=e2709]: Automatic nudges for conversations that went quiet, capped so nobody gets spammed.
+        - button "Watch how · 1 min" [ref=e2711]
+      - generic [ref=e2717]:
+        - generic [ref=e2718]:
+          - generic [ref=e2719]:
+            - paragraph [ref=e2721]: Due now
+            - paragraph [ref=e2726]: "3"
+          - generic [ref=e2727]:
+            - paragraph [ref=e2729]: Sent today
+            - paragraph [ref=e2734]: "1"
+          - generic [ref=e2735]:
+            - paragraph [ref=e2737]: Skipped
+            - paragraph [ref=e2741]: "1"
+          - generic [ref=e2742]:
+            - paragraph [ref=e2744]: Ordered after follow-up
+            - paragraph [ref=e2748]: "14"
+            - paragraph [ref=e2749]: conversions attributed
+        - generic [ref=e2750]:
+          - generic [ref=e2751]:
+            - generic [ref=e2753]:
+              - heading "Queue" [level=2] [ref=e2754]
+              - paragraph [ref=e2755]: Only conversations that went quiet land here.
+            - generic [ref=e2757]:
+              - generic [ref=e2758]:
+                - generic [ref=e2759]: Hot
+                - generic [ref=e2760]:
+                  - paragraph [ref=e2761]: Farhan Ahmed
+                  - paragraph [ref=e2762]: Asked about size M, AI answered, no reply since
+                - generic [ref=e2763]: In 2h
+                - generic [ref=e2766]: sent 0×
+                - generic [ref=e2767]:
+                  - button "Send" [ref=e2768]
+                  - button "Skip" [ref=e2772]
+              - generic [ref=e2773]:
+                - generic [ref=e2774]: Hot
+                - generic [ref=e2775]:
+                  - paragraph [ref=e2776]: Rahim Khan
+                  - paragraph [ref=e2777]: Wholesale quote opened, no response
+                - generic [ref=e2778]: In 20h
+                - generic [ref=e2781]: sent 1×
+                - generic [ref=e2782]:
+                  - button "Send" [ref=e2783]
+                  - button "Skip" [ref=e2787]
+              - generic [ref=e2788]:
+                - generic [ref=e2789]: Warm
+                - generic [ref=e2790]:
+                  - paragraph [ref=e2791]: Ayesha Rahman
+                  - paragraph [ref=e2792]: Asked about shipping outside Dhaka
+                - generic [ref=e2793]: Tomorrow
+                - generic [ref=e2796]: sent 0×
+                - generic [ref=e2797]:
+                  - button "Send" [ref=e2798]
+                  - button "Skip" [ref=e2802]
+              - generic [ref=e2803]:
+                - generic [ref=e2804]: Hot
+                - generic [ref=e2805]:
+                  - paragraph [ref=e2806]: Kenji Mori
+                  - paragraph [ref=e2807]: Asked for a human, thread answered
+                - generic [ref=e2808]: Sent 4h ago
+                - generic [ref=e2811]: sent 1×
+                - generic [ref=e2812]: sent
+              - generic [ref=e2813]:
+                - generic [ref=e2814]: Warm
+                - generic [ref=e2815]:
+                  - paragraph [ref=e2816]: Sadia Islam
+                  - paragraph [ref=e2817]: Chose a competitor — reason recorded
+                - generic [ref=e2818]: Skipped
+                - generic [ref=e2821]: sent 0×
+                - generic [ref=e2822]: skipped
+          - generic [ref=e2823]:
+            - generic [ref=e2825]:
+              - heading "Rules" [level=2] [ref=e2826]
+              - paragraph [ref=e2827]: Applies to every channel.
+            - generic [ref=e2829]:
+              - generic [ref=e2830]:
+                - text: Judgment delay (hours)
+                - spinbutton "Judgment delay (hours) How long the AI waits before deciding a chat went cold." [ref=e2831]: "3"
+                - generic [ref=e2832]: How long the AI waits before deciding a chat went cold.
+              - generic [ref=e2833]:
+                - generic [ref=e2834]:
+                  - paragraph [ref=e2835]: Hot leads
+                  - generic [ref=e2836] [cursor=pointer]:
+                    - switch "Hot follow-ups" [checked] [ref=e2837]
+                    - generic [ref=e2839]: Hot follow-ups
+                - generic [ref=e2840]:
+                  - generic [ref=e2841]:
+                    - text: First (h)
+                    - spinbutton "First (h)" [ref=e2842]: "3"
+                  - generic [ref=e2843]:
+                    - text: Gap (h)
+                    - spinbutton "Gap (h)" [ref=e2844]: "20"
+                  - generic [ref=e2845]:
+                    - text: Max
+                    - spinbutton "Max" [ref=e2846]: "2"
+              - generic [ref=e2847]:
+                - generic [ref=e2848]:
+                  - paragraph [ref=e2849]: Warm leads
+                  - generic [ref=e2850] [cursor=pointer]:
+                    - switch "Warm follow-ups" [checked] [ref=e2851]
+                    - generic [ref=e2853]: Warm follow-ups
+                - generic [ref=e2854]:
+                  - generic [ref=e2855]:
+                    - text: Gap (h)
+                    - spinbutton "Gap (h)" [ref=e2856]: "20"
+                  - generic [ref=e2857]:
+                    - text: Max
+                    - spinbutton "Max" [ref=e2858]: "1"
+              - generic [ref=e2859]:
+                - text: Silence reason
+                - combobox "Silence reason Recorded when a follow-up is skipped." [ref=e2860]:
+                  - option "Customer stopped replying" [selected]
+                  - option "Chose a competitor"
+                  - option "Bought elsewhere / not interested"
+                  - option "Wrong number"
+                - generic [ref=e2861]: Recorded when a follow-up is skipped.
+  - alert [ref=e969]

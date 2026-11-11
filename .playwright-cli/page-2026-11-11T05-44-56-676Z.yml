@@ -1,0 +1,94 @@
+- generic [active] [ref=f23e1]:
+  - generic [ref=f23e3]:
+    - complementary [ref=f23e4]:
+      - generic [ref=f23e11]:
+        - generic [ref=f23e12]: AiPraktor
+        - generic [ref=f23e13]: control plane
+      - navigation [ref=f23e14]:
+        - generic [ref=f23e15]:
+          - generic [ref=f23e16]: Work
+          - link "Overview" [ref=f23e17] [cursor=pointer]:
+            - /url: /dashboard
+          - link "Inbox" [ref=f23e23] [cursor=pointer]:
+            - /url: /dashboard/inbox
+          - link "Notifications" [ref=f23e27] [cursor=pointer]:
+            - /url: /dashboard/notifications
+          - link "Leads" [ref=f23e31] [cursor=pointer]:
+            - /url: /dashboard/leads
+          - link "Comments" [ref=f23e36] [cursor=pointer]:
+            - /url: /dashboard/comments
+          - link "Saved replies ⚡ Auto" [ref=f23e40] [cursor=pointer]:
+            - /url: /dashboard/saved-replies
+            - text: Saved replies
+            - generic "Saved replies can answer customers automatically, free" [ref=f23e43]:
+              - text: ⚡
+              - generic [ref=f23e44]: Auto
+          - link "Orders" [ref=f23e45] [cursor=pointer]:
+            - /url: /dashboard/orders
+          - link "Activity" [ref=f23e49] [cursor=pointer]:
+            - /url: /dashboard/activity
+          - link "Analytics" [ref=f23e52] [cursor=pointer]:
+            - /url: /dashboard/analytics
+          - link "Announcements" [ref=f23e55] [cursor=pointer]:
+            - /url: /dashboard/announcements
+        - generic [ref=f23e59]:
+          - generic [ref=f23e60]: Grow
+          - link "Follow-ups" [ref=f23e61] [cursor=pointer]:
+            - /url: /dashboard/followups
+          - link "Broadcasts" [ref=f23e67] [cursor=pointer]:
+            - /url: /dashboard/broadcasts
+          - link "Products" [ref=f23e71] [cursor=pointer]:
+            - /url: /dashboard/products
+          - link "Posts" [ref=f23e76] [cursor=pointer]:
+            - /url: /dashboard/posts
+          - link "Website chat" [ref=f23e82] [cursor=pointer]:
+            - /url: /dashboard/website
+          - link "Agent Desk" [ref=f23e86] [cursor=pointer]:
+            - /url: /dashboard/agent-desk
+        - generic [ref=f23e88]:
+          - generic [ref=f23e89]: Set up
+          - link "Pages" [ref=f23e90] [cursor=pointer]:
+            - /url: /dashboard/pages
+          - link "Business settings" [ref=f23e96] [cursor=pointer]:
+            - /url: /dashboard/business
+          - link "Billing" [ref=f23e101] [cursor=pointer]:
+            - /url: /dashboard/billing
+          - link "Team" [ref=f23e104] [cursor=pointer]:
+            - /url: /dashboard/submasters
+          - link "Setup" [ref=f23e110] [cursor=pointer]:
+            - /url: /dashboard/setup
+          - link "Video guide" [ref=f23e114] [cursor=pointer]:
+            - /url: /dashboard/videos
+        - generic [ref=f23e118]:
+          - generic [ref=f23e119]: Help
+          - link "AiPraktor Agent" [ref=f23e120] [cursor=pointer]:
+            - /url: /dashboard/help
+          - link "Feedback" [ref=f23e124] [cursor=pointer]:
+            - /url: /dashboard/feedback
+      - generic [ref=f23e127]:
+        - generic "Auto-revert sweeper is running" [ref=f23e129]: SYSTEM ONLINE
+        - generic [ref=f23e134]:
+          - generic [ref=f23e135]: Signed in · Business owner
+          - generic [ref=f23e136]: navinmdnawshin@gmail.com
+        - link "This device" [ref=f23e137] [cursor=pointer]:
+          - /url: /dashboard/device
+        - button "Sign out" [ref=f23e140] [cursor=pointer]
+    - main [ref=f23e144]:
+      - generic [ref=f23e145]:
+        - generic [ref=f23e146]:
+          - generic [ref=f23e147]: LIVE
+          - generic [ref=f23e150]: AI ⟷ HUMAN
+        - generic [ref=f23e151]:
+          - radiogroup "Colour theme" [ref=f23e152]:
+            - radio "Light" [ref=f23e153] [cursor=pointer]
+            - radio "Dark" [checked] [ref=f23e161]
+          - generic "Auto-revert sweeper is running" [ref=f23e166]: SYSTEM ONLINE
+          - generic [ref=f23e171]: 11:44:56
+      - generic [ref=f23e174]:
+        - generic [ref=f23e176]:
+          - generic [ref=f23e177]: access control
+          - heading "Groups" [level=1] [ref=f23e178]
+          - paragraph [ref=f23e179]: "A group says what its people can do. Put a person in one or more groups; the most generous one wins. The business's own login is the owner: it can do everything and is in no group."
+        - link "Team" [ref=f23e181] [cursor=pointer]:
+          - /url: /dashboard/submasters
+  - alert [ref=f23e186]

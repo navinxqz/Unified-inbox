@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import {
   ArrowUpDown,
+  Menu,
   PanelRight,
   Search,
   SquarePen,
@@ -10,9 +11,18 @@ import {
 } from "lucide-react";
 
 import { Avatar } from "@/features/inbox/components/avatar";
+import { ModeBadge, SlaBadge } from "@/features/inbox/components/module-ui";
 import { SourceBadge } from "@/features/inbox/components/source-badge";
-import type { Person } from "@/features/inbox/types";
+import type { Person, RailView } from "@/features/inbox/types";
 import { cn } from "@/lib/utils";
+
+const views: Array<{ id: RailView; label: string }> = [
+  { id: "all", label: "All" },
+  { id: "priority", label: "Priority" },
+  { id: "tagify", label: "Tagify" },
+  { id: "ignored", label: "Ignored" },
+  { id: "bots", label: "Bots" },
+];
 
 type ConversationListProps = {
   people: Person[];
@@ -21,6 +31,10 @@ type ConversationListProps = {
   onQueryChange: (value: string) => void;
   onSelect: (id: string) => void;
   onOpenChannels: () => void;
+  onOpenNav?: () => void;
+  view: RailView;
+  onViewChange: (view: RailView) => void;
+  slaTargetMin: number;
   summary: string;
 };
 
@@ -31,10 +45,16 @@ export function ConversationList({
   onQueryChange,
   onSelect,
   onOpenChannels,
+  onOpenNav,
+  view,
+  onViewChange,
+  slaTargetMin,
   summary,
 }: ConversationListProps) {
   const [newestFirst, setNewestFirst] = useState(true);
+  const [waitingFirst, setWaitingFirst] = useState(true);
   const searchRef = useRef<HTMLInputElement>(null);
+
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -54,7 +74,18 @@ export function ConversationList({
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
-  const rows = newestFirst ? people : [...people].reverse();
+  const rows = waitingFirst
+    ? [...people].sort((a, b) => {
+        const waitingA = a.waitingSinceMs ? 1 : 0;
+        const waitingB = b.waitingSinceMs ? 1 : 0;
+        if (waitingA !== waitingB) return waitingB - waitingA;
+        return (a.waitingSinceMs ?? 0) - (b.waitingSinceMs ?? 0);
+      })
+    : newestFirst
+      ? people
+      : [...people].reverse();
+
+  const waitingCount = people.filter((person) => person.waitingSinceMs).length;
 
   return (
     <section
@@ -62,6 +93,17 @@ export function ConversationList({
       className="flex h-full min-h-0 w-full min-w-0 flex-col overflow-hidden border-r border-border bg-background"
     >
       <div className="flex items-center gap-2 px-5 pt-[18px] pb-3">
+        {onOpenNav ? (
+          <button
+            type="button"
+            aria-label="Open navigation"
+            title="Menu"
+            onClick={onOpenNav}
+            className="-ml-1 flex size-9 items-center justify-center rounded-[10px] text-ink-soft transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary lg:hidden"
+          >
+            <Menu className="size-[18px]" strokeWidth={2} />
+          </button>
+        ) : null}
         <h2 className="flex-1 text-lg font-bold">Messages</h2>
         <button
           type="button"
@@ -104,14 +146,42 @@ export function ConversationList({
         </label>
       </div>
 
-      <div className="flex items-center gap-1.5 px-5 pt-3 pb-2 text-[13px] font-semibold text-ink-soft">
+      <div className="scrollbar-thin flex gap-1 overflow-x-auto px-4 pb-2">
+        {views.map((item) => (
+          <button
+            key={item.id}
+            type="button"
+            aria-pressed={view === item.id}
+            onClick={() => onViewChange(item.id)}
+            className={cn(
+              "shrink-0 rounded-full px-2.5 py-1 text-xs font-semibold transition-colors",
+              view === item.id
+                ? "bg-primary-soft text-primary-strong"
+                : "text-muted-foreground hover:bg-surface",
+            )}
+          >
+            {item.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="flex items-center gap-2 px-5 pt-1 pb-2 text-[13px] font-semibold text-ink-soft">
+        <button
+          type="button"
+          onClick={() => setWaitingFirst((value) => !value)}
+          aria-pressed={waitingFirst}
+          title="Show waiting customers first"
+          className="flex items-center gap-1.5 rounded-md transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+        >
+          <ArrowUpDown className="size-4" strokeWidth={2} />
+          {waitingFirst ? `Waiting first · ${waitingCount}` : "Newest first"}
+        </button>
         <button
           type="button"
           onClick={() => setNewestFirst((value) => !value)}
           aria-label={`Sort ${newestFirst ? "newest first" : "oldest first"}`}
-          className="flex items-center gap-1.5 rounded-md transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          className="text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
         >
-          <ArrowUpDown className="size-4" strokeWidth={2} />
           {newestFirst ? "Newest" : "Oldest"}
         </button>
         <span className="ml-auto font-medium text-muted-foreground">
@@ -150,6 +220,7 @@ export function ConversationList({
 
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-2">
+                    <ModeBadge mode={person.mode ?? "ai"} compact />
                     <span className="min-w-0 flex-1 truncate text-sm font-semibold">
                       {person.name}
                     </span>
@@ -161,6 +232,10 @@ export function ConversationList({
                     <span className="min-w-0 flex-1 truncate text-[13px] text-muted-foreground">
                       {person.preview}
                     </span>
+                    <SlaBadge
+                      waitingSinceMs={person.waitingSinceMs}
+                      targetMin={slaTargetMin}
+                    />
                     <Star
                       aria-hidden="true"
                       className={cn(

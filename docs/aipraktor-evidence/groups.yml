@@ -1,0 +1,198 @@
+- generic [active] [ref=f23e1]:
+  - generic [ref=f23e2]:
+    - generic [ref=f23e3]:
+      - complementary [ref=f23e4]:
+        - generic [ref=f23e11]:
+          - generic [ref=f23e12]: AiPraktor
+          - generic [ref=f23e13]: control plane
+        - navigation [ref=f23e14]:
+          - link "Setup guide 0/8" [ref=f23e187] [cursor=pointer]:
+            - /url: /dashboard#setup-guide
+            - text: Setup guide
+            - generic [ref=f23e191]: 0/8
+          - generic [ref=f23e15]:
+            - generic [ref=f23e16]: Work
+            - link "Overview" [ref=f23e17] [cursor=pointer]:
+              - /url: /dashboard
+            - link "Inbox" [ref=f23e23] [cursor=pointer]:
+              - /url: /dashboard/inbox
+            - link "Notifications" [ref=f23e27] [cursor=pointer]:
+              - /url: /dashboard/notifications
+            - link "Comments" [ref=f23e36] [cursor=pointer]:
+              - /url: /dashboard/comments
+            - link "Saved replies ⚡ Auto" [ref=f23e40] [cursor=pointer]:
+              - /url: /dashboard/saved-replies
+              - text: Saved replies
+              - generic "Saved replies can answer customers automatically, free" [ref=f23e43]:
+                - text: ⚡
+                - generic [ref=f23e44]: Auto
+            - link "Orders" [ref=f23e45] [cursor=pointer]:
+              - /url: /dashboard/orders
+            - link "Activity" [ref=f23e49] [cursor=pointer]:
+              - /url: /dashboard/activity
+            - link "Analytics" [ref=f23e52] [cursor=pointer]:
+              - /url: /dashboard/analytics
+            - link "Announcements" [ref=f23e55] [cursor=pointer]:
+              - /url: /dashboard/announcements
+          - generic [ref=f23e59]:
+            - generic [ref=f23e60]: Grow
+            - link "Follow-ups" [ref=f23e61] [cursor=pointer]:
+              - /url: /dashboard/followups
+            - link "Broadcasts" [ref=f23e67] [cursor=pointer]:
+              - /url: /dashboard/broadcasts
+            - link "Products" [ref=f23e71] [cursor=pointer]:
+              - /url: /dashboard/products
+            - link "Posts" [ref=f23e76] [cursor=pointer]:
+              - /url: /dashboard/posts
+            - link "Knowledge" [ref=f23e192] [cursor=pointer]:
+              - /url: /dashboard/knowledge
+            - link "Website chat" [ref=f23e82] [cursor=pointer]:
+              - /url: /dashboard/website
+            - link "Agent Desk" [ref=f23e86] [cursor=pointer]:
+              - /url: /dashboard/agent-desk
+          - generic [ref=f23e88]:
+            - generic [ref=f23e89]: Set up
+            - link "Pages" [ref=f23e90] [cursor=pointer]:
+              - /url: /dashboard/pages
+            - link "Business settings" [ref=f23e96] [cursor=pointer]:
+              - /url: /dashboard/business
+            - link "Billing" [ref=f23e101] [cursor=pointer]:
+              - /url: /dashboard/billing
+            - link "Team" [ref=f23e104] [cursor=pointer]:
+              - /url: /dashboard/submasters
+            - link "Setup" [ref=f23e110] [cursor=pointer]:
+              - /url: /dashboard/setup
+            - link "Video guide" [ref=f23e114] [cursor=pointer]:
+              - /url: /dashboard/videos
+          - generic [ref=f23e118]:
+            - generic [ref=f23e119]: Help
+            - link "AiPraktor Agent" [ref=f23e120] [cursor=pointer]:
+              - /url: /dashboard/help
+            - link "Feedback" [ref=f23e124] [cursor=pointer]:
+              - /url: /dashboard/feedback
+        - generic [ref=f23e127]:
+          - generic "Auto-revert sweeper is running" [ref=f23e129]: SYSTEM ONLINE
+          - generic [ref=f23e134]:
+            - generic [ref=f23e135]: Signed in · Business owner
+            - generic [ref=f23e136]: navinmdnawshin@gmail.com
+          - switch "On duty" [checked] [ref=f23e196] [cursor=pointer]
+          - link "This device" [ref=f23e137] [cursor=pointer]:
+            - /url: /dashboard/device
+          - button "Sign out" [ref=f23e140] [cursor=pointer]
+      - main [ref=f23e144]:
+        - generic [ref=f23e145]:
+          - generic [ref=f23e146]:
+            - generic [ref=f23e147]: LIVE
+            - generic [ref=f23e150]: AI ⟷ HUMAN
+          - generic [ref=f23e151]:
+            - 'button "Watch how · 1 min — Groups: who may do what" [ref=f23e199] [cursor=pointer]':
+              - generic [ref=f23e203]: Watch how · 1 min
+            - radiogroup "Colour theme" [ref=f23e152]:
+              - radio "Light" [ref=f23e153] [cursor=pointer]
+              - radio "Dark" [checked] [ref=f23e161]
+            - generic "Auto-revert sweeper is running" [ref=f23e166]: SYSTEM ONLINE
+            - generic [ref=f23e171]: 11:44:57
+        - generic [ref=f23e206]:
+          - button "The AiPraktor Agent is now on for everyone. See what it can do in a 9-minute video" [ref=f23e209] [cursor=pointer]
+          - button "Read" [ref=f23e210] [cursor=pointer]
+          - button "Hide this line" [ref=f23e211] [cursor=pointer]
+        - generic [ref=f23e174]:
+          - generic [ref=f23e175]:
+            - generic [ref=f23e176]:
+              - generic [ref=f23e177]: access control
+              - heading "Groups" [level=1] [ref=f23e178]
+              - paragraph [ref=f23e179]: "A group says what its people can do. Put a person in one or more groups; the most generous one wins. The business's own login is the owner: it can do everything and is in no group."
+            - button "New group" [ref=f23e215] [cursor=pointer]
+          - link "Team" [ref=f23e181] [cursor=pointer]:
+            - /url: /dashboard/submasters
+          - generic [ref=f23e217]:
+            - generic [ref=f23e218]:
+              - generic [ref=f23e219]:
+                - generic [ref=f23e220]: Manager
+                - generic [ref=f23e221]: ready-made
+              - generic [ref=f23e222]: ম্যানেজার
+              - generic [ref=f23e223]: "Runs the business day to day: everything except Billing."
+              - generic [ref=f23e224]: "Can do: Inbox, Leads, Orders, Products, Bookings, Follow-ups and broadcasts, AI instructions and knowledge, Team, Connections and settings · Can see: Reports"
+              - generic [ref=f23e225]: Nobody yet
+              - generic [ref=f23e231]:
+                - button "Open" [ref=f23e232] [cursor=pointer]
+                - button "Copy" [ref=f23e233] [cursor=pointer]
+            - generic [ref=f23e237]:
+              - generic [ref=f23e238]:
+                - generic [ref=f23e239]: Inbox
+                - generic [ref=f23e240]: ready-made
+              - generic [ref=f23e241]: ইনবক্স
+              - generic [ref=f23e242]: Answers customers' messages and files leads.
+              - generic [ref=f23e243]: "Can do: Inbox, Leads · Can see: Orders, Products, Bookings"
+              - generic [ref=f23e244]: Nobody yet
+              - generic [ref=f23e250]:
+                - button "Open" [ref=f23e251] [cursor=pointer]
+                - button "Copy" [ref=f23e252] [cursor=pointer]
+            - generic [ref=f23e256]:
+              - generic [ref=f23e257]:
+                - generic [ref=f23e258]: Orders and delivery
+                - generic [ref=f23e259]: ready-made
+              - generic [ref=f23e260]: অর্ডার ও ডেলিভারি
+              - generic [ref=f23e261]: Approves orders, books the courier and handles delivery problems.
+              - generic [ref=f23e262]: "Can do: Inbox, Orders · Can see: Products"
+              - generic [ref=f23e263]: Nobody yet
+              - generic [ref=f23e269]:
+                - button "Open" [ref=f23e270] [cursor=pointer]
+                - button "Copy" [ref=f23e271] [cursor=pointer]
+            - generic [ref=f23e275]:
+              - generic [ref=f23e276]:
+                - generic [ref=f23e277]: Products
+                - generic [ref=f23e278]: ready-made
+              - generic [ref=f23e279]: প্রোডাক্ট
+              - generic [ref=f23e280]: Adds and updates products, prices, offers and coupons.
+              - generic [ref=f23e281]: "Can do: Products · Can see: Orders"
+              - generic [ref=f23e282]: Nobody yet
+              - generic [ref=f23e288]:
+                - button "Open" [ref=f23e289] [cursor=pointer]
+                - button "Copy" [ref=f23e290] [cursor=pointer]
+            - generic [ref=f23e294]:
+              - generic [ref=f23e295]:
+                - generic [ref=f23e296]: Accounts
+                - generic [ref=f23e297]: ready-made
+              - generic [ref=f23e298]: হিসাব
+              - generic [ref=f23e299]: Adds credit, reads the usage and the sales figures.
+              - generic [ref=f23e300]: "Can do: Billing · Can see: Orders, Reports"
+              - generic [ref=f23e301]: Nobody yet
+              - generic [ref=f23e307]:
+                - button "Open" [ref=f23e308] [cursor=pointer]
+                - button "Copy" [ref=f23e309] [cursor=pointer]
+          - generic [ref=f23e313]:
+            - generic [ref=f23e314]: More ready-made groups
+            - paragraph [ref=f23e315]: Add one when the business grows into it. You can rename or change it afterwards.
+            - generic [ref=f23e316]:
+              - generic [ref=f23e317]:
+                - generic [ref=f23e318]:
+                  - text: Sales
+                  - generic [ref=f23e319]: · সেলস
+                - generic [ref=f23e320]: Follows up leads, talks to customers and takes orders.
+                - button "Add" [ref=f23e321] [cursor=pointer]
+              - generic [ref=f23e323]:
+                - generic [ref=f23e324]:
+                  - text: Bookings
+                  - generic [ref=f23e325]: · বুকিং
+                - generic [ref=f23e326]: Confirms and changes customers' bookings.
+                - button "Add" [ref=f23e327] [cursor=pointer]
+              - generic [ref=f23e329]:
+                - generic [ref=f23e330]:
+                  - text: Marketing
+                  - generic [ref=f23e331]: · মার্কেটিং
+                - generic [ref=f23e332]: Runs follow-ups and broadcasts and reads the results.
+                - button "Add" [ref=f23e333] [cursor=pointer]
+              - generic [ref=f23e335]:
+                - generic [ref=f23e336]:
+                  - text: Viewer
+                  - generic [ref=f23e337]: · শুধু দেখা
+                - generic [ref=f23e338]: Sees the work and the numbers; changes nothing.
+                - button "Add" [ref=f23e339] [cursor=pointer]
+      - button "AiPraktor Agent" [ref=f23e341] [cursor=pointer]
+    - note [ref=f23e346]:
+      - paragraph [ref=f23e347]: First time here? A 1 min video shows how this works.
+      - generic [ref=f23e348]:
+        - button "Watch" [ref=f23e349] [cursor=pointer]
+        - button "Don't need it" [ref=f23e353] [cursor=pointer]
+  - alert [ref=f23e186]

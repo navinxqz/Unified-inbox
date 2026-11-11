@@ -15,7 +15,7 @@ import {
   X,
 } from "lucide-react";
 
-import type { Attachment, QuotedMessage } from "@/features/inbox/types";
+import type { Attachment, QuotedMessage, SavedReply } from "@/features/inbox/types";
 import { cn } from "@/lib/utils";
 
 function formatFileSize(bytes: number) {
@@ -59,6 +59,8 @@ type ComposerProps = {
   targetLanguage: string | null;
   onTargetLanguageChange: (lang: string | null) => void;
   onSubmit: () => void;
+  /** Saved replies surfaced when the draft starts with `/`. */
+  savedReplies?: SavedReply[];
 };
 
 const toolButtonStyles =
@@ -79,12 +81,29 @@ export function Composer({
   targetLanguage,
   onTargetLanguageChange,
   onSubmit,
+  savedReplies = [],
 }: ComposerProps) {
   const fileRef = useRef<HTMLInputElement>(null);
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   const [showTagPicker, setShowTagPicker] = useState(false);
   const [showTranslatePicker, setShowTranslatePicker] = useState(false);
   const [customTagInput, setCustomTagInput] = useState("");
+
+  const slashQuery =
+    value.startsWith("/") && !value.includes(" ") && !value.includes("\n")
+      ? value.slice(1).toLowerCase()
+      : null;
+  const slashMatches =
+    slashQuery === null
+      ? []
+      : savedReplies
+          .filter(
+            (reply) =>
+              !reply.archived &&
+              (reply.shortcut.toLowerCase().includes(slashQuery) ||
+                reply.name.toLowerCase().includes(slashQuery)),
+          )
+          .slice(0, 6);
 
   const emojiContainerRef = useRef<HTMLDivElement>(null);
   const tagContainerRef = useRef<HTMLDivElement>(null);
@@ -171,6 +190,46 @@ export function Composer({
         }}
         className="relative rounded-xl border border-border bg-surface p-1 shadow-xs"
       >
+        {slashQuery !== null ? (
+          <div className="absolute bottom-full left-0 z-30 mb-1.5 w-full max-w-sm overflow-hidden rounded-xl border border-border bg-background shadow-xl">
+            <div className="flex items-center gap-1.5 border-b border-border-subtle px-3 py-1.5 text-[11px] font-semibold text-muted-foreground">
+              <Sparkles className="size-3 text-primary" />
+              Saved replies
+              <kbd className="ml-auto rounded border border-border px-1 text-[10px]">
+                /{slashQuery}
+              </kbd>
+            </div>
+            {slashMatches.length === 0 ? (
+              <p className="px-3 py-3 text-xs text-muted-foreground">
+                No saved reply matches. Manage them in Saved replies.
+              </p>
+            ) : (
+              slashMatches.map((reply) => (
+                <button
+                  key={reply.id}
+                  type="button"
+                  onClick={() => {
+                    onChange(reply.body);
+                    inputRef.current?.focus();
+                  }}
+                  className="flex w-full items-start gap-2 px-3 py-2 text-left transition-colors hover:bg-surface"
+                >
+                  <span className="rounded bg-primary-soft px-1.5 py-0.5 font-mono text-[10px] font-bold text-primary-strong">
+                    /{reply.shortcut}
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <span className="block truncate text-xs font-semibold">
+                      {reply.name}
+                    </span>
+                    <span className="block truncate text-[11px] text-muted-foreground">
+                      {reply.body}
+                    </span>
+                  </span>
+                </button>
+              ))
+            )}
+          </div>
+        ) : null}
         {/* Modern Replying-To Banner (WhatsApp / Discord / Messenger style) */}
         {replyingTo ? (
           <div className="mx-1 mt-1 mb-1 flex items-center justify-between gap-2 rounded-lg border-l-4 border-primary bg-primary-soft/80 px-3 py-1.5 text-xs">

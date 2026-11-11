@@ -1,0 +1,241 @@
+- generic [active] [ref=f4e1]:
+  - generic [ref=f4e2]:
+    - generic [ref=f4e3]:
+      - complementary [ref=f4e4]:
+        - generic [ref=f4e11]:
+          - generic [ref=f4e12]: AiPraktor
+          - generic [ref=f4e13]: control plane
+        - navigation [ref=f4e14]:
+          - link "Setup guide 0/8" [ref=f4e178] [cursor=pointer]:
+            - /url: /dashboard#setup-guide
+            - text: Setup guide
+            - generic [ref=f4e182]: 0/8
+          - generic [ref=f4e15]:
+            - generic [ref=f4e16]: Work
+            - link "Overview" [ref=f4e17] [cursor=pointer]:
+              - /url: /dashboard
+            - link "Inbox" [ref=f4e23] [cursor=pointer]:
+              - /url: /dashboard/inbox
+            - link "Notifications" [ref=f4e27] [cursor=pointer]:
+              - /url: /dashboard/notifications
+            - link "Comments" [ref=f4e36] [cursor=pointer]:
+              - /url: /dashboard/comments
+            - link "Saved replies ⚡ Auto" [ref=f4e40] [cursor=pointer]:
+              - /url: /dashboard/saved-replies
+              - text: Saved replies
+              - generic "Saved replies can answer customers automatically, free" [ref=f4e43]:
+                - text: ⚡
+                - generic [ref=f4e44]: Auto
+            - link "Orders" [ref=f4e45] [cursor=pointer]:
+              - /url: /dashboard/orders
+            - link "Activity" [ref=f4e49] [cursor=pointer]:
+              - /url: /dashboard/activity
+            - link "Analytics" [ref=f4e52] [cursor=pointer]:
+              - /url: /dashboard/analytics
+            - link "Announcements" [ref=f4e55] [cursor=pointer]:
+              - /url: /dashboard/announcements
+          - generic [ref=f4e59]:
+            - generic [ref=f4e60]: Grow
+            - link "Follow-ups" [ref=f4e61] [cursor=pointer]:
+              - /url: /dashboard/followups
+            - link "Broadcasts" [ref=f4e67] [cursor=pointer]:
+              - /url: /dashboard/broadcasts
+            - link "Products" [ref=f4e71] [cursor=pointer]:
+              - /url: /dashboard/products
+            - link "Posts" [ref=f4e76] [cursor=pointer]:
+              - /url: /dashboard/posts
+            - link "Knowledge" [ref=f4e183] [cursor=pointer]:
+              - /url: /dashboard/knowledge
+            - link "Website chat" [ref=f4e82] [cursor=pointer]:
+              - /url: /dashboard/website
+            - link "Agent Desk" [ref=f4e86] [cursor=pointer]:
+              - /url: /dashboard/agent-desk
+          - generic [ref=f4e88]:
+            - generic [ref=f4e89]: Set up
+            - link "Pages" [ref=f4e90] [cursor=pointer]:
+              - /url: /dashboard/pages
+            - link "Business settings" [ref=f4e97] [cursor=pointer]:
+              - /url: /dashboard/business
+            - link "Billing" [ref=f4e102] [cursor=pointer]:
+              - /url: /dashboard/billing
+            - link "Team" [ref=f4e105] [cursor=pointer]:
+              - /url: /dashboard/submasters
+            - link "Setup" [ref=f4e111] [cursor=pointer]:
+              - /url: /dashboard/setup
+            - link "Video guide" [ref=f4e115] [cursor=pointer]:
+              - /url: /dashboard/videos
+          - generic [ref=f4e119]:
+            - generic [ref=f4e120]: Help
+            - link "AiPraktor Agent" [ref=f4e121] [cursor=pointer]:
+              - /url: /dashboard/help
+            - link "Feedback" [ref=f4e125] [cursor=pointer]:
+              - /url: /dashboard/feedback
+        - generic [ref=f4e128]:
+          - generic "Auto-revert sweeper is running" [ref=f4e130]: SYSTEM ONLINE
+          - generic [ref=f4e135]:
+            - generic [ref=f4e136]: Signed in · Business owner
+            - generic [ref=f4e137]: navinmdnawshin@gmail.com
+          - switch "On duty" [checked] [ref=f4e187] [cursor=pointer]
+          - link "This device" [ref=f4e138] [cursor=pointer]:
+            - /url: /dashboard/device
+          - button "Sign out" [ref=f4e141] [cursor=pointer]
+      - main [ref=f4e145]:
+        - generic [ref=f4e146]:
+          - generic [ref=f4e147]:
+            - generic [ref=f4e148]: LIVE
+            - generic [ref=f4e151]: AI ⟷ HUMAN
+          - generic [ref=f4e152]:
+            - button "Watch how · 1 min — A page's settings and special offers" [ref=f4e190] [cursor=pointer]:
+              - generic [ref=f4e194]: Watch how · 1 min
+            - radiogroup "Colour theme" [ref=f4e153]:
+              - radio "Light" [checked] [ref=f4e154]
+              - radio "Dark" [ref=f4e162] [cursor=pointer]
+            - generic "Auto-revert sweeper is running" [ref=f4e167]: SYSTEM ONLINE
+            - generic [ref=f4e172]: 11:38:50
+        - generic [ref=f4e197]:
+          - button "The AiPraktor Agent is now on for everyone. See what it can do in a 9-minute video" [ref=f4e200] [cursor=pointer]
+          - button "Read" [ref=f4e201] [cursor=pointer]
+          - button "Hide this line" [ref=f4e202] [cursor=pointer]
+        - generic [ref=f4e175]:
+          - link "all pages" [ref=f4e206] [cursor=pointer]:
+            - /url: /dashboard/pages
+          - generic [ref=f4e209]:
+            - generic [ref=f4e210]:
+              - generic "page_1794374612666_0y3u81" [ref=f4e211]: facebook page
+              - heading "Coffee 9" [level=1] [ref=f4e212]
+            - generic [ref=f4e213]:
+              - link "Alerts off" [ref=f4e214] [cursor=pointer]:
+                - /url: /dashboard/device
+              - button "Close settings" [ref=f4e220] [cursor=pointer]
+          - generic [ref=f4e224]:
+            - generic [ref=f4e225]: Facebook connection — Coffee 9
+            - paragraph [ref=f4e226]: This page has its own Facebook sign-in. Until it is connected, its messages do not arrive and the AI cannot answer on it.
+            - generic [ref=f4e227]:
+              - generic [ref=f4e228]:
+                - generic [ref=f4e229]:
+                  - strong [ref=f4e232]: Facebook
+                  - generic [ref=f4e233]: not connected
+                - paragraph [ref=f4e234]: Sign in once and this page is connected — its messages start arriving and its Instagram is found, without anything to set up in Meta’s dashboard.
+                - generic [ref=f4e235]:
+                  - text: On Facebook’s screen, tick
+                  - strong [ref=f4e236]: the page you want to connect
+                  - text: and continue. If another page is already ticked there, leave it ticked — unticking it switches that page off.
+                - generic [ref=f4e237] [cursor=pointer]:
+                  - checkbox "Also ask for Instagram permissions — untick if there is no Instagram account; asking later costs a second sign-in" [checked] [ref=f4e238]
+                  - text: Also ask for Instagram permissions
+                  - generic [ref=f4e239]: — untick if there is no Instagram account; asking later costs a second sign-in
+                - button "Connect with Facebook" [ref=f4e241] [cursor=pointer]
+              - generic [ref=f4e244]:
+                - generic [ref=f4e245]:
+                  - generic [ref=f4e246]: 📸
+                  - strong [ref=f4e247]: Instagram
+                  - generic [ref=f4e248]: not connected
+                - paragraph [ref=f4e249]: Connect Facebook first — an Instagram account is reached through the page it is linked to, using that same key.
+          - generic [ref=f4e250]:
+            - generic [ref=f4e251]: The AI on this page
+            - paragraph [ref=f4e252]: Switch it off for a channel whenever you like, and on again. Messages are saved either way. This saves by itself.
+            - generic [ref=f4e254]:
+              - img "Messenger" [ref=f4e255]
+              - generic [ref=f4e258]:
+                - generic [ref=f4e259]: Messenger messages
+                - generic [ref=f4e260]: Not connected yet
+              - link "Connect" [ref=f4e261] [cursor=pointer]:
+                - /url: /dashboard/pages/page_1794374612666_0y3u81
+          - generic [ref=f4e262]:
+            - generic [ref=f4e263]: Page settings
+            - generic [ref=f4e264]:
+              - generic [ref=f4e265]:
+                - generic [ref=f4e266]: Page name
+                - textbox [ref=f4e267]: Coffee 9
+              - generic [ref=f4e268]:
+                - generic [ref=f4e269]: Default auto-revert window
+                - generic [ref=f4e270]:
+                  - button "30m" [ref=f4e271] [cursor=pointer]
+                  - button "1h" [ref=f4e272] [cursor=pointer]
+                  - button "2h" [ref=f4e273] [cursor=pointer]
+                  - button "4h" [ref=f4e274] [cursor=pointer]
+                  - button "6h" [ref=f4e275] [cursor=pointer]
+                  - button "8h" [ref=f4e276] [cursor=pointer]
+                  - button "12h" [ref=f4e277] [cursor=pointer]
+                  - button "24h" [ref=f4e278] [cursor=pointer]
+                - generic [ref=f4e279]:
+                  - spinbutton "Auto-revert window in minutes" [ref=f4e280]: "60"
+                  - generic [ref=f4e281]: minutes, any number (not only the presets)
+                - generic [ref=f4e282]: Chats handed to a human revert to AI after 1h unless changed. Shared across your team and used by the automation.
+              - generic [ref=f4e283]:
+                - generic [ref=f4e284]: SLA target — flag waiting chats after
+                - generic [ref=f4e285]:
+                  - button "5m" [ref=f4e286] [cursor=pointer]
+                  - button "10m" [ref=f4e287] [cursor=pointer]
+                  - button "15m" [ref=f4e288] [cursor=pointer]
+                  - button "30m" [ref=f4e289] [cursor=pointer]
+                  - button "60m" [ref=f4e290] [cursor=pointer]
+                - generic [ref=f4e291]:
+                  - spinbutton "Response target in minutes" [ref=f4e292]: "15"
+                  - generic [ref=f4e293]: minutes
+                - generic [ref=f4e294]: A chat waiting on a human longer than 15m turns red in the queue so nobody gets forgotten.
+              - generic [ref=f4e295]:
+                - generic [ref=f4e296]: Replying from the app
+                - generic [ref=f4e297]:
+                  - button "Allow replies" [ref=f4e298] [cursor=pointer]
+                  - button "View-only" [ref=f4e299] [cursor=pointer]
+                - generic [ref=f4e300]: Team can read AND reply to customers from the app.
+              - generic [ref=f4e301]:
+                - generic [ref=f4e302]: Auto-lead on handoff
+                - generic [ref=f4e303]:
+                  - button "On" [ref=f4e304] [cursor=pointer]
+                  - button "Off" [ref=f4e305] [cursor=pointer]
+                - generic [ref=f4e306]: Leads come only from the AI saving one during a chat, and from what you add by hand.
+              - generic [ref=f4e307]:
+                - generic [ref=f4e308]: Automatic follow-ups
+                - generic "Switched on by AiPraktor — contact your account manager" [ref=f4e309]: "ON"
+                - generic [ref=f4e312]: Reminders about the product they asked for, inside a day. Nothing goes to a chat a person on your team has taken over, and the system stays silent when they already ordered or said no.
+                - generic [ref=f4e313]:
+                  - generic [ref=f4e314]: Which customers
+                  - generic [ref=f4e315]:
+                    - button "Both" [pressed] [ref=f4e316] [cursor=pointer]
+                    - button "Hot only" [ref=f4e317] [cursor=pointer]
+                    - button "Warm only" [ref=f4e318] [cursor=pointer]
+                  - generic [ref=f4e319]: Both. A warm customer (asked about a product or its price) gets one reminder; a hot one (also asked delivery, address or quantity, or said they would order) gets 2 reminders.
+              - generic [ref=f4e320]:
+                - generic [ref=f4e321]: Broadcasts
+                - generic "Switched on by AiPraktor — contact your account manager" [ref=f4e322]: "ON"
+                - generic [ref=f4e325]: Short-lived offers to everyone who messaged in the last 24 hours, composed on the Broadcasts desk. Only people the page may still message, each at most once per cap; the coupon is real in the store.
+              - generic [ref=f4e326]:
+                - generic [ref=f4e327]: Delivery problem notice
+                - generic [ref=f4e328]:
+                  - button "On" [ref=f4e329] [cursor=pointer]
+                  - button "Off" [ref=f4e330] [cursor=pointer]
+                - generic [ref=f4e331]: When the courier reports a failed delivery attempt or puts the parcel on hold, the customer is told why and asked when to retry — at most once per 20 hours per order. The team's task opens either way.
+            - generic [ref=f4e332]:
+              - button "Save settings" [ref=f4e333] [cursor=pointer]
+              - button "Cancel" [ref=f4e334] [cursor=pointer]
+            - note [ref=f4e336]:
+              - paragraph [ref=f4e337]: Offers, upsell and the review request are set once for your whole business — every channel uses them.
+              - link "Business settings" [ref=f4e338] [cursor=pointer]:
+                - /url: /dashboard/business
+            - generic [ref=f4e344]:
+              - generic [ref=f4e345]: WhatsApp
+              - paragraph [ref=f4e348]: "The assistant can answer your WhatsApp number too, the same way it answers Facebook. WhatsApp has a monthly cost of its own: ৳900 a month, for the service that keeps your number connected. It is not AiPraktor's service charge and it is not AI credit. Watch the video first; then pay from Billing — we switch WhatsApp on as soon as we find the payment."
+              - generic [ref=f4e349]:
+                - 'button "Before you add WhatsApp: the cost, the risk, how to pay · 4 min" [ref=f4e350] [cursor=pointer]'
+                - link "Pay for WhatsApp" [ref=f4e354] [cursor=pointer]:
+                  - /url: /dashboard/billing?for=whatsapp#add-credit
+                - link "Contact your account manager" [ref=f4e355] [cursor=pointer]:
+                  - /url: https://wa.me/8801627777482
+                - link "Email your account manager" [ref=f4e356] [cursor=pointer]:
+                  - /url: mailto:support@aipraktor.com?subject=Please%20switch%20on%20WhatsApp%20for%20my%20business
+            - generic "Website chat" [ref=f4e358]:
+              - generic [ref=f4e359]: Website chat — put your assistant on your own website
+              - paragraph [ref=f4e363]: A support button on your website with Live chat and a Voice call, answered by the same assistant as this page, plus your WhatsApp, Messenger and phone. Set it up here, then paste one line into your website.
+              - button "Set up website chat" [ref=f4e364] [cursor=pointer]
+            - generic "Remove this channel" [ref=f4e366]:
+              - paragraph [ref=f4e371]: "This is your business's home page: your products, instructions and settings are kept here. Removing it stops the assistant on this channel; the page stays as your business's home, so your other channels keep working."
+              - button "Remove this channel" [ref=f4e372] [cursor=pointer]
+      - button "AiPraktor Agent" [ref=f4e373] [cursor=pointer]
+    - note [ref=f4e378]:
+      - paragraph [ref=f4e379]: First time here? A 1 min video shows how this works.
+      - generic [ref=f4e380]:
+        - button "Watch" [ref=f4e381] [cursor=pointer]
+        - button "Don't need it" [ref=f4e385] [cursor=pointer]
+  - alert [ref=f4e177]

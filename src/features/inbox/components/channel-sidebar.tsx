@@ -13,6 +13,8 @@ type ChannelSidebarProps = {
   activeChannel: ChannelFilter;
   onSelect: (channel: ChannelFilter) => void;
   onReorderChannels?: (reordered: Channel[]) => void;
+  /** Opens the channels module to add another account. */
+  onConnect?: () => void;
   showClose?: boolean;
   onClose?: () => void;
 };
@@ -22,10 +24,10 @@ export function ChannelSidebar({
   activeChannel,
   onSelect,
   onReorderChannels,
+  onConnect,
   showClose = false,
   onClose,
 }: ChannelSidebarProps) {
-  const [showConnectHint, setShowConnectHint] = useState(false);
   const [draggedChannelId, setDraggedChannelId] = useState<ChannelId | null>(null);
   const [dragOverChannelId, setDragOverChannelId] = useState<ChannelId | null>(null);
 
@@ -174,23 +176,12 @@ export function ChannelSidebar({
 
       <button
         type="button"
-        onClick={() => setShowConnectHint((value) => !value)}
-        aria-expanded={showConnectHint}
+        onClick={onConnect}
         className="mt-1 flex h-11 w-full items-center justify-center gap-2 rounded-[10px] border-[1.5px] border-dashed border-[#AEB3C2] text-sm font-semibold text-primary-strong transition-colors hover:border-primary hover:bg-primary-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
       >
         <Plus className="size-[18px]" strokeWidth={2} />
         Connect channel
       </button>
-
-      {showConnectHint ? (
-        <p
-          role="status"
-          className="mx-3 mt-2 rounded-lg bg-background px-3 py-2 text-xs leading-relaxed text-muted-foreground"
-        >
-          Channel connections are coming soon. For now, this demo uses sample
-          data.
-        </p>
-      ) : null}
 
       <div className="mt-auto flex items-center gap-2 px-3 py-2.5 text-xs text-muted-foreground">
         <ChannelDot color="#1F9D55" />

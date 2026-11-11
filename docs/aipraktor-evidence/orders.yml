@@ -1,0 +1,178 @@
+- generic [active] [ref=f12e1]:
+  - generic [ref=f12e2]:
+    - generic [ref=f12e3]:
+      - complementary [ref=f12e4]:
+        - generic [ref=f12e11]:
+          - generic [ref=f12e12]: AiPraktor
+          - generic [ref=f12e13]: control plane
+        - navigation [ref=f12e14]:
+          - link "Setup guide 0/8" [ref=f12e278] [cursor=pointer]:
+            - /url: /dashboard#setup-guide
+            - text: Setup guide
+            - generic [ref=f12e282]: 0/8
+          - generic [ref=f12e15]:
+            - generic [ref=f12e16]: Work
+            - link "Overview" [ref=f12e17] [cursor=pointer]:
+              - /url: /dashboard
+            - link "Inbox" [ref=f12e23] [cursor=pointer]:
+              - /url: /dashboard/inbox
+            - link "Notifications" [ref=f12e27] [cursor=pointer]:
+              - /url: /dashboard/notifications
+            - link "Comments" [ref=f12e31] [cursor=pointer]:
+              - /url: /dashboard/comments
+            - link "Saved replies ⚡ Auto" [ref=f12e35] [cursor=pointer]:
+              - /url: /dashboard/saved-replies
+              - text: Saved replies
+              - generic "Saved replies can answer customers automatically, free" [ref=f12e38]:
+                - text: ⚡
+                - generic [ref=f12e39]: Auto
+            - link "Orders" [ref=f12e40] [cursor=pointer]:
+              - /url: /dashboard/orders
+            - link "Activity" [ref=f12e45] [cursor=pointer]:
+              - /url: /dashboard/activity
+            - link "Analytics" [ref=f12e48] [cursor=pointer]:
+              - /url: /dashboard/analytics
+            - link "Announcements" [ref=f12e51] [cursor=pointer]:
+              - /url: /dashboard/announcements
+          - generic [ref=f12e55]:
+            - generic [ref=f12e56]: Grow
+            - link "Follow-ups" [ref=f12e57] [cursor=pointer]:
+              - /url: /dashboard/followups
+            - link "Broadcasts" [ref=f12e63] [cursor=pointer]:
+              - /url: /dashboard/broadcasts
+            - link "Products" [ref=f12e67] [cursor=pointer]:
+              - /url: /dashboard/products
+            - link "Posts" [ref=f12e72] [cursor=pointer]:
+              - /url: /dashboard/posts
+            - link "Knowledge" [ref=f12e283] [cursor=pointer]:
+              - /url: /dashboard/knowledge
+            - link "Website chat" [ref=f12e78] [cursor=pointer]:
+              - /url: /dashboard/website
+            - link "Agent Desk" [ref=f12e82] [cursor=pointer]:
+              - /url: /dashboard/agent-desk
+          - generic [ref=f12e84]:
+            - generic [ref=f12e85]: Set up
+            - link "Pages" [ref=f12e86] [cursor=pointer]:
+              - /url: /dashboard/pages
+            - link "Business settings" [ref=f12e92] [cursor=pointer]:
+              - /url: /dashboard/business
+            - link "Billing" [ref=f12e97] [cursor=pointer]:
+              - /url: /dashboard/billing
+            - link "Team" [ref=f12e100] [cursor=pointer]:
+              - /url: /dashboard/submasters
+            - link "Setup" [ref=f12e106] [cursor=pointer]:
+              - /url: /dashboard/setup
+            - link "Video guide" [ref=f12e110] [cursor=pointer]:
+              - /url: /dashboard/videos
+          - generic [ref=f12e114]:
+            - generic [ref=f12e115]: Help
+            - link "AiPraktor Agent" [ref=f12e116] [cursor=pointer]:
+              - /url: /dashboard/help
+            - link "Feedback" [ref=f12e120] [cursor=pointer]:
+              - /url: /dashboard/feedback
+        - generic [ref=f12e123]:
+          - generic "Auto-revert sweeper is running" [ref=f12e125]: SYSTEM ONLINE
+          - generic [ref=f12e130]:
+            - generic [ref=f12e131]: Signed in · Business owner
+            - generic [ref=f12e132]: navinmdnawshin@gmail.com
+          - switch "On duty" [checked] [ref=f12e133] [cursor=pointer]
+          - link "This device" [ref=f12e135] [cursor=pointer]:
+            - /url: /dashboard/device
+          - button "Sign out" [ref=f12e138] [cursor=pointer]
+      - main [ref=f12e142]:
+        - generic [ref=f12e143]:
+          - generic [ref=f12e144]:
+            - generic [ref=f12e145]: LIVE
+            - generic [ref=f12e148]: AI ⟷ HUMAN
+          - generic [ref=f12e149]:
+            - button "Watch how · 6 videos" [ref=f12e288] [cursor=pointer]
+            - radiogroup "Colour theme" [ref=f12e150]:
+              - radio "Light" [checked] [ref=f12e151]
+              - radio "Dark" [ref=f12e159] [cursor=pointer]
+            - generic "Auto-revert sweeper is running" [ref=f12e164]: SYSTEM ONLINE
+            - generic [ref=f12e169]: 11:41:48
+        - generic [ref=f12e171]:
+          - button "The AiPraktor Agent is now on for everyone. See what it can do in a 9-minute video" [ref=f12e174] [cursor=pointer]
+          - button "Read" [ref=f12e175] [cursor=pointer]
+          - button "Hide this line" [ref=f12e176] [cursor=pointer]
+        - generic [ref=f12e182]:
+          - generic [ref=f12e184]:
+            - generic [ref=f12e185]: orders
+            - heading "Orders" [level=1] [ref=f12e186]
+            - paragraph [ref=f12e187]: Your shop's order book — every order from confirmation to the courier parcel and the cash to collect, with a history of every change. Orders are never deleted, only cancelled.
+          - navigation "Orders, customers, scanning, the courier, people to chase and the report" [ref=f12e188]:
+            - generic [ref=f12e189] [cursor=pointer]: Orders
+            - link "Customers" [ref=f12e190] [cursor=pointer]:
+              - /url: /dashboard/orders/customers
+            - link "Scan" [ref=f12e191] [cursor=pointer]:
+              - /url: /dashboard/orders/scan
+            - link "Courier" [ref=f12e197] [cursor=pointer]:
+              - /url: /dashboard/orders/handover
+            - link "To chase" [ref=f12e203] [cursor=pointer]:
+              - /url: /dashboard/orders/incomplete
+            - link "Report" [ref=f12e207] [cursor=pointer]:
+              - /url: /dashboard/orders/report
+            - link "Discounts" [ref=f12e210] [cursor=pointer]:
+              - /url: /dashboard/orders/discounts
+          - generic [ref=f12e214]:
+            - textbox "Search orders" [ref=f12e219]:
+              - /placeholder: Search name, phone or order number…
+            - combobox "Page" [ref=f12e294] [cursor=pointer]:
+              - option "All pages" [selected]
+              - option "Coffee 9 Website"
+              - option "Coffee 9"
+            - combobox "Where the order lives" [ref=f12e220] [cursor=pointer]:
+              - option "All sources" [selected]
+              - option "AiPraktor"
+              - option "Store"
+            - button "Show test orders" [ref=f12e221] [cursor=pointer]
+            - button "Filters" [ref=f12e224] [cursor=pointer]
+            - button "Export" [ref=f12e227] [cursor=pointer]
+            - button "New order" [ref=f12e233] [cursor=pointer]
+          - tablist "Order stage" [ref=f12e235]:
+            - tab "All 0" [selected] [ref=f12e295] [cursor=pointer]:
+              - text: All
+              - generic [ref=f12e296]: "0"
+            - tab "Pending 0" [ref=f12e297] [cursor=pointer]:
+              - text: Pending
+              - generic [ref=f12e298]: "0"
+            - tab "On Hold 0" [ref=f12e299] [cursor=pointer]:
+              - text: On Hold
+              - generic [ref=f12e300]: "0"
+            - tab "Exported 0" [ref=f12e301] [cursor=pointer]:
+              - text: Exported
+              - generic [ref=f12e302]: "0"
+            - tab "Approved 0" [ref=f12e303] [cursor=pointer]:
+              - text: Approved
+              - generic [ref=f12e304]: "0"
+            - tab "Processing 0" [ref=f12e305] [cursor=pointer]:
+              - text: Processing
+              - generic [ref=f12e306]: "0"
+            - tab "Ready to Ship 0" [ref=f12e307] [cursor=pointer]:
+              - text: Ready to Ship
+              - generic [ref=f12e308]: "0"
+            - tab "In-Transit 0" [ref=f12e309] [cursor=pointer]:
+              - text: In-Transit
+              - generic [ref=f12e310]: "0"
+            - tab "Delivered 0" [ref=f12e311] [cursor=pointer]:
+              - text: Delivered
+              - generic [ref=f12e312]: "0"
+            - tab "Flagged 0" [ref=f12e313] [cursor=pointer]:
+              - text: Flagged
+              - generic [ref=f12e314]: "0"
+            - tab "Cancelled 0" [ref=f12e315] [cursor=pointer]:
+              - text: Cancelled
+              - generic [ref=f12e316]: "0"
+            - tab "Store 0" [ref=f12e317] [cursor=pointer]:
+              - text: Store
+              - generic [ref=f12e318]: "0"
+          - generic [ref=f12e319]:
+            - generic [ref=f12e324]: No orders yet
+            - generic [ref=f12e325]: "This is the shop's order book: each order with its items, the cash to collect, the courier parcel and a history of every change. Press New order to add the first one."
+      - button "AiPraktor Agent" [ref=f12e326] [cursor=pointer]
+    - note [ref=f12e331]:
+      - paragraph [ref=f12e332]: First time here? Short videos show how this works.
+      - generic [ref=f12e333]:
+        - button "Watch" [ref=f12e334] [cursor=pointer]
+        - button "Don't need it" [ref=f12e338] [cursor=pointer]
+  - alert [ref=f12e277]

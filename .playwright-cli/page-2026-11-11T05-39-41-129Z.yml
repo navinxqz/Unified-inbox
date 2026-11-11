@@ -1,0 +1,94 @@
+- generic [active] [ref=f6e1]:
+  - generic [ref=f6e3]:
+    - complementary [ref=f6e4]:
+      - generic [ref=f6e11]:
+        - generic [ref=f6e12]: AiPraktor
+        - generic [ref=f6e13]: control plane
+      - navigation [ref=f6e14]:
+        - generic [ref=f6e15]:
+          - generic [ref=f6e16]: Work
+          - link "Overview" [ref=f6e17] [cursor=pointer]:
+            - /url: /dashboard
+          - link "Inbox" [ref=f6e23] [cursor=pointer]:
+            - /url: /dashboard/inbox
+          - link "Notifications" [ref=f6e27] [cursor=pointer]:
+            - /url: /dashboard/notifications
+          - link "Leads" [ref=f6e31] [cursor=pointer]:
+            - /url: /dashboard/leads
+          - link "Comments" [ref=f6e36] [cursor=pointer]:
+            - /url: /dashboard/comments
+          - link "Saved replies ⚡ Auto" [ref=f6e40] [cursor=pointer]:
+            - /url: /dashboard/saved-replies
+            - text: Saved replies
+            - generic "Saved replies can answer customers automatically, free" [ref=f6e43]:
+              - text: ⚡
+              - generic [ref=f6e44]: Auto
+          - link "Orders" [ref=f6e45] [cursor=pointer]:
+            - /url: /dashboard/orders
+          - link "Activity" [ref=f6e49] [cursor=pointer]:
+            - /url: /dashboard/activity
+          - link "Analytics" [ref=f6e52] [cursor=pointer]:
+            - /url: /dashboard/analytics
+          - link "Announcements" [ref=f6e55] [cursor=pointer]:
+            - /url: /dashboard/announcements
+        - generic [ref=f6e59]:
+          - generic [ref=f6e60]: Grow
+          - link "Follow-ups" [ref=f6e61] [cursor=pointer]:
+            - /url: /dashboard/followups
+          - link "Broadcasts" [ref=f6e67] [cursor=pointer]:
+            - /url: /dashboard/broadcasts
+          - link "Products" [ref=f6e71] [cursor=pointer]:
+            - /url: /dashboard/products
+          - link "Posts" [ref=f6e76] [cursor=pointer]:
+            - /url: /dashboard/posts
+          - link "Website chat" [ref=f6e82] [cursor=pointer]:
+            - /url: /dashboard/website
+          - link "Agent Desk" [ref=f6e86] [cursor=pointer]:
+            - /url: /dashboard/agent-desk
+        - generic [ref=f6e89]:
+          - generic [ref=f6e90]: Set up
+          - link "Pages" [ref=f6e91] [cursor=pointer]:
+            - /url: /dashboard/pages
+          - link "Business settings" [ref=f6e97] [cursor=pointer]:
+            - /url: /dashboard/business
+          - link "Billing" [ref=f6e102] [cursor=pointer]:
+            - /url: /dashboard/billing
+          - link "Team" [ref=f6e105] [cursor=pointer]:
+            - /url: /dashboard/submasters
+          - link "Setup" [ref=f6e111] [cursor=pointer]:
+            - /url: /dashboard/setup
+          - link "Video guide" [ref=f6e115] [cursor=pointer]:
+            - /url: /dashboard/videos
+        - generic [ref=f6e119]:
+          - generic [ref=f6e120]: Help
+          - link "AiPraktor Agent" [ref=f6e121] [cursor=pointer]:
+            - /url: /dashboard/help
+          - link "Feedback" [ref=f6e125] [cursor=pointer]:
+            - /url: /dashboard/feedback
+      - generic [ref=f6e128]:
+        - generic "Auto-revert sweeper is running" [ref=f6e130]: SYSTEM ONLINE
+        - generic [ref=f6e135]:
+          - generic [ref=f6e136]: Signed in · Business owner
+          - generic [ref=f6e137]: navinmdnawshin@gmail.com
+        - link "This device" [ref=f6e138] [cursor=pointer]:
+          - /url: /dashboard/device
+        - button "Sign out" [ref=f6e141] [cursor=pointer]
+    - main [ref=f6e145]:
+      - generic [ref=f6e146]:
+        - generic [ref=f6e147]:
+          - generic [ref=f6e148]: LIVE
+          - generic [ref=f6e151]: AI ⟷ HUMAN
+        - generic [ref=f6e152]:
+          - radiogroup "Colour theme" [ref=f6e153]:
+            - radio "Light" [checked] [ref=f6e154]
+            - radio "Dark" [ref=f6e162] [cursor=pointer]
+          - generic "Auto-revert sweeper is running" [ref=f6e167]: SYSTEM ONLINE
+          - generic [ref=f6e172]: 11:39:41
+      - generic [ref=f6e175]:
+        - generic [ref=f6e177]:
+          - generic [ref=f6e178]: agent desk
+          - heading "Agent Desk" [level=1] [ref=f6e179]
+          - paragraph [ref=f6e180]: Your part of your assistant's instructions. Add what it should know, test it with a message, and publish it when it answers the way you want.
+        - generic [ref=f6e181]: Page
+        - status "Loading pages…" [ref=f6e185]
+  - alert [ref=f6e189]

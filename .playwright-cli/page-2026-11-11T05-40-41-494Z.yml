@@ -1,0 +1,143 @@
+- generic [ref=f8e1]:
+  - generic [ref=f8e2]:
+    - generic [ref=f8e3]:
+      - complementary [ref=f8e4]:
+        - generic [ref=f8e11]:
+          - generic [ref=f8e12]: AiPraktor
+          - generic [ref=f8e13]: control plane
+        - navigation [ref=f8e14]:
+          - link "Setup guide 0/8" [ref=f8e194] [cursor=pointer]:
+            - /url: /dashboard#setup-guide
+            - text: Setup guide
+            - generic [ref=f8e198]: 0/8
+          - generic [ref=f8e15]:
+            - generic [ref=f8e16]: Work
+            - link "Overview" [ref=f8e17] [cursor=pointer]:
+              - /url: /dashboard
+            - link "Inbox" [ref=f8e23] [cursor=pointer]:
+              - /url: /dashboard/inbox
+            - link "Notifications" [ref=f8e27] [cursor=pointer]:
+              - /url: /dashboard/notifications
+            - link "Comments" [ref=f8e36] [cursor=pointer]:
+              - /url: /dashboard/comments
+            - link "Saved replies ⚡ Auto" [ref=f8e41] [cursor=pointer]:
+              - /url: /dashboard/saved-replies
+              - text: Saved replies
+              - generic "Saved replies can answer customers automatically, free" [ref=f8e44]:
+                - text: ⚡
+                - generic [ref=f8e45]: Auto
+            - link "Orders" [ref=f8e46] [cursor=pointer]:
+              - /url: /dashboard/orders
+            - link "Activity" [ref=f8e50] [cursor=pointer]:
+              - /url: /dashboard/activity
+            - link "Analytics" [ref=f8e53] [cursor=pointer]:
+              - /url: /dashboard/analytics
+            - link "Announcements" [ref=f8e56] [cursor=pointer]:
+              - /url: /dashboard/announcements
+          - generic [ref=f8e60]:
+            - generic [ref=f8e61]: Grow
+            - link "Follow-ups" [ref=f8e62] [cursor=pointer]:
+              - /url: /dashboard/followups
+            - link "Broadcasts" [ref=f8e68] [cursor=pointer]:
+              - /url: /dashboard/broadcasts
+            - link "Products" [ref=f8e72] [cursor=pointer]:
+              - /url: /dashboard/products
+            - link "Posts" [ref=f8e77] [cursor=pointer]:
+              - /url: /dashboard/posts
+            - link "Knowledge" [ref=f8e199] [cursor=pointer]:
+              - /url: /dashboard/knowledge
+            - link "Website chat" [ref=f8e83] [cursor=pointer]:
+              - /url: /dashboard/website
+            - link "Agent Desk" [ref=f8e87] [cursor=pointer]:
+              - /url: /dashboard/agent-desk
+          - generic [ref=f8e89]:
+            - generic [ref=f8e90]: Set up
+            - link "Pages" [ref=f8e91] [cursor=pointer]:
+              - /url: /dashboard/pages
+            - link "Business settings" [ref=f8e97] [cursor=pointer]:
+              - /url: /dashboard/business
+            - link "Billing" [ref=f8e102] [cursor=pointer]:
+              - /url: /dashboard/billing
+            - link "Team" [ref=f8e105] [cursor=pointer]:
+              - /url: /dashboard/submasters
+            - link "Setup" [ref=f8e111] [cursor=pointer]:
+              - /url: /dashboard/setup
+            - link "Video guide" [ref=f8e115] [cursor=pointer]:
+              - /url: /dashboard/videos
+          - generic [ref=f8e119]:
+            - generic [ref=f8e120]: Help
+            - link "AiPraktor Agent" [ref=f8e121] [cursor=pointer]:
+              - /url: /dashboard/help
+            - link "Feedback" [ref=f8e125] [cursor=pointer]:
+              - /url: /dashboard/feedback
+        - generic [ref=f8e128]:
+          - generic "Auto-revert sweeper is running" [ref=f8e130]: SYSTEM ONLINE
+          - generic [ref=f8e135]:
+            - generic [ref=f8e136]: Signed in · Business owner
+            - generic [ref=f8e137]: navinmdnawshin@gmail.com
+          - switch "On duty" [checked] [ref=f8e203] [cursor=pointer]
+          - link "This device" [ref=f8e138] [cursor=pointer]:
+            - /url: /dashboard/device
+          - button "Sign out" [ref=f8e141] [cursor=pointer]
+      - main [ref=f8e145]:
+        - generic [ref=f8e146]:
+          - generic [ref=f8e147]:
+            - generic [ref=f8e148]: LIVE
+            - generic [ref=f8e151]: AI ⟷ HUMAN
+          - generic [ref=f8e152]:
+            - button "Watch how · 3 videos" [ref=f8e206] [cursor=pointer]
+            - radiogroup "Colour theme" [ref=f8e153]:
+              - radio "Light" [checked] [ref=f8e154]
+              - radio "Dark" [ref=f8e162] [cursor=pointer]
+            - generic "Auto-revert sweeper is running" [ref=f8e167]: SYSTEM ONLINE
+            - generic [ref=f8e172]: 11:40:41
+        - generic [ref=f8e213]:
+          - button "The AiPraktor Agent is now on for everyone. See what it can do in a 9-minute video" [ref=f8e216] [cursor=pointer]
+          - button "Read" [ref=f8e217] [cursor=pointer]
+          - button "Hide this line" [ref=f8e218] [cursor=pointer]
+        - generic [ref=f8e175]:
+          - generic [ref=f8e177]:
+            - generic [ref=f8e178]: comments
+            - heading "Comments" [level=1] [ref=f8e179]
+            - paragraph [ref=f8e180]: Every comment under your posts, what the AI answered, and what was removed. To check holds the ones nobody on your team has looked at yet.
+          - generic [ref=f8e181]:
+            - group "What to show" [ref=f8e182]:
+              - button "Comments" [pressed] [ref=f8e183] [cursor=pointer]
+              - button "Posts" [ref=f8e184] [cursor=pointer]
+            - combobox "Period" [ref=f8e185] [cursor=pointer]:
+              - option "Last 7 days"
+              - option "Last 30 days" [selected]
+              - option "Last 90 days"
+            - button "Rules" [active] [ref=f8e186] [cursor=pointer]
+          - generic [ref=f8e188]:
+            - group "Which comments" [ref=f8e222]:
+              - button "To check 0" [pressed] [ref=f8e223] [cursor=pointer]:
+                - generic [ref=f8e224]: To check
+                - generic [ref=f8e225]: "0"
+              - button "All 0" [ref=f8e226] [cursor=pointer]:
+                - generic [ref=f8e227]: All
+                - generic [ref=f8e228]: "0"
+              - button "Needs you 0" [ref=f8e229] [cursor=pointer]:
+                - generic [ref=f8e230]: Needs you
+                - generic [ref=f8e231]: "0"
+              - button "Unanswered 0" [ref=f8e232] [cursor=pointer]:
+                - generic [ref=f8e233]: Unanswered
+                - generic [ref=f8e234]: "0"
+              - button "Complaints 0" [ref=f8e235] [cursor=pointer]:
+                - generic [ref=f8e236]: Complaints
+                - generic [ref=f8e237]: "0"
+              - button "Removed 0" [ref=f8e238] [cursor=pointer]:
+                - generic [ref=f8e239]: Removed
+                - generic [ref=f8e240]: "0"
+            - textbox "Search comments" [ref=f8e243]:
+              - /placeholder: Search the comments and the names…
+            - generic [ref=f8e244]:
+              - generic [ref=f8e249]: Every comment has been checked.
+              - generic [ref=f8e250]: A new comment waits here until someone on your team has looked at it and pressed Done. Done only clears it from this list — nothing changes on Facebook or Instagram. Older comments are under All.
+      - button "AiPraktor Agent" [ref=f8e251] [cursor=pointer]
+    - note [ref=f8e256]:
+      - paragraph [ref=f8e257]: First time here? Short videos show how this works.
+      - generic [ref=f8e258]:
+        - button "Watch" [ref=f8e259] [cursor=pointer]
+        - button "Don't need it" [ref=f8e263] [cursor=pointer]
+  - alert [ref=f8e193]
