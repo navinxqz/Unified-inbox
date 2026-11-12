@@ -25,7 +25,8 @@ import {
   SlaBadge,
   StatCard,
 } from "@/features/inbox/components/module-ui";
-import { channelById, activitySourceLabels } from "@/features/inbox/data";
+import { channelById, activitySourceLabels, hiddenModules } from "@/features/inbox/data";
+import { useI18n } from "@/features/inbox/i18n";
 import type {
   ActivityEntry,
   ChannelConnection,
@@ -60,6 +61,7 @@ export function OverviewModule({
   onNavigate,
   onSelectPerson,
 }: OverviewProps) {
+  const { t } = useI18n();
   const now = useNowMs();
   const open = people.filter((person) => person.status === "open");
   const waiting = open.filter((person) => person.waitingSinceMs);
@@ -97,10 +99,13 @@ export function OverviewModule({
           <div className="flex flex-wrap items-center gap-3">
             <div className="min-w-0 flex-1">
               <p className="text-sm font-bold text-primary-strong">
-                Practice mode — {setupDone} of {setupTotal} setup steps done
+                {t("Practice mode — {setupDone} of {setupTotal} setup steps done", {
+                  setupDone,
+                  setupTotal,
+                })}
               </p>
               <p className="mt-0.5 text-xs text-ink-soft">
-                Test chats stay internal. Your trial starts when you go live.
+                {t("Test chats stay internal. Your trial starts when you go live.")}
               </p>
               <div className="mt-2 h-1.5 w-full max-w-sm overflow-hidden rounded-full bg-white/70">
                 <div
@@ -114,7 +119,7 @@ export function OverviewModule({
               onClick={() => onNavigate("setup")}
               className="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg bg-primary px-3.5 text-sm font-semibold text-white hover:bg-primary/90"
             >
-              Continue setup
+              {t("Continue setup")}
               <ArrowRight className="size-4" />
             </button>
           </div>
@@ -125,27 +130,27 @@ export function OverviewModule({
         <StatCard
           label="Open conversations"
           value={String(open.length)}
-          sub={`${people.length} total`}
+          sub={t("{count} total", { count: people.length })}
           icon={Inbox}
         />
         <StatCard
           label="Waiting on a reply"
           value={String(waiting.length)}
-          sub={`target ${slaTargetMin}m`}
+          sub={t("target {min}m", { min: slaTargetMin })}
           icon={AlarmClock}
           tone="warning"
         />
         <StatCard
           label="AI is handling"
           value={`${Math.round((aiHandled.length / Math.max(1, open.length)) * 100)}%`}
-          sub={`${aiHandled.length} of ${open.length} open`}
+          sub={t("{ai} of {open} open", { ai: aiHandled.length, open: open.length })}
           icon={Bot}
           tone="success"
         />
         <StatCard
           label="Past SLA target"
           value={String(breached.length)}
-          sub={breached.length > 0 ? "needs a human now" : "all within target"}
+          sub={breached.length > 0 ? t("needs a human now") : t("all within target")}
           icon={CheckCircle2}
           tone={breached.length > 0 ? "danger" : "success"}
         />
@@ -161,7 +166,7 @@ export function OverviewModule({
               onClick={() => onNavigate("inbox")}
               className="text-xs font-semibold text-primary hover:underline"
             >
-              Open inbox
+              {t("Open inbox")}
             </button>
           }
         >
@@ -211,7 +216,7 @@ export function OverviewModule({
               onClick={() => onNavigate("notifications")}
               className="text-xs font-semibold text-primary hover:underline"
             >
-              View queue
+              {t("View queue")}
             </button>
           }
         >
@@ -249,7 +254,10 @@ export function OverviewModule({
       <div className="grid gap-4 lg:grid-cols-5">
         <SectionCard
           title="Channel health"
-          description={`${healthyChannels} of ${channels.length} channels connected.`}
+          description={t("{healthy} of {total} channels connected.", {
+            healthy: healthyChannels,
+            total: channels.length,
+          })}
           className="lg:col-span-3"
           action={
             <button
@@ -257,7 +265,7 @@ export function OverviewModule({
               onClick={() => onNavigate("channels")}
               className="text-xs font-semibold text-primary hover:underline"
             >
-              Manage
+              {t("Manage")}
             </button>
           }
         >
@@ -291,9 +299,9 @@ export function OverviewModule({
                   title={
                     channel.enabled
                       ? channel.health === "degraded"
-                        ? "Degraded"
-                        : "Healthy"
-                      : "Paused"
+                        ? t("Degraded")
+                        : t("Healthy")
+                      : t("Paused")
                   }
                 />
               </div>
@@ -311,7 +319,7 @@ export function OverviewModule({
               onClick={() => onNavigate("activity")}
               className="text-xs font-semibold text-primary hover:underline"
             >
-              Audit trail
+              {t("Audit trail")}
             </button>
           }
         >
@@ -344,7 +352,9 @@ export function OverviewModule({
             { label: "Invite teammate", icon: UserPlus, module: "team" as const },
             { label: "Review comments", icon: MessageSquare, module: "comments" as const },
             { label: "Connect a channel", icon: Inbox, module: "channels" as const },
-          ].map(({ label, icon: Icon, module }) => (
+          ]
+            .filter((action) => !hiddenModules.has(action.module))
+            .map(({ label, icon: Icon, module }) => (
             <button
               key={label}
               type="button"
@@ -352,7 +362,7 @@ export function OverviewModule({
               className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-border px-3 text-[13px] font-semibold text-ink-soft transition-colors hover:border-primary hover:bg-primary-soft hover:text-primary-strong"
             >
               <Icon className="size-4" strokeWidth={2} />
-              {label}
+              {t(label)}
             </button>
           ))}
         </div>

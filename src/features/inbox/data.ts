@@ -21,6 +21,7 @@ import type {
   LeadStage,
   Message,
   ModerationRules,
+  ModuleId,
   NotificationItem,
   Order,
   OrderStage,
@@ -34,6 +35,17 @@ import type {
   WebsiteChatState,
   WorkspaceSettings,
 } from "./types";
+
+/**
+ * Modules that ship in the codebase but are intentionally not wired into the
+ * sidebar yet. Re-enable by removing the id from this set.
+ */
+export const hiddenModules: ReadonlySet<ModuleId> = new Set<ModuleId>([
+  "leads",
+  "orders",
+  "followups",
+  "products",
+]);
 
 /** Seed clock — every relative timestamp in the demo data is derived from it. */
 const SEED_NOW = Date.now();

@@ -14,6 +14,7 @@ import {
   SectionCard,
   Toggle,
 } from "@/features/inbox/components/module-ui";
+import { hiddenModules } from "@/features/inbox/data";
 import type { ModuleId, SetupState } from "@/features/inbox/types";
 import { cn } from "@/lib/utils";
 
@@ -91,10 +92,11 @@ export function SetupModule({ setup, onUpdate, onGoLive, onNavigate }: SetupProp
                 </span>
                 <button
                   type="button"
+                  disabled={hiddenModules.has(step.module)}
                   onClick={() => onNavigate(step.module)}
-                  className="inline-flex h-8 shrink-0 items-center gap-1 rounded-lg border border-border px-2.5 text-xs font-semibold text-ink-soft hover:bg-surface"
+                  className="inline-flex h-8 shrink-0 items-center gap-1 rounded-lg border border-border px-2.5 text-xs font-semibold text-ink-soft hover:bg-surface disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:bg-transparent"
                 >
-                  Open
+                  {hiddenModules.has(step.module) ? "Soon" : "Open"}
                   <ArrowRight className="size-3.5" />
                 </button>
               </div>

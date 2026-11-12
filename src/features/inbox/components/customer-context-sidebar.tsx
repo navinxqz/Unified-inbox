@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 
 import { ChannelIcon } from "@/features/inbox/components/channel-icon";
+import { useI18n } from "@/features/inbox/i18n";
 import type { ConversationPriority, ConversationStatus, Person } from "@/features/inbox/types";
 
 type CustomerContextSidebarProps = {
@@ -21,6 +22,7 @@ export function CustomerContextSidebar({
   onUpdateStatus,
   onUpdatePriority,
 }: CustomerContextSidebarProps) {
+  const { t } = useI18n();
   const [internalNotes, setInternalNotes] = useState<string>("");
   const [savedNotes, setSavedNotes] = useState<string[]>(["Client requested enterprise SLA confirmation."]);
 
@@ -28,8 +30,8 @@ export function CustomerContextSidebar({
     return (
       <div className="flex h-full flex-col items-center justify-center p-6 text-center text-xs text-muted-foreground border-l border-border bg-surface-alt/40">
         <User className="size-8 text-muted-foreground/40 mb-2" />
-        <p className="font-semibold text-foreground">No conversation selected</p>
-        <p className="mt-1">Pick a thread from the stream to inspect customer CRM metadata.</p>
+        <p className="font-semibold text-foreground">{t("No conversation selected")}</p>
+        <p className="mt-1">{t("Pick a thread from the stream to inspect customer CRM metadata.")}</p>
       </div>
     );
   }
@@ -42,7 +44,7 @@ export function CustomerContextSidebar({
 
   return (
     <aside
-      aria-label="Customer CRM Context"
+      aria-label={t("Customer CRM Context")}
       className="flex h-full min-h-0 w-full flex-col overflow-y-auto border-l border-border bg-surface-alt/30 text-xs text-foreground p-3.5 space-y-4"
     >
       {/* Profile Header */}
@@ -76,13 +78,13 @@ export function CustomerContextSidebar({
       {/* Ticket Operations: Status & Priority Controls */}
       <div className="space-y-2 border-b border-border pb-3.5">
         <h4 className="font-semibold uppercase tracking-wider text-[10px] text-muted-foreground">
-          Ticket Triage
+          {t("Ticket Triage")}
         </h4>
 
         <div className="grid grid-cols-2 gap-2">
           <div>
             <label className="text-[10px] font-medium text-muted-foreground block mb-1">
-              Status
+              {t("Status")}
             </label>
             <select
               value={person.status ?? "open"}
@@ -91,15 +93,15 @@ export function CustomerContextSidebar({
               }
               className="w-full rounded border border-border bg-background px-2 py-1 text-xs outline-none focus:border-primary"
             >
-              <option value="open">Open</option>
-              <option value="pending">Pending</option>
-              <option value="resolved">Resolved</option>
+              <option value="open">{t("Open")}</option>
+              <option value="pending">{t("Pending")}</option>
+              <option value="resolved">{t("Resolved")}</option>
             </select>
           </div>
 
           <div>
             <label className="text-[10px] font-medium text-muted-foreground block mb-1">
-              Priority
+              {t("Priority")}
             </label>
             <select
               value={person.ticketPriority ?? "medium"}
@@ -108,21 +110,21 @@ export function CustomerContextSidebar({
               }
               className="w-full rounded border border-border bg-background px-2 py-1 text-xs outline-none focus:border-primary"
             >
-              <option value="low">Low</option>
-              <option value="medium">Medium</option>
-              <option value="high">High</option>
-              <option value="urgent">Urgent</option>
+              <option value="low">{t("Low")}</option>
+              <option value="medium">{t("Medium")}</option>
+              <option value="high">{t("High")}</option>
+              <option value="urgent">{t("Urgent")}</option>
             </select>
           </div>
         </div>
 
         <div className="pt-1">
           <label className="text-[10px] font-medium text-muted-foreground block mb-1">
-            Assignee
+            {t("Assignee")}
           </label>
           <div className="flex items-center gap-1.5 rounded border border-border bg-background px-2 py-1">
             <User className="size-3.5 text-muted-foreground" />
-            <span className="font-medium">{person.assignee ?? "Unassigned"}</span>
+            <span className="font-medium">{person.assignee ?? t("Unassigned")}</span>
           </div>
         </div>
       </div>
@@ -130,25 +132,25 @@ export function CustomerContextSidebar({
       {/* Account & Telemetry */}
       <div className="space-y-2 border-b border-border pb-3.5">
         <h4 className="font-semibold uppercase tracking-wider text-[10px] text-muted-foreground">
-          Account Tier & SLA
+          {t("Account Tier & SLA")}
         </h4>
 
         <div className="flex items-center justify-between py-1">
-          <span className="text-muted-foreground">Plan</span>
+          <span className="text-muted-foreground">{t("Plan")}</span>
           <span className="font-semibold text-primary bg-primary-soft px-1.5 py-0.5 rounded text-[11px]">
-            {person.planTier ?? "Starter"}
+            {person.planTier ?? t("Starter")}
           </span>
         </div>
 
         <div className="flex items-center justify-between py-1">
-          <span className="text-muted-foreground">Response SLA</span>
+          <span className="text-muted-foreground">{t("Response SLA")}</span>
           <span className="font-medium text-emerald-600 dark:text-emerald-400">
-            Within 15 mins (Target Met)
+            {t("Within 15 mins (Target Met)")}
           </span>
         </div>
 
         <div className="flex items-center justify-between py-1">
-          <span className="text-muted-foreground">First Contact</span>
+          <span className="text-muted-foreground">{t("First Contact")}</span>
           <span className="text-muted-foreground">Oct 24, 2026</span>
         </div>
       </div>
@@ -156,7 +158,7 @@ export function CustomerContextSidebar({
       {/* Internal Team Notes */}
       <div className="space-y-2">
         <h4 className="font-semibold uppercase tracking-wider text-[10px] text-muted-foreground">
-          Internal Team Notes (Private)
+          {t("Internal Team Notes (Private)")}
         </h4>
 
         <div className="space-y-1.5">
@@ -175,7 +177,7 @@ export function CustomerContextSidebar({
             rows={2}
             value={internalNotes}
             onChange={(e) => setInternalNotes(e.target.value)}
-            placeholder="Add an internal note for your team..."
+            placeholder={t("Add an internal note for your team...")}
             className="w-full rounded border border-border bg-background p-2 text-xs outline-none focus:border-primary resize-none placeholder:text-muted-foreground"
           />
           <button
@@ -184,7 +186,7 @@ export function CustomerContextSidebar({
             disabled={!internalNotes.trim()}
             className="self-end rounded bg-surface border border-border px-2.5 py-1 text-[11px] font-semibold text-foreground hover:bg-border/60 disabled:opacity-40 transition-colors"
           >
-            Add Note
+            {t("Add Note")}
           </button>
         </div>
       </div>

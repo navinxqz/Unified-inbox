@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useSyncExternalStore } from "react";
 import type { Dispatch, SetStateAction } from "react";
 
 import {
@@ -55,141 +55,212 @@ export const MODULE_STORAGE_KEYS = {
   setup: "unified_inbox_setup_v1",
 } as const;
 
+/** UI language — English or Bangla (see `i18n.tsx`). */
+export const LANGUAGE_STORAGE_KEY = "unified_inbox_language_v1";
+
+/**
+ * localStorage-backed snapshot store.
+ *
+ * Reads are cached per key so `getSnapshot` stays referentially stable (a
+ * fresh JSON.parse on every render would loop React). Server renders and the
+ * hydration pass use the seed fallback; the stored value is applied right
+ * after hydration, which keeps server markup and first client render in sync.
+ */
+const cache = new Map<string, unknown>();
+const listeners = new Map<string, Set<() => void>>();
+
+function notify(key: string): void {
+  listeners.get(key)?.forEach((listener) => listener());
+}
+
+if (typeof window !== "undefined") {
+  window.addEventListener("storage", (event) => {
+    if (event.key === null) {
+      cache.clear();
+      listeners.forEach((_, key) => notify(key));
+      return;
+    }
+    cache.delete(event.key);
+    notify(event.key);
+  });
+}
+
+function readStored<T>(key: string, fallback: T, parse?: (raw: unknown) => T): T {
+  if (cache.has(key)) return cache.get(key) as T;
+  let value = fallback;
+  if (typeof window !== "undefined") {
+    try {
+      const raw = window.localStorage.getItem(key);
+      if (raw !== null) {
+        const parsed: unknown = JSON.parse(raw);
+        value = parse ? parse(parsed) : (parsed as T);
+      }
+    } catch {}
+  }
+  cache.set(key, value);
+  return value;
+}
+
+function writeStored<T>(key: string, value: T): void {
+  cache.set(key, value);
+  if (typeof window !== "undefined") {
+    try {
+      window.localStorage.setItem(key, JSON.stringify(value));
+    } catch {}
+  }
+  notify(key);
+}
+
+function subscribe(key: string, listener: () => void): () => void {
+  let set = listeners.get(key);
+  if (!set) {
+    set = new Set();
+    listeners.set(key, set);
+  }
+  set.add(listener);
+  return () => {
+    set.delete(listener);
+    if (set.size === 0) listeners.delete(key);
+  };
+}
+
 /** Generic JSON store — used by modules that own a single domain slice. */
 export function loadStored<T>(key: string, fallback: T): T {
-  if (typeof window === "undefined") return fallback;
-  try {
-    const raw = localStorage.getItem(key);
-    return raw ? (JSON.parse(raw) as T) : fallback;
-  } catch {
-    return fallback;
-  }
+  return readStored(key, fallback);
 }
 
 export function saveStored<T>(key: string, value: T): void {
-  if (typeof window === "undefined") return;
-  try {
-    localStorage.setItem(key, JSON.stringify(value));
-  } catch {}
+  writeStored(key, value);
 }
 
 /**
- * Persistent client state for one module domain. Mirrors the load/save
- * pattern used by the workspace-level domains, without prop drilling.
+ * Persistent client state for one domain slice. The setter writes through
+ * immediately, so no mirroring `useEffect` is needed.
  */
 export function useStoredState<T>(
   key: string,
   fallback: T,
+  parse?: (raw: unknown) => T,
 ): [T, Dispatch<SetStateAction<T>>] {
-  const [value, setValue] = useState<T>(() => loadStored(key, fallback));
+  const subscribeToKey = useCallback(
+    (listener: () => void) => subscribe(key, listener),
+    [key],
+  );
+  const getSnapshot = useCallback(
+    () => readStored(key, fallback, parse),
+    [key, fallback, parse],
+  );
+  const getServerSnapshot = useCallback(() => fallback, [fallback]);
 
-  useEffect(() => {
-    saveStored(key, value);
-  }, [key, value]);
+  const value = useSyncExternalStore(subscribeToKey, getSnapshot, getServerSnapshot);
+
+  const setValue = useCallback<Dispatch<SetStateAction<T>>>(
+    (next) => {
+      const current = readStored(key, fallback, parse);
+      writeStored(
+        key,
+        typeof next === "function" ? (next as (prev: T) => T)(current) : next,
+      );
+    },
+    [key, fallback, parse],
+  );
 
   return [value, setValue];
 }
 
+/** Keep seeded data when a stored list is empty (fresh or cleared profile). */
+function nonEmptyList<T>(fallback: T[]) {
+  return (raw: unknown): T[] =>
+    Array.isArray(raw) && raw.length > 0 ? (raw as T[]) : fallback;
+}
+
+const parseChannels = nonEmptyList<ChannelConnection>(initialChannels);
+const parsePeople = nonEmptyList<Person>(initialPeople);
+const parseMessages = nonEmptyList<Message>(initialMessages);
+
+/** Merge defaults so settings saved by an older version keep working. */
+function parseSettings(raw: unknown): WorkspaceSettings {
+  return raw && typeof raw === "object"
+    ? { ...initialSettings, ...(raw as Partial<WorkspaceSettings>) }
+    : initialSettings;
+}
+
 export function loadStoredChannels(): ChannelConnection[] {
-  if (typeof window === "undefined") return initialChannels;
-  try {
-    const raw = localStorage.getItem(STORAGE_KEYS.CHANNELS);
-    return raw ? JSON.parse(raw) : initialChannels;
-  } catch {
-    return initialChannels;
-  }
+  return readStored(STORAGE_KEYS.CHANNELS, initialChannels, parseChannels);
 }
 
 export function saveStoredChannels(channels: ChannelConnection[]): void {
-  if (typeof window === "undefined") return;
-  try {
-    localStorage.setItem(STORAGE_KEYS.CHANNELS, JSON.stringify(channels));
-  } catch {}
+  writeStored(STORAGE_KEYS.CHANNELS, channels);
 }
 
 export function loadStoredPeople(): Person[] {
-  if (typeof window === "undefined") return initialPeople;
-  try {
-    const raw = localStorage.getItem(STORAGE_KEYS.PEOPLE);
-    return raw ? JSON.parse(raw) : initialPeople;
-  } catch {
-    return initialPeople;
-  }
+  return readStored(STORAGE_KEYS.PEOPLE, initialPeople, parsePeople);
 }
 
 export function saveStoredPeople(people: Person[]): void {
-  if (typeof window === "undefined") return;
-  try {
-    localStorage.setItem(STORAGE_KEYS.PEOPLE, JSON.stringify(people));
-  } catch {}
+  writeStored(STORAGE_KEYS.PEOPLE, people);
 }
 
 export function loadStoredMessages(): Message[] {
-  if (typeof window === "undefined") return initialMessages;
-  try {
-    const raw = localStorage.getItem(STORAGE_KEYS.MESSAGES);
-    return raw ? JSON.parse(raw) : initialMessages;
-  } catch {
-    return initialMessages;
-  }
+  return readStored(STORAGE_KEYS.MESSAGES, initialMessages, parseMessages);
 }
 
 export function saveStoredMessages(messages: Message[]): void {
-  if (typeof window === "undefined") return;
-  try {
-    localStorage.setItem(STORAGE_KEYS.MESSAGES, JSON.stringify(messages));
-  } catch {}
+  writeStored(STORAGE_KEYS.MESSAGES, messages);
 }
 
 export function loadStoredSettings(): WorkspaceSettings {
-  if (typeof window === "undefined") return initialSettings;
-  try {
-    const raw = localStorage.getItem(STORAGE_KEYS.SETTINGS);
-    // Merge defaults so settings saved by an older version keep working once
-    // new fields (auto-revert, SLA, wait-before-answer) ship.
-    return raw ? { ...initialSettings, ...JSON.parse(raw) } : initialSettings;
-  } catch {
-    return initialSettings;
-  }
+  return readStored(STORAGE_KEYS.SETTINGS, initialSettings, parseSettings);
 }
 
 export function saveStoredSettings(settings: WorkspaceSettings): void {
-  if (typeof window === "undefined") return;
-  try {
-    localStorage.setItem(STORAGE_KEYS.SETTINGS, JSON.stringify(settings));
-  } catch {}
+  writeStored(STORAGE_KEYS.SETTINGS, settings);
 }
 
 export function loadStoredApiKeys(): ApiKeyItem[] {
-  if (typeof window === "undefined") return initialApiKeys;
-  try {
-    const raw = localStorage.getItem(STORAGE_KEYS.API_KEYS);
-    return raw ? JSON.parse(raw) : initialApiKeys;
-  } catch {
-    return initialApiKeys;
-  }
+  return readStored(STORAGE_KEYS.API_KEYS, initialApiKeys);
 }
 
 export function saveStoredApiKeys(keys: ApiKeyItem[]): void {
-  if (typeof window === "undefined") return;
-  try {
-    localStorage.setItem(STORAGE_KEYS.API_KEYS, JSON.stringify(keys));
-  } catch {}
+  writeStored(STORAGE_KEYS.API_KEYS, keys);
 }
 
 export function loadStoredWebhookEvents(): WebhookEventItem[] {
-  if (typeof window === "undefined") return initialWebhookEvents;
-  try {
-    const raw = localStorage.getItem(STORAGE_KEYS.WEBHOOKS);
-    return raw ? JSON.parse(raw) : initialWebhookEvents;
-  } catch {
-    return initialWebhookEvents;
-  }
+  return readStored(STORAGE_KEYS.WEBHOOKS, initialWebhookEvents);
 }
 
 export function saveStoredWebhookEvents(events: WebhookEventItem[]): void {
-  if (typeof window === "undefined") return;
-  try {
-    localStorage.setItem(STORAGE_KEYS.WEBHOOKS, JSON.stringify(events));
-  } catch {}
+  writeStored(STORAGE_KEYS.WEBHOOKS, events);
+}
+
+export function useStoredChannels() {
+  return useStoredState<ChannelConnection[]>(
+    STORAGE_KEYS.CHANNELS,
+    initialChannels,
+    parseChannels,
+  );
+}
+
+export function useStoredPeople() {
+  return useStoredState<Person[]>(STORAGE_KEYS.PEOPLE, initialPeople, parsePeople);
+}
+
+export function useStoredMessages() {
+  return useStoredState<Message[]>(STORAGE_KEYS.MESSAGES, initialMessages, parseMessages);
+}
+
+export function useStoredSettings() {
+  return useStoredState<WorkspaceSettings>(
+    STORAGE_KEYS.SETTINGS,
+    initialSettings,
+    parseSettings,
+  );
+}
+
+export function useStoredApiKeys() {
+  return useStoredState<ApiKeyItem[]>(STORAGE_KEYS.API_KEYS, initialApiKeys);
+}
+
+export function useStoredWebhookEvents() {
+  return useStoredState<WebhookEventItem[]>(STORAGE_KEYS.WEBHOOKS, initialWebhookEvents);
 }

@@ -5,6 +5,7 @@ import { ArrowUpDown, GripVertical, Layers, Plus, X } from "lucide-react";
 
 import { ChannelDot } from "@/features/inbox/components/channel-dot";
 import { totalChannelCount } from "@/features/inbox/data";
+import { useI18n } from "@/features/inbox/i18n";
 import type { Channel, ChannelFilter, ChannelId } from "@/features/inbox/types";
 import { cn } from "@/lib/utils";
 
@@ -28,6 +29,7 @@ export function ChannelSidebar({
   showClose = false,
   onClose,
 }: ChannelSidebarProps) {
+  const { t } = useI18n();
   const [draggedChannelId, setDraggedChannelId] = useState<ChannelId | null>(null);
   const [dragOverChannelId, setDragOverChannelId] = useState<ChannelId | null>(null);
 
@@ -65,12 +67,12 @@ export function ChannelSidebar({
 
   return (
     <aside
-      aria-label="Channels"
+      aria-label={t("Channels")}
       className="flex min-h-0 flex-1 flex-col gap-0.5 overflow-y-auto bg-surface-alt p-3 pt-4 select-none"
     >
       <div className="flex items-center gap-2 px-3 pb-2">
         <h2 className="flex-1 text-xs font-semibold tracking-[0.06em] text-muted-foreground uppercase">
-          Channels
+          {t("Channels")}
         </h2>
         <ArrowUpDown
           aria-hidden="true"
@@ -80,7 +82,7 @@ export function ChannelSidebar({
         {showClose ? (
           <button
             type="button"
-            aria-label="Close channels"
+            aria-label={t("Close channels")}
             onClick={onClose}
             className="flex size-7 items-center justify-center rounded-lg text-ink-soft hover:bg-border/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
@@ -103,7 +105,7 @@ export function ChannelSidebar({
         <span className="flex size-5 shrink-0 items-center justify-center rounded-md bg-primary text-white shadow-xs">
           <Layers className="size-3 text-white" strokeWidth={2.5} />
         </span>
-        <span className="flex-1 text-left">All channels</span>
+        <span className="flex-1 text-left">{t("All channels")}</span>
         <span
           className={cn(
             "min-w-[22px] rounded-full px-1.5 py-0.5 text-center text-xs font-semibold",
@@ -139,7 +141,7 @@ export function ChannelSidebar({
               )}
             >
               <div
-                title="Drag to change priority order"
+                title={t("Drag to change priority order")}
                 className="flex h-11 cursor-grab items-center px-1 text-muted-foreground/50 hover:text-foreground active:cursor-grabbing"
               >
                 <GripVertical className="size-3.5" />
@@ -171,7 +173,7 @@ export function ChannelSidebar({
       </div>
 
       <p className="mx-3 my-3 text-[12px] leading-relaxed text-ink-soft">
-        Pick a channel to filter, or drag to reorder.
+        {t("Pick a channel to filter, or drag to reorder.")}
       </p>
 
       <button
@@ -180,12 +182,12 @@ export function ChannelSidebar({
         className="mt-1 flex h-11 w-full items-center justify-center gap-2 rounded-[10px] border-[1.5px] border-dashed border-[#AEB3C2] text-sm font-semibold text-primary-strong transition-colors hover:border-primary hover:bg-primary-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
       >
         <Plus className="size-[18px]" strokeWidth={2} />
-        Connect channel
+        {t("Connect channel")}
       </button>
 
       <div className="mt-auto flex items-center gap-2 px-3 py-2.5 text-xs text-muted-foreground">
         <ChannelDot color="#1F9D55" />
-        {channels.length} channels connected
+        {channels.length} {t("channels connected")}
       </div>
     </aside>
   );

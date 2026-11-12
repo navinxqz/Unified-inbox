@@ -1,0 +1,740 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Primary navigation" [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e10]:
+          - paragraph [ref=e11]: Unified Inbox
+          - paragraph [ref=e12]: ws_1794374612651_f3d05g
+        - button "Collapse sidebar" [ref=e13]
+      - generic "Realtime connection is active (SSE)" [ref=e18]:
+        - text: Practice mode
+        - generic [ref=e22]:
+          - text: · synced
+          - generic [ref=e23]: "2"
+          - text: s
+      - navigation [ref=e24]:
+        - group "Work" [ref=e25]:
+          - paragraph [ref=e26]: Work
+          - generic [ref=e27]:
+            - button "Overview" [ref=e28]
+            - button "Inbox 9" [ref=e35]:
+              - generic [ref=e39]: Inbox
+              - generic [ref=e40]: "9"
+            - button "Saved replies" [ref=e41]
+            - button "Comments" [ref=e45]
+            - button "Notifications 5" [ref=e49]:
+              - generic [ref=e53]: Notifications
+              - generic [ref=e54]: "5"
+            - button "Activity" [ref=e55]
+            - button "Analytics" [ref=e61]
+        - group "Grow" [ref=e65]:
+          - paragraph [ref=e66]: Grow
+          - generic [ref=e67]:
+            - button "Broadcasts" [ref=e68]
+            - button "Posts" [ref=e73]
+        - group "AI" [ref=e79]:
+          - paragraph [ref=e80]: AI
+          - generic [ref=e81]:
+            - button "Agent Desk" [ref=e82]
+            - button "Knowledge" [ref=e87]
+        - group "Set up" [ref=e91]:
+          - paragraph [ref=e92]: Set up
+          - generic [ref=e93]:
+            - button "Setup guide 3/8" [ref=e94]:
+              - generic [ref=e98]: Setup guide
+              - generic [ref=e99]: 3/8
+            - button "Channels" [ref=e100]
+            - button "Website chat" [ref=e106]
+            - button "Business" [ref=e111]
+            - button "Team" [ref=e116]
+            - button "Groups" [ref=e123]
+            - button "Billing" [ref=e128]
+            - button "Workspace settings" [ref=e132]
+      - generic [ref=e137]:
+        - button "Quick actions ⌘K" [ref=e138]:
+          - text: Quick actions
+          - generic [ref=e139]: ⌘K
+        - generic [ref=e140]:
+          - generic [aria-hidden] [ref=e141]: YN
+          - generic [ref=e142]:
+            - paragraph [ref=e143]: You
+            - paragraph [ref=e144]: Owner · Manager group
+    - generic [ref=e146]:
+      - region "Conversations" [ref=e148]:
+        - generic [ref=e149]:
+          - generic [ref=e150]:
+            - heading "Messages" [level=2] [ref=e151]
+            - paragraph [ref=e152]: All channels · 14
+          - button "New message" [ref=e153]
+        - generic [ref=e158]:
+          - generic [ref=e162]: Search people and messages
+          - searchbox "Search people and messages" [ref=e163]
+          - generic [aria-hidden] [ref=e164]: /
+        - generic [ref=e165]:
+          - button "All" [pressed] [ref=e166]
+          - button "Priority" [ref=e167]
+          - button "Tagify" [ref=e168]
+          - button "Ignored" [ref=e169]
+          - button "Bots" [ref=e170]
+        - generic [ref=e171]:
+          - button "Waiting · 9" [pressed] [ref=e172]:
+            - text: Waiting
+            - generic [ref=e176]: · 9
+          - button "Sort oldest first" [ref=e177]: Newest
+        - generic [ref=e178]:
+          - button "WhatsApp Rahim Khan Priority 11m আপনার ইনভয়েসটি পেয়েছি, পেমেন্ট আগামীকাল হবে। 2" [ref=e179]:
+            - generic [ref=e180]:
+              - generic [aria-hidden] [ref=e181]: RK
+              - img "WhatsApp" [ref=e182]
+            - generic [ref=e185]:
+              - generic [ref=e186]:
+                - generic [ref=e187]: Rahim Khan
+                - img "Priority" [ref=e188]
+                - generic [ref=e190]: 11m
+              - generic [ref=e191]:
+                - generic [ref=e192]: আপনার ইনভয়েসটি পেয়েছি, পেমেন্ট আগামীকাল হবে।
+                - generic [ref=e193]: "2"
+          - button "WhatsApp Esther Howard 3h Yes, I saw your message. I'm writing the full reply now — just need a moment. Human 38m" [ref=e194]:
+            - generic [ref=e195]:
+              - generic [aria-hidden] [ref=e196]: EH
+              - img "WhatsApp" [ref=e197]
+            - generic [ref=e200]:
+              - generic [ref=e201]:
+                - generic [ref=e202]: Esther Howard
+                - generic [ref=e203]: 3h
+              - generic [ref=e204]: Yes, I saw your message. I'm writing the full reply now — just need a moment.
+              - generic [ref=e206]:
+                - generic [ref=e207]: Human
+                - generic "Waiting 38m · SLA 15m" [ref=e209]: 38m
+          - button "Instagram Farhan Ahmed 8m ভাই, এই জ্যাকেটটার দাম কত? সাইজ M আছে? 2" [ref=e213]:
+            - generic [ref=e214]:
+              - generic [aria-hidden] [ref=e215]: FA
+              - img "Instagram" [ref=e216]
+            - generic [ref=e219]:
+              - generic [ref=e220]:
+                - generic [ref=e221]: Farhan Ahmed
+                - generic [ref=e222]: 8m
+              - generic [ref=e223]:
+                - generic [ref=e224]: ভাই, এই জ্যাকেটটার দাম কত? সাইজ M আছে?
+                - generic [ref=e225]: "2"
+          - button "Instagram Ayesha Rahman 46m Just saw the reel — do you ship outside Dhaka? 46m" [ref=e226]:
+            - generic [ref=e227]:
+              - generic [aria-hidden] [ref=e228]: AR
+              - img "Instagram" [ref=e229]
+            - generic [ref=e232]:
+              - generic [ref=e233]:
+                - generic [ref=e234]: Ayesha Rahman
+                - generic [ref=e235]: 46m
+              - generic [ref=e236]: Just saw the reel — do you ship outside Dhaka?
+              - generic "Waiting 46m · SLA 15m" [ref=e239]: 46m
+          - button "Discord Kenji Mori 6m The /support thread is open — can someone take over from the bot? 1 Human" [ref=e243]:
+            - generic [ref=e244]:
+              - generic [aria-hidden] [ref=e245]: KM
+              - img "Discord" [ref=e246]
+            - generic [ref=e249]:
+              - generic [ref=e250]:
+                - generic [ref=e251]: Kenji Mori
+                - generic [ref=e252]: 6m
+              - generic [ref=e253]:
+                - generic [ref=e254]: The /support thread is open — can someone take over from the bot?
+                - generic [ref=e255]: "1"
+              - generic [ref=e256]: Human
+          - 'button "Email Jonas Teller 34m Re: Q4 proposal — attached the revised numbers, let me know if the scope works. 34m" [ref=e259]':
+            - generic [ref=e260]:
+              - generic [aria-hidden] [ref=e261]: JT
+              - img "Email" [ref=e262]
+            - generic [ref=e266]:
+              - generic [ref=e267]:
+                - generic [ref=e268]: Jonas Teller
+                - generic [ref=e269]: 34m
+              - generic [ref=e270]: "Re: Q4 proposal — attached the revised numbers, let me know if the scope works."
+              - generic "Waiting 34m · SLA 15m" [ref=e273]: 34m
+          - 'button "Gmail Priya Nair 1h Re: Invoice #4821 — still waiting on the refund confirmation. Reverting 64m" [ref=e277]':
+            - generic [ref=e278]:
+              - generic [aria-hidden] [ref=e279]: PN
+              - img "Gmail" [ref=e280]
+            - generic [ref=e283]:
+              - generic [ref=e284]:
+                - generic [ref=e285]: Priya Nair
+                - generic [ref=e286]: 1h
+              - generic [ref=e287]: "Re: Invoice #4821 — still waiting on the refund confirmation."
+              - generic [ref=e289]:
+                - generic [ref=e290]: Reverting
+                - generic "Waiting 64m · SLA 15m" [ref=e292]: 64m
+          - button "Slack Maya Alvarez Priority 2m Can you confirm the delivery date for the Enterprise API keys? 1 Human 18m" [ref=e296]:
+            - generic [ref=e297]:
+              - generic [aria-hidden] [ref=e298]: MA
+              - img "Slack" [ref=e299]
+            - generic [ref=e302]:
+              - generic [ref=e303]:
+                - generic [ref=e304]: Maya Alvarez
+                - img "Priority" [ref=e305]
+                - generic [ref=e307]: 2m
+              - generic [ref=e308]:
+                - generic [ref=e309]: Can you confirm the delivery date for the Enterprise API keys?
+                - generic [ref=e310]: "1"
+              - generic [ref=e311]:
+                - generic [ref=e312]: Human
+                - generic "Waiting 18m · SLA 15m" [ref=e314]: 18m
+          - button "Website chat Mehedi Hasan 3m Do you have the trail runner in size 42? 1" [ref=e318]:
+            - generic [ref=e319]:
+              - generic [aria-hidden] [ref=e320]: MH
+              - img "Website chat" [ref=e321]
+            - generic [ref=e325]:
+              - generic [ref=e326]:
+                - generic [ref=e327]: Mehedi Hasan
+                - generic [ref=e328]: 3m
+              - generic [ref=e329]:
+                - generic [ref=e330]: Do you have the trail runner in size 42?
+                - generic [ref=e331]: "1"
+          - button "WhatsApp Leslie Alexander 10h Please be informed that a new policy takes effect from Monday." [ref=e332]:
+            - generic [ref=e333]:
+              - generic [aria-hidden] [ref=e334]: LA
+              - img "WhatsApp" [ref=e335]
+            - generic [ref=e338]:
+              - generic [ref=e339]:
+                - generic [ref=e340]: Leslie Alexander
+                - generic [ref=e341]: 10h
+              - generic [ref=e342]: Please be informed that a new policy takes effect from Monday.
+          - button "Messenger Sana Parveen 1h Is the sample still available in blue?" [ref=e344]:
+            - generic [ref=e345]:
+              - generic [aria-hidden] [ref=e346]: SP
+              - img "Messenger" [ref=e347]
+            - generic [ref=e350]:
+              - generic [ref=e351]:
+                - generic [ref=e352]: Sana Parveen
+                - generic [ref=e353]: 1h
+              - generic [ref=e354]: Is the sample still available in blue?
+          - button "Messenger Chloe Patel 15h This is a friendly reminder that the deadline is tomorrow at 5 PM." [ref=e356]:
+            - generic [ref=e357]:
+              - generic [aria-hidden] [ref=e358]: CP
+              - img "Messenger" [ref=e359]
+            - generic [ref=e362]:
+              - generic [ref=e363]:
+                - generic [ref=e364]: Chloe Patel
+                - generic [ref=e365]: 15h
+              - generic [ref=e366]: This is a friendly reminder that the deadline is tomorrow at 5 PM.
+          - button "Email Elise Hunt 2d Following up on the contract draft — could you review section 4?" [ref=e368]:
+            - generic [ref=e369]:
+              - generic [aria-hidden] [ref=e370]: EH
+              - img "Email" [ref=e371]
+            - generic [ref=e375]:
+              - generic [ref=e376]:
+                - generic [ref=e377]: Elise Hunt
+                - generic [ref=e378]: 2d
+              - generic [ref=e379]: Following up on the contract draft — could you review section 4?
+          - button "Telegram Sophia Rodriguez 5h I'm currently working on Project Y and sharing the update before lunch." [ref=e381]:
+            - generic [ref=e382]:
+              - generic [aria-hidden] [ref=e383]: SR
+              - img "Telegram" [ref=e384]
+            - generic [ref=e387]:
+              - generic [ref=e388]:
+                - generic [ref=e389]: Sophia Rodriguez
+                - generic [ref=e390]: 5h
+              - generic [ref=e391]: I'm currently working on Project Y and sharing the update before lunch.
+      - main [ref=e394]:
+        - generic [ref=e395]:
+          - generic [ref=e397]:
+            - generic [aria-hidden] [ref=e398]: "#"
+            - generic [ref=e399]:
+              - heading "All messages" [level=1] [ref=e400]
+              - paragraph [ref=e401]: 9 channels, one unified inbox
+          - generic [ref=e402]:
+            - button "Open AI copilot" [ref=e403]
+            - button "Pin conversation" [ref=e407]
+        - generic [ref=e410]:
+          - paragraph [ref=e412]: "New in Telegram — Sophia: “Sharing the Project Y update now.”"
+          - button "View" [ref=e413]
+          - button "Ignore" [ref=e414]
+        - generic [ref=e415]:
+          - generic [ref=e416]: Today
+          - article [ref=e419]:
+            - generic [aria-hidden] [ref=e420]: RK
+            - generic [ref=e421]:
+              - generic [ref=e422]:
+                - generic [ref=e423]: Rahim Khan
+                - generic [ref=e424]: WhatsApp
+                - generic [ref=e427]: 9:12 AM
+              - paragraph [ref=e428]: আপনার ইনভয়েসটি পেয়েছি, পেমেন্ট আগামীকাল হবে।
+              - paragraph [ref=e429]:
+                - generic [ref=e434]: "Translated: “Got the invoice, payment will be made tomorrow.”"
+              - generic [ref=e435]:
+                - generic [ref=e436]: "# invoice"
+                - generic [ref=e437]: "# urgent"
+            - generic:
+              - button "React to Rahim Khan"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to Rahim Khan"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e438]:
+            - generic [aria-hidden] [ref=e439]: MA
+            - generic [ref=e440]:
+              - generic [ref=e441]:
+                - generic [ref=e442]: Maya Alvarez
+                - generic [ref=e443]: Slack
+                - generic [ref=e446]: 9:40 AM
+              - paragraph [ref=e447]: Can you confirm the delivery date? The client is asking again.
+              - generic [ref=e448]:
+                - generic [ref=e449]: "# enterprise"
+                - generic [ref=e450]: "# sla"
+              - generic [ref=e451]:
+                - button "👍 reaction, 2" [pressed] [ref=e452]:
+                  - generic [aria-hidden] [ref=e453]: 👍
+                  - generic [ref=e454]: "2"
+                - button "👀 reaction, 1" [ref=e455]:
+                  - generic [aria-hidden] [ref=e456]: 👀
+                  - generic [ref=e457]: "1"
+                - button "Add reaction" [ref=e458]
+              - generic [ref=e462]:
+                - generic [ref=e463]:
+                  - generic [aria-hidden] [ref=e465]: YN
+                  - generic [ref=e466]:
+                    - generic [ref=e467]:
+                      - generic [ref=e468]: You
+                      - generic [ref=e469]: 9:42 AM
+                    - generic [ref=e470] [cursor=pointer]:
+                      - generic [ref=e471]: "Maya Alvarez:"
+                      - generic [ref=e472]: Can you confirm the delivery date? The client is asking again.
+                    - paragraph [ref=e473]: Checking with the warehouse now, will update you shortly.
+                - generic [ref=e474]:
+                  - generic [aria-hidden] [ref=e476]: MA
+                  - generic [ref=e477]:
+                    - generic [ref=e478]:
+                      - generic [ref=e479]: Maya Alvarez
+                      - generic [ref=e480]: 9:44 AM
+                    - generic [ref=e481] [cursor=pointer]:
+                      - generic [ref=e482]: "You:"
+                      - generic [ref=e483]: Checking with the warehouse now, will update you shortly.
+                    - paragraph [ref=e484]: Thanks, appreciated.
+                    - generic [ref=e485]:
+                      - button "❤️ reaction, 1" [ref=e486]:
+                        - generic [aria-hidden] [ref=e487]: ❤️
+                        - generic [ref=e488]: "1"
+                      - button "Add reaction" [ref=e489]
+            - generic:
+              - button "React to Maya Alvarez"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to Maya Alvarez"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e493]:
+            - generic [aria-hidden] [ref=e494]: JT
+            - generic [ref=e495]:
+              - generic [ref=e496]:
+                - generic [ref=e497]: Jonas Teller
+                - generic [ref=e498]: Email
+                - generic [ref=e502]: 10:05 AM
+              - paragraph [ref=e503]: "Re: Q4 proposal — attached the revised numbers, let me know if the scope works."
+              - generic [ref=e504]: "# proposal"
+              - generic [ref=e506]:
+                - generic [ref=e509]: Q4-proposal-v2.pdf
+                - generic [ref=e510]: 248 KB
+            - generic:
+              - button "React to Jonas Teller"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to Jonas Teller"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e511]:
+            - generic [aria-hidden] [ref=e512]: SP
+            - generic [ref=e513]:
+              - generic [ref=e514]:
+                - generic [ref=e515]: Sana Parveen
+                - generic [ref=e516]: Messenger
+                - generic [ref=e519]: 10:30 AM
+              - paragraph [ref=e520]: Is the sample still available in blue?
+              - generic [ref=e522]:
+                - generic [aria-hidden] [ref=e524]: YN
+                - generic [ref=e525]:
+                  - generic [ref=e526]:
+                    - generic [ref=e527]: You
+                    - generic [ref=e528]: 10:34 AM
+                  - paragraph [ref=e529]: Yes, blue is in stock. Want me to hold one for you?
+            - generic:
+              - button "React to Sana Parveen"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to Sana Parveen"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e530]:
+            - generic [aria-hidden] [ref=e531]: EH
+            - generic [ref=e532]:
+              - generic [ref=e533]:
+                - generic [ref=e534]: Esther Howard
+                - generic [ref=e535]: WhatsApp
+                - generic [ref=e538]: 10:52 AM
+              - paragraph [ref=e539]: Yes, I saw your message. I'm writing the full reply now — just need a moment.
+            - generic:
+              - button "React to Esther Howard"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to Esther Howard"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e540]:
+            - generic [aria-hidden] [ref=e541]: SR
+            - generic [ref=e542]:
+              - generic [ref=e543]:
+                - generic [ref=e544]: Sophia Rodriguez
+                - generic [ref=e545]: Telegram
+                - generic [ref=e548]: 11:14 AM
+              - paragraph [ref=e549]: I'm currently working on Project Y and sharing the update before lunch.
+            - generic:
+              - button "React to Sophia Rodriguez"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to Sophia Rodriguez"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e550]:
+            - generic [aria-hidden] [ref=e551]: LA
+            - generic [ref=e552]:
+              - generic [ref=e553]:
+                - generic [ref=e554]: Leslie Alexander
+                - generic [ref=e555]: WhatsApp
+                - generic [ref=e558]: 11:38 AM
+              - paragraph [ref=e559]: Please be informed that a new policy takes effect from Monday.
+            - generic:
+              - button "React to Leslie Alexander"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to Leslie Alexander"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e560]:
+            - generic [aria-hidden] [ref=e561]: CP
+            - generic [ref=e562]:
+              - generic [ref=e563]:
+                - generic [ref=e564]: Chloe Patel
+                - generic [ref=e565]: Messenger
+                - generic [ref=e568]: 12:02 PM
+              - paragraph [ref=e569]: This is a friendly reminder that the deadline is tomorrow at 5 PM.
+            - generic:
+              - button "React to Chloe Patel"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to Chloe Patel"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e570]:
+            - generic [aria-hidden] [ref=e571]: EH
+            - generic [ref=e572]:
+              - generic [ref=e573]:
+                - generic [ref=e574]: Elise Hunt
+                - generic [ref=e575]: Email
+                - generic [ref=e579]: 12:20 PM
+              - paragraph [ref=e580]: Following up on the contract draft — could you review section 4?
+              - generic [ref=e581]: "# contract"
+            - generic:
+              - button "React to Elise Hunt"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to Elise Hunt"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e583]:
+            - generic [aria-hidden] [ref=e584]: YN
+            - generic [ref=e585]:
+              - generic [ref=e586]:
+                - generic [ref=e587]: You
+                - generic [ref=e588]: Slack
+                - generic [ref=e591]: 9:41 AM
+              - paragraph [ref=e592]: Hi Maya! The Enterprise API keys ship Thursday. I'm looping in a human for the exact delivery window.
+            - generic:
+              - button "React to You"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to You"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e593]:
+            - generic [aria-hidden] [ref=e594]: YN
+            - generic [ref=e595]:
+              - generic [ref=e596]:
+                - generic [ref=e597]: You
+                - generic [ref=e598]: Slack
+                - generic [ref=e601]: 9:41 AM
+              - paragraph [ref=e602]: "AI handed off to a human · Reason: special request · Claimed by You"
+            - generic:
+              - button "React to You"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to You"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e603]:
+            - generic [aria-hidden] [ref=e604]: FA
+            - generic [ref=e605]:
+              - generic [ref=e606]:
+                - generic [ref=e607]: Farhan Ahmed
+                - generic [ref=e608]: Instagram
+                - generic [ref=e611]: 10:24 AM
+              - paragraph [ref=e612]: ভাই, এই জ্যাকেটটার দাম কত? সাইজ M আছে?
+              - paragraph [ref=e613]:
+                - generic [ref=e618]: "Translated: “Brother, how much is this jacket? Is size M available?”"
+              - generic [ref=e619]: "# product"
+            - generic:
+              - button "React to Farhan Ahmed"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to Farhan Ahmed"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e621]:
+            - generic [aria-hidden] [ref=e622]: YN
+            - generic [ref=e623]:
+              - generic [ref=e624]:
+                - generic [ref=e625]: You
+                - generic [ref=e626]: Instagram
+                - generic [ref=e629]: 10:24 AM
+              - paragraph [ref=e630]: The Trail Jacket is ৳2,450 and size M is in stock. Want me to reserve one for you?
+              - generic [ref=e631]: "# product"
+            - generic:
+              - button "React to You"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to You"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e633]:
+            - generic [aria-hidden] [ref=e634]: AR
+            - generic [ref=e635]:
+              - generic [ref=e636]:
+                - generic [ref=e637]: Ayesha Rahman
+                - generic [ref=e638]: Instagram
+                - generic [ref=e641]: 9:45 AM
+              - paragraph [ref=e642]: Just saw the reel — do you ship outside Dhaka?
+            - generic:
+              - button "React to Ayesha Rahman"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to Ayesha Rahman"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e643]:
+            - generic [aria-hidden] [ref=e644]: KM
+            - generic [ref=e645]:
+              - generic [ref=e646]:
+                - generic [ref=e647]: Kenji Mori
+                - generic [ref=e648]: Discord
+                - generic [ref=e651]: 10:52 AM
+              - paragraph [ref=e652]: The /support thread is open — can someone take over from the bot?
+            - generic:
+              - button "React to Kenji Mori"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to Kenji Mori"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e653]:
+            - generic [aria-hidden] [ref=e654]: YN
+            - generic [ref=e655]:
+              - generic [ref=e656]:
+                - generic [ref=e657]: You
+                - generic [ref=e658]: Discord
+                - generic [ref=e661]: 10:53 AM
+              - paragraph [ref=e662]: "AI handed off to a human · Reason: customer asked for a human · Claimed by You"
+            - generic:
+              - button "React to You"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to You"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e663]:
+            - generic [aria-hidden] [ref=e664]: YN
+            - generic [ref=e665]:
+              - generic [ref=e666]:
+                - generic [ref=e667]: You
+                - generic [ref=e668]: Discord
+                - generic [ref=e671]: 10:54 AM
+              - paragraph [ref=e672]: I'm here, Kenji — taking over this thread now. What's happening with your order?
+            - generic:
+              - button "React to You"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to You"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e673]:
+            - generic [aria-hidden] [ref=e674]: PN
+            - generic [ref=e675]:
+              - generic [ref=e676]:
+                - generic [ref=e677]: Priya Nair
+                - generic [ref=e678]: Gmail
+                - generic [ref=e681]: 9:38 AM
+              - paragraph [ref=e682]: "Re: Invoice #4821 — still waiting on the refund confirmation."
+              - generic [ref=e683]:
+                - generic [ref=e684]: "# refund"
+                - generic [ref=e685]: "# invoice"
+              - generic [ref=e686]:
+                - generic [ref=e689]: invoice-4821.pdf
+                - generic [ref=e690]: 96 KB
+            - generic:
+              - button "React to Priya Nair"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to Priya Nair"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e691]:
+            - generic [aria-hidden] [ref=e692]: YN
+            - generic [ref=e693]:
+              - generic [ref=e694]:
+                - generic [ref=e695]: You
+                - generic [ref=e696]: Gmail
+                - generic [ref=e699]: 10:46 AM
+              - paragraph [ref=e700]: Auto-reverted to AI · No human reply within the 60m window · Never answered
+            - generic:
+              - button "React to You"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to You"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e701]:
+            - generic [aria-hidden] [ref=e702]: MH
+            - generic [ref=e703]:
+              - generic [ref=e704]:
+                - generic [ref=e705]: Mehedi Hasan
+                - generic [ref=e706]: Website chat
+                - generic [ref=e710]: 10:59 AM
+              - paragraph [ref=e711]: Do you have the trail runner in size 42?
+            - generic:
+              - button "React to Mehedi Hasan"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to Mehedi Hasan"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e712]:
+            - generic [aria-hidden] [ref=e713]: YN
+            - generic [ref=e714]:
+              - generic [ref=e715]:
+                - generic [ref=e716]: You
+                - generic [ref=e717]: Website chat
+                - generic [ref=e721]: 10:59 AM
+              - paragraph [ref=e722]: Yes — the Trail Runner (size 42) is in stock at ৳3,900. Shall I send you a checkout link?
+            - generic:
+              - button "React to You"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to You"
+              - button "Add tag"
+              - button "More actions"
+          - article [ref=e723]:
+            - generic [aria-hidden] [ref=e724]: YN
+            - generic [ref=e725]:
+              - generic [ref=e726]:
+                - generic [ref=e727]: You
+                - generic [ref=e728]: Website chat
+                - generic [ref=e732]: 10:59 AM
+              - paragraph [ref=e733]: Lead captured from website widget · Name + phone collected · Added to Leads pipeline
+            - generic:
+              - button "React to You"
+              - button "React with 👍": 👍
+              - button "React with ❤️": ❤️
+              - button "React with ✅": ✅
+              - button "Reply to You"
+              - button "Add tag"
+              - button "More actions"
+        - generic [ref=e734]:
+          - generic [ref=e735]:
+            - generic [ref=e736]: Suggested
+            - button "Yes, delivery is confirmed for Thursday" [ref=e737]
+            - button "Let me check and get back to you" [ref=e738]
+            - button "I'll share the update within the hour" [ref=e739]
+          - generic [ref=e740]:
+            - generic [ref=e741]: Message
+            - textbox "Message" [ref=e742]:
+              - /placeholder: Reply to the unified timeline
+            - generic [ref=e743]:
+              - button [aria-hidden] [ref=e744]
+              - button "Attach a file" [ref=e745]
+              - button "Insert emoji" [ref=e749]
+              - button "Suggest a reply" [ref=e754]: Suggest
+              - button "Translate draft" [ref=e759]: Translate
+              - button "Ask the bot" [ref=e764]: Bot
+              - button "Tag this reply" [ref=e769]: Tagify
+              - button "Send" [disabled] [ref=e773]
+      - complementary "Channels" [ref=e777]:
+        - heading "Channels" [level=2] [ref=e779]
+        - button "All channels 42" [ref=e783]:
+          - generic [ref=e789]: All channels
+          - generic [ref=e790]: "42"
+        - generic [ref=e792]:
+          - generic [ref=e793]:
+            - generic "Drag to change priority order" [ref=e794]
+            - button "WhatsApp 9" [ref=e802]:
+              - generic [ref=e806]: WhatsApp
+              - generic [ref=e807]: "9"
+          - generic [ref=e808]:
+            - generic "Drag to change priority order" [ref=e809]
+            - button "Messenger 6" [ref=e817]:
+              - generic [ref=e821]: Messenger
+              - generic [ref=e822]: "6"
+          - generic [ref=e823]:
+            - generic "Drag to change priority order" [ref=e824]
+            - button "Instagram 5" [ref=e832]:
+              - generic [ref=e836]: Instagram
+              - generic [ref=e837]: "5"
+          - generic [ref=e838]:
+            - generic "Drag to change priority order" [ref=e839]
+            - button "Discord 3" [ref=e847]:
+              - generic [ref=e851]: Discord
+              - generic [ref=e852]: "3"
+          - generic [ref=e853]:
+            - generic "Drag to change priority order" [ref=e854]
+            - button "Email 11" [ref=e862]:
+              - generic [ref=e867]: Email
+              - generic [ref=e868]: "11"
+          - generic [ref=e869]:
+            - generic "Drag to change priority order" [ref=e870]
+            - button "Gmail 4" [ref=e878]:
+              - generic [ref=e882]: Gmail
+              - generic [ref=e883]: "4"
+          - generic [ref=e884]:
+            - generic "Drag to change priority order" [ref=e885]
+            - button "Slack 12" [ref=e893]:
+              - generic [ref=e897]: Slack
+              - generic [ref=e898]: "12"
+          - generic [ref=e899]:
+            - generic "Drag to change priority order" [ref=e900]
+            - button "Telegram 4" [ref=e908]:
+              - generic [ref=e912]: Telegram
+              - generic [ref=e913]: "4"
+          - generic [ref=e914]:
+            - generic "Drag to change priority order" [ref=e915]
+            - button "Website chat 7" [ref=e923]:
+              - generic [ref=e928]: Website chat
+              - generic [ref=e929]: "7"
+        - paragraph [ref=e930]: Pick a channel to filter, or drag to reorder.
+        - button "Connect channel" [ref=e931]
+        - generic [ref=e933]: 9 channels connected
+  - alert [ref=e935]

@@ -12,6 +12,7 @@ import {
 import { Avatar } from "@/features/inbox/components/avatar";
 import { ChannelIcon } from "@/features/inbox/components/channel-icon";
 import { channelById } from "@/features/inbox/data";
+import { useI18n } from "@/features/inbox/i18n";
 import type { ConversationPriority, ConversationStatus, Person } from "@/features/inbox/types";
 
 type UserDetailsModalProps = {
@@ -29,6 +30,7 @@ export function UserDetailsModal({
   onUpdateStatus,
   onUpdatePriority,
 }: UserDetailsModalProps) {
+  const { t } = useI18n();
   const [internalNotes, setInternalNotes] = useState("");
   const [notes, setNotes] = useState<string[]>([
     "Client requested confirmation on delivery timeline.",
@@ -50,7 +52,7 @@ export function UserDetailsModal({
       <div
         role="dialog"
         aria-modal="true"
-        aria-label="User Details"
+        aria-label={t("User Details")}
         className="relative w-full max-w-lg rounded-2xl border border-border bg-background p-6 shadow-2xl space-y-5"
       >
         {/* Header */}
@@ -91,24 +93,24 @@ export function UserDetailsModal({
         {/* Contact & Company Details */}
         <div className="grid grid-cols-2 gap-3 text-xs">
           <div className="rounded-lg border border-border bg-surface/30 p-2.5">
-            <span className="text-[11px] text-muted-foreground block mb-1">Company</span>
+            <span className="text-[11px] text-muted-foreground block mb-1">{t("Company")}</span>
             <span className="font-semibold text-foreground flex items-center gap-1.5">
               <Building2 className="size-3.5 text-muted-foreground" />
-              {person.company ?? "Individual Customer"}
+              {person.company ?? t("Individual Customer")}
             </span>
           </div>
 
           <div className="rounded-lg border border-border bg-surface/30 p-2.5">
-            <span className="text-[11px] text-muted-foreground block mb-1">Account Tier</span>
+            <span className="text-[11px] text-muted-foreground block mb-1">{t("Account Tier")}</span>
             <span className="font-semibold text-primary flex items-center gap-1.5">
               <Shield className="size-3.5 text-primary" />
-              {person.planTier ?? "Starter Plan"}
+              {person.planTier ?? t("Starter Plan")}
             </span>
           </div>
 
           {person.phone ? (
             <div className="rounded-lg border border-border bg-surface/30 p-2.5">
-              <span className="text-[11px] text-muted-foreground block mb-1">Phone</span>
+              <span className="text-[11px] text-muted-foreground block mb-1">{t("Phone")}</span>
               <span className="font-medium text-foreground flex items-center gap-1.5">
                 <Phone className="size-3.5 text-muted-foreground" />
                 {person.phone}
@@ -117,10 +119,10 @@ export function UserDetailsModal({
           ) : null}
 
           <div className="rounded-lg border border-border bg-surface/30 p-2.5">
-            <span className="text-[11px] text-muted-foreground block mb-1">Response SLA</span>
+            <span className="text-[11px] text-muted-foreground block mb-1">{t("Response SLA")}</span>
             <span className="font-medium text-emerald-600 flex items-center gap-1.5">
               <CheckCircle2 className="size-3.5" />
-              Target Met (&lt;15m)
+              {t("Target Met (<15m)")}
             </span>
           </div>
         </div>
@@ -128,11 +130,11 @@ export function UserDetailsModal({
         {/* Ticket Status & Priority Triage */}
         <div className="rounded-lg border border-border p-3 bg-surface/20 space-y-2 text-xs">
           <h4 className="font-semibold text-muted-foreground uppercase text-[10px] tracking-wider">
-            Ticket Triage
+            {t("Ticket Triage")}
           </h4>
           <div className="grid grid-cols-2 gap-2">
             <div>
-              <label className="text-[11px] text-muted-foreground block mb-1">Status</label>
+              <label className="text-[11px] text-muted-foreground block mb-1">{t("Status")}</label>
               <select
                 value={person.status ?? "open"}
                 onChange={(e) =>
@@ -140,14 +142,14 @@ export function UserDetailsModal({
                 }
                 className="w-full rounded border border-border bg-background p-1.5 text-xs outline-none focus:border-primary"
               >
-                <option value="open">Open</option>
-                <option value="pending">Pending</option>
-                <option value="resolved">Resolved</option>
+                <option value="open">{t("Open")}</option>
+                <option value="pending">{t("Pending")}</option>
+                <option value="resolved">{t("Resolved")}</option>
               </select>
             </div>
 
             <div>
-              <label className="text-[11px] text-muted-foreground block mb-1">Priority</label>
+              <label className="text-[11px] text-muted-foreground block mb-1">{t("Priority")}</label>
               <select
                 value={person.ticketPriority ?? "medium"}
                 onChange={(e) =>
@@ -155,10 +157,10 @@ export function UserDetailsModal({
                 }
                 className="w-full rounded border border-border bg-background p-1.5 text-xs outline-none focus:border-primary"
               >
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
-                <option value="urgent">Urgent</option>
+                <option value="low">{t("Low")}</option>
+                <option value="medium">{t("Medium")}</option>
+                <option value="high">{t("High")}</option>
+                <option value="urgent">{t("Urgent")}</option>
               </select>
             </div>
           </div>
@@ -167,7 +169,7 @@ export function UserDetailsModal({
         {/* Private Team Notes */}
         <div className="space-y-2 text-xs">
           <h4 className="font-semibold text-muted-foreground uppercase text-[10px] tracking-wider">
-            Internal Team Notes
+            {t("Internal Team Notes")}
           </h4>
           <div className="space-y-1.5 max-h-28 overflow-y-auto">
             {notes.map((n, i) => (
@@ -182,7 +184,7 @@ export function UserDetailsModal({
               type="text"
               value={internalNotes}
               onChange={(e) => setInternalNotes(e.target.value)}
-              placeholder="Add team note..."
+              placeholder={t("Add team note...")}
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
                   e.preventDefault();
@@ -196,7 +198,7 @@ export function UserDetailsModal({
               onClick={handleAddNote}
               className="rounded bg-primary px-3 py-1.5 text-xs font-semibold text-white hover:bg-primary/90"
             >
-              Add
+              {t("Add")}
             </button>
           </div>
         </div>

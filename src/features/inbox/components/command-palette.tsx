@@ -14,6 +14,8 @@ import {
   X,
 } from "lucide-react";
 
+import { hiddenModules } from "@/features/inbox/data";
+import { useI18n } from "@/features/inbox/i18n";
 import type { ModuleId } from "@/features/inbox/types";
 
 type CommandPaletteProps = {
@@ -45,6 +47,7 @@ export function CommandPalette({
   onNavigate,
   onSelectChannelFilter,
 }: CommandPaletteProps) {
+  const { t } = useI18n();
   const [query, setQuery] = useState("");
 
   useEffect(() => {
@@ -67,12 +70,14 @@ export function CommandPalette({
   if (!isOpen) return null;
 
   const actions = [
-    ...moduleJumps.map((item) => ({
-      label: item.label,
-      category: "Navigation",
-      icon: item.icon,
-      run: () => onNavigate(item.module),
-    })),
+    ...moduleJumps
+      .filter((item) => !hiddenModules.has(item.module))
+      .map((item) => ({
+        label: t(item.label),
+        category: t("Navigation"),
+        icon: item.icon,
+        run: () => onNavigate(item.module),
+      })),
     ...[
       { label: "Slack", id: "slack" },
       { label: "WhatsApp", id: "whatsapp" },
@@ -80,8 +85,8 @@ export function CommandPalette({
       { label: "Instagram", id: "instagram" },
       { label: "Website chat", id: "website" },
     ].map((channel) => ({
-      label: `Filter inbox to ${channel.label}`,
-      category: "Channel",
+      label: t("Filter inbox to {channel}", { channel: channel.label }),
+      category: t("Channel"),
       icon: Layers,
       run: () => {
         onNavigate("inbox");
@@ -104,13 +109,13 @@ export function CommandPalette({
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Jump to a module or channel… (Esc to close)"
+            placeholder={t("Jump to a module or channel… (Esc to close)")}
             className="w-full bg-transparent text-xs text-foreground outline-none placeholder:text-muted-foreground"
           />
           <button
             type="button"
             onClick={onClose}
-            aria-label="Close quick actions"
+            aria-label={t("Close quick actions")}
             className="p-1 text-muted-foreground hover:text-foreground"
           >
             <X className="size-4" />
@@ -119,7 +124,7 @@ export function CommandPalette({
 
         <div className="scrollbar-thin max-h-72 divide-y divide-border/20 overflow-y-auto p-1.5 text-xs">
           {filtered.length === 0 ? (
-            <p className="p-4 text-center text-muted-foreground">No results found.</p>
+            <p className="p-4 text-center text-muted-foreground">{t("No results found.")}</p>
           ) : (
             filtered.map((item, idx) => {
               const Icon = item.icon;

@@ -9,6 +9,7 @@ import {
 
 import { Avatar } from "@/features/inbox/components/avatar";
 import { authorById, channelById, selfAuthor } from "@/features/inbox/data";
+import { useI18n } from "@/features/inbox/i18n";
 import type { ChannelId, Message, Reaction } from "@/features/inbox/types";
 import { cn } from "@/lib/utils";
 
@@ -38,6 +39,7 @@ function ReactionPills({
   reactions?: Reaction[];
   onToggle: (emoji: string) => void;
 }) {
+  const { t } = useI18n();
   if (!reactions?.length) {
     return null;
   }
@@ -65,8 +67,8 @@ function ReactionPills({
 
       <button
         type="button"
-        aria-label="Add reaction"
-        title="Add reaction"
+        aria-label={t("Add reaction")}
+        title={t("Add reaction")}
         onClick={() => onToggle("❤️")}
         className="flex size-7 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary-border hover:bg-primary-soft hover:text-primary-strong focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-primary"
       >
@@ -91,6 +93,7 @@ export function MessageCard({
   onToggleReaction,
   onReply,
 }: MessageCardProps) {
+  const { t } = useI18n();
   const author = authorById[message.authorId] ?? selfAuthor;
   const channel = message.channel ? channelById[message.channel] : undefined;
   const isTargeted = highlightedMessageId === message.id;
@@ -145,7 +148,7 @@ export function MessageCard({
               strokeWidth={2}
             />
             <span>
-              Translated: &ldquo;{message.translation}&rdquo;
+              {t("Translated:")} &ldquo;{message.translation}&rdquo;
             </span>
           </p>
         ) : null}
@@ -249,7 +252,7 @@ export function MessageCard({
         <button
           type="button"
           aria-label={`React to ${author.name}`}
-          title="React"
+          title={t("React")}
           onClick={() => onToggleReaction(message.id, "👍")}
           className={toolbarButtonStyles}
         >
@@ -272,7 +275,7 @@ export function MessageCard({
         <button
           type="button"
           aria-label={`Reply to ${author.name}`}
-          title="Reply"
+          title={t("Reply")}
           onClick={() =>
             onReply({
               id: message.id,
@@ -287,7 +290,7 @@ export function MessageCard({
         <button
           type="button"
           aria-label="Add tag"
-          title="Tag"
+          title={t("Tag")}
           className={toolbarButtonStyles}
         >
           <Tag className="size-[18px]" strokeWidth={2} />
@@ -295,7 +298,7 @@ export function MessageCard({
         <button
           type="button"
           aria-label="More actions"
-          title="More"
+          title={t("More")}
           className={toolbarButtonStyles}
         >
           <MoreHorizontal className="size-[18px]" strokeWidth={2} />

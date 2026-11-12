@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 
 import type { Attachment, QuotedMessage, SavedReply } from "@/features/inbox/types";
+import { useI18n } from "@/features/inbox/i18n";
 import { cn } from "@/lib/utils";
 
 function formatFileSize(bytes: number) {
@@ -64,7 +65,7 @@ type ComposerProps = {
 };
 
 const toolButtonStyles =
-  "inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg px-2.5 text-[13px] font-semibold text-ink-soft transition-colors hover:bg-border/70 focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-primary";
+  "inline-flex h-9 shrink-0 items-center gap-1 rounded-lg px-2 text-[12px] sm:text-[13px] font-semibold text-ink-soft transition-colors hover:bg-border/70 focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-primary";
 
 export function Composer({
   value,
@@ -83,6 +84,7 @@ export function Composer({
   onSubmit,
   savedReplies = [],
 }: ComposerProps) {
+  const { t } = useI18n();
   const fileRef = useRef<HTMLInputElement>(null);
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   const [showTagPicker, setShowTagPicker] = useState(false);
@@ -332,8 +334,9 @@ export function Composer({
           className="h-11 w-full border-0 bg-transparent px-2.5 text-[15px] text-foreground outline-none placeholder:text-muted-foreground"
         />
 
-        <div className="flex flex-wrap items-center gap-0.5 pb-1">
-          <input
+        <div className="flex items-center justify-between gap-1 pb-1">
+          <div className="flex min-w-0 items-center gap-0.5 overflow-x-auto scrollbar-none py-0.5">
+            <input
             ref={fileRef}
             type="file"
             tabIndex={-1}
@@ -353,11 +356,11 @@ export function Composer({
 
           <button
             type="button"
-            aria-label="Attach a file"
-            title="Attach a file"
+            aria-label={t("Attach a file")}
+            title={t("Attach a file")}
             onClick={() => fileRef.current?.click()}
             className={cn(
-              "flex size-9 items-center justify-center rounded-lg text-ink-soft transition-colors hover:bg-border/70 focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-primary",
+              "flex size-9 shrink-0 items-center justify-center rounded-lg text-ink-soft transition-colors hover:bg-border/70 focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-primary",
               attachment && "text-primary bg-primary-soft",
             )}
           >
@@ -365,11 +368,11 @@ export function Composer({
           </button>
 
           {/* Emoji Picker Popover */}
-          <div ref={emojiContainerRef} className="relative">
+          <div ref={emojiContainerRef} className="relative shrink-0">
             <button
               type="button"
-              aria-label="Insert emoji"
-              title="Emoji"
+              aria-label={t("Pick an emoji")}
+              title={t("Pick an emoji")}
               onClick={() => setShowEmojiPicker((v) => !v)}
               className={cn(
                 "flex size-9 items-center justify-center rounded-lg text-ink-soft transition-colors hover:bg-border/70 focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-primary",
@@ -382,7 +385,7 @@ export function Composer({
             {showEmojiPicker ? (
               <div className="absolute bottom-11 left-0 z-30 w-64 rounded-xl border border-border bg-background p-2.5 shadow-xl">
                 <p className="mb-1.5 text-xs font-semibold text-muted-foreground">
-                  Pick an emoji
+                  {t("Pick an emoji")}
                 </p>
                 <div className="grid grid-cols-8 gap-1">
                   {COMMON_EMOJIS.map((emoji) => (
@@ -400,12 +403,12 @@ export function Composer({
             ) : null}
           </div>
 
-          <span aria-hidden="true" className="mx-1 h-5 w-px bg-border" />
+          <span aria-hidden="true" className="mx-1 h-5 w-px shrink-0 bg-border" />
 
           <button
             type="button"
-            aria-label="Suggest a reply"
-            title="Suggest a reply"
+            aria-label={t("Suggest")}
+            title={t("Suggest")}
             onClick={() => {
               onChange(suggestions[0] ?? "");
               inputRef.current?.focus();
@@ -413,15 +416,15 @@ export function Composer({
             className={toolButtonStyles}
           >
             <Sparkles className="size-4" strokeWidth={2} />
-            Suggest
+            <span>{t("Suggest")}</span>
           </button>
 
           {/* Translate Options Dropdown */}
-          <div ref={translateContainerRef} className="relative">
+          <div ref={translateContainerRef} className="relative shrink-0">
             <button
               type="button"
-              aria-label="Translate draft"
-              title="Translate options"
+              aria-label={t("Translate")}
+              title={t("Translate")}
               onClick={() => setShowTranslatePicker((v) => !v)}
               className={cn(
                 toolButtonStyles,
@@ -429,13 +432,13 @@ export function Composer({
               )}
             >
               <Languages className="size-4" strokeWidth={2} />
-              Translate
+              <span>{t("Translate")}</span>
             </button>
 
             {showTranslatePicker ? (
               <div className="absolute bottom-11 left-0 z-30 w-52 rounded-xl border border-border bg-background p-1.5 shadow-xl">
                 <p className="px-2 py-1 text-xs font-semibold text-muted-foreground">
-                  Translate message to:
+                  {t("Translate message to:")}
                 </p>
                 {TARGET_LANGUAGES.map((lang) => (
                   <button
@@ -465,23 +468,23 @@ export function Composer({
 
           <button
             type="button"
-            aria-label="Ask the bot"
-            title="Bot assistant"
+            aria-label={t("Bot")}
+            title={t("Bot")}
             onClick={() => {
               onChange("Bot: How can I help you today?");
             }}
             className={toolButtonStyles}
           >
             <Bot className="size-4" strokeWidth={2} />
-            Bot
+            <span>{t("Bot")}</span>
           </button>
 
           {/* Tagify Options Popover */}
-          <div ref={tagContainerRef} className="relative">
+          <div ref={tagContainerRef} className="relative shrink-0">
             <button
               type="button"
-              aria-label="Tag this reply"
-              title="Tagify"
+              aria-label={t("Tagify")}
+              title={t("Tagify")}
               onClick={() => setShowTagPicker((v) => !v)}
               className={cn(
                 toolButtonStyles,
@@ -491,13 +494,15 @@ export function Composer({
               )}
             >
               <Tag className="size-4" strokeWidth={2} />
-              Tagify {tags.length > 0 ? `(${tags.length})` : ""}
+              <span>
+                {t("Tagify")} {tags.length > 0 ? `(${tags.length})` : ""}
+              </span>
             </button>
 
             {showTagPicker ? (
               <div className="absolute bottom-11 left-0 z-30 w-64 rounded-xl border border-border bg-background p-3 shadow-xl">
                 <p className="mb-2 text-xs font-semibold text-muted-foreground">
-                  Attach tags to message:
+                  {t("Attach tags to message:")}
                 </p>
                 <div className="flex flex-wrap gap-1.5 mb-2.5">
                   {AVAILABLE_TAGS.map((tag) => {
@@ -531,7 +536,7 @@ export function Composer({
                         handleAddCustomTag();
                       }
                     }}
-                    placeholder="New tag..."
+                    placeholder={t("New tag...")}
                     className="min-w-0 flex-1 rounded border border-border bg-surface px-2 py-1 text-xs outline-none"
                   />
                   <button
@@ -539,22 +544,23 @@ export function Composer({
                     onClick={handleAddCustomTag}
                     className="rounded bg-primary px-2 py-1 text-xs font-semibold text-white hover:bg-primary/90"
                   >
-                    Add
+                    {t("Add")}
                   </button>
                 </div>
               </div>
             ) : null}
           </div>
-
-          <button
-            type="submit"
-            disabled={!canSend}
-            className="ml-auto inline-flex h-9 items-center gap-1.5 rounded-lg bg-primary px-4 text-sm font-semibold text-white transition-colors hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-primary disabled:cursor-not-allowed disabled:opacity-50"
-          >
-            <SendHorizontal className="size-4" strokeWidth={2} />
-            Send
-          </button>
         </div>
+
+        <button
+          type="submit"
+          disabled={!canSend}
+          className="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg bg-primary px-3.5 sm:px-4 text-sm font-semibold text-white transition-colors hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-primary disabled:cursor-not-allowed disabled:opacity-50"
+        >
+          <SendHorizontal className="size-4" strokeWidth={2} />
+          <span>{t("Send")}</span>
+        </button>
+      </div>
       </form>
     </div>
   );

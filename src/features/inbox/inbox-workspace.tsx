@@ -35,48 +35,37 @@ import {
   channelById,
   handoffReasonLabels,
   initialActivity,
-  initialChannels,
   initialLeads,
-  initialMessages,
   initialNotifications,
   initialOrders,
-  initialPeople,
   initialSavedReplies,
   initialSetup,
   storyBanner,
   suggestedReplies,
 } from "@/features/inbox/data";
+import { useI18n } from "@/features/inbox/i18n";
 import {
   MODULE_STORAGE_KEYS,
   loadStored,
-  loadStoredApiKeys,
-  loadStoredChannels,
-  loadStoredMessages,
-  loadStoredPeople,
-  loadStoredSettings,
-  loadStoredWebhookEvents,
   saveStored,
-  saveStoredApiKeys,
-  saveStoredChannels,
-  saveStoredMessages,
-  saveStoredPeople,
-  saveStoredSettings,
-  saveStoredWebhookEvents,
+  useStoredApiKeys,
+  useStoredChannels,
+  useStoredMessages,
+  useStoredPeople,
+  useStoredSettings,
   useStoredState,
+  useStoredWebhookEvents,
 } from "@/features/inbox/storage";
 import type {
   ActivityEntry,
   ActivitySource,
-  ApiKeyItem,
   Attachment,
-  ChannelConnection,
   ChannelFilter,
   ChannelId,
   ConversationPriority,
   ConversationStatus,
   HandoffReason,
   Lead,
-  Message,
   ModuleId,
   NotificationItem,
   Person,
@@ -85,8 +74,6 @@ import type {
   Reaction,
   SavedReply,
   SetupState,
-  WebhookEventItem,
-  WorkspaceSettings,
 } from "@/features/inbox/types";
 import { cn } from "@/lib/utils";
 
@@ -167,6 +154,7 @@ function toggleReactionList(
 }
 
 export function InboxWorkspace() {
+  const { t } = useI18n();
   const [activeModule, setActiveModule] = useState<ModuleId>(() =>
     typeof window === "undefined" ? "inbox" : parseHash(window.location.hash),
   );
@@ -175,21 +163,12 @@ export function InboxWorkspace() {
   const [selectedPersonId, setSelectedPersonId] = useState<string | null>(null);
   const [query, setQuery] = useState("");
 
-  const [channelList, setChannelList] = useState<ChannelConnection[]>(() => {
-    const stored = loadStoredChannels();
-    return stored.length ? stored : initialChannels;
-  });
-  const [peopleList, setPeopleList] = useState<Person[]>(() => {
-    const stored = loadStoredPeople();
-    return stored.length ? stored : initialPeople;
-  });
-  const [messages, setMessages] = useState<Message[]>(() => {
-    const stored = loadStoredMessages();
-    return stored.length ? stored : initialMessages;
-  });
-  const [settings, setSettings] = useState<WorkspaceSettings>(loadStoredSettings);
-  const [apiKeys, setApiKeys] = useState<ApiKeyItem[]>(loadStoredApiKeys);
-  const [webhookEvents, setWebhookEvents] = useState<WebhookEventItem[]>(loadStoredWebhookEvents);
+  const [channelList, setChannelList] = useStoredChannels();
+  const [peopleList, setPeopleList] = useStoredPeople();
+  const [messages, setMessages] = useStoredMessages();
+  const [settings, setSettings] = useStoredSettings();
+  const [apiKeys, setApiKeys] = useStoredApiKeys();
+  const [webhookEvents, setWebhookEvents] = useStoredWebhookEvents();
 
   const [activity, setActivity] = useStoredState<ActivityEntry[]>(
     MODULE_STORAGE_KEYS.activity,
@@ -206,6 +185,11 @@ export function InboxWorkspace() {
   );
   const [setup, setSetup] = useStoredState<SetupState>(MODULE_STORAGE_KEYS.setup, initialSetup);
 
+  const [navCollapsed, setNavCollapsed] = useStoredState<boolean>(
+    "unified_inbox_nav_collapsed_v1",
+    false,
+  );
+
   const [bannerVisible, setBannerVisible] = useState(true);
   const [mobileThreadOpen, setMobileThreadOpen] = useState(false);
   const [channelsOpen, setChannelsOpen] = useState(false);
@@ -214,25 +198,6 @@ export function InboxWorkspace() {
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
   const [copilotOpen, setCopilotOpen] = useState(false);
   const [insertion, setInsertion] = useState<{ text: string; nonce: number } | undefined>();
-
-  useEffect(() => {
-    saveStoredChannels(channelList);
-  }, [channelList]);
-  useEffect(() => {
-    saveStoredPeople(peopleList);
-  }, [peopleList]);
-  useEffect(() => {
-    saveStoredMessages(messages);
-  }, [messages]);
-  useEffect(() => {
-    saveStoredSettings(settings);
-  }, [settings]);
-  useEffect(() => {
-    saveStoredApiKeys(apiKeys);
-  }, [apiKeys]);
-  useEffect(() => {
-    saveStoredWebhookEvents(webhookEvents);
-  }, [webhookEvents]);
 
   useEffect(() => {
     function onHashChange() {
@@ -366,28 +331,30 @@ export function InboxWorkspace() {
   const header = selectedPerson
     ? {
         title: selectedPerson.name,
-        subtitle: `${channelById[selectedPerson.channel]?.label ?? "Chat"} · ${threadMessages.length} message${
-          threadMessages.length === 1 ? "" : "s"
-        }`,
+        subtitle: `${channelById[selectedPerson.channel]?.label ?? t("Chat")} · ${t(
+          threadMessages.length === 1 ? "{count} message" : "{count} messages",
+          { count: threadMessages.length },
+        )}`,
         person: selectedPerson,
         channel: null,
       }
     : {
-        title: activeChannel?.label ?? railMeta[railView].title,
+        title: activeChannel?.label ?? t(railMeta[railView].title),
         subtitle: activeChannel
-          ? `${filteredPeople.length} people · one unified inbox`
-          : railMeta[railView].subtitle,
+          ? t("{count} people · one unified inbox", { count: filteredPeople.length })
+          : t(railMeta[railView].subtitle),
         person: null,
         channel: activeChannel,
       };
 
   const placeholder = selectedPerson
-    ? `Reply to ${selectedPerson.name} on ${
-        channelById[selectedPerson.channel]?.label ?? "Chat"
-      }`
+    ? t("Reply to {name} on {channel}", {
+        name: selectedPerson.name,
+        channel: channelById[selectedPerson.channel]?.label ?? t("Chat"),
+      })
     : activeChannel
-      ? `Reply in ${activeChannel.label}`
-      : "Reply to the unified timeline";
+      ? t("Reply in {channel}", { channel: activeChannel.label })
+      : t("Reply to the unified timeline");
 
   /* ── Navigation ───────────────────────────────────────────────────── */
 
@@ -884,6 +851,8 @@ export function InboxWorkspace() {
           setupTotal={setupTotal}
           practiceMode={setup.practiceMode}
           onOpenPalette={() => setCommandPaletteOpen(true)}
+          collapsed={navCollapsed}
+          onToggleCollapsed={() => setNavCollapsed((value) => !value)}
         />
       </div>
 
@@ -915,7 +884,8 @@ export function InboxWorkspace() {
           <div className="flex h-full min-h-0">
             <div
               className={cn(
-                "min-h-0 w-full min-w-0 flex-col lg:flex lg:w-[320px] lg:shrink-0",
+                "min-h-0 w-full min-w-0 flex-col lg:flex lg:shrink-0 transition-[width] duration-150",
+                navCollapsed ? "lg:w-[320px]" : "lg:w-[260px] xl:w-[275px]",
                 mobileThreadOpen ? "hidden lg:flex" : "flex",
               )}
             >
@@ -931,7 +901,7 @@ export function InboxWorkspace() {
                 onViewChange={handleSelectView}
                 slaTargetMin={settings.slaTargetMin}
                 summary={`${
-                  channelFilter === "all" ? "All channels" : activeChannel?.label ?? ""
+                  channelFilter === "all" ? t("All channels") : activeChannel?.label ?? ""
                 } · ${filteredPeople.length}`}
               />
             </div>
@@ -952,7 +922,10 @@ export function InboxWorkspace() {
                 savedReplies={savedReplies}
                 banner={
                   bannerVisible && railView !== "ignored" && railView !== "bots"
-                    ? storyBanner
+                    ? {
+                        title: t(storyBanner.title),
+                        text: t(storyBanner.text),
+                      }
                     : null
                 }
                 placeholder={placeholder}

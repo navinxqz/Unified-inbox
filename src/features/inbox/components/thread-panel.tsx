@@ -18,6 +18,7 @@ import { Composer } from "@/features/inbox/components/composer";
 import { MessageCard } from "@/features/inbox/components/message-card";
 import { ModeBadge } from "@/features/inbox/components/module-ui";
 import { handoffReasonLabels } from "@/features/inbox/data";
+import { useI18n } from "@/features/inbox/i18n";
 import { useNowMs } from "@/features/inbox/use-now";
 import type {
   Attachment,
@@ -101,6 +102,7 @@ export function ThreadPanel({
   onOpenCopilot,
   insertion,
 }: ThreadPanelProps) {
+  const { t } = useI18n();
   const [pinned, setPinned] = useState(false);
   const [draft, setDraft] = useState("");
   const [attachment, setAttachment] = useState<Attachment | null>(null);
@@ -176,23 +178,24 @@ export function ThreadPanel({
 
   return (
     <main className="flex h-full min-h-0 w-full min-w-0 flex-col bg-background">
-      <header className="flex h-[60px] shrink-0 items-center gap-3 border-b border-border px-4 md:px-6">
+      <header className="flex h-[60px] shrink-0 items-center gap-2 border-b border-border px-4 md:px-6">
         <button
           type="button"
-          aria-label="Back to conversations"
-          title="Back to conversations"
+          aria-label={t("Back to conversations")}
+          title={t("Back to conversations")}
           onClick={onBack}
           className="-ml-1 flex size-9 items-center justify-center rounded-[10px] text-ink-soft transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary md:hidden"
         >
           <ChevronLeft className="size-5" strokeWidth={2} />
         </button>
 
+        <div className="flex min-w-0 flex-1 items-center">
         {person ? (
           <button
             type="button"
             onClick={onOpenUserDetails}
-            title="Click to view customer details"
-            className="flex items-center gap-2.5 text-left group hover:opacity-80 transition-opacity"
+            title={t("Click to view customer details")}
+            className="group flex min-w-0 items-center gap-2.5 text-left transition-opacity hover:opacity-80"
           >
             <Avatar
               initials={person.initials}
@@ -206,7 +209,7 @@ export function ThreadPanel({
                   {title}
                 </h1>
                 <span className="rounded bg-surface px-1.5 py-0.5 text-[10px] font-medium text-muted-foreground group-hover:bg-primary-soft group-hover:text-primary">
-                  View Info
+                  {t("View Info")}
                 </span>
               </div>
               <p className="truncate text-[13px] text-muted-foreground">
@@ -240,48 +243,51 @@ export function ThreadPanel({
             </div>
           </div>
         )}
+        </div>
 
-        {onOpenCopilot ? (
+        <div className="flex shrink-0 items-center gap-1">
+          {onOpenCopilot ? (
+            <button
+              type="button"
+              aria-label={t("Open AI copilot")}
+              title={t("Open AI copilot")}
+              onClick={onOpenCopilot}
+              className="flex size-9 shrink-0 items-center justify-center rounded-[10px] text-ink-soft transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            >
+              <Sparkles className="size-5" strokeWidth={2} />
+            </button>
+          ) : null}
+
           <button
             type="button"
-            aria-label="Open AI copilot"
-            title="AI copilot"
-            onClick={onOpenCopilot}
-            className="flex size-9 shrink-0 items-center justify-center rounded-[10px] text-ink-soft transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            aria-label={pinned ? t("Unpin conversation") : t("Pin conversation")}
+            title={pinned ? t("Unpin") : t("Pin")}
+            aria-pressed={pinned}
+            onClick={() => setPinned((value) => !value)}
+            className={cn(
+              "flex size-9 shrink-0 items-center justify-center rounded-[10px] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+              pinned
+                ? "bg-primary-soft text-primary-strong"
+                : "text-ink-soft hover:bg-surface",
+            )}
           >
-            <Sparkles className="size-5" strokeWidth={2} />
+            <Pin
+              className="size-5"
+              strokeWidth={2}
+              fill={pinned ? "currentColor" : "none"}
+            />
           </button>
-        ) : null}
 
-        <button
-          type="button"
-          aria-label={pinned ? "Unpin conversation" : "Pin conversation"}
-          title={pinned ? "Unpin" : "Pin"}
-          aria-pressed={pinned}
-          onClick={() => setPinned((value) => !value)}
-          className={cn(
-            "flex size-9 shrink-0 items-center justify-center rounded-[10px] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
-            pinned
-              ? "bg-primary-soft text-primary-strong"
-              : "text-ink-soft hover:bg-surface",
-          )}
-        >
-          <Pin
-            className="size-5"
-            strokeWidth={2}
-            fill={pinned ? "currentColor" : "none"}
-          />
-        </button>
-
-        <button
-          type="button"
-          aria-label="Open channels"
-          title="Channels"
-          onClick={onOpenChannels}
-          className="flex size-9 shrink-0 items-center justify-center rounded-[10px] text-ink-soft transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary xl:hidden"
-        >
-          <PanelRight className="size-5" strokeWidth={2} />
-        </button>
+          <button
+            type="button"
+            aria-label={t("Open channels")}
+            title={t("Channels")}
+            onClick={onOpenChannels}
+            className="flex size-9 shrink-0 items-center justify-center rounded-[10px] text-ink-soft transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary xl:hidden"
+          >
+            <PanelRight className="size-5" strokeWidth={2} />
+          </button>
+        </div>
       </header>
 
       {person ? (
@@ -289,7 +295,7 @@ export function ThreadPanel({
           <ModeBadge mode={mode} />
           {mode === "human" && handoffReason ? (
             <span className="text-[11px] font-semibold text-muted-foreground">
-              {handoffReasonLabels[handoffReason]}
+              {t(handoffReasonLabels[handoffReason])}
             </span>
           ) : null}
           {mode === "human" && revertAtMs && now !== null ? (
@@ -298,7 +304,7 @@ export function ThreadPanel({
               className="inline-flex items-center gap-1 rounded-full border border-amber-200 bg-warning-soft px-2 py-0.5 text-[11px] font-semibold text-warning"
             >
               <Clock className="size-3" />
-              Reverts to AI in {revertLabel}
+              {t("Reverts to AI in {time}", { time: revertLabel })}
             </span>
           ) : null}
 
@@ -312,12 +318,12 @@ export function ThreadPanel({
                   className="inline-flex h-7 items-center gap-1 rounded-lg bg-warning-soft px-2 text-[11px] font-bold text-warning hover:bg-warning-soft/80"
                 >
                   <UserCheck className="size-3.5" />
-                  Take over
+                  {t("Take over")}
                 </button>
                 {handoffMenuOpen ? (
                   <div className="absolute top-full right-0 z-30 mt-1 w-52 rounded-xl border border-border bg-background p-1.5 shadow-xl">
                     <p className="px-2 py-1 text-[10px] font-bold tracking-wide text-muted-foreground uppercase">
-                      Handoff reason
+                      {t("Handoff reason")}
                     </p>
                     {handoffReasons.map((reason) => (
                       <button
@@ -329,7 +335,7 @@ export function ThreadPanel({
                         }}
                         className="w-full rounded-lg px-2 py-1.5 text-left text-xs transition-colors hover:bg-surface"
                       >
-                        {handoffReasonLabels[reason]}
+                        {t(handoffReasonLabels[reason])}
                       </button>
                     ))}
                   </div>
@@ -344,11 +350,11 @@ export function ThreadPanel({
                     className="inline-flex h-7 items-center gap-1 rounded-lg border border-border bg-background px-2 text-[11px] font-bold text-ink-soft hover:bg-surface"
                   >
                     <UserCheck className="size-3.5" />
-                    Claim
+                    {t("Claim")}
                   </button>
                 ) : (
                   <span className="text-[11px] font-semibold text-muted-foreground">
-                    Claimed by {person.claimedBy}
+                    {t("Claimed by {name}", { name: person.claimedBy })}
                   </span>
                 )}
                 <button
@@ -357,7 +363,7 @@ export function ThreadPanel({
                   className="inline-flex h-7 items-center gap-1 rounded-lg border border-border bg-background px-2 text-[11px] font-bold text-ink-soft hover:bg-surface"
                 >
                   <Undo2 className="size-3.5" />
-                  Return to AI
+                  {t("Return to AI")}
                 </button>
               </>
             )}
@@ -381,14 +387,14 @@ export function ThreadPanel({
             onClick={onViewBanner}
             className="h-9 shrink-0 rounded-lg bg-white px-3.5 text-[13px] font-semibold text-banner transition-colors hover:bg-white/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
-            View
+            {t("View")}
           </button>
           <button
             type="button"
             onClick={onDismissBanner}
             className="h-9 shrink-0 rounded-lg border border-banner-border px-3.5 text-[13px] text-white transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
-            Ignore
+            {t("Ignore")}
           </button>
         </div>
       ) : null}
@@ -396,7 +402,7 @@ export function ThreadPanel({
       <div className="scrollbar-thin flex-1 overflow-y-auto pt-1">
         <div className="flex items-center gap-3 px-6 py-2 text-xs font-semibold text-muted-foreground">
           <span aria-hidden="true" className="h-px flex-1 bg-border" />
-          Today
+          {t("Today")}
           <span aria-hidden="true" className="h-px flex-1 bg-border" />
         </div>
 
@@ -405,9 +411,9 @@ export function ThreadPanel({
             <div className="flex size-12 items-center justify-center rounded-full bg-surface text-muted-foreground">
               <Inbox className="size-5" strokeWidth={2} />
             </div>
-            <p className="text-sm font-semibold">No messages here</p>
+            <p className="text-sm font-semibold">{t("No messages here")}</p>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Try another view or connect a channel to bring conversations in.
+              {t("Try another view or connect a channel to bring conversations in.")}
             </p>
           </div>
         ) : (

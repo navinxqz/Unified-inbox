@@ -12,6 +12,7 @@ import {
 
 import { ModeBadge, Pill, SectionCard } from "@/features/inbox/components/module-ui";
 import { channelById } from "@/features/inbox/data";
+import { useI18n } from "@/features/inbox/i18n";
 import type { Message, Person, SavedReply } from "@/features/inbox/types";
 import { cn } from "@/lib/utils";
 
@@ -71,6 +72,7 @@ export function CopilotPanel({
   onCreateLead,
   onCreateOrder,
 }: CopilotPanelProps) {
+  const { t } = useI18n();
   const [usedSuggestion, setUsedSuggestion] = useState<string | null>(null);
 
   const intent = useMemo(() => detectIntent(person, messages), [person, messages]);
@@ -92,7 +94,7 @@ export function CopilotPanel({
 
   return (
     <aside
-      aria-label="AI copilot"
+      aria-label={t("AI copilot")}
       className="flex h-full min-h-0 w-full flex-col overflow-hidden border-l border-border bg-surface-alt"
     >
       <div className="flex h-[60px] shrink-0 items-center gap-2 border-b border-border px-3">
@@ -100,14 +102,14 @@ export function CopilotPanel({
           <Sparkles className="size-4" />
         </span>
         <div className="min-w-0 flex-1">
-          <p className="truncate text-sm font-bold">AI copilot</p>
+          <p className="truncate text-sm font-bold">{t("AI copilot")}</p>
           <p className="truncate text-[11px] text-muted-foreground">
-            {person ? `${person.name} · ${channelById[person.channel]?.label ?? "Chat"}` : "No conversation selected"}
+            {person ? `${person.name} · ${channelById[person.channel]?.label ?? "Chat"}` : t("No conversation selected")}
           </p>
         </div>
         <button
           type="button"
-          aria-label="Close copilot"
+          aria-label={t("Close copilot")}
           onClick={onClose}
           className="flex size-8 items-center justify-center rounded-lg text-muted-foreground hover:bg-border/70 hover:text-foreground"
         >
@@ -119,11 +121,11 @@ export function CopilotPanel({
         <div className="scrollbar-thin flex-1 space-y-3 overflow-y-auto p-3">
           <div className="flex flex-wrap items-center gap-1.5">
             <ModeBadge mode={person.mode ?? "ai"} />
-            <Pill tone="info">{intent}</Pill>
-            {person.priority ? <Pill tone="warning">Priority</Pill> : null}
+            <Pill tone="info">{t(intent)}</Pill>
+            {person.priority ? <Pill tone="warning">{t("Priority")}</Pill> : null}
           </div>
 
-          <SectionCard title="Summary">
+          <SectionCard title={t("Summary")}>
             <p className="text-[12px] leading-relaxed text-ink-soft">
               {lastCustomer
                 ? `${person.name} last asked: “${lastCustomer.body}”. ${
@@ -133,11 +135,11 @@ export function CopilotPanel({
             </p>
             <p className="mt-2 inline-flex items-center gap-1.5 text-[11px] text-muted-foreground">
               <Bot className="size-3.5" />
-              Grounded in Agent Desk instructions, Knowledge, and the product catalog.
+              {t("Grounded in Agent Desk instructions, Knowledge, and the product catalog.")}
             </p>
           </SectionCard>
 
-          <SectionCard title="Suggested replies" description="Tap to drop into the composer.">
+          <SectionCard title={t("Suggested replies")} description={t("Tap to drop into the composer.")}>
             <div className="space-y-1.5">
               {suggestions.map((suggestion) => {
                 const used = usedSuggestion === suggestion.label;
@@ -172,7 +174,7 @@ export function CopilotPanel({
             </div>
           </SectionCard>
 
-          <SectionCard title="Next actions" description="Run without leaving the thread.">
+          <SectionCard title={t("Next actions")} description={t("Run without leaving the thread.")}>
             <div className="space-y-1.5">
               <button
                 type="button"
@@ -180,7 +182,7 @@ export function CopilotPanel({
                 className="inline-flex h-8 w-full items-center gap-1.5 rounded-lg border border-border bg-background px-2.5 text-[12px] font-semibold text-ink-soft hover:bg-surface"
               >
                 <Target className="size-3.5" />
-                Capture as lead
+                {t("Capture as lead")}
               </button>
               <button
                 type="button"
@@ -188,14 +190,13 @@ export function CopilotPanel({
                 className="inline-flex h-8 w-full items-center gap-1.5 rounded-lg border border-border bg-background px-2.5 text-[12px] font-semibold text-ink-soft hover:bg-surface"
               >
                 <Lightbulb className="size-3.5" />
-                Draft an order
+                {t("Draft an order")}
               </button>
             </div>
           </SectionCard>
 
           <p className="px-1 text-[10px] leading-relaxed text-muted-foreground">
-            The copilot never sends on its own — every suggestion waits for a human
-            keystroke.
+            {t("The copilot never sends on its own — every suggestion waits for a human keystroke.")}
           </p>
         </div>
       ) : (
@@ -203,10 +204,9 @@ export function CopilotPanel({
           <span className="flex size-11 items-center justify-center rounded-full bg-surface text-muted-foreground">
             <Sparkles className="size-5" />
           </span>
-          <p className="text-sm font-semibold">Pick a conversation</p>
+          <p className="text-sm font-semibold">{t("Pick a conversation")}</p>
           <p className="text-xs text-muted-foreground">
-            The copilot summarises the thread and drafts replies from your saved
-            knowledge.
+            {t("The copilot summarises the thread and drafts replies from your saved knowledge.")}
           </p>
         </div>
       )}
