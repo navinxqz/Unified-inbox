@@ -5,10 +5,13 @@ import {
   Bot,
   Check,
   History,
+  Plus,
   RotateCcw,
   Send,
   ShieldAlert,
   Sparkles,
+  Upload,
+  X,
 } from "lucide-react";
 
 import {
@@ -16,8 +19,17 @@ import {
   Pill,
   SectionCard,
 } from "@/features/inbox/components/module-ui";
+import {
+  InstructionUploadDialog,
+  type ParsedInstructions,
+} from "@/features/inbox/components/agent-instructions-upload";
 import { initialAgentDesk } from "@/features/inbox/data";
-import { MODULE_STORAGE_KEYS, useStoredState } from "@/features/inbox/storage";
+import { useI18n } from "@/features/inbox/i18n";
+import {
+  MODULE_STORAGE_KEYS,
+  parseAgentDesk,
+  useStoredState,
+} from "@/features/inbox/storage";
 import type { AgentDeskState, AgentInstructions } from "@/features/inbox/types";
 
 const blocks: Array<{
@@ -32,6 +44,13 @@ const blocks: Array<{
     label: "About the business",
     limit: 2000,
     hint: "What you sell, where you operate, which channels you cover.",
+    rows: 4,
+  },
+  {
+    key: "catalog",
+    label: "Estimated Product Catalog",
+    limit: 2000,
+    hint: "Rough catalog the AI may quote — name, SKU, price, stock, one line each. Empty saves as NULL so the AI never guesses a price.",
     rows: 4,
   },
   {
@@ -71,25 +90,74 @@ type AgentDeskProps = {
 };
 
 export function AgentDeskModule({ logActivity }: AgentDeskProps) {
+  const { t } = useI18n();
   const [state, setState] = useStoredState<AgentDeskState>(
     MODULE_STORAGE_KEYS.agentDesk,
     initialAgentDesk,
+    parseAgentDesk,
   );
   const [dirty, setDirty] = useState(false);
   const [testInput, setTestInput] = useState("");
   const [testMessages, setTestMessages] = useState<TestMessage[]>([]);
+  const [uploadOpen, setUploadOpen] = useState(false);
 
   function updateBlock(key: keyof AgentInstructions, value: string) {
     setState({ ...state, instructions: { ...state.instructions, [key]: value } });
     setDirty(true);
   }
 
-  function publish() {
+  function updatePrinciple(index: number, value: string) {
+    const principles = state.principles.map((rule, position) =>
+      position === index ? value : rule,
+    );
+    setState({ ...state, principles });
+    setDirty(true);
+  }
+
+  function addPrinciple() {
+    setState({ ...state, principles: [...state.principles, ""] });
+    setDirty(true);
+  }
+
+  function removePrinciple(index: number) {
     setState({
       ...state,
+      principles: state.principles.filter((_, position) => position !== index),
+    });
+    setDirty(true);
+  }
+
+  function applyUpload(result: ParsedInstructions, fileName: string) {
+    const instructions: AgentInstructions = {
+      ...state.instructions,
+      ...result.instructions,
+    };
+    if (!instructions.catalog.trim()) instructions.catalog = "NULL";
+    setState({
+      ...state,
+      instructions,
+      principles:
+        result.principles.length > 0 ? result.principles : state.principles,
+    });
+    setDirty(true);
+    setUploadOpen(false);
+    logActivity(`imported Agent Desk instructions from ${fileName}`, "Agent Desk");
+  }
+
+  function publish() {
+    const instructions: AgentInstructions = {
+      ...state.instructions,
+      catalog: state.instructions.catalog.trim() || "NULL",
+    };
+    const principles = state.principles.map((rule) => rule.trim()).filter(Boolean);
+    setState({
+      ...state,
+      instructions,
+      principles,
       versions: state.versions + 1,
       publishedAt: "Just now",
-      lastPublished: state.instructions,
+      lastPublished: instructions,
+      lastPublishedPrinciples: principles,
     });
     setDirty(false);
     logActivity(`published Agent Desk instructions v${state.versions + 1}`, "Agent Desk");
@@ -97,7 +165,11 @@ export function AgentDeskModule({ logActivity }: AgentDeskProps) {
 
   function restoreLastPublished() {
     if (!state.lastPublished) return;
-    setState({ ...state, instructions: state.lastPublished });
+    setState({
+      ...state,
+      instructions: state.lastPublished,
+      principles: state.lastPublishedPrinciples ?? state.principles,
+    });
     setDirty(true);
     logActivity("restored the last published Agent Desk instructions", "Agent Desk");
   }
@@ -109,6 +181,7 @@ export function AgentDeskModule({ logActivity }: AgentDeskProps) {
     const lower = question.toLowerCase();
     const delivery = state.instructions.delivery;
     const refund = state.instructions.exactWords;
+    const catalog = state.instructions.catalog.trim();
 
     let answer =
       "I don't have that in my instructions yet — let me hand this to a human so nothing is guessed.";
@@ -120,7 +193,9 @@ export function AgentDeskModule({ logActivity }: AgentDeskProps) {
       answer = "We're open Sat–Thu, 10:00–19:00, and closed on Friday.";
     } else if (lower.includes("price") || lower.includes("dam") || lower.includes("দাম")) {
       answer =
-        "I only quote prices from the product catalog — tell me the item name and I'll pull the exact price and stock.";
+        catalog && catalog.toUpperCase() !== "NULL"
+          ? `Here is what I have in the catalog:\n${catalog}`
+          : "I don't have a product catalog on file, so I won't guess a price — let me hand this to a human.";
     }
 
     setTestMessages((current) => [
@@ -137,6 +212,14 @@ export function AgentDeskModule({ logActivity }: AgentDeskProps) {
       subtitle="Write the instructions behind every AI reply, test them as a customer, then publish."
       actions={
         <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => setUploadOpen(true)}
+            className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-border px-3 text-[13px] font-semibold text-ink-soft hover:bg-surface"
+          >
+            <Upload className="size-4" />
+            <span className="hidden sm:inline">{t("Upload instructions")}</span>
+          </button>
           {state.lastPublished ? (
             <button
               type="button"
@@ -144,7 +227,7 @@ export function AgentDeskModule({ logActivity }: AgentDeskProps) {
               className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-border px-3 text-[13px] font-semibold text-ink-soft hover:bg-surface"
             >
               <RotateCcw className="size-4" />
-              Restore last publish
+              <span className="hidden sm:inline">{t("Restore last publish")}</span>
             </button>
           ) : null}
           <button
@@ -160,7 +243,9 @@ export function AgentDeskModule({ logActivity }: AgentDeskProps) {
       walkthrough={{
         title: "Tune the AI agent",
         steps: [
-          "Fill the five instruction blocks — business facts, delivery, voice, exact words, guardrails.",
+          "Fill the six instruction blocks — business facts, product catalog, delivery, voice, exact words, guardrails.",
+          "No catalog? Leave it blank — it saves as NULL so the AI never guesses a price.",
+          "Upload a .md or .pdf to fill every block at once, following the guideline.",
           "Test as a customer on the right: the reply comes from exactly what you wrote.",
           "Publish bumps the version and re-indexes knowledge — the audit trail records it.",
           "Restore the last publish if a change made replies worse.",
@@ -191,6 +276,15 @@ export function AgentDeskModule({ logActivity }: AgentDeskProps) {
                 <textarea
                   value={value}
                   onChange={(event) => updateBlock(block.key, event.target.value)}
+                  onBlur={
+                    block.key === "catalog"
+                      ? () => {
+                          if (!state.instructions.catalog.trim()) {
+                            updateBlock("catalog", "NULL");
+                          }
+                        }
+                      : undefined
+                  }
                   rows={block.rows}
                   className="w-full rounded-lg border border-border bg-background px-2.5 py-2 text-[13px] outline-none focus:border-primary"
                 />
@@ -203,76 +297,111 @@ export function AgentDeskModule({ logActivity }: AgentDeskProps) {
             );
           })}
 
-          <SectionCard title="Guardrail principles" description="Always applied, even if you forget to write them.">
-            <ul className="grid gap-2 sm:grid-cols-2">
-              {[
-                "Never invent a price that is not in the catalog",
-                "Never promise a discount that is not an active code",
-                "Ask one clarifying question before guessing",
-                "Hand off on complaints, refunds, and chargebacks",
-                "Mirror the customer's language, never mix scripts",
-                "Never share another customer's data",
-              ].map((rule) => (
-                <li key={rule} className="flex items-start gap-2 text-[13px] text-ink-soft">
-                  <ShieldAlert className="mt-0.5 size-3.5 shrink-0 text-warning" />
-                  {rule}
-                </li>
-              ))}
-            </ul>
+          <SectionCard
+            title="Guardrail principles"
+            description="Always applied, even if you forget to write them. Click a rule to edit it."
+            action={
+              <button
+                type="button"
+                onClick={addPrinciple}
+                className="inline-flex h-8 shrink-0 items-center gap-1 rounded-lg border border-border px-2.5 text-xs font-semibold text-ink-soft hover:bg-surface"
+              >
+                <Plus className="size-3.5" />
+                {t("Add principle")}
+              </button>
+            }
+          >
+            {state.principles.length === 0 ? (
+              <p className="text-[13px] text-muted-foreground">
+                {t("No custom principles yet — add one to constrain the AI.")}
+              </p>
+            ) : (
+              <ul className="grid gap-2 sm:grid-cols-2">
+                {state.principles.map((rule, index) => (
+                  <li key={index} className="group flex items-start gap-2">
+                    <ShieldAlert className="mt-1 size-3.5 shrink-0 text-warning" />
+                    <input
+                      value={rule}
+                      onChange={(event) => updatePrinciple(index, event.target.value)}
+                      aria-label={t("Guardrail principle {n}", { n: index + 1 })}
+                      placeholder={t("Write a principle or constraint")}
+                      className="min-w-0 flex-1 rounded-md border border-transparent bg-transparent px-1 py-0.5 text-[13px] text-ink-soft outline-none hover:border-border focus:border-primary focus:bg-background"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => removePrinciple(index)}
+                      aria-label={t("Remove principle {n}", { n: index + 1 })}
+                      className="rounded-md p-1 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100 hover:bg-surface hover:text-foreground focus-visible:opacity-100"
+                    >
+                      <X className="size-3.5" />
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
           </SectionCard>
         </div>
 
-        <SectionCard
-          title="Test as a customer"
-          description="Nothing is sent to a real customer."
-        >
-          <div className="flex h-[360px] flex-col">
-            <div className="scrollbar-thin flex-1 space-y-2 overflow-y-auto rounded-lg bg-surface/60 p-2.5">
-              {testMessages.length === 0 ? (
-                <p className="px-1 py-6 text-center text-xs text-muted-foreground">
-                  Ask something a customer would ask — delivery times, refunds, prices.
-                </p>
-              ) : (
-                testMessages.map((message) => (
-                  <div
-                    key={message.id}
-                    className={
-                      message.role === "customer"
-                        ? "ml-6 rounded-lg rounded-br-sm bg-primary px-2.5 py-1.5 text-[12px] text-white"
-                        : "mr-6 rounded-lg rounded-bl-sm border border-border bg-background px-2.5 py-1.5 text-[12px] whitespace-pre-line"
+        <div className="lg:sticky lg:top-4 lg:z-20 lg:self-start">
+          <SectionCard
+            title="Test as a customer"
+            description="Nothing is sent to a real customer."
+          >
+            <div className="flex h-[360px] flex-col">
+              <div className="scrollbar-thin flex-1 space-y-2 overflow-y-auto rounded-lg bg-surface/60 p-2.5">
+                {testMessages.length === 0 ? (
+                  <p className="px-1 py-6 text-center text-xs text-muted-foreground">
+                    Ask something a customer would ask — delivery times, refunds, prices.
+                  </p>
+                ) : (
+                  testMessages.map((message) => (
+                    <div
+                      key={message.id}
+                      className={
+                        message.role === "customer"
+                          ? "ml-6 rounded-lg rounded-br-sm bg-primary px-2.5 py-1.5 text-[12px] text-white"
+                          : "mr-6 rounded-lg rounded-bl-sm border border-border bg-background px-2.5 py-1.5 text-[12px] whitespace-pre-line"
+                      }
+                    >
+                      {message.body}
+                    </div>
+                  ))
+                )}
+              </div>
+              <div className="mt-2 flex items-center gap-1.5">
+                <input
+                  value={testInput}
+                  onChange={(event) => setTestInput(event.target.value)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter") {
+                      event.preventDefault();
+                      runTest();
                     }
-                  >
-                    {message.body}
-                  </div>
-                ))
-              )}
+                  }}
+                  placeholder="What are your delivery charges?"
+                  className="h-9 min-w-0 flex-1 rounded-lg border border-border bg-background px-2.5 text-[13px] outline-none focus:border-primary"
+                />
+                <button
+                  type="button"
+                  onClick={runTest}
+                  disabled={!testInput.trim()}
+                  aria-label="Send test message"
+                  className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-primary text-white hover:bg-primary/90 disabled:opacity-50"
+                >
+                  <Send className="size-4" />
+                </button>
+              </div>
             </div>
-            <div className="mt-2 flex items-center gap-1.5">
-              <input
-                value={testInput}
-                onChange={(event) => setTestInput(event.target.value)}
-                onKeyDown={(event) => {
-                  if (event.key === "Enter") {
-                    event.preventDefault();
-                    runTest();
-                  }
-                }}
-                placeholder="What are your delivery charges?"
-                className="h-9 min-w-0 flex-1 rounded-lg border border-border bg-background px-2.5 text-[13px] outline-none focus:border-primary"
-              />
-              <button
-                type="button"
-                onClick={runTest}
-                disabled={!testInput.trim()}
-                aria-label="Send test message"
-                className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-primary text-white hover:bg-primary/90 disabled:opacity-50"
-              >
-                <Send className="size-4" />
-              </button>
-            </div>
-          </div>
-        </SectionCard>
+          </SectionCard>
+        </div>
       </div>
+
+      {uploadOpen ? (
+        <InstructionUploadDialog
+          onApply={applyUpload}
+          onClose={() => setUploadOpen(false)}
+        />
+      ) : null}
     </ModuleShell>
   );
 }

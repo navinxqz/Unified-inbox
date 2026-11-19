@@ -4,6 +4,7 @@ import { useCallback, useSyncExternalStore } from "react";
 import type { Dispatch, SetStateAction } from "react";
 
 import {
+  initialAgentDesk,
   initialApiKeys,
   initialChannels,
   initialMessages,
@@ -12,6 +13,8 @@ import {
   initialWebhookEvents,
 } from "./data";
 import type {
+  AgentDeskState,
+  AgentInstructions,
   ApiKeyItem,
   ChannelConnection,
   Message,
@@ -47,6 +50,8 @@ export const MODULE_STORAGE_KEYS = {
   broadcasts: "unified_inbox_broadcasts_v1",
   agentDesk: "unified_inbox_agent_desk_v1",
   knowledge: "unified_inbox_knowledge_v1",
+  knowledgeTopics: "unified_inbox_knowledge_topics_v1",
+  privateNotes: "unified_inbox_private_notes_v1",
   websiteChat: "unified_inbox_website_chat_v1",
   business: "unified_inbox_business_v1",
   team: "unified_inbox_team_v1",
@@ -183,6 +188,38 @@ function parseSettings(raw: unknown): WorkspaceSettings {
   return raw && typeof raw === "object"
     ? { ...initialSettings, ...(raw as Partial<WorkspaceSettings>) }
     : initialSettings;
+}
+
+/**
+ * Merge Agent Desk defaults so older stored state gains new blocks
+ * (catalog, principles) instead of rendering `undefined`.
+ */
+export function parseAgentDesk(raw: unknown): AgentDeskState {
+  if (!raw || typeof raw !== "object") return initialAgentDesk;
+  const stored = raw as Partial<AgentDeskState>;
+  const instructions: AgentInstructions = {
+    ...initialAgentDesk.instructions,
+    ...(stored.instructions ?? {}),
+  };
+  if (!instructions.catalog.trim()) instructions.catalog = "NULL";
+
+  const lastPublished = stored.lastPublished
+    ? { ...initialAgentDesk.instructions, ...stored.lastPublished }
+    : initialAgentDesk.lastPublished;
+  if (lastPublished && !lastPublished.catalog.trim()) lastPublished.catalog = "NULL";
+
+  return {
+    ...initialAgentDesk,
+    ...stored,
+    instructions,
+    principles: Array.isArray(stored.principles)
+      ? stored.principles
+      : initialAgentDesk.principles,
+    lastPublished,
+    lastPublishedPrinciples: Array.isArray(stored.lastPublishedPrinciples)
+      ? stored.lastPublishedPrinciples
+      : initialAgentDesk.lastPublishedPrinciples,
+  };
 }
 
 export function loadStoredChannels(): ChannelConnection[] {

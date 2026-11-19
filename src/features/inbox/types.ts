@@ -456,6 +456,8 @@ export type Broadcast = {
 
 export type AgentInstructions = {
   about: string;
+  /** Free-form product catalog snapshot. "NULL" means none supplied. */
+  catalog: string;
   delivery: string;
   voice: string;
   exactWords: string;
@@ -464,9 +466,12 @@ export type AgentInstructions = {
 
 export type AgentDeskState = {
   instructions: AgentInstructions;
+  /** Editable guardrail principles applied to every reply. */
+  principles: string[];
   publishedAt?: string;
   versions: number;
   lastPublished?: AgentInstructions;
+  lastPublishedPrinciples?: string[];
 };
 
 export type KnowledgeSource = {
@@ -476,6 +481,31 @@ export type KnowledgeSource = {
   status: "ready" | "indexing";
   words: number;
   at: string;
+};
+
+export type KnowledgeTopic = {
+  id: string;
+  uuid: string;
+  title: string;
+  content: string;
+  call_type_name?: string;
+  category?: string;
+  sub_category?: string;
+  sub_sub_category?: string;
+  tags: string[];
+  file_name?: string | null;
+  file_url?: string | null;
+  created_by: string;
+  created_at: string;
+  updated_at?: string;
+  views_count: number;
+};
+
+export type PrivateChatNote = {
+  id: string;
+  conversationId: string;
+  content: string;
+  updatedAt: string;
 };
 
 /* ── Website chat widget ───────────────────────────────────────────────── */

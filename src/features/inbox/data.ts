@@ -17,6 +17,7 @@ import type {
   GroupDef,
   HandoffReason,
   KnowledgeSource,
+  KnowledgeTopic,
   Lead,
   LeadStage,
   Message,
@@ -1504,10 +1505,21 @@ export const initialBroadcasts: Broadcast[] = [
   },
 ];
 
+const initialGuardrailPrinciples = [
+  "Never invent a price that is not in the catalog",
+  "Never promise a discount that is not an active code",
+  "Ask one clarifying question before guessing",
+  "Hand off on complaints, refunds, and chargebacks",
+  "Mirror the customer's language, never mix scripts",
+  "Never share another customer's data",
+];
+
 export const initialAgentDesk: AgentDeskState = {
   instructions: {
     about:
       "Unified Inbox is a Bangladeshi retail brand selling outdoor apparel and accessories. We run one support desk across WhatsApp, Instagram, Messenger, Discord, Gmail, and our website chat.",
+    catalog:
+      "Trail Runner Jacket — ৳4,900 (S, M, L, XL)\nStorm Shell — ৳6,200 (M, L)\nTrailpack 22L — ৳2,850 (one size)\nIndicative prices: confirm stock before quoting.",
     delivery:
       "Inside Dhaka: 1–2 days (৳60). Outside Dhaka: 3–5 days (৳120). Free delivery over ৳2,500. Courier: Pathao for Dhaka, DHL Express nationwide. Always give the tracking link once the parcel is handed to the courier.",
     voice:
@@ -1517,11 +1529,14 @@ export const initialAgentDesk: AgentDeskState = {
     custom:
       "Never quote a price that is not in the product catalog. If the customer asks for a discount, offer the active coupon code and nothing else. If unsure, ask one clarifying question or hand off to a human.",
   },
+  principles: initialGuardrailPrinciples,
   versions: 3,
   publishedAt: "41m ago",
   lastPublished: {
     about:
       "Unified Inbox is a retail brand selling outdoor apparel and accessories across WhatsApp, Instagram, Messenger, Discord, Gmail, and website chat.",
+    catalog:
+      "Trail Runner Jacket — ৳4,900 (S, M, L, XL)\nStorm Shell — ৳6,200 (M, L)\nTrailpack 22L — ৳2,850 (one size)",
     delivery:
       "Inside Dhaka: 1–2 days (৳60). Outside Dhaka: 3–5 days (৳120). Free delivery over ৳2,500.",
     voice:
@@ -1531,6 +1546,7 @@ export const initialAgentDesk: AgentDeskState = {
     custom:
       "Never quote a price that is not in the product catalog. If unsure, ask one clarifying question or hand off to a human.",
   },
+  lastPublishedPrinciples: initialGuardrailPrinciples,
 };
 
 export const initialKnowledge: KnowledgeSource[] = [
@@ -1538,6 +1554,73 @@ export const initialKnowledge: KnowledgeSource[] = [
   { id: "kn-2", title: "Product catalog 2026.csv", kind: "file", status: "ready", words: 1240, at: "1 day ago" },
   { id: "kn-3", title: "Size guide", kind: "text", status: "ready", words: 208, at: "4 days ago" },
   { id: "kn-4", title: "FAQ — payments & refunds", kind: "url", status: "indexing", words: 96, at: "Just now" },
+];
+
+export const initialKnowledgeTopics: KnowledgeTopic[] = [
+  {
+    id: "topic-1",
+    uuid: "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+    title: "Shipping and Delivery Timeline Policy",
+    content: "<h2>Standard Delivery Timelines</h2><p>Our domestic logistics partners fulfill deliveries according to regional locations:</p><ul><li><strong>Inside Dhaka:</strong> 24–48 hours (৳60 delivery charge)</li><li><strong>Outside Dhaka:</strong> 3–5 working days (৳120 delivery charge)</li><li><strong>Express Same-Day:</strong> Orders placed before 11:00 AM qualify for express same-day delivery inside Dhaka.</li></ul><p>Free standard delivery applies automatically on any order totaling above <strong>৳2,500</strong>.</p><table><thead><tr><th>Zone</th><th>Duration</th><th>Cost</th></tr></thead><tbody><tr><td>Dhaka Metro</td><td>1–2 Days</td><td>৳60</td></tr><tr><td>Suburbs</td><td>2–3 Days</td><td>৳100</td></tr><tr><td>National</td><td>3–5 Days</td><td>৳120</td></tr></tbody></table>",
+    call_type_name: "Inquiry",
+    category: "Logistics",
+    sub_category: "Shipping",
+    tags: ["Delivery", "Shipping", "Dhaka", "Timeline"],
+    file_name: "shipping-zones-guide.pdf",
+    file_url: "#",
+    created_by: "Support Lead",
+    created_at: "2026-11-12T10:30:00Z",
+    updated_at: "2026-11-14T08:15:00Z",
+    views_count: 142,
+  },
+  {
+    id: "topic-2",
+    uuid: "7b8e5c21-992a-4ec0-bfae-4d5c19ee823a",
+    title: "Return and Replacement Guidelines",
+    content: "<h2>7-Day Hassle-Free Replacement Policy</h2><p>Customers are eligible for replacement or return within <strong>7 days</strong> of delivery under the following conditions:</p><ol><li>The item received is defective, damaged, or incorrect in size/color.</li><li>The item remains in original unwashed condition with tags intact.</li><li>Customer provides an unboxing video or clear photo of the defect.</li></ol><p><em>Refund turnaround:</em> Approved refunds are processed back to the original payment channel (bKash/Nagad/Cards) within 3–5 business days.</p>",
+    call_type_name: "Support",
+    category: "After Sales",
+    sub_category: "Refunds",
+    tags: ["Returns", "Refund", "Policy", "Warranty"],
+    file_name: null,
+    file_url: null,
+    created_by: "Operations Admin",
+    created_at: "2026-11-10T14:20:00Z",
+    updated_at: "2026-11-13T12:00:00Z",
+    views_count: 98,
+  },
+  {
+    id: "topic-3",
+    uuid: "3c21849a-6415-4a62-9721-a0293dbb7182",
+    title: "Accepted Payment Methods & MFS Troubleshooting",
+    content: "<h2>Supported Payment Gateways</h2><p>We support immediate digital payments and cash on delivery:</p><ul><li><strong>bKash / Nagad / Upay:</strong> Direct checkout and merchant payment QR codes.</li><li><strong>Credit & Debit Cards:</strong> Visa, Mastercard, American Express via SSLCommerz gateway.</li><li><strong>Cash on Delivery (COD):</strong> Available nationwide with order confirmation SMS.</li></ul><p>If a customer reports a bKash deduction without order confirmation, verify the Transaction ID (TrxID) in the bKash Merchant Portal before placing the order manually.</p>",
+    call_type_name: "Billing",
+    category: "Payments",
+    sub_category: "MFS",
+    tags: ["Payment", "bKash", "Nagad", "COD", "TrxID"],
+    file_name: "payment-troubleshooting.pdf",
+    file_url: "#",
+    created_by: "Accounts Desk",
+    created_at: "2026-11-08T09:00:00Z",
+    updated_at: "2026-11-14T11:45:00Z",
+    views_count: 215,
+  },
+  {
+    id: "topic-4",
+    uuid: "9a12c4d6-8419-4176-bf10-77a80b190f84",
+    title: "Apparel Size Chart and Measurement Instructions",
+    content: "<h2>How to Measure for Perfect Fit</h2><p>Provide customers with accurate chest, waist, and length measurements using the standard metric chart below:</p><table><thead><tr><th>Size</th><th>Chest (Inches)</th><th>Length (Inches)</th><th>Sleeve (Inches)</th></tr></thead><tbody><tr><td>M</td><td>38–40</td><td>27</td><td>24</td></tr><tr><td>L</td><td>40–42</td><td>28</td><td>25</td></tr><tr><td>XL</td><td>42–44</td><td>29</td><td>25.5</td></tr><tr><td>XXL</td><td>44–46</td><td>30</td><td>26</td></tr></tbody></table><p>Advise customers between sizes to choose the larger size for a relaxed streetwear silhouette.</p>",
+    call_type_name: "Product",
+    category: "Sizing",
+    sub_category: "Clothing",
+    tags: ["Size Chart", "Measurements", "T-shirt", "Hoodie"],
+    file_name: "size-guide-2026.png",
+    file_url: "#",
+    created_by: "Product Specialist",
+    created_at: "2026-11-05T16:45:00Z",
+    updated_at: "2026-11-11T15:10:00Z",
+    views_count: 310,
+  },
 ];
 
 export const initialWebsiteChat: WebsiteChatState = {

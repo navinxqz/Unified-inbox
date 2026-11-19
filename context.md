@@ -1,5 +1,36 @@
 # Project Context
 
+## Changes — 2026-11-15 (Knowledge Bank, TinyMCE Replica & Chat Notes)
+
+- **TinyMCE Rich Text Editor Replica (`tinymce-editor.tsx`)**:
+  - Exact replica of the TinyMCE configuration from `C:\Navin\knowledge-bank-frontend\components\topic\AddTopic.tsx`.
+  - Loaded dynamically via official jsdelivr CDN (`tinymce@8.9.3`) with `oxide` skin, GPL license key, and no external package dependencies or lockfile changes (zero React 19 peer-dependency conflicts).
+  - Exact toolbar ordering: `bold italic underline strikethrough | alignleft aligncenter alignright | bullist numlist | table | fontfamily fontsize lineheight | image | spellcheckdialog | undo redo | preview | print | removeformat`.
+  - Custom font sizes (`8pt` to `72pt`), line heights (`1` to `2.5`), table formatting, and base64 image upload/paste handlers.
+- **Knowledge Bank Dedicated Page (`knowledge-bank-module.tsx`)**:
+  - Replaces `/#knowledge` with a full-featured Knowledge Bank dashboard replicating `NewDashboard.tsx`, `TopicView.tsx`, and `AddTopic.tsx` from `knowledge-bank-frontend`.
+  - Hero search banner ("How can we help you?") with immediate text, tag, and category search.
+  - "New Added Topics" and "Most Researched Topics" lists with view counting.
+  - Topic reader view with sanitized HTML rendering, attachment download, topic editing, and deletion.
+  - Add & Edit Topic forms with Title, TinyMCE editor, Wrap-Up classification (Call Type, Category, Sub-category), tag chips with removable pills, and document file attachments.
+  - Retains existing AI indexing sources and document grounding under a dedicated secondary tab.
+- **Chat Top Bar Personal Note (`chat-private-note-drawer.tsx`)**:
+  - Accessible via `StickyNote` icon button in `ThreadPanel` header next to Copilot and Pin.
+  - Isolated and private to the individual logged-in user (`unified_inbox_private_notes_v1`).
+  - Supports conversation-specific notes and a general scratchpad with debounced autosaving, timestamp indicators, copy to clipboard, and clear actions.
+  - Amber badge indicator surfaces on the header button whenever a note exists for that conversation.
+- **Chat Top Bar Knowledge Bank Quick Access (`chat-knowledge-bank-drawer.tsx`)**:
+  - Accessible via `BookOpen` icon button in `ThreadPanel` header.
+  - Shared repository across all team members for canned responses and policies.
+  - Instant debounced topic search, tag filtering, article preview, and 1-click "Insert into Reply" inserting plain-text sanitized answers directly into the composer.
+  - Shortcut link to open the full Knowledge Bank page.
+- **Bilingual i18n**:
+  - All new labels, tooltips, dialogs, buttons, and placeholders registered with zero duplicate keys in `i18n.tsx` for both English (`en`) and Bangla (`bn`).
+- **Pure White Styling & UX Alignment**:
+  - Pure white background (`#ffffff` / `bg-white`) enforced across Personal Note, Knowledge Bank drawer, Knowledge Bank module dashboard/reader/editor, and TinyMCE editor container.
+  - Eliminated all dark overlays (`bg-black/15`) and dark mode class overrides (`dark:bg-zinc-900`).
+  - Close cross (`X`) positioned in the exact same top bar area where the user clicked to open, alongside a header close button.
+
 ## Current state
 
 - **Next.js 16.4.5** App Router, **React 19.3**, TypeScript, **Tailwind CSS v4**, Lucide icons.

@@ -20,7 +20,7 @@ import { BusinessModule } from "@/features/inbox/components/modules/business-mod
 import { CommentsModule } from "@/features/inbox/components/modules/comments-module";
 import { FollowupsModule } from "@/features/inbox/components/modules/followups-module";
 import { GroupsModule } from "@/features/inbox/components/modules/groups-module";
-import { KnowledgeModule } from "@/features/inbox/components/modules/knowledge-module";
+import { KnowledgeBankModule } from "@/features/inbox/components/modules/knowledge-bank-module";
 import { LeadsModule } from "@/features/inbox/components/modules/leads-module";
 import { NotificationsModule } from "@/features/inbox/components/modules/notifications-module";
 import { OrdersModule } from "@/features/inbox/components/modules/orders-module";
@@ -780,7 +780,7 @@ export function InboxWorkspace() {
       case "agent-desk":
         return <AgentDeskModule logActivity={logActivity} />;
       case "knowledge":
-        return <KnowledgeModule logActivity={logActivity} />;
+        return <KnowledgeBankModule logActivity={logActivity} />;
       case "setup":
         return (
           <SetupModule
@@ -953,6 +953,7 @@ export function InboxWorkspace() {
                   if (selectedPerson) takeOver(selectedPerson);
                 }}
                 onOpenCopilot={() => setCopilotOpen(true)}
+                onNavigateToKnowledge={() => navigate("knowledge")}
               />
             </div>
 

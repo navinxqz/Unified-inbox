@@ -197,8 +197,12 @@ const bangla: Record<string, string> = {
   "Search by person, action, or subject to trace one conversation's history.":
     "এক কথোপকথনের ইতিহাস অনুসন্ধান করতে ব্যক্তি, কর্ম বা বিষয় দিয়ে খুঁজুন।",
   "Tune the AI agent": "এআই এজেন্ট টিউন করুন",
-  "Fill the five instruction blocks — business facts, delivery, voice, exact words, guardrails.":
-    "পাঁচটি নির্দেশিকা পূরণ করুন — ব্যবসার তথ্য, ডেলিভারি, কণ্ঠস্বর, নির্দিষ্ট শব্দ, সুরক্ষানীতি।",
+  "Fill the six instruction blocks — business facts, product catalog, delivery, voice, exact words, guardrails.":
+    "ছয়টি নির্দেশিকা পূরণ করুন — ব্যবসার তথ্য, পণ্য তালিকা, ডেলিভারি, কণ্ঠস্বর, নির্দিষ্ট শব্দ, সুরক্ষানীতি।",
+  "No catalog? Leave it blank — it saves as NULL so the AI never guesses a price.":
+    "পণ্য তালিকা নেই? খালি রাখুন — এটি NULL হিসেবে সেভ হবে যাতে এআই কখনো দাম অনুমান না করে।",
+  "Upload a .md or .pdf to fill every block at once, following the guideline.":
+    "গাইডলাইন অনুসরণ করে একটি .md বা .pdf আপলোড করে সব ঘর একসাথে পূরণ করুন।",
   "Test as a customer on the right: the reply comes from exactly what you wrote.":
     "ডানপাশে গ্রাহক হিসেবে পরীক্ষা করুন: আপনি যা লিখেছেন ঠিক সে অনুসারেই উত্তর আসবে।",
   "Publish bumps the version and re-indexes knowledge — the audit trail records it.":
@@ -443,6 +447,80 @@ const bangla: Record<string, string> = {
 
   /* ── Command Palette ──────────────────────────────────────────────────── */
 
+  /* ── Channel Connect Dialog & Integration ─────────────────────────────── */
+  "Back to channel list": "চ্যানেল তালিকায় ফিরে যান",
+  "Channel connected": "চ্যানেল সংযুক্ত হয়েছে",
+  "Connect {name}": "{name} সংযুক্ত করুন",
+  "Every channel lands in the same inbox.":
+    "সব চ্যানেল একই ইনবক্সে এসে জমা হয়।",
+  "Inbound messages will start routing into the unified inbox.":
+    "আগত বার্তাগুলো ইউনিফাইড ইনবক্সে পাঠানো শুরু হবে।",
+  "{name} is live": "{name} এখন লাইভ",
+  "{handle} is receiving messages. The webhook is verified and the channel is now highest priority for new inbound.":
+    "{handle} বার্তা গ্রহণ করছে। ওয়েবহুক যাচাইকৃত এবং চ্যানেলটি এখন সর্বোচ্চ অগ্রাধিকারপ্রাপ্ত।",
+  "Account handle": "অ্যাকাউন্ট হ্যান্ডেল",
+  "This demo simulates the OAuth handshake locally; no network request leaves the browser.":
+    "এই ডেমোটি স্থানীয়ভাবে ও-অথ হ্যান্ডশেক সিমুলেট করে; ব্রাউজার থেকে কোনো নেটওয়ার্ক রিকোয়েস্ট যায় না।",
+  "Authorise & connect": "অনুমোদন ও সংযুক্ত করুন",
+  "Pick a channel type to add another account (for example a second WhatsApp number).":
+    "অন্য একটি অ্যাকাউন্ট যোগ করতে চ্যানেল টাইপ বেছে নিন (যেমন দ্বিতীয় হোয়াটসঅ্যাপ নম্বর)।",
+  connected: "সংযুক্ত",
+  "Channel Connections & API Integrations":
+    "চ্যানেল সংযোগ ও এপিআই ইন্টিগ্রেশন",
+  "Manage your incoming omnichannel pipelines, webhook endpoints, and API authentication credentials.":
+    "আপনার ওমনিচ্যানেল পাইপলাইন, ওয়েবহুক এন্ডপয়েন্ট ও এপিআই ক্রেডেনশিয়াল পরিচালনা করুন।",
+  "Connected Channels ({count})": "সংযুক্ত চ্যানেলসমূহ ({count})",
+  "Webhooks & Live Simulator": "ওয়েবহুক ও লাইভ সিমুলেটর",
+  "API Access Keys ({count})": "এপিআই অ্যাক্সেস কি ({count})",
+
+  /* ── Settings Dashboard ───────────────────────────────────────────────── */
+  "Workspace Settings & Configuration": "ওয়ার্কস্পেস সেটিংস ও কনফিগারেশন",
+  "Configure your company profile, appearance, SLA automation, AI assistants, and notification preferences.":
+    "কোম্পানি প্রোফাইল, চেহারা, এসএলএ অটোমেশন, এআই সহকারী ও নোটিফিকেশন পছন্দসমূহ কনফিগার করুন।",
+  "General Information": "সাধারণ তথ্য",
+  "Workspace Name": "ওয়ার্কস্পেস নাম",
+  "Workspace Slug / Subdomain": "ওয়ার্কস্পেস সাবডোমেন",
+  "Primary Support Email": "প্রধান সাপোর্ট ইমেইল",
+  "Operational Timezone": "কাজের সময় অঞ্চল (টাইমজোন)",
+  "AI Copilot & Multi-Lingual Automation": "এআই কপাইলট ও বহুভাষিক অটোমেশন",
+  "Smart AI Suggestions": "স্মার্ট এআই পরামর্শ",
+  "Predict and generate recommended canned responses per ticket.":
+    "প্রতি টিকেটের জন্য প্রস্তাবিত সংরক্ষিত উত্তর প্রস্তুত করুন।",
+  "Automatic Translation": "স্বয়ংক্রিয় অনুবাদ",
+  "Real-time translation for foreign inbound language messages.":
+    "অন্যান্য ভাষার আগত বার্তার জন্য রিয়েল-টাইম অনুবাদ।",
+  "Default Translation Language": "ডিফল্ট অনুবাদের ভাষা",
+  "AI & Handoff Automation": "এআই ও হ্যান্ডঅফ অটোমেশন",
+  "Auto-revert window (unanswered human chats)":
+    "অটো-রিভার্ট উইন্ডো (উত্তরহীন মানব চ্যাট)",
+  "When a human claims a chat and nobody answers, the AI takes it back after this window.":
+    "মানব প্রতিনিধি চ্যাট দাবি করার পর কেউ উত্তর না দিলে এই সময়ের পর এআই দায়িত্ব ফেরত নেয়।",
+  "SLA target for a waiting customer": "অপেক্ষমাণ গ্রাহকের জন্য এসএলএ লক্ষ্যমাত্রা",
+  "Waiting conversations past this target are flagged in the inbox and counted in Analytics.":
+    "এই লক্ষ্যমাত্রা পার হওয়া কথোপকথন ইনবক্সে ফ্ল্যাগ হয় এবং অ্যানালিটিক্সে গণনা করা হয়।",
+  "Wait before the AI answers": "এআই উত্তর দেওয়ার পূর্বের অপেক্ষা",
+  "A short delay batches multi-part messages so the AI answers once instead of three times.":
+    "স্বল্প বিলম্ব একাধিক খণ্ড বার্তার সমন্বয় করে যাতে এআই বারবার উত্তর না দিয়ে একবারেই দেয়।",
+  "Custom Tags & Triage Taxonomy": "কাস্টম ট্যাগ ও ট্রায়াজ ট্যাক্সোনমি",
+  "Add Tag": "ট্যাগ যুক্ত করুন",
+  "Notification Rules & Routing": "নোটিফিকেশন নিয়ম ও রাউটিং",
+  "Audible Sound Alerts": "শব্দযুক্ত অ্যালার্ট",
+  "Play sound when new high-priority customer message arrives.":
+    "নতুন গুরুত্বপূর্ণ গ্রাহকের বার্তা এলে শব্দ বাজান।",
+  "Browser Desktop Notifications": "ব্রাউজার ডেস্কটপ নোটিফিকেশন",
+  "Push desktop notification for unassigned tickets.":
+    "অনির্ধারিত টিকেটের জন্য ডেস্কটপ নোটিফিকেশন দিন।",
+  "Team Email Digest": "টিম ইমেইল ডাইজেস্ট",
+  "Instant per message": "প্রতি বার্তার সাথে সাথে",
+  "Daily morning summary": "দৈনিক সকালের সারসংক্ষেপ",
+  "Weekly performance digest": "সাপ্তাহিক পারফরম্যান্স ডাইজেস্ট",
+  "Muted (Off)": "বন্ধ",
+  "Answer immediately": "অবিলম্বে উত্তর দিন",
+  "{n} minutes": "{n} মিনিট",
+  "{n} seconds": "{n} সেকেন্ড",
+  "{n} hour": "{n} ঘণ্টা",
+  "{n} hours": "{n} ঘণ্টা",
+
   /* ── Overview Module Additions ────────────────────────────────────────── */
   "View queue": "কিউ দেখুন",
   Manage: "পরিচালনা করুন",
@@ -501,6 +579,154 @@ const bangla: Record<string, string> = {
     "পরীক্ষামূলক চ্যাট অভ্যন্তরীণ থাকে। লাইভে গেলে আপনার ট্রায়াল শুরু হবে।",
   "Your desk at a glance — waiting conversations, AI handoffs, and channel health.":
     "আপনার ডেস্কে একনজরে — অপেক্ষমাণ কথোপকথন, এআই হ্যান্ডঅফ ও চ্যানেলের সার্বিক অবস্থা।",
+
+  /* ── Knowledge Bank & Chat Notes ────────────────────────────────────────── */
+  "Knowledge Bank": "নলেজ ব্যাংক",
+  "Personal Note": "ব্যক্তিগত নোট",
+  "Close Personal Note": "ব্যক্তিগত নোট বন্ধ করুন",
+  "Personal Note (Only you can see)": "ব্যক্তিগত নোট (শুধুমাত্র আপনি দেখতে পারবেন)",
+  "Knowledge Bank (Shared team knowledge)": "নলেজ ব্যাংক (দলের সবার জন্য উন্মুক্ত)",
+  "Close Knowledge Bank": "নলেজ ব্যাংক বন্ধ করুন",
+  "Only you can see this note": "শুধুমাত্র আপনি এই নোটটি দেখতে পারবেন",
+  "Team Shared": "দলের সবার জন্য",
+  "Search and insert canned answers": "ক্যানড উত্তর খুঁজুন এবং চ্যাটে যোগ করুন",
+  "Search knowledge articles...": "নলেজ আর্টিকেল খুঁজুন...",
+  "Back to list": "তালিকায় ফিরে যান",
+  "Attached": "সংযুক্ত",
+  "Insert into Reply": "রিপ্লাইতে যোগ করুন",
+  "Inserted into Reply!": "রিপ্লাইতে যোগ করা হয়েছে!",
+  "Inserted": "যোগ হয়েছে",
+  "Insert": "যোগ করুন",
+  "Preview article": "আর্টিকেল প্রিভিউ",
+  "Preview": "প্রিভিউ",
+  "Open Knowledge Bank Dashboard": "নলেজ ব্যাংক ড্যাশবোর্ড খুলুন",
+  "How can we help you?": "আমরা আপনাকে কীভাবে সাহায্য করতে পারি?",
+  "Search through internal policies, answers, guidelines, and canned procedures.":
+    "অভ্যন্তরীণ নীতিমালা, উত্তর, নির্দেশিকা এবং প্রস্তুত পদ্ধতি অনুসন্ধান করুন।",
+  "Search by keyword, topic title, or tag...": "কীওয়ার্ড, টপিকের শিরোনাম অথবা ট্যাগ দিয়ে খুঁজুন...",
+  "Popular tags:": "জনপ্রিয় ট্যাগ:",
+  "Clear filter": "ফিল্টার মুছুন",
+  "Total Topics": "মোট টপিক",
+  "Total Views": "মোট ভিউ",
+  "Categories": "ক্যাটাগরি",
+  "Tagged Keywords": "ট্যাগযুক্ত কীওয়ার্ড",
+  "New Added Topics": "নতুন যুক্ত টপিকসমূহ",
+  "Most Researched Topics": "সর্বাধিক পঠিত টপিকসমূহ",
+  "All Knowledge Topics": "সকল নলেজ টপিক",
+  "Search Results": "অনুসন্ধানের ফলাফল",
+  "No knowledge topics found": "কোনো নলেজ টপিক পাওয়া যায়নি",
+  "Try changing your search query or filter, or click + Add Topic to publish one.":
+    "আপনার অনুসন্ধানের শব্দ বা ফিল্টার পরিবর্তন করুন, অথবা নতুন টপিক যুক্ত করতে + Add Topic চাপুন।",
+  "Add Topic": "টপিক যোগ করুন",
+  "Back to Dashboard": "ড্যাশবোর্ডে ফিরে যান",
+  "Articles & Dashboard": "আর্টিকেল ও ড্যাশবোর্ড",
+  "AI Indexing Sources": "এআই ইনডেক্সিং সোর্স",
+  "Indexed sources": "ইনডেক্স করা সোর্স",
+  "Ready for retrieval": "ব্যবহারের জন্য প্রস্তুত",
+  "Total words indexed": "মোট ইনডেক্স করা শব্দ",
+  "Add indexing source": "ইনডেক্সিং সোর্স যুক্ত করুন",
+  "Provide text, files, or URLs for AI grounding": "এআই গ্রাউন্ডিংয়ের জন্য টেক্সট, ফাইল বা ইউআরএল প্রদান করুন",
+  "Source Title": "সোর্সের শিরোনাম",
+  "e.g. Return Policy 2026": "যেমনঃ রিটার্ন পলিসি ২০২৬",
+  "Plain Text Document": "প্লেন টেক্সট ডকুমেন্ট",
+  "CSV / PDF File": "সিএসভি / পিডিএফ ফাইল",
+  "Web URL": "ওয়েব ইউআরএল",
+  "Add to Index": "ইনডেক্সে যোগ করুন",
+  "Configured Sources": "কনফিগার করা সোর্সসমূহ",
+  "Are you sure you want to delete this topic?": "আপনি কি নিশ্চিত যে এই টপিকটি মুছে ফেলতে চান?",
+  "Title is required": "শিরোনাম আবশ্যক",
+  "Content is required": "বিবরণ আবশ্যক",
+  "At least one tag is required": "অন্তত একটি ট্যাগ আবশ্যক",
+  "Create New Topic": "নতুন টপিক তৈরি করুন",
+  "Edit Topic": "টপিক সম্পাদনা করুন",
+  "Use the rich text editor below to format text, add tables, and upload images.":
+    "টেক্সট ফরম্যাট, টেবিল যুক্ত এবং ছবি আপলোড করতে নিচের রিচ টেক্সট এডিটর ব্যবহার করুন।",
+  "Topic Title": "টপিকের শিরোনাম",
+  "Write a clear, descriptive title...": "একটি সুস্পষ্ট ও বর্ণনামূলক শিরোনাম লিখুন...",
+  "Wrap Up & Classification": "র‌্যাপ আপ ও শ্রেণিবিন্যাস",
+  "Call Type": "কলের ধরন",
+  "Category": "ক্যাটাগরি",
+  "Sub-category": "সাব-ক্যাটাগরি",
+  "Description / Body": "বিবরণ / মূল অংশ",
+  "Full tables, alignment & images supported": "সম্পূর্ণ টেবিল, অ্যালাইনমেন্ট এবং ইমেজ সমর্থিত",
+  "Start writing topic content, policies, instructions or tables...":
+    "টপিকের মূল বিষয়বস্তু, পলিসি, নির্দেশনা বা টেবিল লেখা শুরু করুন...",
+  "Write tag name and press Enter": "ট্যাগের নাম লিখে এন্টার চাপুন",
+  "Attach File / Document": "ফাইল বা ডকুমেন্ট সংযুক্ত করুন",
+  "Browse file": "ফাইল বাছাই করুন",
+  "Optional PDF, CSV, or document file": "ঐচ্ছিক পিডিএফ, সিএসভি বা ডকুমেন্ট ফাইল",
+  "Create Topic": "টপিক প্রকাশ করুন",
+  "Are you sure you want to clear this private note?": "আপনি কি নিশ্চিত যে এই ব্যক্তিগত নোটটি মুছে ফেলতে চান?",
+  "Write personal notes about {name} (orders, reminders, preferences, internal flags)...":
+    "{name} সম্পর্কে ব্যক্তিগত নোট লিখুন (অর্ডার, রিমাইন্ডার, পছন্দ, ইন্টারনাল ফ্ল্যাগ)...",
+  "Write personal scratchpad notes, numbers, or reminders...": "ব্যক্তিগত স্ক্র্যাচপ্যাড নোট, নম্বর বা রিমাইন্ডার লিখুন...",
+  "Autosaved locally": "স্থানীয়ভাবে অটোসেভ হচ্ছে",
+  "General Scratchpad": "সাধারণ স্ক্র্যাচপ্যাড",
+  "This Chat": "এই চ্যাট",
+  "Attached resource document": "সংযুক্ত রিসোর্স ডকুমেন্ট",
+  "Downloading file:": "ফাইল ডাউনলোড হচ্ছে:",
+  "Publish, search, and manage rich canned knowledge topics and AI indexed sources":
+    "রিচ ক্যানড নলেজ টপিক এবং এআই ইনডেক্সিং সোর্স প্রকাশ, অনুসন্ধান ও পরিচালনা করুন",
+  "How to use Knowledge Bank": "নলেজ ব্যাংক ব্যবহারের নিয়ম",
+  "Create rich-text articles with TinyMCE, categorize policies, and insert canned knowledge directly into customer chat replies.":
+    "TinyMCE দিয়ে রিচ-টেক্সট আর্টিকেল তৈরি করুন, পলিসি শ্রেণিবদ্ধ করুন এবং সরাসরি কাস্টমার চ্যাটে ক্যানড নলেজ যোগ করুন।",
+  "1. Search Topics": "১. টপিক অনুসন্ধান",
+  "Use the top search bar to find answers by keywords, categories, or tags.":
+    "কীওয়ার্ড, ক্যাটাগরি বা ট্যাগ দিয়ে উত্তর খুঁজতে ওপরের সার্চ বার ব্যবহার করুন।",
+  "2. Create Articles with TinyMCE": "২. TinyMCE দিয়ে আর্টিকেল তৈরি",
+  "Click + Add Topic to launch the TinyMCE editor with full formatting and tables.":
+    "সম্পূর্ণ ফরম্যাটিং এবং টেবিলসহ TinyMCE এডিটর চালু করতে + Add Topic বাটনে ক্লিক করুন।",
+  "3. Quick Insert in Chat": "৩. চ্যাটে দ্রুত ইনসার্ট",
+  "Access your shared Knowledge Bank directly in every conversation top bar.":
+    "প্রতিটি চ্যাটের টপ বার থেকে সরাসরি দলের নলেজ ব্যাংক ব্যবহার করুন।",
+  "reads": "বার পঠিত",
+
+  /* ── Agent Desk: catalog, upload & guardrails ─────────────────────────── */
+  "Estimated Product Catalog": "আনুমানিক পণ্য তালিকা",
+  "Rough catalog the AI may quote — name, SKU, price, stock, one line each. Empty saves as NULL so the AI never guesses a price.":
+    "এআই যে আনুমানিক তালিকা থেকে দাম বলতে পারে — নাম, এসকেইউ, দাম, স্টক, প্রতি লাইনে একটি। খালি রাখলে NULL সেভ হয় যাতে এআই দাম অনুমান না করে।",
+  "Upload instructions": "নির্দেশিকা আপলোড",
+  "Restore last publish": "শেষ প্রকাশ ফিরিয়ে আনুন",
+  "Guardrail principles": "সুরক্ষা নীতি",
+  "Always applied, even if you forget to write them. Click a rule to edit it.":
+    "সবসময় প্রয়োগ হয়, এমনকি লিখতে ভুলে গেলেও। সম্পাদনা করতে নিয়মে ক্লিক করুন।",
+  "Add principle": "নীতি যোগ করুন",
+  "No custom principles yet — add one to constrain the AI.":
+    "এখনো কোনো কাস্টম নীতি নেই — এআই নিয়ন্ত্রণে একটি যোগ করুন।",
+  "Guardrail principle {n}": "সুরক্ষা নীতি {n}",
+  "Remove principle {n}": "সুরক্ষা নীতি {n} সরান",
+  "Write a principle or constraint": "একটি নীতি বা সীমাবদ্ধতা লিখুন",
+  "Upload agent instructions": "এজেন্ট নির্দেশিকা আপলোড",
+  "One file can fill every block. Only the sections found in the file are replaced.":
+    "একটি ফাইলেই সব ঘর পূরণ করা যায়। ফাইলে যে অংশগুলো আছে শুধু সেগুলোই প্রতিস্থাপিত হয়।",
+  "File guideline": "ফাইল গাইডলাইন",
+  "Use the exact ## headings from the template — only those sections are read.":
+    "টেমপ্লেটের ঠিক ## শিরোনামগুলো ব্যবহার করুন — শুধু সেই অংশগুলো পড়া হয়।",
+  "Write plain text under each heading; line breaks are kept as written.":
+    "প্রতিটি শিরোনামের নিচে সাধারণ টেক্সট লিখুন; লাইন ব্রেক যেমন লিখবেন তেমন থাকবে।",
+  "Product catalog: one product per line. Leave it as NULL when you have none.":
+    "পণ্য তালিকা: প্রতি লাইনে একটি পণ্য। না থাকলে NULL লিখুন।",
+  "Guardrail principles: one rule per bullet; each rule stays editable here.":
+    "সুরক্ষা নীতি: প্রতি বুলেটে একটি নিয়ম; প্রতিটি নিয়ম এখানে সম্পাদনযোগ্য থাকবে।",
+  ".md is the most reliable. A .pdf works when it contains selectable text.":
+    ".md সবচেয়ে নির্ভরযোগ্য। .pdf কাজ করে যখন তাতে সিলেক্টযোগ্য টেক্সট থাকে।",
+  "Sections missing from the file stay unchanged — only what you upload is replaced.":
+    "ফাইলে না থাকা অংশ অপরিবর্তিত থাকে — শুধু আপলোড করা অংশ প্রতিস্থাপিত হয়।",
+  "Template": "টেমপ্লেট",
+  "Copied": "কপি হয়েছে",
+  "Copy template": "টেমপ্লেট কপি করুন",
+  "Reading file…": "ফাইল পড়া হচ্ছে…",
+  "Choose .md or .pdf": ".md বা .pdf বেছে নিন",
+  "Copy failed — select the template text and copy it manually.":
+    "কপি ব্যর্থ হয়েছে — টেমপ্লেট টেক্সট সিলেক্ট করে ম্যানুয়ালি কপি করুন।",
+  "This PDF has no selectable text (it may be a scan). Export it as .md and upload again.":
+    "এই PDF-এ সিলেক্টযোগ্য টেক্সট নেই (স্ক্যান হতে পারে)। .md হিসেবে এক্সপোর্ট করে আবার আপলোড করুন।",
+  "That file is over 2 MB. Trim it down or upload a .md file.":
+    "ফাইলটি ২ এমবির বেশি। ছোট করুন বা একটি .md ফাইল আপলোড করুন।",
+  "No guideline headings were found. Check the template below and try again.":
+    "গাইডলাইনের কোনো শিরোনাম পাওয়া যায়নি। নিচের টেমপ্লেট দেখে আবার চেষ্টা করুন।",
+  "That file couldn't be read. Try a .md file.":
+    "ফাইলটি পড়া যায়নি। একটি .md ফাইল চেষ্টা করুন।",
 };
 
 function interpolate(template: string, vars?: Record<string, string | number>) {

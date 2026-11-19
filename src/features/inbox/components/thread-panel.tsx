@@ -2,23 +2,29 @@
 
 import { useEffect, useRef, useState } from "react";
 import {
+  BookOpen,
   ChevronLeft,
   Clock,
   Inbox,
   PanelRight,
   Pin,
   Sparkles,
+  StickyNote,
   Undo2,
   UserCheck,
+  X,
 } from "lucide-react";
 
 import { Avatar } from "@/features/inbox/components/avatar";
 import { ChannelDot } from "@/features/inbox/components/channel-dot";
+import { ChatKnowledgeBankDrawer } from "@/features/inbox/components/chat-knowledge-bank-drawer";
+import { ChatPrivateNoteDrawer } from "@/features/inbox/components/chat-private-note-drawer";
 import { Composer } from "@/features/inbox/components/composer";
 import { MessageCard } from "@/features/inbox/components/message-card";
 import { ModeBadge } from "@/features/inbox/components/module-ui";
 import { handoffReasonLabels } from "@/features/inbox/data";
 import { useI18n } from "@/features/inbox/i18n";
+import { MODULE_STORAGE_KEYS, useStoredState } from "@/features/inbox/storage";
 import { useNowMs } from "@/features/inbox/use-now";
 import type {
   Attachment,
@@ -27,6 +33,7 @@ import type {
   HandoffReason,
   Message,
   Person,
+  PrivateChatNote,
   QuotedMessage,
   SavedReply,
 } from "@/features/inbox/types";
@@ -63,6 +70,7 @@ type ThreadPanelProps = {
   onReturnToAi?: () => void;
   onTakeover?: () => void;
   onOpenCopilot?: () => void;
+  onNavigateToKnowledge?: () => void;
   /** Text pushed into the composer by the copilot (nonce triggers re-insert). */
   insertion?: { text: string; nonce: number };
 };
@@ -100,10 +108,13 @@ export function ThreadPanel({
   onReturnToAi,
   onTakeover,
   onOpenCopilot,
+  onNavigateToKnowledge,
   insertion,
 }: ThreadPanelProps) {
   const { t } = useI18n();
   const [pinned, setPinned] = useState(false);
+  const [noteDrawerOpen, setNoteDrawerOpen] = useState(false);
+  const [kbDrawerOpen, setKbDrawerOpen] = useState(false);
   const [draft, setDraft] = useState("");
   const [attachment, setAttachment] = useState<Attachment | null>(null);
   const [replyingTo, setReplyingTo] = useState<QuotedMessage | null>(null);
@@ -113,12 +124,31 @@ export function ThreadPanel({
   const [handoffMenuOpen, setHandoffMenuOpen] = useState(false);
   const now = useNowMs();
 
+  const [notesStore] = useStoredState<Record<string, PrivateChatNote>>(
+    MODULE_STORAGE_KEYS.privateNotes,
+    {},
+  );
+  const hasNote = person ? !!notesStore[person.id]?.content?.trim() : false;
+
   const inputRef = useRef<HTMLInputElement>(null);
   const endRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ block: "end" });
   }, [messages.length, title]);
+
+  // Close drawers on Escape key
+  useEffect(() => {
+    if (!noteDrawerOpen && !kbDrawerOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setNoteDrawerOpen(false);
+        setKbDrawerOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [noteDrawerOpen, kbDrawerOpen]);
 
   // Render-phase sync: copilot pushes text into the composer without an effect.
   const [lastInsertionNonce, setLastInsertionNonce] = useState<number | undefined>();
@@ -177,7 +207,7 @@ export function ThreadPanel({
   }
 
   return (
-    <main className="flex h-full min-h-0 w-full min-w-0 flex-col bg-background">
+    <main className="relative flex h-full min-h-0 w-full min-w-0 flex-col bg-background">
       <header className="flex h-[60px] shrink-0 items-center gap-2 border-b border-border px-4 md:px-6">
         <button
           type="button"
@@ -257,6 +287,62 @@ export function ThreadPanel({
               <Sparkles className="size-5" strokeWidth={2} />
             </button>
           ) : null}
+
+          {/* Note Option (Individual user only) */}
+          <button
+            type="button"
+            aria-label={noteDrawerOpen ? t("Close Personal Note") : t("Personal Note")}
+            title={noteDrawerOpen ? t("Close Personal Note") : t("Personal Note (Only you can see)")}
+            aria-pressed={noteDrawerOpen}
+            onClick={() => {
+              setNoteDrawerOpen((prev) => !prev);
+              setKbDrawerOpen(false);
+            }}
+            className={cn(
+              "relative flex size-9 shrink-0 items-center justify-center rounded-[10px] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+              noteDrawerOpen
+                ? "bg-amber-100 text-amber-800 ring-2 ring-amber-500/30"
+                : "text-ink-soft hover:bg-surface",
+            )}
+          >
+            {noteDrawerOpen ? (
+              <X className="size-5" strokeWidth={2.5} />
+            ) : (
+              <>
+                <StickyNote className="size-5" strokeWidth={2} />
+                {hasNote && (
+                  <span
+                    aria-hidden="true"
+                    className="absolute top-1.5 right-1.5 size-2 rounded-full bg-amber-500 ring-2 ring-background"
+                  />
+                )}
+              </>
+            )}
+          </button>
+
+          {/* Knowledge Bank Option (Shared for everyone) */}
+          <button
+            type="button"
+            aria-label={kbDrawerOpen ? t("Close Knowledge Bank") : t("Knowledge Bank")}
+            title={kbDrawerOpen ? t("Close Knowledge Bank") : t("Knowledge Bank (Shared team knowledge)")}
+            aria-pressed={kbDrawerOpen}
+            onClick={() => {
+              setKbDrawerOpen((prev) => !prev);
+              setNoteDrawerOpen(false);
+            }}
+            className={cn(
+              "flex size-9 shrink-0 items-center justify-center rounded-[10px] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+              kbDrawerOpen
+                ? "bg-primary-soft text-primary-strong ring-2 ring-primary/30"
+                : "text-ink-soft hover:bg-surface",
+            )}
+          >
+            {kbDrawerOpen ? (
+              <X className="size-5" strokeWidth={2.5} />
+            ) : (
+              <BookOpen className="size-5" strokeWidth={2} />
+            )}
+          </button>
 
           <button
             type="button"
@@ -451,6 +537,28 @@ export function ThreadPanel({
           onSubmit={handleSend}
         />
       ) : null}
+
+      {noteDrawerOpen && (
+        <div className="absolute top-[60px] bottom-0 right-0 z-30 w-full max-w-[380px] bg-white border-l border-border shadow-xl animate-in slide-in-from-right duration-200">
+          <ChatPrivateNoteDrawer
+            person={person}
+            onClose={() => setNoteDrawerOpen(false)}
+          />
+        </div>
+      )}
+
+      {kbDrawerOpen && (
+        <div className="absolute top-[60px] bottom-0 right-0 z-30 w-full max-w-[390px] bg-white border-l border-border shadow-xl animate-in slide-in-from-right duration-200">
+          <ChatKnowledgeBankDrawer
+            onClose={() => setKbDrawerOpen(false)}
+            onInsert={(text) => {
+              setDraft((prev) => (prev ? `${prev}\n${text}` : text));
+              inputRef.current?.focus();
+            }}
+            onOpenKnowledgeModule={onNavigateToKnowledge}
+          />
+        </div>
+      )}
     </main>
   );
 }

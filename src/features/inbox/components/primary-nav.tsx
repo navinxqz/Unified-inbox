@@ -81,7 +81,7 @@ const groups: NavGroup[] = [
     label: "AI",
     items: [
       { id: "agent-desk", label: "Agent Desk", icon: Bot },
-      { id: "knowledge", label: "Knowledge", icon: BookOpen },
+      { id: "knowledge", label: "Knowledge Bank", icon: BookOpen },
     ],
   },
   {
